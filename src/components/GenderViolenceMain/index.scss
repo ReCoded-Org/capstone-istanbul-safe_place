@@ -1,0 +1,43 @@
+@import "../../style/variables";
+
+.main-container {
+  background-color: $lightColor;
+
+  .main-text {
+    align-self: center;
+    font-family: $mainFontFamily;
+    font-size: 1.2rem;
+    color: $primaryColor;
+    p {
+      margin-top: 1.4rem;
+    }
+
+    span {
+      font-family: $secondaryFontFamily;
+      font-weight: 800;
+      text-transform: capitalize;
+    }
+
+    button {
+      margin-top: 1.4rem;
+      background-color: $primaryColor;
+      color: $lightColor;
+      width: 30%;
+      min-height: 2.4rem;
+      border: 0;
+      border-radius: $borderRadius;
+
+      &:hover {
+        background-color: $secondayColor;
+      }
+    }
+
+    h1 {
+      font-size: 3.8rem;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

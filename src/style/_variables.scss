@@ -1,1 +1,16 @@
-/* add all shared styles here */
+/* Colors */
+$primaryColor: #fe8f7c;
+$secondayColor: #c8d7c2;
+$lightColor: #fffefc;
+$warningColor: #ffbfb5;
+$successColor: #8ccbba;
+$darkColor: #4f4f4f;
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$mainFontFamily: "Roboto", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+$secondaryFontFamily: "Caveat", cursive;
+
+$borderRadius: 4px;
