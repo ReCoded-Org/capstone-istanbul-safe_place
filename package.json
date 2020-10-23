@@ -15,7 +15,8 @@
         "react-dom": "^16.14.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
-        "react-slick": "^0.27.12"
+        "react-slick": "^0.27.12",
+        "slick-carousel": "^1.8.1"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -51,5 +52,9 @@
         "jest": "^24.9.0",
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1"
-    }
+    },
+    "main": "index.js",
+    "repository": "git@github.com:ReCoded-Org/capstone-istanbul-safe_place.git",
+    "author": "jennethydyrova <jennethydyrovaa@gmail.com>",
+    "license": "MIT"
 }
