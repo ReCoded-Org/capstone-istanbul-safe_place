@@ -6,7 +6,6 @@ import i18n from "./i18n.config";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-
 ReactDOM.render(
   <React.StrictMode>
     <React.Suspense fallback="loading">
