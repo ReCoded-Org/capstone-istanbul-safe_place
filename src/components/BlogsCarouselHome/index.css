@@ -1,0 +1,13 @@
+.photoSize {
+  width: 22rem;
+  height: 12rem;
+  padding: 0 2rem;
+}
+.photosCarousel {
+  height: 100%;
+  width: 100%;
+}
+.homeCarousel {
+  padding: 5%;
+  text-align: center;
+}
