@@ -24,14 +24,31 @@
       @include primaryBtn;
       margin-top: 1.4rem;
     }
-    
 
     h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
     }
   }
 
   img {
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    .main-text {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .main-container {
+    .main-text {
+      button {
+        width: 100%;
+      }
+    }
   }
 }
