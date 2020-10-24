@@ -1,13 +1,23 @@
-.photoSize {
-  width: 22rem;
-  height: 12rem;
-  padding: 0 2rem;
-}
 .photosCarousel {
-  height: 100%;
-  width: 100%;
+    width: 22rem;
+    height: 12rem;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 1.5rem;
 }
+
 .homeCarousel {
-  padding: 5%;
   text-align: center;
+}
+
+.title{
+    color: #FE8F7C;
+}
+
+span{
+    color:#4F4F4F;
+    font-size: 6rem;
 }
