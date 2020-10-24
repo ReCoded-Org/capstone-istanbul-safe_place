@@ -4,7 +4,7 @@ import phoneSvg from "./images/phone.svg";
 import locationSvg from "./images/map-marker.svg";
 // import rightArrow from './images/Chevron-right.svg'
 import { Container, Row, Col } from "react-bootstrap";
-import "./index.css";
+import "./index.scss";
 
 const SeekHelpCarousel = () => {
   const SETTINGS = {
@@ -23,62 +23,102 @@ const SeekHelpCarousel = () => {
   };
 
   return (
-    <Container>
-      <Slider {...SETTINGS} className="carouselSize">
-        <div className="carouselItem">
-          <div style={{ color: "#4F4F4F" }}>
-            <h2>Doctor</h2>
-            <h3>Jenny Wilson</h3>
-          </div>
-          <div style={{ color: "#FFFEFC" }}>
-            <img src={phoneSvg} alt="Phone icon" />
-            <p>+1-340-5558-235 </p>
-            <img src={locationSvg} alt="Location icon" />
-            <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-            <p>
-              In oculis quidem faciunt, ut dolore magnam aliquam causam ista,
-              quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum,
-              quem modo ista sis.
-            </p>
-          </div>
-        </div>
+    <Container className="carousel">
+      <Row>
+        <Col md={{ span: 7, offset: 5 }}>
+          <Slider {...SETTINGS}>
+            <div className="carouselItem">
+              <div>
+                <h3>Doctor</h3>
+                <h4>Jenny Wilson</h4>
+              </div>
+              <div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={phoneSvg} alt="Phone icon" />
+                  </div>
+                  <div>
+                    <p>+1-340-5558-235 </p>
+                  </div>
+                </div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={locationSvg} alt="Location icon" />
+                  </div>
+                  <div>
+                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
+                  </div>
+                </div>
+                <p>
+                  In oculis quidem faciunt, ut dolore magnam aliquam causam
+                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
+                  delectu rerum, quem modo ista sis.
+                </p>
+              </div>
+            </div>
 
-        <div className="carouselItem">
-          <div style={{ color: "#4F4F4F" }}>
-            <h2>Doctor</h2>
-            <h3>Jenny Wilson</h3>
-          </div>
-          <div style={{ color: "#FFFEFC" }}>
-            <img src={phoneSvg} alt="phone icon" />
-            <p>+1-340-5558-235 </p>
-            <img src={locationSvg} alt="location icon" />
-            <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-            <p>
-              In oculis quidem faciunt, ut dolore magnam aliquam causam ista,
-              quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum,
-              quem modo ista sis.
-            </p>
-          </div>
-        </div>
+            <div className="carouselItem">
+              <div>
+                <h3>Doctor</h3>
+                <h4>Jenny Wilson</h4>
+              </div>
+              <div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={phoneSvg} alt="Phone icon" />
+                  </div>
+                  <div>
+                    <p>+1-340-5558-235 </p>
+                  </div>
+                </div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={locationSvg} alt="Location icon" />
+                  </div>
+                  <div>
+                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
+                  </div>
+                </div>
+                <p>
+                  In oculis quidem faciunt, ut dolore magnam aliquam causam
+                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
+                  delectu rerum, quem modo ista sis.
+                </p>
+              </div>
+            </div>
 
-        <div className="carouselItem">
-          <div style={{ color: "#4F4F4F" }}>
-            <h2>Doctor</h2>
-            <h3>Jenny Wilson</h3>
-          </div>
-          <div style={{ color: "#FFFEFC" }}>
-            <img src={phoneSvg} alt="phone icon" />
-            <p>+1-340-5558-235 </p>
-            <img src={locationSvg} alt="location icon" />
-            <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-            <p>
-              In oculis quidem faciunt, ut dolore magnam aliquam causam ista,
-              quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum,
-              quem modo ista sis.
-            </p>
-          </div>
-        </div>
-      </Slider>
+            <div className="carouselItem">
+              <div>
+                <h3>Doctor</h3>
+                <h4>Jenny Wilson</h4>
+              </div>
+              <div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={phoneSvg} alt="Phone icon" />
+                  </div>
+                  <div>
+                    <p>+1-340-5558-235 </p>
+                  </div>
+                </div>
+                <div className="contactDetails">
+                  <div>
+                    <img src={locationSvg} alt="Location icon" />
+                  </div>
+                  <div>
+                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
+                  </div>
+                </div>
+                <p>
+                  In oculis quidem faciunt, ut dolore magnam aliquam causam
+                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
+                  delectu rerum, quem modo ista sis.
+                </p>
+              </div>
+            </div>
+          </Slider>
+        </Col>
+      </Row>
     </Container>
   );
 };

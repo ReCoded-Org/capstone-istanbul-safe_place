@@ -1,17 +1,16 @@
 import React from "react";
 import SeekHelpMap from "../SeekHelpMap";
 import SeekHelpCarousel from "../SeekHelpCarousel";
+import "./index.scss";
 
 const SeekHelp = () => {
   return (
-    <div>
-      <h2 style={{ color: "#FE8F7C", fontSize: "28px", textAlign: "center" }}>
-        Find help
-      </h2>
-      <p style={{ color: "#4F4F4F", fontSize: "14px", textAlign: "center" }}>
-        Find immediate access to infomration of nearby shelters, psychologist,
+    <div className="seekHelpSection">
+      <h2>Find help</h2>
+      <h6>
+        Find immediate access to information of nearby shelters, psychologist,
         lawyers or doctors.
-      </p>
+      </h6>
       <SeekHelpMap />
       <SeekHelpCarousel />
     </div>

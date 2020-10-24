@@ -1,0 +1,60 @@
+$warningColor: #ffbfb5;
+$darkColor: #4f4f4f;
+$lightColor: #fffefc;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$mainFontFamily: "Roboto", sans-serif;
+
+.carouselItem {
+  background-color: $warningColor;
+  border-radius: 20px;
+  height: 280px;
+  width: 652px;
+
+  h3 {
+    color: $darkColor;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: $mainFontFamily;
+    padding: 1rem 0 0 1rem;
+  }
+  h4 {
+    color: $darkColor;
+    font-size: 20px;
+    font-family: $mainFontFamily;
+    padding-left: 1rem;
+  }
+  p {
+    color: $lightColor;
+    font-size: 12px;
+  }
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+}
+
+.carousel {
+  position: absolute;
+  z-index: 2;
+  top: 25rem;
+}
+/* .slick-prev:after {
+  background-image: url("images/Chevron-right.svg");
+  background-size: 50px 50px;
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+  content: "";
+} */
+/* .slick-next:after {
+  background-image: url("images/Chevron.svg");
+  background-size: 50px 50px;
+  display: inline-block;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  content: "";
+} */

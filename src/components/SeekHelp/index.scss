@@ -1,0 +1,22 @@
+$lightColor: #fffefc;
+$darkColor: #4f4f4f;
+$primaryColor: #fe8f7c;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$mainFontFamily: "Roboto", sans-serif;
+
+.seekHelpSection {
+  background: $lightColor;
+  margin-top: 1rem;
+  h2 {
+    color: $primaryColor;
+    text-align: center;
+    font-family: $mainFontFamily;
+    font-weight: bold;
+  }
+  h6 {
+    color: $darkColor;
+    text-align: center;
+    font-size: 14px;
+    font-family: $mainFontFamily;
+  }
+}
