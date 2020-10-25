@@ -1,5 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import locationData from "./locationData.json";
+import markerImage from "./images/marker.svg";
 import "./index.scss";
 
 const SeekHelpMap = () => {
@@ -9,6 +11,32 @@ const SeekHelpMap = () => {
   };
   const MAP_ZOOM = 13;
 
+  const ModelsMap = (map, maps) => {
+    const dataArray = [];
+    locationData.map((markerJson) => dataArray.push(markerJson));
+
+    const attachSecretMessage = (marker, secretMessage) => {
+      const infowindow = new maps.InfoWindow({
+        content: secretMessage,
+      });
+      marker.addListener("click", () => {
+        infowindow.open(marker.get("map"), marker);
+      });
+      console.log(marker);
+    };
+
+    for (let i = 0; i < dataArray.length; i++) {
+      const marker = new maps.Marker({
+        position: { lat: dataArray[i].lat, lng: dataArray[i].lng },
+        map,
+        clickable: true,
+        icon: markerImage,
+      });
+      attachSecretMessage(marker, dataArray[i].id);
+    }
+    return dataArray;
+  };
+
   return (
     <div className="mapStyle">
       <GoogleMapReact
@@ -16,9 +44,8 @@ const SeekHelpMap = () => {
         defaultCenter={DEFAULT_CENTER}
         defaultZoom={MAP_ZOOM}
         yesIWantToUseGoogleMapApiInternals
-      >
-        {/* <AnyReactComponent lat={41.0256728} lng={28.97194} text="My Marker" /> */}
-      </GoogleMapReact>
+        onGoogleApiLoaded={({ map, maps }) => ModelsMap(map, maps)}
+      />
     </div>
   );
 };

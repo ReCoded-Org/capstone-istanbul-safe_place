@@ -28,6 +28,12 @@ $mainFontFamily: "Roboto", sans-serif;
   }
 }
 
+.carouselHeaderAndImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .contactDetails {
   display: flex;
   flex-direction: row;
@@ -48,6 +54,3 @@ $mainFontFamily: "Roboto", sans-serif;
   flex-direction: row !important;
   align-items: center !important;
 }
-// // .slick-track {
-// //   margin-right: 2rem;
-// // }

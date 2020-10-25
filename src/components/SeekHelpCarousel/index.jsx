@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import phoneSvg from "./images/phone.svg";
 import locationSvg from "./images/map-marker.svg";
-import leftArrow from "./images/Chevron.svg";
-import rightArrow from "./images/Chevron-right.svg";
+import leftArrowSvg from "./images/Chevron.svg";
+import rightArrowSvg from "./images/Chevron-right.svg";
+import doctorImg from "./images/doctorImage.svg";
 import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
+import specialistData from "./specialistInfo.json";
 
 const customeSlider = React.createRef();
 
@@ -17,9 +19,10 @@ const NextArrow = () => {
   return (
     <div>
       <img
-        src={leftArrow}
+        src={leftArrowSvg}
         onClick={() => goToNext()}
         style={{ marginLeft: "1rem" }}
+        alt="Left arrow"
       />
     </div>
   );
@@ -33,12 +36,17 @@ const PrevArrow = () => {
   return (
     <div>
       <img
-        src={rightArrow}
+        src={rightArrowSvg}
         onClick={() => goToPrev()}
         style={{ marginRight: "1rem" }}
+        alt="Right arrow"
       />
     </div>
   );
+};
+
+const imagesObj = {
+  specialist: doctorImg,
 };
 
 const SeekHelpCarousel = () => {
@@ -58,97 +66,41 @@ const SeekHelpCarousel = () => {
       <Row>
         <Col md={{ span: 7, offset: 5 }}>
           <Slider {...SETTINGS} ref={customeSlider}>
-            <div className="carouselItem">
-              <div>
-                <h3>Doctor</h3>
-                <h4>Jenny Wilson</h4>
-              </div>
-              <div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={phoneSvg} alt="Phone icon" />
+            {specialistData.map((el) => {
+              return (
+                <div className="carouselItem">
+                  <div className="carouselHeaderAndImage">
+                    <div>
+                      <h3>{el.title}</h3>
+                      <h4>{el.name}</h4>
+                    </div>
+                    <div>
+                      <img src={imagesObj[el.img]} alt="Specialist" />
+                    </div>
                   </div>
                   <div>
-                    <p>+1-340-5558-235 </p>
-                  </div>
-                </div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={locationSvg} alt="Location icon" />
-                  </div>
-                  <div>
-                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-                  </div>
-                </div>
-                <p>
-                  In oculis quidem faciunt, ut dolore magnam aliquam causam
-                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
-                  delectu rerum, quem modo ista sis.
-                </p>
-              </div>
-            </div>
-
-            <div className="carouselItem">
-              <div>
-                <h3>Doctor</h3>
-                <h4>Jenny Wilson</h4>
-              </div>
-              <div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={phoneSvg} alt="Phone icon" />
-                  </div>
-                  <div>
-                    <p>+1-340-5558-235 </p>
+                    <div className="contactDetails">
+                      <div>
+                        <img src={phoneSvg} alt="Phone icon" />
+                      </div>
+                      <div>
+                        <p>{el.phoneNumber}</p>
+                      </div>
+                    </div>
+                    <div className="contactDetails">
+                      <div>
+                        <img src={locationSvg} alt="Location icon" />
+                      </div>
+                      <div>
+                        <p>{el.address}</p>
+                      </div>
+                    </div>
+                    <p>{el.moreInfo}</p>
                   </div>
                 </div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={locationSvg} alt="Location icon" />
-                  </div>
-                  <div>
-                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-                  </div>
-                </div>
-                <p>
-                  In oculis quidem faciunt, ut dolore magnam aliquam causam
-                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
-                  delectu rerum, quem modo ista sis.
-                </p>
-              </div>
-            </div>
-
-            <div className="carouselItem">
-              <div>
-                <h3>Doctor</h3>
-                <h4>Jenny Wilson</h4>
-              </div>
-              <div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={phoneSvg} alt="Phone icon" />
-                  </div>
-                  <div>
-                    <p>+1-340-5558-235 </p>
-                  </div>
-                </div>
-                <div className="contactDetails">
-                  <div>
-                    <img src={locationSvg} alt="Location icon" />
-                  </div>
-                  <div>
-                    <p>9094 Bay Meadows Street, Conyers, GA 30012</p>
-                  </div>
-                </div>
-                <p>
-                  In oculis quidem faciunt, ut dolore magnam aliquam causam
-                  ista, quae sine causa? quae fuerit causa, nollem me ab eo
-                  delectu rerum, quem modo ista sis.
-                </p>
-              </div>
-            </div>
+              );
+            })}
           </Slider>
-          {/* </div> */}
         </Col>
       </Row>
     </Container>
