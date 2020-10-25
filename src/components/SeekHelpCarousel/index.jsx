@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
+import { Container, Row, Col } from "react-bootstrap";
 import phoneSvg from "./images/phone.svg";
 import locationSvg from "./images/map-marker.svg";
 import leftArrowSvg from "./images/Chevron.svg";
 import rightArrowSvg from "./images/Chevron-right.svg";
 import doctorImg from "./images/doctorImage.svg";
-import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import specialistData from "./specialistInfo.json";
 
@@ -22,7 +22,7 @@ const NextArrow = () => {
         src={leftArrowSvg}
         onClick={() => goToNext()}
         style={{ marginLeft: "1rem" }}
-        alt="Left arrow"
+        alt="Left Arrow"
       />
     </div>
   );
@@ -39,14 +39,10 @@ const PrevArrow = () => {
         src={rightArrowSvg}
         onClick={() => goToPrev()}
         style={{ marginRight: "1rem" }}
-        alt="Right arrow"
+        alt="Right Arrow"
       />
     </div>
   );
-};
-
-const imagesObj = {
-  specialist: doctorImg,
 };
 
 const SeekHelpCarousel = () => {
@@ -55,10 +51,13 @@ const SeekHelpCarousel = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    cssEase: "linear",
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+  };
+
+  const imagesObj = {
+    specialist: doctorImg,
   };
 
   return (
@@ -68,7 +67,7 @@ const SeekHelpCarousel = () => {
           <Slider {...SETTINGS} ref={customeSlider}>
             {specialistData.map((el) => {
               return (
-                <div className="carouselItem">
+                <div className="carouselItem" key={el.name}>
                   <div className="carouselHeaderAndImage">
                     <div>
                       <h3>{el.title}</h3>
@@ -81,7 +80,7 @@ const SeekHelpCarousel = () => {
                   <div>
                     <div className="contactDetails">
                       <div>
-                        <img src={phoneSvg} alt="Phone icon" />
+                        <img src={phoneSvg} alt="Phone Icon" />
                       </div>
                       <div>
                         <p>{el.phoneNumber}</p>
@@ -89,7 +88,7 @@ const SeekHelpCarousel = () => {
                     </div>
                     <div className="contactDetails">
                       <div>
-                        <img src={locationSvg} alt="Location icon" />
+                        <img src={locationSvg} alt="Location Icon" />
                       </div>
                       <div>
                         <p>{el.address}</p>
