@@ -26,7 +26,7 @@ export default function GenderViolenceMain() {
           <button type="button">Find Help</button>
         </Col>
         <Col md={{ span: 6, order: "last" }} xs={{ span: 12, order: "first" }}>
-          <img src={stopGenderViolenceImg} alt="stop Gender Violence" />
+          <img src={stopGenderViolenceImg} alt="Stop Gender Violence" />
         </Col>
       </Row>
     </Container>
