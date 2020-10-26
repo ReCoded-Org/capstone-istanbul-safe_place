@@ -1,6 +1,6 @@
 import React from "react";
 import SeekHelp from "../../components/SeekHelp";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer";
 
 const Home = () => (
   <div>
