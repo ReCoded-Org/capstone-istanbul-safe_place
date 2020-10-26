@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
-import "./Navbar.scss";
+import "./index.scss";
 import logo from "../../images/Logo.svg";
 
 const MainNavbar = () => (
