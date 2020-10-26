@@ -1,5 +1,6 @@
 @import "../../style/variables";
-@import "../../style/mixins";
+@import "../../style/buttons";
+@import "../../style/bootstrapImports";
 
 .main-container {
   background-color: $lightColor;
@@ -35,7 +36,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include media-breakpoint-down(lg) {
   .main-container {
     .main-text {
       margin-top: 1rem;
@@ -43,7 +44,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@include media-breakpoint-down(sm) {
   .main-container {
     .main-text {
       button {

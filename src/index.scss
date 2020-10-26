@@ -1,3 +1,5 @@
+@import "./style/bootstrapImports";
+
 html {
   font-size: 16px;
 }
@@ -18,13 +20,13 @@ code {
     monospace;
 }
 
-@media (max-width: 992px) {
+@include media-breakpoint-down(lg) {
   html {
     font-size: 12px;
   }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(md) {
   html {
     font-size: 10px;
   }
