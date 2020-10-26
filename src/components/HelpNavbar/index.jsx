@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Form, Button, FormControl } from "react-bootstrap";
 import phone from "../../images/icons/phone.svg";
-import "./HelpNavbar.scss";
+import "./index.scss";
 
 const HelpNavbar = () => (
   <Navbar className="help-navbar">

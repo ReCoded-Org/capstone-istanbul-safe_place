@@ -1,6 +1,6 @@
 import React from "react";
 import SeekHelp from "../../components/SeekHelp";
-import HelpNavbar from "../../components/HelpNavbar/HelpNavbar";
+import HelpNavbar from "../../components/HelpNavbar";
 
 const Home = () => (
   <div>
