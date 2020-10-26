@@ -11,38 +11,42 @@ $LightGreen:#C8D7C2;
 
   .navbar-nav{
       margin-left:auto; 
+      align-items:baseline;
   }
-
+  .nav-link{
+    color:$LightCream!important;
+    font-weight: bold;
+  }
   p {
     margin: 0.1rem;
   }
 
   button {
     height: 2rem;
-
+    color:$LightCream;
     padding: 0 2rem;
-    color: $LightCream;
-    background-color: $LightGreen;
     border-color: $LightCream;
+    font-weight: bold;
   }
 
   button:focus {
     box-shadow: 0 0 0 0.2rem $PeachColor;
   }
   button:hover {
-    color: #fff;
-    background-color: $PeachColor;
-    border-color: $PeachColor;
+    color: $PeachColor;
+    background-color: $LightCream;
+    border-color: $LightCream;
   }
   .form-control:focus {
     border-color: $PeachColor;
-    box-shadow: 0 0 0 0.2rem $PeachColor;
+    box-shadow: 0 0 0 0.2rem $LightCream;
   }
-  button:last-child {
+
+  .sign-up-btn {
     height: 2rem;
     padding: 0 2rem;
-    color: $PeachColor;
-    background-color: $LightCreamOpacity;
-    border-color: $LightCream;
+    color: $LightCream;
+    background-color: $PeachColor;
+    border-color: $PeachColor;
   }
 }
