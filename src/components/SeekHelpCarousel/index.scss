@@ -1,8 +1,4 @@
-$warningColor: #ffbfb5;
-$darkColor: #4f4f4f;
-$lightColor: #fffefc;
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-$mainFontFamily: "Roboto", sans-serif;
+@import "../../style//variables";
 
 .carouselItem {
   background-color: $warningColor;

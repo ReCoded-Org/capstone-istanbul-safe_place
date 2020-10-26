@@ -4,25 +4,26 @@ import locationData from "./locationData.json";
 import markerImage from "./images/marker.svg";
 import "./index.scss";
 
-const SeekHelpMap = () => {
-  const DEFAULT_CENTER = {
-    lat: 41.015137,
-    lng: 28.97953,
-  };
-  const MAP_ZOOM = 13;
+const DEFAULT_CENTER = {
+  lat: 41.015137,
+  lng: 28.97953,
+};
+const MAP_ZOOM = 13;
 
-  const ModelsMap = (map, maps) => {
+// Example of infoWindow is taken from here https://developers.google.com/maps/documentation/javascript/infowindows
+
+const SeekHelpMap = () => {
+  const modelsMap = (map, maps) => {
     const dataArray = [];
     locationData.map((markerJson) => dataArray.push(markerJson));
 
-    const attachSecretMessage = (marker, secretMessage) => {
+    const attachInfoWindow = (marker, infoWindow) => {
       const infowindow = new maps.InfoWindow({
-        content: secretMessage,
+        content: infoWindow,
       });
       marker.addListener("click", () => {
         infowindow.open(marker.get("map"), marker);
       });
-      console.log(marker);
     };
 
     for (let i = 0; i < dataArray.length; i++) {
@@ -32,7 +33,7 @@ const SeekHelpMap = () => {
         clickable: true,
         icon: markerImage,
       });
-      attachSecretMessage(marker, dataArray[i].id);
+      attachInfoWindow(marker, dataArray[i].id);
     }
     return dataArray;
   };
@@ -44,7 +45,7 @@ const SeekHelpMap = () => {
         defaultCenter={DEFAULT_CENTER}
         defaultZoom={MAP_ZOOM}
         yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map, maps }) => ModelsMap(map, maps)}
+        onGoogleApiLoaded={({ map, maps }) => modelsMap(map, maps)}
       />
     </div>
   );

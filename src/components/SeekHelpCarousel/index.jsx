@@ -1,59 +1,22 @@
 import React from "react";
 import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
+import SliderArrow from "../SliderArrow";
 import phoneSvg from "./images/phone.svg";
 import locationSvg from "./images/map-marker.svg";
-import leftArrowSvg from "./images/Chevron.svg";
-import rightArrowSvg from "./images/Chevron-right.svg";
 import doctorImg from "./images/doctorImage.svg";
 import "./index.scss";
 import specialistData from "./specialistInfo.json";
 
-const customeSlider = React.createRef();
-
-const NextArrow = () => {
-  const goToNext = () => {
-    customeSlider.current.slickNext();
-  };
-
-  return (
-    <div>
-      <img
-        src={leftArrowSvg}
-        onClick={() => goToNext()}
-        style={{ marginLeft: "1rem" }}
-        alt="Left Arrow"
-      />
-    </div>
-  );
-};
-
-const PrevArrow = () => {
-  const goToPrev = () => {
-    customeSlider.current.slickPrev();
-  };
-
-  return (
-    <div>
-      <img
-        src={rightArrowSvg}
-        onClick={() => goToPrev()}
-        style={{ marginRight: "1rem" }}
-        alt="Right Arrow"
-      />
-    </div>
-  );
-};
-
 const SeekHelpCarousel = () => {
-  const SETTINGS = {
+  const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <SliderArrow leftOrRight={"right"} />,
+    prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
 
   const imagesObj = {
@@ -64,7 +27,7 @@ const SeekHelpCarousel = () => {
     <Container className="carousel">
       <Row>
         <Col md={{ span: 7, offset: 5 }}>
-          <Slider {...SETTINGS} ref={customeSlider}>
+          <Slider {...settings}>
             {specialistData.map((el) => {
               return (
                 <div className="carouselItem" key={el.name}>

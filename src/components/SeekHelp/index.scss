@@ -1,8 +1,4 @@
-$lightColor: #fffefc;
-$darkColor: #4f4f4f;
-$primaryColor: #fe8f7c;
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-$mainFontFamily: "Roboto", sans-serif;
+@import "../../style//variables";
 
 .seekHelpSection {
   background: $lightColor;
