@@ -1,23 +1,26 @@
 import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
 import "./Footer.scss";
-import logo from "../../images/Logo.svg"
+import logo from "../../images/Logo-footer.png";
+import twitter from "../../images/icons/twitter.svg";
+import linkedin from "../../images/icons/linkedin.svg";
+import instagram from "../../images/icons/instagram.svg";
+import facebook from "../../images/icons/facebook.svg";
 
 const Footer = () => {
   return (
     <footer>
-      <Container>
-        <Row>
-          <Col className="footerCol" md="5">
-            <img src={logo} alt="logo"/>
-          </Col>
-
-          <Col className="footerCol" md="3">
-            
-          </Col>
-
-        </Row>
-      </Container>
+      <img src={logo} alt="logo" width="200" />
+      <div className="footer-info">
+        <p>Privacy and Cookies</p>
+        <p>Terms and Conditions</p>
+        <p>Follow us on social media:</p>
+        <div className="social-media">
+          <img src={twitter} alt="twitter" width="25" />
+          <img src={linkedin} alt="twitter" width="25" />
+          <img src={instagram} alt="instagram" width="25" />
+          <img src={facebook} alt="facebook" width="25" />
+        </div>
+      </div>
     </footer>
   );
 };

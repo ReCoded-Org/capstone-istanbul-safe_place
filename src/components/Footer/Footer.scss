@@ -2,8 +2,36 @@ $PeachColor: #fe8f7c;
 $LightCream: #fffefc;
 $LightPeachColor: #ffbfb5;
 $LightCreamOpacity: rgba(255, 254, 252, 0.6);
-$LightGreen:#C8D7C2;
+$LightGreen: #c8d7c2;
 
 footer {
-    background-color: $LightGreen;
+  background-color: $LightGreen;
+  padding: 2rem 14rem;
+  //   height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  .footer-info {
+    color: $LightCream;
+    width: 15rem;
+    text-align: right;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 5rem;
+    justify-content: center;
+    .footer-info {
+      text-align: center;
+    }
+  }
 }
