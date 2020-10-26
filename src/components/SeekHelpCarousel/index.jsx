@@ -38,7 +38,7 @@ const SeekHelpCarousel = () => {
                         <h4>{t(el.name)}</h4>
                       </div>
                       <div>
-                        <img src={imagesObj[el.img]} alt="Specialist" />
+                        <img src={imagesObj[el.portraitImg]} alt="Specialist" />
                       </div>
                     </div>
                     <div>

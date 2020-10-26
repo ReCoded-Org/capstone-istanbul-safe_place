@@ -1,10 +1,8 @@
-@import "../../style//variables";
+@import "../../style/variables";
 
 .carouselItem {
   background-color: $warningColor;
   border-radius: 20px;
-  height: 280px;
-  width: 652px;
   padding: 2rem;
 
   h3 {

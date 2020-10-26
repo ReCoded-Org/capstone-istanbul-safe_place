@@ -13,7 +13,7 @@ const SliderArrow = ({ leftOrRight, onClick }) => {
             ? { marginLeft: "1rem" }
             : { marginRight: "1rem" }
         }
-        alt="Arrow"
+        alt="Carousel Arrow"
       />
     </div>
   );
