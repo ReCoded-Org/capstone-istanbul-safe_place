@@ -2,19 +2,19 @@ $PeachColor: #fe8f7c;
 $LightCream: #fffefc;
 $LightPeachColor: #ffbfb5;
 $LightCreamOpacity: rgba(255, 254, 252, 0.6);
-$LightGreen:#C8D7C2;
+$LightGreen: #c8d7c2;
 
 .navbar {
   background-color: $LightGreen;
   height: 4rem;
   padding: 0 14rem;
 
-  .navbar-nav{
-      margin-left:auto; 
-      align-items:baseline;
+  .navbar-nav {
+    margin-left: auto;
+    align-items: baseline;
   }
-  .nav-link{
-    color:$LightCream!important;
+  .nav-link {
+    color: $LightCream !important;
     font-weight: bold;
   }
   p {
@@ -23,7 +23,7 @@ $LightGreen:#C8D7C2;
 
   button {
     height: 2rem;
-    color:$LightCream;
+    color: $LightCream;
     padding: 0 2rem;
     border-color: $LightCream;
     font-weight: bold;

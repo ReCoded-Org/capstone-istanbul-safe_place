@@ -5,7 +5,9 @@ import logo from "../../images/Logo.svg";
 
 const MainNavbar = () => (
   <Navbar expand="lg" collapseOnSelect>
-    <Navbar.Brand href="#home"><img src={logo} alt="logo"/></Navbar.Brand>
+    <Navbar.Brand href="#home">
+      <img src={logo} alt="logo" />
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav>
@@ -17,7 +19,9 @@ const MainNavbar = () => (
           <Button variant="outline-primary">Sign In</Button>
         </Nav.Link>
         <Nav.Link href="#sign-up">
-          <Button variant="outline-primary" className="sign-up-btn">Sign Up</Button>
+          <Button variant="outline-primary" className="sign-up-btn">
+            Sign Up
+          </Button>
         </Nav.Link>
       </Nav>
     </Navbar.Collapse>
