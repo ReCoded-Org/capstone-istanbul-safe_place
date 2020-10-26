@@ -1,10 +1,10 @@
 import React from "react";
 import SeekHelp from "../../components/SeekHelp";
-import Navbar from "../../components/Navbar/Navbar";
+import MainNavbar from "../../components/Navbar/Navbar";
 
 const Home = () => (
   <div>
-    <Navbar />
+    <MainNavbar />
     <SeekHelp />
   </div>
 );
