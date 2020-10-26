@@ -31,7 +31,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
       className="col-md-6 col-12 order-md-last order-first"
     >
       <img
-        alt="stop Gender Violence"
+        alt="Stop Gender Violence"
         src="stop-gender-violence.svg"
       />
     </div>
