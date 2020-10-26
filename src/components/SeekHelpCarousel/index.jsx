@@ -20,7 +20,7 @@ const SeekHelpCarousel = () => {
     prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
   const imagesObj = {
-    specialist: doctorImg,
+    doctorImg: doctorImg,
   };
 
   return (
