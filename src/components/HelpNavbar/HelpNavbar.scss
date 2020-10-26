@@ -1,0 +1,11 @@
+$PeachColor:#FE8F7C;
+$LightCream: #FFFEFC;
+
+.help-navbar {
+   background-color: $PeachColor;
+   color:$LightCream;
+   height:3rem;
+   p {
+       margin:.1rem;
+   }
+}
