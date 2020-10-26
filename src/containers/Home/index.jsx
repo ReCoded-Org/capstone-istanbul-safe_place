@@ -5,6 +5,7 @@ import GenderViolenceMain from "../../components/GenderViolenceMain";
 const Home = () => (
   <div>
     <GenderViolenceMain />
+    <SeekHelp />
   </div>
 );
 
