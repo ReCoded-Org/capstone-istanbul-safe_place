@@ -2,25 +2,30 @@ $PeachColor: #fe8f7c;
 $LightCream: #fffefc;
 $LightPeachColor: #ffbfb5;
 $LightCreamOpacity: rgba(255, 254, 252, 0.6);
+$LightGreen:#C8D7C2;
 
-.main-navbar {
-  background-color: $LightPeachColor;
-  color: $LightCream;
-  height: 3rem;
+.navbar {
+  background-color: $LightGreen;
+  height: 4rem;
   padding: 0 14rem;
+
+  .navbar-nav{
+      margin-left:auto; 
+  }
+
   p {
     margin: 0.1rem;
   }
-  .form-control {
-    height: 2rem;
-  }
+
   button {
     height: 2rem;
+
     padding: 0 2rem;
-    color: $PeachColor;
-    background-color: $LightCreamOpacity;
+    color: $LightCream;
+    background-color: $LightGreen;
     border-color: $LightCream;
   }
+
   button:focus {
     box-shadow: 0 0 0 0.2rem $PeachColor;
   }
@@ -32,5 +37,12 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
   .form-control:focus {
     border-color: $PeachColor;
     box-shadow: 0 0 0 0.2rem $PeachColor;
+  }
+  button:last-child {
+    height: 2rem;
+    padding: 0 2rem;
+    color: $PeachColor;
+    background-color: $LightCreamOpacity;
+    border-color: $LightCream;
   }
 }

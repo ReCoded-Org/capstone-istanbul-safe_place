@@ -3,15 +3,23 @@ import { Navbar, Nav, Button } from "react-bootstrap";
 import "./Navbar.scss";
 
 const MainNavbar = () => (
-  <Navbar className="main-navbar">
+  <Navbar expand="lg" collapseOnSelect>
     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="navbar-right">
-      <Nav.Link href="#about">About</Nav.Link>
-      <Nav.Link href="#blog">Blog</Nav.Link>
-      <Nav.Link href="#opportunities">Opportunities</Nav.Link>
-      <Nav.Link href="contact">Contact</Nav.Link>
-      <Button variant="outline-primary">Search</Button>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav>
+        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#blog">Blog</Nav.Link>
+        <Nav.Link href="#opportunities">Opportunities</Nav.Link>
+        <Nav.Link href="#contact">Contact</Nav.Link>
+        <Nav.Link href="#sign-in">
+          <Button variant="outline-primary">Sign In</Button>
+        </Nav.Link>
+        <Nav.Link href="#sign-up">
+          <Button variant="outline-primary">Sign Up</Button>
+        </Nav.Link>
       </Nav>
+    </Navbar.Collapse>
   </Navbar>
 );
 
