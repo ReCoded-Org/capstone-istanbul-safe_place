@@ -10,19 +10,19 @@ const DEFAULT_CENTER = {
 };
 const MAP_ZOOM = 13;
 
-// Example of infoWindow is taken from here https://developers.google.com/maps/documentation/javascript/infowindows
+// Example code for markers is here https://developers.google.com/maps/documentation/javascript/infowindows
 
 const SeekHelpMap = () => {
   const modelsMap = (map, maps) => {
     const dataArray = [];
     locationData.map((markerJson) => dataArray.push(markerJson));
 
-    const attachInfoWindow = (marker, infoWindow) => {
-      const infowindow = new maps.InfoWindow({
-        content: infoWindow,
+    const attachMapPopUp = (marker, mapPopUp) => {
+      const infoWindow = new maps.InfoWindow({
+        content: mapPopUp,
       });
       marker.addListener("click", () => {
-        infowindow.open(marker.get("map"), marker);
+        infoWindow.open(marker.get("map"), marker);
       });
     };
 
@@ -33,7 +33,7 @@ const SeekHelpMap = () => {
         clickable: true,
         icon: markerImage,
       });
-      attachInfoWindow(marker, dataArray[i].id);
+      attachMapPopUp(marker, dataArray[i].id);
     }
     return dataArray;
   };
