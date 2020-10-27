@@ -3,7 +3,7 @@
 @import "../../style/bootstrapImports";
 $LightCreamOpacity: rgba(255, 254, 252, 0.6);
 
-.help-navbar {
+.helpNavbar {
   background-color: $warningColor;
   color: $lightColor;
   height: 3rem;
@@ -11,9 +11,11 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
   p {
     margin: 0.1rem;
   }
+
   .form-control {
     height: 2rem;
   }
+
   button {
     height: 2rem;
     padding: 0 2rem;
@@ -21,33 +23,39 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
     background-color: $LightCreamOpacity;
     border-color: $lightColor;
   }
+
   button:focus {
     box-shadow: 0 0 0 0.2rem $primaryColor;
   }
+
   button:hover {
     color: #fff;
     background-color: $primaryColor;
     border-color: $primaryColor;
   }
+
   .form-control {
     border-color: $lightColor;
   }
+
   .form-control:focus {
     border-color: $primaryColor;
     box-shadow: 0 0 0 0.2rem $primaryColor;
   }
 }
 @include media-breakpoint-down(sm) {
-  .help-navbar {
+  .helpNavbar {
     height: 5rem;
 
     .container {
       flex-direction: column;
     }
+
     .form-inline {
       justify-content: space-between;
       margin-bottom: 0.3rem;
     }
+
     .form-control {
       width: 60%;
     }

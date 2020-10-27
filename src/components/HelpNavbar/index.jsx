@@ -11,11 +11,11 @@ import phone from "../../images/icons/phone.svg";
 import "./index.scss";
 
 const HelpNavbar = () => (
-  <Navbar className="help-navbar">
+  <Navbar className="helpNavbar">
     <Container>
       <Nav>
         <p>Immediate helpline:</p>
-        <img src={phone} alt="phone" width="16px" />
+        <img src={phone} alt="phone-icon" width="16px" />
         <p>+1-340-5558-235</p>
       </Nav>
       <Form inline>
