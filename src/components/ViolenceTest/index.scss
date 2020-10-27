@@ -1,10 +1,8 @@
 @import "../../style/variables";
 
-/* Colors */
-
 .violenceIntro {
   background-color: $secondaryColor;
-  font-family: Roboto;
+  font-family: $mainFontFamily;
   padding: 5rem 0;
 
   .violenceTest {
@@ -22,7 +20,7 @@
 
   p,
   h5 {
-    color: #fffefc;
+    color: $lightColor;
     text-align: justify;
   }
 
