@@ -6,4 +6,3 @@ it("renders correctly and matches the snapshot", () => {
   const tree = renderer.create(<ViolenceTest />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
