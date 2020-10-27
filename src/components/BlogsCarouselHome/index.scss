@@ -1,0 +1,23 @@
+@import "../../style/variables";
+@import "../../style/bootstrapImports";
+
+.photosCarousel {
+    width: 22rem;
+    height: 12rem;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 1.5rem;
+}
+.homeCarousel {
+  text-align: center;
+  font-family: $mainFontFamily;
+}
+.title{
+    color: $primaryColor;
+}
+.allBlogsBtn{
+    text-align: right;
+}
