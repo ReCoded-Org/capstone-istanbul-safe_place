@@ -1,0 +1,46 @@
+@import "../../style/variables";
+
+.violenceIntro {
+  background-color: $secondaryColor;
+  font-family: $mainFontFamily;
+  padding: 5rem 0;
+
+  .violenceTest {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    color: $primaryColor;
+    padding-top: 0.8rem;
+  }
+
+  p,
+  h5 {
+    color: $lightColor;
+    text-align: justify;
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  button {
+    color: $lightColor;
+    background-color: $primaryColor;
+    border: none;
+
+    &:hover {
+      background-color: $lightColor;
+      color: $primaryColor;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
