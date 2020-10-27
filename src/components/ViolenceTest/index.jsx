@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
-import img1 from "../../images/violence-test-image1.png";
-import img2 from "../../images/violence-test-image2.png";
-import img3 from "../../images/violence-test-image3.png";
+import trappedWomen from "../../images/trappedWomen.png";
+import dontSpeak from "../../images/dontSpeak.png";
+import womenStopViolence from "../../images/womenStopViolence.png";
 import "./index.scss";
 
 const ViolenceTest = () => {
@@ -11,15 +11,15 @@ const ViolenceTest = () => {
       <Container>
         <Row className="justify-content-md-center">
           <Col lg={6} md={12}>
-            <img src={img1} alt="A woman trapped by fear" className="img1" />
+            <img src={trappedWomen} alt="A woman trapped by fear" />
           </Col>
           <Col lg={6} md={12}>
             <Row>
               <Col>
-                <img src={img2} alt="A man not allowing woman to speak" />
+                <img src={dontSpeak} alt="A man not allowing woman to speak" />
               </Col>
               <Col>
-                <img src={img3} alt="A women saying stop to violence" />
+                <img src={womenStopViolence} alt="A women saying stop to violence" />
               </Col>
             </Row>
             <Row>
