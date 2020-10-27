@@ -2,12 +2,12 @@
 
 /* Colors */
 
-.violence-intro {
+.violenceIntro {
   background-color: $secondaryColor;
   font-family: Roboto;
   padding: 5rem 0;
 
-  .violence-test {
+  .violenceTest {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -30,7 +30,7 @@
     font-size: 0.9rem;
   }
 
-  Button {
+  button {
     color: $lightColor;
     background-color: $primaryColor;
     border: none;

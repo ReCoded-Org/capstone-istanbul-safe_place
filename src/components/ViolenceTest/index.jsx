@@ -7,7 +7,7 @@ import "./index.scss";
 
 const ViolenceTest = () => {
   return (
-    <div className="violence-intro">
+    <div className="violenceIntro">
       <Container>
         <Row className="justify-content-md-center">
           <Col lg={6} md={12}>
@@ -34,7 +34,7 @@ const ViolenceTest = () => {
                   women in the public and private spheres, and arbitrarily
                   restricting freedom.
                 </p>
-                <div className="violence-test">
+                <div className="violenceTest">
                   <h5>
                     Are you in an abusive relationship?
                     <span>Take our test</span>
