@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <div>
       <GenderViolenceMain />
-      <SeekHelp />
       <ViolenceTest />
+      <SeekHelp />
     </div>
   );
 };
+export default Home;
