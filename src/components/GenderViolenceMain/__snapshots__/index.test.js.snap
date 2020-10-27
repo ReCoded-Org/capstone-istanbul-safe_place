@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="main-container container-md"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="main-text col-md-6 col-12 order-md-first order-last"
+    >
+      <h1>
+        You are not alone
+        <br />
+        Safe Place is
+        <span>
+           HERE
+        </span>
+      </h1>
+      <p>
+        Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.
+      </p>
+      <button
+        type="button"
+      >
+        Find Help
+      </button>
+    </div>
+    <div
+      className="col-md-6 col-12 order-md-last order-first"
+    >
+      <img
+        alt="Stop Gender Violence"
+        src="stop-gender-violence.svg"
+      />
+    </div>
+  </div>
+</div>
+`;

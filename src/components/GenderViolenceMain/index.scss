@@ -1,0 +1,55 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+@import "../../style/bootstrapImports";
+
+.main-container {
+  background-color: $lightColor;
+
+  .main-text {
+    align-self: center;
+    font-family: $mainFontFamily;
+    font-size: 1.2rem;
+    color: $primaryColor;
+
+    p {
+      margin-top: 1.4rem;
+    }
+
+    span {
+      font-family: $secondaryFontFamily;
+      font-weight: 800;
+      text-transform: capitalize;
+    }
+
+    button {
+      @include primaryBtn;
+      margin-top: 1.4rem;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .main-container {
+    .main-text {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main-container {
+    .main-text {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
