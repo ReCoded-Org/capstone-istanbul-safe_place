@@ -1,13 +1,13 @@
-$PeachColor: #fe8f7c;
-$LightCream: #fffefc;
-$LightPeachColor: #ffbfb5;
+@import "../../style/variables";
+@import "../../style/buttons";
+@import "../../style/bootstrapImports";
 $LightCreamOpacity: rgba(255, 254, 252, 0.6);
 
 .help-navbar {
-  background-color: $LightPeachColor;
-  color: $LightCream;
+  background-color: $warningColor;
+  color: $lightColor;
   height: 3rem;
-  padding: 0 14rem;
+
   p {
     margin: 0.1rem;
   }
@@ -17,20 +17,39 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
   button {
     height: 2rem;
     padding: 0 2rem;
-    color: $PeachColor;
+    color: $primaryColor;
     background-color: $LightCreamOpacity;
-    border-color: $LightCream;
+    border-color: $lightColor;
   }
   button:focus {
-    box-shadow: 0 0 0 0.2rem $PeachColor;
+    box-shadow: 0 0 0 0.2rem $primaryColor;
   }
   button:hover {
     color: #fff;
-    background-color: $PeachColor;
-    border-color: $PeachColor;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+  .form-control {
+    border-color: $lightColor;
   }
   .form-control:focus {
-    border-color: $PeachColor;
-    box-shadow: 0 0 0 0.2rem $PeachColor;
+    border-color: $primaryColor;
+    box-shadow: 0 0 0 0.2rem $primaryColor;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .help-navbar {
+    height: 5rem;
+    
+    .container {
+      flex-direction: column;
+    }
+    .form-inline {
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+    }
+    .form-control {
+      width: 60%;
+    }
   }
 }
