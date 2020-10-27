@@ -1,11 +1,9 @@
-$warningColor: #ffbfb5;
-$darkColor: #4f4f4f;
-$lightColor: #fffefc;
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-$mainFontFamily: "Roboto", sans-serif;
+@import "../../style/variables";
+
+/* Colors */
 
 .violence-intro {
-  background-color: #c8d7c2;
+  background-color: $secondaryColor;
   font-family: Roboto;
   padding: 5rem 0;
 
@@ -18,7 +16,7 @@ $mainFontFamily: "Roboto", sans-serif;
   }
 
   h3 {
-    color: #fe8f7c;
+    color: $primaryColor;
     padding-top: 0.8rem;
   }
   p,
@@ -31,9 +29,13 @@ $mainFontFamily: "Roboto", sans-serif;
     font-size: 0.9rem;
   }
   Button {
-    color: #fffefc !important;
-    background-color: #fe8f7c !important;
-    border: none !important;
+    color: $lightColor;
+    background-color: $primaryColor;
+    border: none;
+    &:hover {
+      background-color: $lightColor;
+      color: $primaryColor;
+    }
   }
   img {
     width: 100%;
