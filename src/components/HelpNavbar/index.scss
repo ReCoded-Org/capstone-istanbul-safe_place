@@ -40,7 +40,7 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
 @include media-breakpoint-down(sm) {
   .help-navbar {
     height: 5rem;
-    
+
     .container {
       flex-direction: column;
     }
