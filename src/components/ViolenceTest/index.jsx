@@ -19,7 +19,10 @@ const ViolenceTest = () => {
                 <img src={dontSpeak} alt="A man not allowing woman to speak" />
               </Col>
               <Col>
-                <img src={womenStopViolence} alt="A women saying stop to violence" />
+                <img
+                  src={womenStopViolence}
+                  alt="A women saying stop to violence"
+                />
               </Col>
             </Row>
             <Row>
