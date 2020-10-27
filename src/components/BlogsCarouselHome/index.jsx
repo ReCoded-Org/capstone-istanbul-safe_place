@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation, I18nextProvider } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
+import SliderArrow from "../SliderArrow";
 
 export default function BlogsCarouselHome() {
   const { t } = useTranslation();
@@ -16,16 +17,19 @@ export default function BlogsCarouselHome() {
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
+    // autoplay: true,
+    infinite: true,
     autoplaySpeed: 3000,
-    arrow: true,
+    arrows: true,
+    // nextArrow: <SliderArrow leftOrRight={"right"} />,
+    // prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
-  const blogsImgs = [
-    carouselFirstImg,
-    carouselSecondImg,
-    carouselThirdImg,
-    carouselForthImg,
-  ];
+  //   const blogsImgs = [
+  //     carouselFirstImg,
+  //     carouselSecondImg,
+  //     carouselThirdImg,
+  //     carouselForthImg,
+  //   ];
   const slidesData = [
     {
       id: 1,
