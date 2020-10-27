@@ -19,6 +19,7 @@
     color: $primaryColor;
     padding-top: 0.8rem;
   }
+
   p,
   h5 {
     color: #fffefc;
@@ -28,15 +29,18 @@
   span {
     font-size: 0.9rem;
   }
+
   Button {
     color: $lightColor;
     background-color: $primaryColor;
     border: none;
+
     &:hover {
       background-color: $lightColor;
       color: $primaryColor;
     }
   }
+
   img {
     width: 100%;
     margin-top: 1rem;

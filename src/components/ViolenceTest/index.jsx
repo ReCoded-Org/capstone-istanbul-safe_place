@@ -11,20 +11,20 @@ const ViolenceTest = () => {
       <Container>
         <Row className="justify-content-md-center">
           <Col lg={6} md={12}>
-            <img src={img1} alt="img1" className="img1" />
+            <img src={img1} alt="A woman trapped by fear" className="img1" />
           </Col>
           <Col lg={6} md={12}>
             <Row>
               <Col>
-                <img src={img2} alt="img2" />
+                <img src={img2} alt="A man not allowing woman to speak" />
               </Col>
               <Col>
-                <img src={img3} alt="img3" />
+                <img src={img3} alt="A women saying stop to violence" />
               </Col>
             </Row>
             <Row>
               <Col>
-                <h3>What is violance against women?</h3>
+                <h3>What is violence against women?</h3>
                 <p>
                   According to the first article of the Declaration on the
                   Prevention of Violence Against Women, adopted by the United
