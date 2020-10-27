@@ -19,7 +19,7 @@ const MainNavbar = () => (
           <Button variant="outline-primary">Sign In</Button>
         </Nav.Link>
         <Nav.Link href="#sign-up">
-          <Button variant="outline-primary" className="sign-up-btn">
+          <Button variant="outline-primary" className="signUpBtn">
             Sign Up
           </Button>
         </Nav.Link>

@@ -1,20 +1,19 @@
-$PeachColor: #fe8f7c;
-$LightCream: #fffefc;
-$LightPeachColor: #ffbfb5;
-$LightCreamOpacity: rgba(255, 254, 252, 0.6);
-$LightGreen: #c8d7c2;
+@import "../../style/variables";
+
+$lightColorOpacity: rgba(255, 254, 252, 0.6);
 
 .navbar {
-  background-color: $LightGreen;
+  background-color: $secondaryColor;
   height: 4rem;
   padding: 0 14rem;
+  font-family: $mainFontFamily;
 
   .navbar-nav {
     margin-left: auto;
     align-items: baseline;
   }
   .nav-link {
-    color: $LightCream !important;
+    color: $lightColor !important;
     font-weight: bold;
   }
   p {
@@ -23,30 +22,30 @@ $LightGreen: #c8d7c2;
 
   button {
     height: 2rem;
-    color: $LightCream;
+    color: $lightColor;
     padding: 0 2rem;
-    border-color: $LightCream;
+    border-color: $lightColor;
     font-weight: bold;
   }
 
   button:focus {
-    box-shadow: 0 0 0 0.2rem $PeachColor;
+    box-shadow: 0 0 0 0.2rem $primaryColor;
   }
   button:hover {
-    color: $PeachColor;
-    background-color: $LightCream;
-    border-color: $LightCream;
+    color: $primaryColor;
+    background-color: $lightColor;
+    border-color: $lightColor;
   }
   .form-control:focus {
-    border-color: $PeachColor;
-    box-shadow: 0 0 0 0.2rem $LightCream;
+    border-color: $primaryColor;
+    box-shadow: 0 0 0 0.2rem $lightColor;
   }
 
-  .sign-up-btn {
+  .signUpBtn {
     height: 2rem;
     padding: 0 2rem;
-    color: $LightCream;
-    background-color: $PeachColor;
-    border-color: $PeachColor;
+    color: $lightColor;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
   }
 }
