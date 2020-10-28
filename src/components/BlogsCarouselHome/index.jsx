@@ -7,12 +7,12 @@ import "./index.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useTranslation, I18nextProvider } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
 import SliderArrow from "../SliderArrow";
 
 export default function BlogsCarouselHome() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -51,31 +51,29 @@ export default function BlogsCarouselHome() {
   ];
 
   return (
-    <I18nextProvider>
-      <Container className="homeCarousel">
-        <Row>
-          <Col>
-            <h1 className="title">Our Blogs</h1>
-            <h6>Infomration about violence, women and health.</h6>
-            <h6>
-              Read different topics that contribute positivley to the mental
-              health ofwomen.
-            </h6>
-            <Slider className="slider" {...settings}>
-              {slidesData.map((slide) => (
-                <div className="slide" key={slide.id}>
-                  <label className="blogLabel">{slide.label}</label>
-                  <div className="shadowEffect"></div>
-                  <img className="blogImage" src={slide.img} alt="blog image" />
-                </div>
-              ))}
-            </Slider>
-            <h6 className="allBlogsBtn">
-              All blog posts <span>&#8594;</span>
-            </h6>
-          </Col>
-        </Row>
-      </Container>
-    </I18nextProvider>
+    <Container className="homeCarousel">
+      <Row>
+        <Col>
+          <h1 className="title">Our Blogs</h1>
+          <h6>Infomration about violence, women and health.</h6>
+          <h6>
+            Read different topics that contribute positivley to the mental
+            health ofwomen.
+          </h6>
+          <Slider className="slider" {...settings}>
+            {slidesData.map((slide) => (
+              <div className="slide" key={slide.id}>
+                <label className="blogLabel">{slide.label}</label>
+                <div className="shadowEffect"></div>
+                <img className="blogImage" src={slide.img} alt="blogsImgs" />
+              </div>
+            ))}
+          </Slider>
+          <h6 className="allBlogsBtn">
+            All blog posts <span>&#8594;</span>
+          </h6>
+        </Col>
+      </Row>
+    </Container>
   );
 }
