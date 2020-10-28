@@ -18,7 +18,7 @@ const Footer = () => {
           <Col className="footer-info">
             <p>Privacy and Cookies</p>
             <p>Terms and Conditions</p>
-            <h5>Follow us on social media:</h5>
+            <h6>Follow us on social media:</h6>
             <div className="social-media">
               <a href="https://www.twitter.com/">
                 <img src={twitter} alt="twitter" width="25" />
