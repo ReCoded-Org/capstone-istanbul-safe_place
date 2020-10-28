@@ -1,18 +1,16 @@
 import React from "react";
-import carouselFirstImg from "./images/carouselFirstImg.jpg";
-import carouselSecondImg from "./images/carouselSecondImg.jpg";
-import carouselThirdImg from "./images/carouselThirdImg.jpg";
-import carouselForthImg from "./images/carouselForthImg.jpg";
+import smilingWoman from "./images/smilingWoman.jpg";
+import womanAndManHoldingHands from "./images/womanAndManHoldingHands.jpg";
+import womanTalkingToTherapist from "./images/womanTalkingToTherapist.jpg";
+import multinationalWomen from "./images/multinationalWomen.jpg";
 import "./index.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-//import { useTranslation } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
 import SliderArrow from "../SliderArrow";
 
 export default function BlogsCarouselHome() {
-  // const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -28,25 +26,25 @@ export default function BlogsCarouselHome() {
       id: 1,
       title: "Dolorem officiis temporibus.",
       label: "Healthy Me, Healthy We: Preventing Dating Violence.",
-      img: `${carouselFirstImg}`,
+      img: `${smilingWoman}`,
     },
     {
       id: 2,
       title: "Officia non provident dolor esse et neque.",
       label: "Don’t Confuse Abuse With Love.",
-      img: `${carouselSecondImg}`,
+      img: `${womanAndManHoldingHands}`,
     },
     {
       id: 3,
       title: "Ut recusandae vel vitae molestiae id soluta.",
       label: "Talking to Your Kids About Sexual Assault.",
-      img: `${carouselThirdImg}`,
+      img: `${womanTalkingToTherapist}`,
     },
     {
       id: 4,
       title: "Qui vel consequatur recusandae illo repellendus.",
       label: "International Womens Day",
-      img: `${carouselForthImg}`,
+      img: `${multinationalWomen}`,
     },
   ];
 
@@ -56,9 +54,9 @@ export default function BlogsCarouselHome() {
         <Col>
           <h1 className="title">Our Blogs</h1>
           <h6>
-            Infomration about violence, women and health.
+            Information about violence, women and health.
             <br />
-            Read different topics that contribute positivley to the mental
+            Read different topics that contribute positively to the mental
             health of women.
           </h6>
           <Slider className="slider" {...settings}>
