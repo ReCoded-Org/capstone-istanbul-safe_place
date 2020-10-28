@@ -1,7 +1,6 @@
 @import "../../style/variables";
 @import "../../style/buttons";
 @import "../../style/bootstrapImports";
-$LightCreamOpacity: rgba(255, 254, 252, 0.6);
 
 .helpNavbar {
   background-color: $warningColor;
@@ -20,7 +19,7 @@ $LightCreamOpacity: rgba(255, 254, 252, 0.6);
     height: 2rem;
     padding: 0 2rem;
     color: $primaryColor;
-    background-color: $LightCreamOpacity;
+    background-color: $lightColorSearch;
     border-color: $lightColor;
   }
 
