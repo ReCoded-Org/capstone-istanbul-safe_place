@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col>
-            <img src={logo} alt="logo" width="200" />
+            <img src={logo} alt="logo" width="200px" />
           </Col>
           <Col className="footer-info">
             <p>Privacy and Cookies</p>
@@ -21,16 +21,16 @@ const Footer = () => {
             <h6>Follow us on social media:</h6>
             <div className="social-media">
               <a href="https://www.twitter.com/">
-                <img src={twitter} alt="twitter" width="25" />
+                <img src={twitter} alt="twitter" width="25px" />
               </a>
               <a href="https://www.linkedin.com/">
-                <img src={linkedin} alt="twitter" width="25" />
+                <img src={linkedin} alt="twitter" width="25px" />
               </a>
               <a href="https://www.instagram.com/">
-                <img src={instagram} alt="instagram" width="25" />
+                <img src={instagram} alt="instagram" width="25px" />
               </a>
               <a href="https://www.facebook.com/">
-                <img src={facebook} alt="facebook" width="25" />
+                <img src={facebook} alt="facebook" width="25px" />
               </a>
             </div>
           </Col>
