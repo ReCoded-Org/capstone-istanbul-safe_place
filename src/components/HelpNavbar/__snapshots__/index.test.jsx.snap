@@ -15,9 +15,8 @@ exports[`renders correctly 1`] = `
         Immediate helpline:
       </p>
       <img
-        alt="phone-icon"
+        alt="Phone icon"
         src="phone.svg"
-        width="16px"
       />
       <p>
         +1-340-5558-235

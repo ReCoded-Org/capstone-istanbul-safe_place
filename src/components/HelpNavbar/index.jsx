@@ -15,7 +15,7 @@ const HelpNavbar = () => (
     <Container>
       <Nav>
         <p>Immediate helpline:</p>
-        <img src={phone} alt="phone-icon" width="16px" />
+        <img src={phone} alt="Phone icon" />
         <p>+1-340-5558-235</p>
       </Nav>
       <Form inline>
