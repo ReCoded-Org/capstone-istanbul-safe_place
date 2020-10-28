@@ -55,10 +55,11 @@ export default function BlogsCarouselHome() {
       <Row>
         <Col>
           <h1 className="title">Our Blogs</h1>
-          <h6>Infomration about violence, women and health.</h6>
           <h6>
+            Infomration about violence, women and health.
+            <br />
             Read different topics that contribute positivley to the mental
-            health ofwomen.
+            health of women.
           </h6>
           <Slider className="slider" {...settings}>
             {slidesData.map((slide) => (
