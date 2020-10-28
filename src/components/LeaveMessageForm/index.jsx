@@ -1,6 +1,11 @@
 import React from "react";
-import './index.scss'
+import { Col } from "react-bootstrap";
+import "./index.scss";
 
 export default function LeaveMessageForm() {
-  return <div>LeaveMessageForm</div>;
+  return (
+    <Col md={6} xs={12}>
+      as
+    </Col>
+  );
 }
