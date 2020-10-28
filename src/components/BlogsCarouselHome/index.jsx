@@ -17,19 +17,13 @@ export default function BlogsCarouselHome() {
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    // autoplay: true,
     infinite: true,
     autoplaySpeed: 3000,
     arrows: true,
-    // nextArrow: <SliderArrow leftOrRight={"right"} />,
-    // prevArrow: <SliderArrow leftOrRight={"left"} />,
+    nextArrow: <SliderArrow leftOrRight={"right"} />,
+    prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
-  //   const blogsImgs = [
-  //     carouselFirstImg,
-  //     carouselSecondImg,
-  //     carouselThirdImg,
-  //     carouselForthImg,
-  //   ];
+
   const slidesData = [
     {
       id: 1,
@@ -39,7 +33,7 @@ export default function BlogsCarouselHome() {
     },
     {
       id: 2,
-      title: ",Officia non provident dolor esse et neque.",
+      title: "Officia non provident dolor esse et neque.",
       label: "Don’t Confuse Abuse With Love.",
       img: `${carouselSecondImg}`,
     },
@@ -57,12 +51,6 @@ export default function BlogsCarouselHome() {
     },
   ];
 
-  //   const renderSlides = () =>
-  //     blogsImgs.map((blogImg) => (
-  //       <div className="photoSize">
-  //         <img src={blogImg} className="photosCarousel"></img>
-  //       </div>
-  //     ));
 
   return (
     <I18nextProvider>
@@ -80,7 +68,7 @@ export default function BlogsCarouselHome() {
                 <div className="slide" key={slide.id}>
                   {/* <h2 className="slide-title">{slide.title}</h2> */}
                   <label className="blogLabel">{slide.label}</label>
-                  <img className="blogImage" src={slide.img} />
+                  <img className="blogImage" src={slide.img} alt=""/>
                 </div>
               ))}
             </Slider>
