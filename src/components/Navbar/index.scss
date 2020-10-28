@@ -1,8 +1,6 @@
 @import "../../style/variables";
 @import "../../style/bootstrapImports";
 
-$lightColorOpacity: rgba(255, 254, 252, 0.6);
-
 .navbar {
   background-color: $secondaryColor;
   height: 5rem;
@@ -12,6 +10,7 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
     margin-left: auto;
     align-items: baseline;
   }
+
   .nav-link {
     color: $lightColor !important;
     font-weight: bold;
@@ -36,11 +35,13 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
   button:focus {
     box-shadow: 0 0 0 0.2rem $primaryColor;
   }
+
   button:hover {
     color: $primaryColor;
     background-color: $lightColor;
     border-color: $lightColor;
   }
+
   .form-control:focus {
     border-color: $primaryColor;
     box-shadow: 0 0 0 0.2rem $lightColor;
@@ -60,6 +61,7 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
     height: 8rem;
     z-index: 1;
   }
+
   .navbar-nav {
     margin-left: 0;
     background-color: $secondaryColor;
@@ -67,6 +69,7 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
     padding-bottom: 1rem;
     border-radius: 0.5rem;
   }
+
   .nav-link {
     position: right;
     align-self: center;
