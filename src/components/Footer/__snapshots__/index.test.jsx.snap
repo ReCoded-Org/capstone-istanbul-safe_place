@@ -16,7 +16,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
         <img
           alt="Logo"
           className="logo"
-          src="Logo-footer.png"
+          src="logoFooter.png"
         />
       </div>
       <div
@@ -37,7 +37,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           >
             <img
               alt="Twitter icon"
-              src="twitter.svg"
+              src="twitterIcon.svg"
             />
           </a>
           <a
@@ -45,7 +45,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           >
             <img
               alt="Linkedin icon"
-              src="linkedin.svg"
+              src="linkedinIcon.svg"
             />
           </a>
           <a
@@ -53,7 +53,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           >
             <img
               alt="Instagram icon"
-              src="instagram.svg"
+              src="instagramIcon.svg"
             />
           </a>
           <a
@@ -61,7 +61,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           >
             <img
               alt="Facebook icon"
-              src="facebook.svg"
+              src="facebookIcon.svg"
             />
           </a>
         </div>

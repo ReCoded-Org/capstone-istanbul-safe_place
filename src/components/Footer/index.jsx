@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.scss";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../../images/Logo-footer.png";
-import twitterIcon from "../../images/icons/twitter.svg";
-import linkedinIcon from "../../images/icons/linkedin.svg";
-import instagramIcon from "../../images/icons/instagram.svg";
-import facebookIcon from "../../images/icons/facebook.svg";
+import logo from "../../images/logoFooter.png";
+import twitterIcon from "../../images/icons/twitterIcon.svg";
+import linkedinIcon from "../../images/icons/linkedinIcon.svg";
+import instagramIcon from "../../images/icons/instagramIcon.svg";
+import facebookIcon from "../../images/icons/facebookIcon.svg";
 
 const Footer = () => {
   return (
