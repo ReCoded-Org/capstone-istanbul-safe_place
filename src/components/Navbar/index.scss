@@ -1,11 +1,11 @@
 @import "../../style/variables";
+@import "../../style/bootstrapImports";
 
 $lightColorOpacity: rgba(255, 254, 252, 0.6);
 
 .navbar {
   background-color: $secondaryColor;
-  height: 4rem;
-  padding: 0 14rem;
+  height: 5rem;
   font-family: $mainFontFamily;
 
   .navbar-nav {
@@ -15,7 +15,12 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
   .nav-link {
     color: $lightColor !important;
     font-weight: bold;
+
+    &:hover {
+      color: $primaryColor !important;
+    }
   }
+
   p {
     margin: 0.1rem;
   }
@@ -47,5 +52,23 @@ $lightColorOpacity: rgba(255, 254, 252, 0.6);
     color: $lightColor;
     background-color: $primaryColor;
     border-color: $primaryColor;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar {
+    height: 8rem;
+    z-index: 1;
+  }
+  .navbar-nav {
+    margin-left: 0;
+    background-color: $secondaryColor;
+    width: 14rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+  .nav-link {
+    position: right;
+    align-self: center;
   }
 }
