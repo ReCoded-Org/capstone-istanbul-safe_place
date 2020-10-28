@@ -11,7 +11,7 @@ import { useTranslation, I18nextProvider } from "react-i18next";
 const SeekHelpCarousel = () => {
   const { t } = useTranslation();
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
