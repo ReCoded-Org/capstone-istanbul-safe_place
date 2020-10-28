@@ -1,7 +1,7 @@
 @import "../../style/variables";
 @import "../../style/bootstrapImports";
 
-footer {
+.mainFooter {
   background-color: $secondaryColor;
   padding: 2rem 0;
   font-family: $mainFontFamily;
@@ -11,7 +11,11 @@ footer {
     justify-content: flex-start;
   }
 
-  .footer-info {
+  .logo {
+    width: 200px;
+  }
+
+  .footerInfo {
     color: $lightColor;
     text-align: right;
 
@@ -22,6 +26,10 @@ footer {
     p:hover {
       color: $primaryColor;
       cursor: pointer;
+    }
+
+    img {
+      width: 1.5rem;
     }
 
     img:hover {
@@ -37,13 +45,13 @@ footer {
 }
 
 @include media-breakpoint-down(sm) {
-  footer {
+  .mainFooter {
     .row {
       flex-direction: column;
       text-align: center;
     }
 
-    .footer-info {
+    .footerInfo {
       text-align: center;
       margin-top: 1rem;
     }

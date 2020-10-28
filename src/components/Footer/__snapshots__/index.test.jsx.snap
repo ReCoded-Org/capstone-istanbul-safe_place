@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly and matches the snapshot 1`] = `
-<footer>
+<footer
+  className="mainFooter"
+>
   <div
     className="container"
   >
@@ -12,13 +14,13 @@ exports[`renders correctly and matches the snapshot 1`] = `
         className="col"
       >
         <img
-          alt="logo"
+          alt="Logo"
+          className="logo"
           src="Logo-footer.png"
-          width="200px"
         />
       </div>
       <div
-        className="footer-info col"
+        className="footerInfo col"
       >
         <p>
           Privacy and Cookies
@@ -29,43 +31,37 @@ exports[`renders correctly and matches the snapshot 1`] = `
         <h6>
           Follow us on social media:
         </h6>
-        <div
-          className="social-media"
-        >
+        <div>
           <a
             href="https://www.twitter.com/"
           >
             <img
-              alt="twitter"
+              alt="Twitter icon"
               src="twitter.svg"
-              width="25px"
             />
           </a>
           <a
             href="https://www.linkedin.com/"
           >
             <img
-              alt="twitter"
+              alt="Linkedin icon"
               src="linkedin.svg"
-              width="25px"
             />
           </a>
           <a
             href="https://www.instagram.com/"
           >
             <img
-              alt="instagram"
+              alt="Instagram icon"
               src="instagram.svg"
-              width="25px"
             />
           </a>
           <a
             href="https://www.facebook.com/"
           >
             <img
-              alt="facebook"
+              alt="Facebook icon"
               src="facebook.svg"
-              width="25px"
             />
           </a>
         </div>
