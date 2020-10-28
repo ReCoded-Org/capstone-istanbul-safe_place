@@ -1,37 +1,48 @@
-$PeachColor: #fe8f7c;
-$LightCream: #fffefc;
-$LightPeachColor: #ffbfb5;
-$LightCreamOpacity: rgba(255, 254, 252, 0.6);
-$LightGreen: #c8d7c2;
+@import "../../style/variables";
+@import "../../style/bootstrapImports";
 
 footer {
-  background-color: $LightGreen;
-  padding: 2rem 14rem;
-  //   height: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
+  background-color: $secondaryColor;
+  padding: 2rem 0;
+  font-weight: bold;
 
-  .footer-info {
-    color: $LightCream;
-    width: 15rem;
-    text-align: right;
+  .row {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .icon g {
+    fill: $primaryColor;
   }
 
-  .social-media {
-    display: flex;
-    justify-content: space-between;
+  .footer-info {
+    color: $lightColor;
+    text-align: right;
+
+    p:hover {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+    img:hover {
+      background-color: $primaryColor;
+      padding: 0.1rem;
+      border-radius: 0.2rem;
+    }
+  }
+
+  a {
+    margin-left: 1rem;
   }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(sm) {
   footer {
-    padding: 5rem;
-    justify-content: center;
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
     .footer-info {
       text-align: center;
+      margin-top: 1rem;
     }
   }
 }
