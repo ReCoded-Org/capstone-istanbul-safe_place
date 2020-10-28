@@ -14,7 +14,6 @@ import SliderArrow from "../SliderArrow";
 export default function BlogsCarouselHome() {
   const { t } = useTranslation();
   const settings = {
-    dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     infinite: true,
@@ -51,7 +50,6 @@ export default function BlogsCarouselHome() {
     },
   ];
 
-
   return (
     <I18nextProvider>
       <Container className="homeCarousel">
@@ -66,9 +64,9 @@ export default function BlogsCarouselHome() {
             <Slider className="slider" {...settings}>
               {slidesData.map((slide) => (
                 <div className="slide" key={slide.id}>
-                  {/* <h2 className="slide-title">{slide.title}</h2> */}
                   <label className="blogLabel">{slide.label}</label>
-                  <img className="blogImage" src={slide.img} alt=""/>
+                  <div className="shadowEffect"></div>
+                  <img className="blogImage" src={slide.img} alt="blog image" />
                 </div>
               ))}
             </Slider>
