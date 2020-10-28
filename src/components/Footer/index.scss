@@ -4,24 +4,26 @@
 footer {
   background-color: $secondaryColor;
   padding: 2rem 0;
-  font-weight: bold;
+  font-family: $mainFontFamily;
 
   .row {
     align-items: center;
     justify-content: flex-start;
-  }
-  .icon g {
-    fill: $primaryColor;
   }
 
   .footer-info {
     color: $lightColor;
     text-align: right;
 
+    p {
+      font-weight: 500;
+    }
+
     p:hover {
       color: $primaryColor;
       cursor: pointer;
     }
+
     img:hover {
       background-color: $primaryColor;
       padding: 0.1rem;
@@ -40,6 +42,7 @@ footer {
       flex-direction: column;
       text-align: center;
     }
+
     .footer-info {
       text-align: center;
       margin-top: 1rem;
