@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/bootstrapImports";
+@import "../../style/buttons";
 
 .navbar {
   background-color: $secondaryColor;
@@ -26,33 +27,14 @@
 
   button {
     height: 2rem;
-    color: $lightColor;
     padding: 0 2rem;
-    border-color: $lightColor;
-    font-weight: bold;
-  }
-
-  button:focus {
-    box-shadow: 0 0 0 0.2rem $primaryColor;
-  }
-
-  button:hover {
-    color: $primaryColor;
-    background-color: $lightColor;
-    border-color: $lightColor;
-  }
-
-  .form-control:focus {
-    border-color: $primaryColor;
-    box-shadow: 0 0 0 0.2rem $lightColor;
+    @include signInBtn;
   }
 
   .signUpBtn {
     height: 2rem;
     padding: 0 2rem;
-    color: $lightColor;
-    background-color: $primaryColor;
-    border-color: $primaryColor;
+    @include signUpBtn;
   }
 }
 
