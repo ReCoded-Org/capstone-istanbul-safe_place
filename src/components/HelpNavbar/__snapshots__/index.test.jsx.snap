@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
     >
       <input
         className="mr-sm-2 form-control"
-        placeholder="Search"
+        placeholder="Find a shelter"
         type="text"
       />
       <button
