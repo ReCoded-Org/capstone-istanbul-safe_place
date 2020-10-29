@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="jobsTrainingSection"
+>
+  <h1>
+    Jobs/ trainings Opportunities
+  </h1>
+  <p>
+    Browse our list of job opportunities, trainings or workshops. 
+  </p>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4"
+      >
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Job Opportunities
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={[Function]}
+          >
+            Trainings
+          </button>
+        </div>
+      </div>
+      <div
+        className="col-md-8"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="jobOpportunities col"
+          >
+            <div
+              className="jobTitle"
+            >
+              <h1 />
+            </div>
+            <div
+              className="jobDescription"
+            />
+            <div
+              className="jobAddress"
+            />
+            <div
+              className="jobContactsDetails"
+            />
+            <div
+              className="jobPostDate"
+            />
+          </div>
+          <div
+            className="jobOpportunities col"
+          >
+            <div
+              className="jobTitle"
+            >
+              <h1 />
+            </div>
+            <div
+              className="jobDescription"
+            />
+            <div
+              className="jobAddress"
+            />
+            <div
+              className="jobContactsDetails"
+            />
+            <div
+              className="jobPostDate"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

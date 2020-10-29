@@ -40,30 +40,35 @@
         "dicreption": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020"
+        "date": "27/10/2020",
+        "id": 1
+
       },
       {
         "title": "Web Developer",
         "dicreption": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020"
+        "date": "27/10/2020",
+        "id": 2
       }
     ],
     "trainings": [
       {
-        "title": "Web Devolopment Bootcamp",
+        "title": "Web Devolopment Bootcamp training",
         "dicreption": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020"
+        "date": "27/10/2020",
+        "id": 1
       },
       {
-        "title": "sdwd",
+        "title": "Cookin training",
         "dicreption": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020"
+        "date": "27/10/2020",
+        "id": 2
       }
     ]
   }

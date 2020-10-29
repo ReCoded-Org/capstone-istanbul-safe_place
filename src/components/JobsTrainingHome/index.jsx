@@ -1,36 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import OpportunitiesCart from "../OpportunitiesCart"
 
 export default function JobsTrainingHome() {
+  const { t } = useTranslation();
+  const [type , setType] = useState("JobOpportunities")
+  const cardsArr =  [... t(`home.${type}`, { returnObjects: true })]
+  const cards = () =>cardsArr.slice(0, 2).map((opportunity) => <OpportunitiesCart {...opportunity} key={opportunity.id}/>)
   return (
-    <Container>
-      <h1>job/training opportunities</h1>
-      <Row>
-        <Col className="sliderBetweenJobTrainings">
-          <div>
-            <h1>Job Opportunities</h1>
-          </div>
-          <div>
-            <h1>Trainings/Workshops</h1>
-          </div>
-        </Col>
-        <Col className="jobOpportunities">
-          <div className="jobTitle"></div>
-          <div className="jobDescription"></div>
-          <div className="jobAddress"></div>
-          <div className="jobContactsDetails"></div>
-          <div className="jobPostDate"></div>
-        </Col>
-        <Col className="trainings">
-          <div className="trainingTitle"></div>
-          <div className="trainingDescription"></div>
-          <div className="trainingAddress"></div>
-          <div className="trainingContactsDetails"></div>
-          <div className="trainingPostDate"></div>
-        </Col>
-      </Row>
-    </Container>
+    <div className="jobsTrainingSection">
+      <h1>Jobs/ trainings Opportunities</h1>
+      <p>Browse our list of job opportunities, trainings or workshops. </p>
+      <Container>
+        <Row>
+          <Col md={4}>
+            <div>
+              <button onClick={() => setType("JobOpportunities")}>Job Opportunities</button>
+            </div>
+            <div>
+              <button onClick={() => setType("trainings")}>Trainings</button>
+            </div>
+          </Col>
+          <Col md={8}>
+          <Row>
+          {cards()}
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
