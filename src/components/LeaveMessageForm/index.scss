@@ -1,0 +1,89 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+@import "../../style/bootstrapImports";
+
+.contactForm {
+  font: inherit;
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    border-radius: $borderRadius;
+    background-color: $lightColor;
+    color: $darkColor;
+    outline: none;
+    border: solid 0.12rem $lightColor;
+    border-color: $lightColor;
+    padding: 0.4rem 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0.4rem 0.1rem $primaryColor;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::placeholder {
+      color: #c4cdd5;
+    }
+  }
+
+  textarea {
+    height: 8rem;
+  }
+
+  input[type="submit"] {
+    @include primaryBtn;
+    background-color: $successColor;
+    font-weight: 800;
+
+    &:hover {
+      background-color: $lightColor;
+      color: $primaryColor;
+    }
+  }
+
+  .formInput {
+    margin-bottom: 1.4rem;
+    position: relative;
+
+    label {
+      width: 100%;
+      font-weight: 500;
+    }
+  }
+
+  .errorMessage {
+    display: inline;
+    color: $lightColor;
+    padding: 0.4rem;
+    font-size: 0.75rem;
+    background-color: #f23a3c;
+
+    img {
+      width: 1rem;
+      margin: 0 0.4rem;
+      padding: 0;
+      color: $lightColor;
+    }
+  }
+
+  input.inputError,
+  textarea.inputError {
+    box-shadow: 0 0 0.2rem 0.1rem #f23a3c;
+    &:focus {
+      box-shadow: 0 0 0.4rem 0.1rem #f23a3c;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .contactForm {
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+}
