@@ -2,7 +2,6 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
-import { locationSvg } from "../../components/SeekHelpCarousel/images/map-marker.svg";
 
 export default function OpportunitiesCart(opportunity) {
   const { t } = useTranslation();

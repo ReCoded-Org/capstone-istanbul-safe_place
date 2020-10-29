@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="opportunities col"
+>
+  <div
+    className="opportunityPostDate"
+  />
+  <div
+    className="opportunityTitle"
+  />
+  <div
+    className="opportunityDescription"
+  />
+  <span
+    className="borderLine"
+  />
+  <div
+    className="opportunityContactsDetails"
+  >
+    <div
+      className="opportunityAddress"
+    />
+    <div
+      className="opportunityPhoneNumber"
+    />
+  </div>
+</div>
+`;

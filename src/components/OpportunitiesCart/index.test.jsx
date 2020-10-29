@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import JobsTrainingHome from "./index";
+import OpportunitiesCart from "./index";
 
 it("renders correctly and matches the snapshot", () => {
-  const tree = renderer.create(<JobsTrainingHome />).toJSON();
+  const tree = renderer.create(<OpportunitiesCart />).toJSON();
   expect(tree).toMatchSnapshot();
 });
