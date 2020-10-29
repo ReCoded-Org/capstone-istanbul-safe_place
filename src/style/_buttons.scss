@@ -10,3 +10,79 @@
     background-color: $secondaryColor;
   }
 }
+
+@mixin helpNavbarForm {
+  border: solid 0.12rem $lightColor;
+  color: $primaryColor;
+  background-color: $lightColorSearch;
+  border-color: $lightColor;
+
+  &:focus {
+    border-color: $primaryColor;
+    box-shadow: 0 0 0 0.2rem $primaryColor;
+  }
+
+  &::placeholder {
+    color: $primaryColor;
+  }
+}
+
+@mixin helpNavbarBtn {
+  color: $lightColor;
+  border-color: $lightColor;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $lightColor;
+  }
+
+  &:hover {
+    color: $primaryColor;
+    background-color: $lightColor;
+    border-color: $lightColor;
+  }
+
+  &:active {
+    color: $lightColor;
+    background-color: $primaryColor !important;
+    border-color: $primaryColor !important;
+    box-shadow: 0 0 0 0.2rem $primaryColor !important;
+  }
+}
+
+@mixin signUpBtn {
+  color: $lightColor;
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+
+  &:active {
+    background-color: $primaryColor !important;
+    border-color: $lightColor !important;
+    box-shadow: 0 0 0 0.2rem $primaryColor !important;
+    &:hover {
+      color: $primaryColor !important;
+      background-color: $lightColor !important;
+      border-color: $lightColor !important;
+    }
+  }
+}
+
+@mixin signInBtn {
+  color: $lightColor;
+  border-color: $lightColor;
+  font-weight: bold;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $primaryColor;
+  }
+
+  &:hover {
+    color: $primaryColor;
+    background-color: $lightColor;
+    border-color: $lightColor;
+  }
+  &:active {
+    background-color: $primaryColor !important;
+    border-color: $lightColor !important;
+    box-shadow: 0 0 0 0.2rem $primaryColor !important;
+  }
+}
