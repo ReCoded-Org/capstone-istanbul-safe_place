@@ -11,19 +11,19 @@ export default function JobsTrainingHome() {
   const cards = () =>cardsArr.slice(0, 2).map((opportunity) => <OpportunitiesCart {...opportunity} key={opportunity.id}/>)
   return (
     <div className="jobsTrainingSection">
-      <h1>Jobs/ trainings Opportunities</h1>
-      <p>Browse our list of job opportunities, trainings or workshops. </p>
+      <h1 className="title">Jobs/ trainings Opportunities</h1>
+      <p className="description">Browse our list of job opportunities, trainings or workshops. </p>
       <Container>
         <Row>
-          <Col md={4}>
+          <Col md={3}>
             <div>
-              <button onClick={() => setType("JobOpportunities")}>Job Opportunities</button>
+              <button type="button" className="jobsBtn" onClick={() => setType("JobOpportunities")}>Job Opportunities</button>
             </div>
             <div>
-              <button onClick={() => setType("trainings")}>Trainings</button>
+              <button type="button" className="trainingsBtn" onClick={() => setType("trainings")}>Trainings</button>
             </div>
           </Col>
-          <Col md={8}>
+          <Col md={9}>
           <Row>
           {cards()}
             </Row>

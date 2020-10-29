@@ -1,25 +1,30 @@
-@import "../../style/variables"; 
+@import "../../style/variables";
 @import "../../style/buttons";
 
-.jobsTrainingSection{
-    padding-top: 50px;
-    margin-top: 30px;
-    background-color: $successColor;
-    width: 100%;
-    text-align: center;
-    font-family:$mainFontFamily ;
+.jobsTrainingSection {
+  padding-top: 50px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  background-color: $secondaryColor;
+  width: 100%;
+  text-align: center;
+  font-family: $mainFontFamily;
+}
+.title {
+  color: $primaryColor;
+}
 
-.col-md-4{
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-    align-content: center;
-}
-}
-.jobsTrainingSection button {
+.trainingsBtn, .jobsBtn {
     @include primaryBtn;
-    width: 100px;
-    margin:20px;
+    width: 204px;
+    border-radius: 0px;
+    background-color: $secondaryColor;
+    &:hover {border-right: solid $primaryColor;}
+    &:focus {
+      border-right: solid $primaryColor;
+        outline:0;
+        }
+}
+.jobsBtn{
+    margin-top: 30px;
 }
