@@ -19,7 +19,11 @@ const HelpNavbar = () => (
         <p>+1-340-5558-235</p>
       </Nav>
       <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <FormControl
+          type="text"
+          placeholder="Find a shelter"
+          className="mr-sm-2"
+        />
         <Button variant="outline-primary">Search</Button>
       </Form>
     </Container>

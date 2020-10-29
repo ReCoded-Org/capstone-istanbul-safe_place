@@ -18,42 +18,12 @@
   button {
     height: 2rem;
     padding: 0 2rem;
-    color: $lightColor;
-    border-color: $lightColor;
-
-    &:focus {
-      box-shadow: 0 0 0 0.2rem $lightColor;
-    }
-
-    &:hover {
-      color: $primaryColor;
-      background-color: $lightColor;
-      border-color: $lightColor;
-    }
-
-    &:active {
-      color: $lightColor;
-      background-color: $primaryColor !important;
-      border-color: $primaryColor !important;
-      box-shadow: 0 0 0 0.2rem $primaryColor !important;
-    }
+    @include helpNavbarBtn;
   }
 
   .form-control {
     height: 2rem;
-    border: solid 0.12rem $lightColor;
-    color: $primaryColor;
-    background-color: $lightColorSearch;
-    border-color: $lightColor;
-
-    &:focus {
-      border-color: $primaryColor;
-      box-shadow: 0 0 0 0.2rem $primaryColor;
-    }
-
-    &::placeholder {
-      color: $primaryColor;
-    }
+    @include helpNavbarForm;
   }
 }
 @include media-breakpoint-down(sm) {
