@@ -15,35 +15,45 @@
     margin: 0.1rem;
   }
 
-  .form-control {
-    height: 2rem;
-  }
-
   button {
     height: 2rem;
     padding: 0 2rem;
-    color: $primaryColor;
-    background-color: $lightColorSearch;
+    color: $lightColor;
     border-color: $lightColor;
-  }
 
-  button:focus {
-    box-shadow: 0 0 0 0.2rem $primaryColor;
-  }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $lightColor;
+    }
 
-  button:hover {
-    color: #fff;
-    background-color: $primaryColor;
-    border-color: $primaryColor;
+    &:hover {
+      color: $primaryColor;
+      background-color: $lightColor;
+      border-color: $lightColor;
+    }
+
+    &:active {
+      color: $lightColor;
+      background-color: $primaryColor !important;
+      border-color: $primaryColor !important;
+      box-shadow: 0 0 0 0.2rem $primaryColor !important;
+    }
   }
 
   .form-control {
+    height: 2rem;
+    border: solid 0.12rem $lightColor;
+    color: $primaryColor;
+    background-color: $lightColorSearch;
     border-color: $lightColor;
-  }
 
-  .form-control:focus {
-    border-color: $primaryColor;
-    box-shadow: 0 0 0 0.2rem $primaryColor;
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 0.2rem $primaryColor;
+    }
+
+    &::placeholder {
+      color: $primaryColor;
+    }
   }
 }
 @include media-breakpoint-down(sm) {
