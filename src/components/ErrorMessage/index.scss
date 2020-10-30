@@ -2,9 +2,9 @@
 @import "../../style/forms";
 
 .errorMessage {
-    @include inputErrorMessage;
+  @include inputErrorMessage;
 
-    img {
-      @include inputErrorIcon;
-    }
+  img {
+    @include inputErrorIcon;
   }
+}
