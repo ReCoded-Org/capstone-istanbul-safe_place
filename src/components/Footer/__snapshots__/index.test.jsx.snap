@@ -23,12 +23,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
         className="footerInfo col"
       >
         <a
-          href="#"
+          href="/privacy"
         >
           Privacy and Cookies
         </a>
         <a
-          href="#"
+          href="/terms"
         >
           Terms and Conditions
         </a>
