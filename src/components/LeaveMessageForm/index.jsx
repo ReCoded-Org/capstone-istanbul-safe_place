@@ -1,7 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
-import PatchExclamationFll from '../../images/Patch-exclamation-fll.svg'
+import ErrorMessage from '../../components/ErrorMessage';
 import "./index.scss";
 
 export default function LeaveMessageForm() {
@@ -25,13 +25,7 @@ export default function LeaveMessageForm() {
                 minLength: 3
               })}
             />
-            {errors.fullName &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  Your name is too short.
-                </p>
-              )}
+            {errors.fullName && <ErrorMessage message='Your name is too short.' />}
           </label>
         </div>
 
@@ -53,19 +47,9 @@ export default function LeaveMessageForm() {
               })}
             />
             {(errors.email && errors.email.type === 'required') &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  Your email address is required.
-                </p>
-              )}
+              (<ErrorMessage message='Your email address is required.' />)}
             {errors.email && errors.email.type === 'pattern' &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  {errors.email.message}
-                </p>
-              )}
+              (<ErrorMessage message={errors.email.message} />)}
           </label>
         </div>
 
@@ -77,29 +61,18 @@ export default function LeaveMessageForm() {
               name="message"
               id="message"
               placeholder="type your message here ..."
-              ref={register({ required: true, minLength: 10, maxLength: 2000 })}
+              ref={register({ 
+                required: true, 
+                minLength: 10, 
+                maxLength: 2000 
+              })}
             />
             {errors.message && errors.message.type === 'required' &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  You should write your message.
-                </p>
-              )}
+              (<ErrorMessage message='You should write your message.' />)}
             {errors.message && errors.message.type === 'minLength' &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  Your message is too short. Write us more!
-                </p>
-              )}
+              (<ErrorMessage message='Your message is too short. Write us more!' />)}
             {errors.message && errors.message.type === 'maxLength' &&
-              (
-                <p className="errorMessage">
-                  <img src={PatchExclamationFll} alt="" width="32" height="32" title="Bootstrap" />
-                  Your message is too long. Be spesific please!
-                </p>
-              )}
+              (<ErrorMessage message='Your message is too long. Be spesific please!' />)}
           </label>
         </div>
 

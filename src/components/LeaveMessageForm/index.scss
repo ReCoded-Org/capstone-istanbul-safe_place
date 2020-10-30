@@ -37,14 +37,6 @@
     }
   }
 
-  .errorMessage {
-    @include inputErrorMessage;
-
-    img {
-      @include inputErrorIcon;
-    }
-  }
-
   input.inputError,
   textarea.inputError {
     @include inputErrorBorder;
