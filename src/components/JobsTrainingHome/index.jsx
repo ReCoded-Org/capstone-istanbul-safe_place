@@ -6,17 +6,15 @@ import OpportunitiesCard from "../OpportunitiesCard";
 
 export default function JobsTrainingHome() {
   const { t } = useTranslation();
-  const [type, setType] = useState("JobOpportunities");
+  const [type, setType] = useState("jobOpportunities");
   const cardsArr = [...t(`home.${type}`, { returnObjects: true })];
-  const cards = () =>
-    cardsArr
-      .slice(0, 2)
-      .map((opportunity) => (
-        <OpportunitiesCard {...opportunity} key={opportunity.id} />
-      ));
+  const showTwoOpportunitiesCards = cardsArr.slice(0,2)
+  const cards = showTwoOpportunitiesCards.map((opportunity) => (
+      <OpportunitiesCard {...opportunity} key={opportunity.id} />
+    ));
   return (
     <div className="jobsTrainingSection">
-      <h2 className="title">Jobs/ Trainings Opportunities</h2>
+      <h2 className="title">Jobs / Trainings Opportunities</h2>
       <p className="description">
         Browse our list of job opportunities, trainings or workshops.{" "}
       </p>
@@ -27,7 +25,7 @@ export default function JobsTrainingHome() {
               <button
                 type="button"
                 className="jobsBtn"
-                onClick={() => setType("JobOpportunities")}
+                onClick={() => setType("jobOpportunities")}
               >
                 Job Opportunities
               </button>
@@ -43,7 +41,7 @@ export default function JobsTrainingHome() {
             </div>
           </Col>
           <Col md={9}>
-            <Row>{cards()}</Row>
+            <Row>{cards}</Row>
           </Col>
         </Row>
       </Container>
