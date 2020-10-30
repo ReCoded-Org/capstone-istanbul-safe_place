@@ -25,11 +25,13 @@
 
   &:hover {
     border-right: solid $primaryColor;
+    color: $primaryColor;
   }
 
   &:focus {
     border-right: solid $primaryColor;
     outline: 0;
+    color: $primaryColor;
   }
 }
 
