@@ -10,27 +10,3 @@
     background-color: $secondaryColor;
   }
 }
-
-@mixin transparentBtn {
-  color: $lightColor;
-  border-color: $lightColor;
-  background-color: transparent;
-  border-radius: $borderRadius;
-  border: 0.15rem solid $lightColor;
-
-  &:focus {
-    box-shadow: 0 0 0 0.2rem $primaryColor;
-  }
-
-  &:hover {
-    color: $primaryColor;
-    background-color: $lightColor;
-    border-color: $lightColor;
-  }
-
-  &:active {
-    background-color: $primaryColor;
-    border-color: $lightColor;
-    box-shadow: 0 0 0 0.2rem $primaryColor;
-  }
-}
