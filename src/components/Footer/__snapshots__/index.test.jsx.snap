@@ -22,15 +22,19 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <div
         className="footerInfo col"
       >
-        <p>
+        <a
+          href="#"
+        >
           Privacy and Cookies
-        </p>
-        <p>
+        </a>
+        <a
+          href="#"
+        >
           Terms and Conditions
-        </p>
-        <h6>
+        </a>
+        <p>
           Follow us on social media:
-        </h6>
+        </p>
         <div>
           <a
             href="https://www.twitter.com/"
@@ -44,8 +48,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
             href="https://www.linkedin.com/"
           >
             <img
-              alt="Linkedin icon"
-              src="linkedinIcon.svg"
+              alt="LinkedIn icon"
+              src="linkedInIcon.svg"
             />
           </a>
           <a

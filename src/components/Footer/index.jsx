@@ -3,7 +3,7 @@ import "./index.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import logo from "../../images/logoFooter.png";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
-import linkedinIcon from "../../images/icons/linkedinIcon.svg";
+import linkedInIcon from "../../images/icons/linkedInIcon.svg";
 import instagramIcon from "../../images/icons/instagramIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 
@@ -16,15 +16,15 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="logo" />
           </Col>
           <Col className="footerInfo">
-            <p>Privacy and Cookies</p>
-            <p>Terms and Conditions</p>
-            <h6>Follow us on social media:</h6>
+            <a href="#">Privacy and Cookies</a>
+            <a href="#">Terms and Conditions</a>
+            <p>Follow us on social media:</p>
             <div>
               <a href="https://www.twitter.com/">
                 <img src={twitterIcon} alt="Twitter icon" />
               </a>
               <a href="https://www.linkedin.com/">
-                <img src={linkedinIcon} alt="Linkedin icon" />
+                <img src={linkedInIcon} alt="LinkedIn icon" />
               </a>
               <a href="https://www.instagram.com/">
                 <img src={instagramIcon} alt="Instagram icon" />
