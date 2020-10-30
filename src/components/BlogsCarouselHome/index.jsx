@@ -1,8 +1,8 @@
 import React from "react";
-import smilingWoman from "./images/smilingWoman.jpg";
-import womanAndManHoldingHands from "./images/womanAndManHoldingHands.jpg";
-import womanTalkingToTherapist from "./images/womanTalkingToTherapist.jpg";
-import multinationalWomen from "./images/multinationalWomen.jpg";
+import smilingWomanImg from "./images/smilingWomanImg.jpg";
+import womanAndManHoldingHandsImg from "./images/womanAndManHoldingHandsImg.jpg";
+import womanTalkingToTherapistImg from "./images/womanTalkingToTherapistImg.jpg";
+import multinationalWomenImg from "./images/multinationalWomenImg.jpg";
 import "./index.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -26,25 +26,25 @@ export default function BlogsCarouselHome() {
       id: 1,
       title: "Dolorem officiis temporibus.",
       label: "Healthy Me, Healthy We: Preventing Dating Violence.",
-      img: `${smilingWoman}`,
+      img: `${smilingWomanImg}`,
     },
     {
       id: 2,
       title: "Officia non provident dolor esse et neque.",
       label: "Don’t Confuse Abuse With Love.",
-      img: `${womanAndManHoldingHands}`,
+      img: `${womanAndManHoldingHandsImg}`,
     },
     {
       id: 3,
       title: "Ut recusandae vel vitae molestiae id soluta.",
       label: "Talking to Your Kids About Sexual Assault.",
-      img: `${womanTalkingToTherapist}`,
+      img: `${womanTalkingToTherapistImg}`,
     },
     {
       id: 4,
       title: "Qui vel consequatur recusandae illo repellendus.",
       label: "International Womens Day",
-      img: `${multinationalWomen}`,
+      img: `${multinationalWomenImg}`,
     },
   ];
 

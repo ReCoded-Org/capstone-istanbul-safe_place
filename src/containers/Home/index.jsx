@@ -13,11 +13,8 @@ const Home = () => {
       <GenderViolenceMain />
       <ViolenceTest />
       <SeekHelp />
-<<<<<<< HEAD
       <BlogsCarouselHome />
-=======
       <Footer />
->>>>>>> dev
     </div>
   );
 };
