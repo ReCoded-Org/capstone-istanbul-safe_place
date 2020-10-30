@@ -1,13 +1,15 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
-import ErrorMessage from '../../components/ErrorMessage';
+import ErrorMessage from '../ErrorMessage';
 import "./index.scss";
 
 export default function LeaveMessageForm() {
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
+  const { register, handleSubmit, errors, reset } = useForm();
+  const onSubmit = data => {
+    console.log(data)
+    reset();
+  };
 
   return (
     <Col md={6} xs={12} className="contactForm">
@@ -22,10 +24,13 @@ export default function LeaveMessageForm() {
               name="fullName"
               id="fullName"
               ref={register({
-                minLength: 3
+                minLength: {
+                  value: 3,
+                  message: 'Your name is too short.'
+                }
               })}
             />
-            {errors.fullName && <ErrorMessage message='Your name is too short.' />}
+            {errors?.fullName && <ErrorMessage message={errors.fullName.message} />}
           </label>
         </div>
 
@@ -39,40 +44,52 @@ export default function LeaveMessageForm() {
               name="email"
               id="email"
               ref={register({
-                required: true,
+                required: {
+                  value: true,
+                  message: 'Your email address is required.'
+                },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "invalid email address"
+                  message: "Invalid email address."
                 }
               })}
             />
-            {(errors.email && errors.email.type === 'required') &&
-              (<ErrorMessage message='Your email address is required.' />)}
-            {errors.email && errors.email.type === 'pattern' &&
+            {(errors?.email?.type === 'required') &&
+              (<ErrorMessage message={errors.email.message} />)}
+            {errors?.email?.type === 'pattern' &&
               (<ErrorMessage message={errors.email.message} />)}
           </label>
         </div>
 
         <div className="formInput">
-          <label htmlFor="message">
+          <label htmlFor="messageContent">
             Message
             <textarea
               className={errors.message && 'inputError'}
-              name="message"
-              id="message"
+              name="messageContent"
+              id="messageContent"
               placeholder="type your message here ..."
               ref={register({ 
-                required: true, 
-                minLength: 10, 
-                maxLength: 2000 
+                required: {
+                  value: true,
+                  message: 'You should write your message.'
+                }, 
+                minLength: {
+                  value: 10,
+                  message: 'Your message is too short. Write us more!'
+                }, 
+                maxLength: {
+                  value: 2000,
+                  message: 'Your message is too long. Be spesific please!'
+                } 
               })}
             />
-            {errors.message && errors.message.type === 'required' &&
-              (<ErrorMessage message='You should write your message.' />)}
-            {errors.message && errors.message.type === 'minLength' &&
-              (<ErrorMessage message='Your message is too short. Write us more!' />)}
-            {errors.message && errors.message.type === 'maxLength' &&
-              (<ErrorMessage message='Your message is too long. Be spesific please!' />)}
+            {errors?.messageContent?.type === 'required' &&
+              (<ErrorMessage message={errors.messageContent.message} />)}
+            {errors?.messageContent?.type === 'minLength' &&
+              (<ErrorMessage message={errors.messageContent.message} />)}
+            {errors?.messageContent?.type === 'maxLength' &&
+              (<ErrorMessage message={errors.messageContent.message} />)}
           </label>
         </div>
 
