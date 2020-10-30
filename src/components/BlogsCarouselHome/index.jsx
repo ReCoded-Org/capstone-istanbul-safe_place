@@ -48,7 +48,6 @@ export default function BlogsCarouselHome() {
     prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
 
-
   return (
     <Container className="homeCarousel">
       <Row>
