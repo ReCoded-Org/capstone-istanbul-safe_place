@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import LeaveMessageForm from "./index";
+import LeaveMessage from "./index";
 
-describe("LeaveMessageForm", () => {
+describe("LeaveMessage", () => {
   it("renders correctly and matches the snapshot", () => {
-    const tree = renderer.create(<LeaveMessageForm />).toJSON();
+    const tree = renderer.create(<LeaveMessage />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
