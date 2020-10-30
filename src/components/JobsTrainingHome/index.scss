@@ -10,8 +10,10 @@
   text-align: center;
   font-family: $mainFontFamily;
 }
+
 .title {
   color: $primaryColor;
+  font-size: 1.75rem;
 }
 
 .trainingsBtn,
@@ -20,14 +22,17 @@
   width: 12.75rem;
   border-radius: 0;
   background-color: $secondaryColor;
+
   &:hover {
     border-right: solid $primaryColor;
   }
+
   &:focus {
     border-right: solid $primaryColor;
     outline: 0;
   }
 }
+
 .jobsBtn {
   margin-top: 1.875rem;
 }
