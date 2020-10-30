@@ -4,10 +4,10 @@ import { useForm } from 'react-hook-form';
 import ErrorMessage from '../ErrorMessage';
 import "./index.scss";
 
-export default function LeaveMessageForm() {
+export default function LeaveMessageForm({submit}) {
   const { register, handleSubmit, errors, reset } = useForm();
   const onSubmit = data => {
-    console.log(data)
+    submit(data);
     reset();
   };
 
@@ -93,7 +93,7 @@ export default function LeaveMessageForm() {
           </label>
         </div>
 
-        <input type="submit" className="submitBtn" value="Send" />
+        <button type="submit" className="submitBtn">Send</button>
       </form>
     </Col>
   );
