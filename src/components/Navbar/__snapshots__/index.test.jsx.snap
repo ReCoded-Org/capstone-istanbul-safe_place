@@ -9,7 +9,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
   >
     <a
       className="navbar-brand"
-      href="#home"
+      href="/home"
     >
       <img
         alt="logo"
@@ -38,8 +38,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
       >
         <a
           className="nav-link"
-          data-rb-event-key="#about"
-          href="#about"
+          data-rb-event-key="/about"
+          href="/about"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -47,8 +47,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="#blog"
-          href="#blog"
+          data-rb-event-key="/blog"
+          href="/blog"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -56,8 +56,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="#opportunities"
-          href="#opportunities"
+          data-rb-event-key="/opportunities"
+          href="/opportunities"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -65,8 +65,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="#contact"
-          href="#contact"
+          data-rb-event-key="/contact"
+          href="/contact"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -74,14 +74,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="#sign-in"
-          href="#sign-in"
+          data-rb-event-key="/signin"
+          href="/signin"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
           <button
-            className="btn btn-outline-primary"
-            disabled={false}
             type="button"
           >
             Sign In
@@ -89,14 +87,13 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </a>
         <a
           className="nav-link"
-          data-rb-event-key="#sign-up"
-          href="#sign-up"
+          data-rb-event-key="/signup"
+          href="/signup"
           onClick={[Function]}
           onKeyDown={[Function]}
         >
           <button
-            className="signUpBtn btn btn-outline-primary"
-            disabled={false}
+            className="signUpBtn"
             type="button"
           >
             Sign Up

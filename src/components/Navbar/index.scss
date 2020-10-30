@@ -26,15 +26,19 @@
   }
 
   button {
+    @include transparentBtn;
+    width: 8rem;
     height: 2rem;
     padding: 0 2rem;
-    @include signInBtn;
+    font-weight: bold;
   }
 
   .signUpBtn {
-    height: 2rem;
+    @include primaryBtn;
+    width: 8rem;
+    min-height: 0.2rem;
     padding: 0 2rem;
-    @include signUpBtn;
+    font-weight: bold;
   }
 }
 
