@@ -39,6 +39,12 @@
     min-height: 0.2rem;
     padding: 0 2rem;
     font-weight: bold;
+    
+    &:hover {
+      color: $primaryColor;
+      background-color: $lightColor;
+      border-color: $lightColor;
+    }
   }
 }
 
