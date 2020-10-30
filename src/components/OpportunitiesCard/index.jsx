@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
 
-export default function OpportunitiesCart(opportunity) {
+export default function OpportunitiesCard(opportunity) {
   const { t } = useTranslation();
   return (
     <Col className="opportunities">

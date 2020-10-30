@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
-import OpportunitiesCart from "../OpportunitiesCart";
+import OpportunitiesCard from "../OpportunitiesCard";
 
 export default function JobsTrainingHome() {
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ export default function JobsTrainingHome() {
     cardsArr
       .slice(0, 2)
       .map((opportunity) => (
-        <OpportunitiesCart {...opportunity} key={opportunity.id} />
+        <OpportunitiesCard {...opportunity} key={opportunity.id} />
       ));
   return (
     <div className="jobsTrainingSection">
