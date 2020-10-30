@@ -10,6 +10,33 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from "react-bootstrap";
 import SliderArrow from "../SliderArrow";
 
+const SLIDE_DATA = [
+  {
+    id: 1,
+    title: "Dolorem officiis temporibus.",
+    label: "Healthy Me, Healthy We: Preventing Dating Violence.",
+    img: `${smilingWomanImg}`,
+  },
+  {
+    id: 2,
+    title: "Officia non provident dolor esse et neque.",
+    label: "Don’t Confuse Abuse With Love.",
+    img: `${womanAndManHoldingHandsImg}`,
+  },
+  {
+    id: 3,
+    title: "Ut recusandae vel vitae molestiae id soluta.",
+    label: "Talking to Your Kids About Sexual Assault.",
+    img: `${womanTalkingToTherapistImg}`,
+  },
+  {
+    id: 4,
+    title: "Qui vel consequatur recusandae illo repellendus.",
+    label: "International Womens Day",
+    img: `${multinationalWomenImg}`,
+  },
+];
+
 export default function BlogsCarouselHome() {
   const settings = {
     slidesToShow: 3,
@@ -21,32 +48,6 @@ export default function BlogsCarouselHome() {
     prevArrow: <SliderArrow leftOrRight={"left"} />,
   };
 
-  const slidesData = [
-    {
-      id: 1,
-      title: "Dolorem officiis temporibus.",
-      label: "Healthy Me, Healthy We: Preventing Dating Violence.",
-      img: `${smilingWomanImg}`,
-    },
-    {
-      id: 2,
-      title: "Officia non provident dolor esse et neque.",
-      label: "Don’t Confuse Abuse With Love.",
-      img: `${womanAndManHoldingHandsImg}`,
-    },
-    {
-      id: 3,
-      title: "Ut recusandae vel vitae molestiae id soluta.",
-      label: "Talking to Your Kids About Sexual Assault.",
-      img: `${womanTalkingToTherapistImg}`,
-    },
-    {
-      id: 4,
-      title: "Qui vel consequatur recusandae illo repellendus.",
-      label: "International Womens Day",
-      img: `${multinationalWomenImg}`,
-    },
-  ];
 
   return (
     <Container className="homeCarousel">
@@ -60,7 +61,7 @@ export default function BlogsCarouselHome() {
             health of women.
           </h6>
           <Slider className="slider" {...settings}>
-            {slidesData.map((slide) => (
+            {SLIDE_DATA.map((slide) => (
               <div className="slide" key={slide.id}>
                 <label className="blogLabel">{slide.label}</label>
                 <div className="shadowEffect"></div>
