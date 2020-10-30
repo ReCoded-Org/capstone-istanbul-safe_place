@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  Form,
-  Button,
-  FormControl,
-  Container,
-} from "react-bootstrap";
-import phone from "../../images/icons/phone.svg";
+import { Navbar, Nav, Form, FormControl, Container } from "react-bootstrap";
+import phoneIcon from "../../images/icons/phone.svg";
 import "./index.scss";
 
 const HelpNavbar = () => (
@@ -15,7 +8,7 @@ const HelpNavbar = () => (
     <Container>
       <Nav>
         <p>Immediate helpline:</p>
-        <img src={phone} alt="Phone icon" />
+        <img src={phoneIcon} alt="Phone icon" />
         <p>+1-340-5558-235</p>
       </Nav>
       <Form inline>
@@ -24,7 +17,7 @@ const HelpNavbar = () => (
           placeholder="Find a shelter"
           className="mr-sm-2"
         />
-        <Button variant="outline-primary">Search</Button>
+        <button type="button">Search</button>
       </Form>
     </Container>
   </Navbar>

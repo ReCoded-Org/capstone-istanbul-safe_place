@@ -16,16 +16,31 @@
   }
 
   button {
-    height: 2rem;
+    @include primaryBtn;
+    min-height: 2rem;
+    width: 8rem;
     padding: 0 2rem;
-    @include helpNavbarBtn;
+    font-weight: bold;
   }
 
   .form-control {
     height: 2rem;
-    @include helpNavbarForm;
+    border: solid 0.12rem $lightColor;
+    color: $primaryColor;
+    background-color: $lightColorSearch;
+    border-color: $lightColor;
+
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 0.2rem $primaryColor;
+    }
+
+    &::placeholder {
+      color: $primaryColor;
+    }
   }
 }
+
 @include media-breakpoint-down(sm) {
   .helpNavbar {
     height: 5rem;

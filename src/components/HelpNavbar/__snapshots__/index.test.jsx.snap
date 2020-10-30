@@ -31,8 +31,6 @@ exports[`renders correctly 1`] = `
         type="text"
       />
       <button
-        className="btn btn-outline-primary"
-        disabled={false}
         type="button"
       >
         Search
