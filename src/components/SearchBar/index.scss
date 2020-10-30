@@ -1,0 +1,28 @@
+@import "../../style/variables";
+
+// bootstrap class
+.form-control {
+  height: 2rem;
+  border: solid 0.12rem $primaryColor !important;
+  background-color: rgba(254, 143, 124, 0.3) !important;
+  border-color: $primaryColor !important;
+  border-radius: 10px !important;
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem $primaryColor !important;
+  }
+
+  &::placeholder {
+    color: $primaryColor !important;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  right: 1rem;
+  top: 5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
