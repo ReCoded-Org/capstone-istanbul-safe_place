@@ -5,25 +5,25 @@ exports[`renders correctly and matches the snapshot 1`] = `
   className="opportunities col"
 >
   <div
-    className="opportunityPostDate"
+    className="postDate"
   />
   <div
-    className="opportunityTitle"
+    className="title"
   />
   <div
-    className="opportunityDescription"
+    className="description"
   />
   <span
     className="borderLine"
   />
   <div
-    className="opportunityContactsDetails"
+    className="contactsDetails"
   >
     <div
-      className="opportunityAddress"
+      className="address"
     />
     <div
-      className="opportunityPhoneNumber"
+      className="phoneNumber"
     />
   </div>
 </div>

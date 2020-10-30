@@ -8,10 +8,10 @@ export default function JobsTrainingHome() {
   const { t } = useTranslation();
   const [type, setType] = useState("jobOpportunities");
   const cardsArr = [...t(`home.${type}`, { returnObjects: true })];
-  const showTwoOpportunitiesCards = cardsArr.slice(0,2)
+  const showTwoOpportunitiesCards = cardsArr.slice(0, 2);
   const cards = showTwoOpportunitiesCards.map((opportunity) => (
-      <OpportunitiesCard {...opportunity} key={opportunity.id} />
-    ));
+    <OpportunitiesCard {...opportunity} key={opportunity.id} />
+  ));
   return (
     <div className="jobsTrainingSection">
       <h2 className="jobsTrainingTitle">Jobs / Trainings Opportunities</h2>
