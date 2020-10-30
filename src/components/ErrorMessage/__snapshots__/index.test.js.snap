@@ -3,6 +3,7 @@
 exports[`renders correctly and matches the snapshot 1`] = `
 <div
   className="errorMessage"
+  role="alert"
 >
   <img
     alt=""
