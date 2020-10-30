@@ -16,7 +16,7 @@
     height: 8rem;
   }
 
-  input[type="submit"] {
+  button.submitBtn {
     @include primaryBtn;
     background-color: $successColor;
     font-weight: 800;
@@ -45,7 +45,7 @@
 
 @include media-breakpoint-down(sm) {
   .contactForm {
-    input[type="submit"] {
+    button.submitBtn {
       width: 100%;
     }
   }
