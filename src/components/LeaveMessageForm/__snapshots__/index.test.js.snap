@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
+<div
+  className="contactForm col-md-6 col-12"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="formInput"
+    >
+      <label
+        htmlFor="fullName"
+      >
+        Full Name
+        <input
+          id="fullName"
+          name="fullName"
+          placeholder="Louis Li (Optional)"
+          type="text"
+        />
+      </label>
+    </div>
+    <div
+      className="formInput"
+    >
+      <label
+        htmlFor="email"
+      >
+        E-mail Address
+        <input
+          id="email"
+          name="email"
+          placeholder="louis@example.com"
+          type="email"
+        />
+      </label>
+    </div>
+    <div
+      className="formInput"
+    >
+      <label
+        htmlFor="messageContent"
+      >
+        Message
+        <textarea
+          id="messageContent"
+          name="messageContent"
+          placeholder="type your message here ..."
+        />
+      </label>
+    </div>
+    <button
+      className="submitBtn"
+      type="submit"
+    >
+      Send
+    </button>
+  </form>
+</div>
+`;
