@@ -9,44 +9,44 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-}
 
-.opportunityPostDate {
-  font-size: 0.625rem;
-  padding-left: 80%;
-  width: 4.375rem;
-}
+  .postDate {
+    font-size: 0.625rem;
+    padding-left: 80%;
+    width: 4.375rem;
+  }
 
-.opportunityTitle {
-  padding-bottom: 2%;
-  font-size: 1.125rem;
-  color: $primaryColor;
-  text-align: left;
-}
+  .title {
+    padding-bottom: 2%;
+    font-size: 1.125rem;
+    color: $primaryColor;
+    text-align: left;
+  }
 
-.opportunityDescription {
-  font-size: 0.875rem;
-  text-align: left;
-}
+  .description {
+    font-size: 0.875rem;
+    text-align: left;
+  }
 
-.opportunityContactsDetails {
-  padding-top: 2%;
-  display: flex;
-  justify-content: space-around;
-}
+  .contactsDetails {
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+  }
 
-.opportunityAddress {
-  text-align: left;
-  font-size: 0.8125rem;
-}
+  .address {
+    text-align: left;
+    font-size: 0.8125rem;
+  }
 
-.opportunityPhoneNumber {
-  text-align: right;
-  font-size: 0.8125rem;
-  width: 6.75rem;
-}
+  .phoneNumber {
+    text-align: right;
+    font-size: 0.8125rem;
+    width: 6.75rem;
+  }
 
-.borderLine {
-  padding: 7%;
-  border-bottom: 0.125rem solid $warningColor;
+  .borderLine {
+    padding: 7%;
+    border-bottom: 0.125rem solid $warningColor;
+  }
 }

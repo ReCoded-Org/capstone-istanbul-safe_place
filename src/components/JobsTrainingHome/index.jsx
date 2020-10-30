@@ -14,7 +14,7 @@ export default function JobsTrainingHome() {
     ));
   return (
     <div className="jobsTrainingSection">
-      <h2 className="title">Jobs / Trainings Opportunities</h2>
+      <h2 className="jobsTrainingTitle">Jobs / Trainings Opportunities</h2>
       <p className="description">
         Browse our list of job opportunities, trainings or workshops.{" "}
       </p>
@@ -36,7 +36,7 @@ export default function JobsTrainingHome() {
                 className="trainingsBtn"
                 onClick={() => setType("trainings")}
               >
-                Trainings
+                Trainings / Workshops
               </button>
             </div>
           </Col>

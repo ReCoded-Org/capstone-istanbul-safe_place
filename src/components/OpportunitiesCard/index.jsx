@@ -7,13 +7,13 @@ export default function OpportunitiesCard(opportunity) {
   const { t } = useTranslation();
   return (
     <Col className="opportunities">
-      <div className="opportunityPostDate">{t(opportunity.date)}</div>
-      <div className="opportunityTitle">{t(opportunity.title)}</div>
-      <div className="opportunityDescription">{t(opportunity.description)}</div>
+      <div className="postDate">{t(opportunity.date)}</div>
+      <div className="title">{t(opportunity.title)}</div>
+      <div className="description">{t(opportunity.description)}</div>
       <span className="borderLine"></span>
-      <div className="opportunityContactsDetails">
-        <div className="opportunityAddress">{t(opportunity.address)}</div>
-        <div className="opportunityPhoneNumber">
+      <div className="contactsDetails">
+        <div className="address">{t(opportunity.address)}</div>
+        <div className="phoneNumber">
           {t(opportunity.phoneNumber)}
         </div>
       </div>
