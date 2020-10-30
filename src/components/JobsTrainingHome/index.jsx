@@ -16,7 +16,7 @@ export default function JobsTrainingHome() {
       ));
   return (
     <div className="jobsTrainingSection">
-      <h1 className="title">Jobs/ trainings Opportunities</h1>
+      <h2 className="title">Jobs/ Trainings Opportunities</h2>
       <p className="description">
         Browse our list of job opportunities, trainings or workshops.{" "}
       </p>
