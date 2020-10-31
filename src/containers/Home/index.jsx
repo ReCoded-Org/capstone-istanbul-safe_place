@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import MainNavbar from "../../components/Navbar";
 import ViolenceTest from "../../components/ViolenceTest";
 import GenderViolenceMain from "../../components/GenderViolenceMain";
+import BlogsCarouselHome from "../../components/BlogsCarouselHome";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <GenderViolenceMain />
       <ViolenceTest />
       <SeekHelp />
+      <BlogsCarouselHome />
       <Footer />
     </div>
   );
