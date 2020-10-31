@@ -1,7 +1,11 @@
 @import "../../style/variables";
 @import "../../style/buttons";
 
-@mixin inputElement($bgColor: $lightColor, $hoverColor: $primaryColor, $phColor: #c4cdd5) {
+@mixin inputElement(
+  $bgColor: $lightColor,
+  $hoverColor: $primaryColor,
+  $phColor: #c4cdd5
+) {
   display: block;
   width: 100%;
   height: 2rem;
