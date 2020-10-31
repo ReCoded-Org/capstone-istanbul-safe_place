@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
+<div
+  className="contactSection container-fluid"
+>
+  <div
+    className="contactContainer container-md"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="contactInfo col-md-6 col-12"
+      >
+        <div>
+          Contact info, comming soon ...
+        </div>
+      </div>
+      <div
+        className="contactForm col-md-6 col-12"
+      >
+        <div>
+          contact form, comming soon ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
