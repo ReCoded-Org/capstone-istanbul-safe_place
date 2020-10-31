@@ -8,8 +8,7 @@ exports[`renders correctly 1`] = `
     className="container"
   >
     <div
-      className="navbar-nav"
-      onKeyDown={[Function]}
+      className="col"
     >
       <p>
         Immediate helpline:

@@ -1,16 +1,16 @@
 import React from "react";
-import { Navbar, Nav, Form, FormControl, Container } from "react-bootstrap";
+import { Navbar, Form, FormControl, Container, Col } from "react-bootstrap";
 import phoneIcon from "../../images/icons/phone.svg";
 import "./index.scss";
 
 const HelpNavbar = () => (
   <Navbar className="helpNavbar">
     <Container>
-      <Nav>
+      <Col>
         <p>Immediate helpline:</p>
         <img src={phoneIcon} alt="Phone icon" />
         <p>+1-340-5558-235</p>
-      </Nav>
+      </Col>
       <Form inline>
         <FormControl
           type="text"
