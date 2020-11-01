@@ -6,12 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => (
   <div>
     <HelpNavbar />
     <MainNavbar />
     <Home />
+    <Footer />
   </div>
 );
 
