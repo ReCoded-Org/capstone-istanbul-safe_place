@@ -15,6 +15,7 @@
   .nav-link {
     color: $lightColor !important;
     font-weight: bold;
+    margin-right: 1rem;
 
     &:hover {
       color: $primaryColor !important;
@@ -25,18 +26,19 @@
     margin: 0.1rem;
   }
 
-  button {
+  .signInBtn {
     @include primaryBtn;
     width: 8rem;
     min-height: 0.2rem;
     height: 2rem;
-    padding: 0 2rem;
     font-weight: bold;
     color: $lightColor;
     border-color: $lightColor;
     background-color: transparent;
     border-radius: $borderRadius;
     border: 0.15rem solid $lightColor;
+    padding: 0 2rem;
+    margin-left: 1.5rem;
 
     &:focus {
       box-shadow: 0 0 0 0.2rem $primaryColor;
@@ -57,10 +59,11 @@
 
   .signUpBtn {
     @include primaryBtn;
-    width: 8rem;
     min-height: 0.2rem;
-    padding: 0 2rem;
     font-weight: bold;
+    width: 8rem;
+    height: 2rem;
+    margin: 0 0.5rem;
 
     &:hover {
       color: $primaryColor;
@@ -86,5 +89,10 @@
   .nav-link {
     position: right;
     align-self: center;
+  }
+  
+  .signUpBtn,
+  .signInBtn {
+    margin: 0.4rem auto !important;
   }
 }
