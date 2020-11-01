@@ -14,14 +14,14 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
         className="contactInfo col-md-6 col-12"
       >
         <div>
-          Contact info, comming soon ...
+          Contact info, coming soon ...
         </div>
       </div>
       <div
         className="contactForm col-md-6 col-12"
       >
         <div>
-          contact form, comming soon ...
+          Contact form, coming soon ...
         </div>
       </div>
     </div>
