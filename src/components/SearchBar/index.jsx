@@ -25,7 +25,10 @@ const SearchBar = ({ handleSearch }) => {
               className="searchIcon"
               src={searchIcon}
               alt="Search Icon"
-              onClick={(e) => handleSearch(e, keyword)}
+              onClick={(e) => {
+                handleSearch(e, keyword);
+                setKeyword("");
+              }}
             />
           </InputGroup.Append>
         </InputGroup>

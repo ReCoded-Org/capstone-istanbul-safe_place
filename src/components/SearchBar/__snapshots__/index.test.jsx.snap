@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="container"
+>
+  <form
+    className=""
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        className="mr-sm-2 searchBarInput form-control"
+        onChange={[Function]}
+        placeholder="Search"
+      />
+      <div
+        className="input-group-append"
+      >
+        <img
+          alt="Search Icon"
+          className="searchIcon"
+          onClick={[Function]}
+          src="searchIcon.svg"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+`;
