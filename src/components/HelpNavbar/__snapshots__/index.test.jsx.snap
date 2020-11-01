@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="helpNavbar navbar navbar-expand navbar-light"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        Immediate helpline:
+      </p>
+      <img
+        alt="Phone icon"
+        src="phone.svg"
+      />
+      <p>
+        +1-340-5558-235
+      </p>
+    </div>
+    <form
+      className="form-inline"
+    >
+      <input
+        className="mr-sm-2 form-control"
+        placeholder="Find a shelter"
+        type="text"
+      />
+      <button
+        type="button"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
+`;
