@@ -1,8 +1,7 @@
 @import "../../style/variables";
 
-// bootstrap class
-.form-control {
-  height: 2rem;
+.searchBarInput {
+  height: 2.4rem;
   border: solid 0.12rem $primaryColor !important;
   background-color: rgba(254, 143, 124, 0.3) !important;
   border-color: $primaryColor !important;
@@ -20,7 +19,10 @@
 .searchIcon {
   position: absolute;
   right: 1rem;
-  top: 5%;
+  top: 7%;
+  width: 2rem;
+  height: 2rem;
+  z-index: 3;
 
   &:hover {
     cursor: pointer;

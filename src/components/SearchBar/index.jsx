@@ -12,17 +12,17 @@ const SearchBar = ({ handleSearch }) => {
   };
 
   return (
-    <Container className="searchBar">
+    <Container>
       <Form>
-        <InputGroup className="mb-2">
+        <InputGroup>
           <FormControl
             placeholder="Search"
-            className="mr-sm-2"
+            className="mr-sm-2 searchBarInput"
             onChange={(e) => handleSearchInput(e)}
           />
-          <InputGroup.Append className="searchIcon">
-            <input
-              type="image"
+          <InputGroup.Append>
+            <img
+              className="searchIcon"
               src={searchIcon}
               alt="Search Icon"
               onClick={(e) => handleSearch(e, keyword)}
