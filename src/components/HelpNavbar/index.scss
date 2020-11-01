@@ -20,7 +20,8 @@
   }
 
   img {
-    width: 1.5rem;
+    width: 1.2rem;
+    margin-left: .6rem;
   }
 
   p {
@@ -75,12 +76,12 @@
     }
 
     .form-inline {
-      justify-content: space-between;
+      justify-content: space-evenly;
       margin-bottom: 0.3rem;
     }
 
     .form-control {
-      width: 60%;
+      width: 50%;
     }
   }
 }
