@@ -2,7 +2,7 @@
 
 exports[`renders correctly and matches the snapshot 1`] = `
 <nav
-  className="navbar navbar-expand-lg navbar-light"
+  className="mainNavbar navbar navbar-expand-lg navbar-light"
 >
   <div
     className="container"
@@ -72,33 +72,20 @@ exports[`renders correctly and matches the snapshot 1`] = `
         >
           Contact
         </a>
-        <a
-          className="nav-link"
-          data-rb-event-key="/signin"
-          href="/signin"
-          onClick={[Function]}
-          onKeyDown={[Function]}
+        <button
+          className="signInBtn"
+          to="/signin"
+          type="button"
         >
-          <button
-            type="button"
-          >
-            Sign In
-          </button>
-        </a>
-        <a
-          className="nav-link"
-          data-rb-event-key="/signup"
-          href="/signup"
-          onClick={[Function]}
-          onKeyDown={[Function]}
+          Sign In
+        </button>
+        <button
+          className="signUpBtn"
+          to="/signup"
+          type="button"
         >
-          <button
-            className="signUpBtn"
-            type="button"
-          >
-            Sign Up
-          </button>
-        </a>
+          Sign Up
+        </button>
       </div>
     </div>
   </div>

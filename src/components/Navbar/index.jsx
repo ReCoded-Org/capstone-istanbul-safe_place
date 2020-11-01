@@ -4,7 +4,7 @@ import "./index.scss";
 import logo from "../../images/Logo.svg";
 
 const MainNavbar = () => (
-  <Navbar expand="lg" collapseOnSelect>
+  <Navbar expand="lg" collapseOnSelect className="mainNavbar">
     <Container>
       <Navbar.Brand href="/home">
         <img src={logo} alt="logo" />
@@ -16,14 +16,12 @@ const MainNavbar = () => (
           <Nav.Link href="/blog">Blog</Nav.Link>
           <Nav.Link href="/opportunities">Opportunities</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
-          <Nav.Link href="/signin">
-            <button type="button">Sign In</button>
-          </Nav.Link>
-          <Nav.Link href="/signup">
-            <button type="button" className="signUpBtn">
-              Sign Up
-            </button>
-          </Nav.Link>
+          <button type="button" className="signInBtn" to="/signin">
+            Sign In
+          </button>
+          <button type="button" className="signUpBtn" to="/signup">
+            Sign Up
+          </button>
         </Nav>
       </Navbar.Collapse>
     </Container>
