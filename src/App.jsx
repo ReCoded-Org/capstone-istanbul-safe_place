@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,12 +10,18 @@ import MainNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const App = () => (
-  <div>
-    <HelpNavbar />
-    <MainNavbar />
-    <Home />
-    <Footer />
-  </div>
+  <Router>
+    <div>
+      <HelpNavbar />
+      <MainNavbar />
+      <Switch>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
+    </div>
+  </Router>
 );
 
 export default App;
