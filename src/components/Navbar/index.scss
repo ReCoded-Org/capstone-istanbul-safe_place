@@ -1,0 +1,90 @@
+@import "../../style/variables";
+@import "../../style/bootstrapImports";
+@import "../../style/buttons";
+
+.navbar {
+  background-color: $secondaryColor;
+  height: 5rem;
+  font-family: $mainFontFamily;
+
+  .navbar-nav {
+    margin-left: auto;
+    align-items: baseline;
+  }
+
+  .nav-link {
+    color: $lightColor !important;
+    font-weight: bold;
+
+    &:hover {
+      color: $primaryColor !important;
+    }
+  }
+
+  p {
+    margin: 0.1rem;
+  }
+
+  button {
+    @include primaryBtn;
+    width: 8rem;
+    min-height: 0.2rem;
+    height: 2rem;
+    padding: 0 2rem;
+    font-weight: bold;
+    color: $lightColor;
+    border-color: $lightColor;
+    background-color: transparent;
+    border-radius: $borderRadius;
+    border: 0.15rem solid $lightColor;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $primaryColor;
+    }
+
+    &:hover {
+      color: $primaryColor;
+      background-color: $lightColor;
+      border-color: $lightColor;
+    }
+
+    &:active {
+      background-color: $primaryColor;
+      border-color: $lightColor;
+      box-shadow: 0 0 0 0.2rem $primaryColor;
+    }
+  }
+
+  .signUpBtn {
+    @include primaryBtn;
+    width: 8rem;
+    min-height: 0.2rem;
+    padding: 0 2rem;
+    font-weight: bold;
+
+    &:hover {
+      color: $primaryColor;
+      background-color: $lightColor;
+      border-color: $lightColor;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar {
+    height: 8rem;
+    z-index: 1;
+  }
+
+  .navbar-nav {
+    background-color: $secondaryColor;
+    width: 14rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .nav-link {
+    position: right;
+    align-self: center;
+  }
+}
