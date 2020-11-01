@@ -13,4 +13,5 @@ const SearchForHelpPage = () => {
     </div>
   );
 };
+
 export default SearchForHelpPage;
