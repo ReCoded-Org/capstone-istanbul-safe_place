@@ -6,16 +6,15 @@ import ViolenceTest from "../../components/ViolenceTest";
 import GenderViolenceMain from "../../components/GenderViolenceMain";
 import BlogsCarouselHome from "../../components/BlogsCarouselHome";
 
-const Home = () => {
-  return (
-    <div>
-      <MainNavbar />
-      <GenderViolenceMain />
-      <ViolenceTest />
-      <SeekHelp />
-      <BlogsCarouselHome />
-      <Footer />
-    </div>
-  );
-};
+const Home = () => (
+  <div>
+    <MainNavbar />
+    <GenderViolenceMain />
+    <ViolenceTest />
+    <SeekHelp />
+    <BlogsCarouselHome />
+    <Footer />
+  </div>
+);
+
 export default Home;
