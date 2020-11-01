@@ -1,7 +1,8 @@
 import React from "react";
 import SearchBar from "../../components/SearchBar";
 
-const SearchForHelp = () => {
+const SearchForHelpPage = () => {
+  // TODO(jennethydyrova): Finish implementing search here.
   const handleSearch = (e, keyword) => {
     e.preventDefault();
   };
@@ -12,4 +13,4 @@ const SearchForHelp = () => {
     </div>
   );
 };
-export default SearchForHelp;
+export default SearchForHelpPage;

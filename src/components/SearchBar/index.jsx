@@ -3,11 +3,11 @@ import { Form, FormControl, Container, InputGroup } from "react-bootstrap";
 import searchIcon from "./images/searchIcon.svg";
 import "./index.scss";
 
-//This component takes in a function 'handleSearch' as a props, which handles search based on a keyword provided by user
+// This component takes in a function 'handleSearch' as a props, which handles search based on a keyword provided by user
 const SearchBar = ({ handleSearch }) => {
   const [keyword, setKeyword] = useState("");
 
-  const handleSearchInput = (e) => {
+  const handleInputChange = (e) => {
     setKeyword(e.target.value);
   };
 
@@ -18,7 +18,7 @@ const SearchBar = ({ handleSearch }) => {
           <FormControl
             placeholder="Search"
             className="mr-sm-2 searchBarInput"
-            onChange={(e) => handleSearchInput(e)}
+            onChange={(e) => handleInputChange(e)}
           />
           <InputGroup.Append>
             <img
