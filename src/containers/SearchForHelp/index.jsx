@@ -4,7 +4,6 @@ import SearchBar from "../../components/SearchBar";
 const SearchForHelp = () => {
   const handleSearch = (e, keyword) => {
     e.preventDefault();
-    console.log(keyword);
   };
 
   return (
