@@ -4,7 +4,7 @@ import "./index.scss";
 import logo from "../../images/Logo.svg";
 
 const MainNavbar = () => (
-  <Navbar expand="lg" collapseOnSelect>
+  <Navbar expand="lg" collapseOnSelect className="mainNavbar">
     <Container>
       <Navbar.Brand href="/home">
         <img src={logo} alt="logo" />
