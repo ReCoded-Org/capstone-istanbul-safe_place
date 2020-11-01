@@ -4,7 +4,7 @@
 @mixin inputElement(
   $bgColor: $lightColor,
   $hoverColor: $primaryColor,
-  $phColor: #c4cdd5
+  $placeholderColor: #c4cdd5
 ) {
   display: block;
   width: 100%;
@@ -29,22 +29,22 @@
   }
 }
 
-@mixin inputErrorMessage($color: $lightColor, $bgColor: $errorColor) {
+@mixin inputErrorMessage {
   display: inline;
-  color: $color;
+  color: $lightColor;
   padding: 0.4rem;
   font-size: 0.75rem;
-  background-color: $bgColor;
+  background-color: $errorColor;
   & > p {
     display: inline;
   }
 }
 
-@mixin inputErrorIcon($color: $lightColor) {
+@mixin inputErrorIcon {
   width: 1rem;
   margin: 0 0.4rem;
   padding: 0;
-  color: $color;
+  color: $lightColor;
 }
 
 @mixin inputErrorBorder {
