@@ -17,7 +17,9 @@ const HelpNavbar = () => (
           placeholder="Find a shelter"
           className="mr-sm-2"
         />
-        <button type="button">Search</button>
+        <button type="button" to="/seekhelp">
+          Search
+        </button>
       </Form>
     </Container>
   </Navbar>
