@@ -30,6 +30,7 @@ exports[`renders correctly 1`] = `
         type="text"
       />
       <button
+        to="/seekhelp"
         type="button"
       >
         Search
