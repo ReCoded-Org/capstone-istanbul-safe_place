@@ -11,15 +11,6 @@ import MainNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const App = () => (
-<<<<<<< HEAD
-  <div>
-    <HelpNavbar />
-    <MainNavbar />
-    <Home />
-    <SearchForHelpPage />
-    <Footer />
-  </div>
-=======
   <Router>
     <div>
       <HelpNavbar />
@@ -32,7 +23,6 @@ const App = () => (
       <Footer />
     </div>
   </Router>
->>>>>>> dev
 );
 
 export default App;
