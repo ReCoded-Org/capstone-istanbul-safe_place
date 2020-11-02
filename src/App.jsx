@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ViolenceTestPage from "./containers/ViolenceTestPage";
 
 const App = () => (
   <Router>
@@ -17,6 +18,9 @@ const App = () => (
       <Switch>
         <Route exact path="/home">
           <Home />
+        </Route>
+        <Route exact path="/test">
+          <ViolenceTestPage />
         </Route>
       </Switch>
       <Footer />
