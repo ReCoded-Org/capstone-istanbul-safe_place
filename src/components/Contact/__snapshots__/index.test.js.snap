@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
-<div
-  className="contactSection container-fluid"
+<section
+  className="contactSection"
 >
   <div
     className="contactContainer container-md"
@@ -26,5 +26,5 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
       </div>
     </div>
   </div>
-</div>
+</section>
 `;
