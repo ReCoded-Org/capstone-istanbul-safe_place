@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="errorMessage"
+  role="alert"
+>
+  <img
+    alt=""
+    height="32"
+    src="patchExclamationFll.svg"
+    title="Bootstrap"
+    width="32"
+  />
+  <p>
+    Invalid input value
+  </p>
+</div>
+`;
