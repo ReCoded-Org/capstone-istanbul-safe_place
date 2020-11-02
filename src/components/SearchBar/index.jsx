@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormControl, Container, InputGroup } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import searchIcon from "./images/searchIcon.svg";
 import "./index.scss";
 
@@ -13,26 +13,24 @@ const SearchBar = ({ handleSearch }) => {
 
   return (
     <Container>
-      <Form>
-        <InputGroup>
-          <FormControl
+      <Row>
+        <Col>
+          <input
             placeholder="Search"
             className="mr-sm-2 searchBarInput"
             onChange={(e) => handleInputChange(e)}
           />
-          <InputGroup.Append>
-            <img
-              className="searchIcon"
-              src={searchIcon}
-              alt="Search Icon"
-              onClick={(e) => {
-                handleSearch(e, keyword);
-                setKeyword("");
-              }}
-            />
-          </InputGroup.Append>
-        </InputGroup>
-      </Form>
+          <img
+            className="searchIcon"
+            src={searchIcon}
+            alt="Search Icon"
+            onClick={(e) => {
+              handleSearch(e, keyword);
+              setKeyword("");
+            }}
+          />
+        </Col>
+      </Row>
     </Container>
   );
 };

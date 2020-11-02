@@ -1,27 +1,22 @@
 @import "../../style/variables";
+@import "../../style/forms";
 
 .searchBarInput {
+  @include inputElement(
+    $bgColor: $primaryColor,
+    $placeholderColor: $primaryColor
+  );
   height: 2.4rem;
-  border: solid 0.12rem $primaryColor !important;
-  background-color: rgba(254, 143, 124, 0.3) !important;
-  border-color: $primaryColor !important;
-  border-radius: 10px !important;
-
-  &:focus {
-    box-shadow: 0 0 0 0.1rem $primaryColor !important;
-  }
-
-  &::placeholder {
-    color: $primaryColor !important;
-  }
+  background-color: rgba(254, 143, 124, 0.3);
 }
 
 .searchIcon {
   position: absolute;
   right: 1rem;
-  top: 7%;
-  width: 2rem;
-  height: 2rem;
+  top: 20%;
+  right: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   z-index: 3;
 
   &:hover {
