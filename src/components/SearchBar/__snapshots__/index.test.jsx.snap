@@ -4,28 +4,24 @@ exports[`renders correctly and matches the snapshot 1`] = `
 <div
   className="container"
 >
-  <form
-    className=""
+  <div
+    className="row"
   >
     <div
-      className="input-group"
+      className="col"
     >
       <input
-        className="mr-sm-2 searchBarInput form-control"
+        className="mr-sm-2 searchBarInput"
         onChange={[Function]}
         placeholder="Search"
       />
-      <div
-        className="input-group-append"
-      >
-        <img
-          alt="Search Icon"
-          className="searchIcon"
-          onClick={[Function]}
-          src="searchIcon.svg"
-        />
-      </div>
+      <img
+        alt="Search Icon"
+        className="searchIcon"
+        onClick={[Function]}
+        src="searchIcon.svg"
+      />
     </div>
-  </form>
+  </div>
 </div>
 `;
