@@ -6,13 +6,13 @@ import "./index.scss";
 
 export default function LeaveMessage() {
   return (
-    <Container fluid className="contactSection">
+    <section className="contactSection">
       <Container fluid="md" className="contactContainer">
         <Row>
           <ContactInfo />
           <ContactForm />
         </Row>
       </Container>
-    </Container>
+    </section>
   );
 }
