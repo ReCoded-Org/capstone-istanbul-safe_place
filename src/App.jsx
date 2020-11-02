@@ -9,9 +9,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SeekHelpMap from "./components/SeekHelpMap";
 
 const App = () => (
+<<<<<<< HEAD
+  <div>
+    <HelpNavbar />
+    <MainNavbar />
+    <Home />
+    <SearchForHelpPage />
+    <Footer />
+  </div>
+=======
   <Router>
     <div>
       <HelpNavbar />
@@ -20,13 +28,11 @@ const App = () => (
         <Route exact path="/home">
           <Home />
         </Route>
-        <Route exact path="/seekhelp">
-          <SearchForHelpPage />
-        </Route>
       </Switch>
       <Footer />
     </div>
   </Router>
+>>>>>>> dev
 );
 
 export default App;
