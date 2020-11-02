@@ -6,14 +6,11 @@ exports[`renders correctly and matches the snapshot 1`] = `
   role="alert"
 >
   <img
-    alt=""
+    alt="Error Logo"
     height="32"
     src="patchExclamationFll.svg"
-    title="Bootstrap"
     width="32"
   />
-  <p>
-    Invalid input value
-  </p>
+  <p />
 </div>
 `;
