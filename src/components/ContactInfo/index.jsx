@@ -18,16 +18,16 @@ export default function ContactInfo() {
       </p>
       <Row className="contactMethods">
         <Col>
-          <img className="contactIcon" src={locationIcon} alt="Location Icon" />
+          <img className="contactIcon" src={locationIcon} alt="Location icon" />
           <p>9094 Bay Meadows Street Conyers, GA 30012</p>
         </Col>
         <Col>
-          <img className="contactIcon" src={phoneIcon} alt="Phone Icon" />
-          <p>+229-955-5388-336 +229-955-5373-360</p>
+          <img className="contactIcon" src={phoneIcon} alt="Phone icon" />
+          <p>+229-955-5388-336</p>
         </Col>
         <Col>
-          <img className="contactIcon" src={mailIcon} alt="Contact Icon" />
-          <p>office@mail.com support@mail.com</p>
+          <img className="contactIcon" src={mailIcon} alt="Contact icon" />
+          <p>office@mail.com</p>
         </Col>
       </Row>
     </Col>

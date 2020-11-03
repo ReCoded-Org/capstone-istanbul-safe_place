@@ -17,7 +17,7 @@ exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
       className="col"
     >
       <img
-        alt="Location Icon"
+        alt="Location icon"
         className="contactIcon"
         src="locationIcon.svg"
       />
@@ -29,24 +29,24 @@ exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
       className="col"
     >
       <img
-        alt="Phone Icon"
+        alt="Phone icon"
         className="contactIcon"
         src="phoneIcon.svg"
       />
       <p>
-        +229-955-5388-336 +229-955-5373-360
+        +229-955-5388-336
       </p>
     </div>
     <div
       className="col"
     >
       <img
-        alt="Contact Icon"
+        alt="Contact icon"
         className="contactIcon"
         src="mailIcon.svg"
       />
       <p>
-        office@mail.com support@mail.com
+        office@mail.com
       </p>
     </div>
   </div>
