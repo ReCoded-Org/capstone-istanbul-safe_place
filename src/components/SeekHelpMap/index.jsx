@@ -12,7 +12,7 @@ const MAP_ZOOM = 13;
 
 // Example code for markers is here https://developers.google.com/maps/documentation/javascript/infowindows
 
-const SeekHelpMap = ({ mapStyle }) => {
+const SeekHelpMap = () => {
   const modelsMap = (map, maps) => {
     const dataArray = [];
     locationData.map((markerJson) => dataArray.push(markerJson));
