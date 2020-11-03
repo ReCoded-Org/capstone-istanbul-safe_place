@@ -11,7 +11,7 @@ exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
     Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium nos causae confidere, sed animo etiam erga nos causae confidere, sed uti oratione perpetua malo quam ostendis sed quia dolor repellendus temporibus autem.
   </p>
   <div
-    className="contactMethod row"
+    className="contactMethods row"
   >
     <div
       className="col"
@@ -41,7 +41,7 @@ exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
       className="col"
     >
       <img
-        alt="Phone Icon"
+        alt="Contact Icon"
         className="contactIcon"
         src="mailIcon.svg"
       />
