@@ -8,7 +8,7 @@ export default function JobsTrainingHome() {
   const { t } = useTranslation();
   const [translationKey, setTranslationKey] = useState("jobOpportunities");
   const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
-  const NUM_CARDS_TO_SHOW = 2
+  const NUM_CARDS_TO_SHOW = 2;
   const showTwoOpportunitiesCards = cardsArr.slice(0, NUM_CARDS_TO_SHOW);
   const cards = showTwoOpportunitiesCards.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
