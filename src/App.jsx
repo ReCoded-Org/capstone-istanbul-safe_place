@@ -15,10 +15,13 @@ const App = () => (
     <div>
       <HelpNavbar />
       <MainNavbar />
-      <SearchForHelpPage />
+
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/seekhelp">
+          <SearchForHelpPage />
         </Route>
       </Switch>
       <Footer />
