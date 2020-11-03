@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ViolenceTestHeader from "../../components/SelfViolenceTestHeader";
-import ViolenceTestCards from "../../components/SelfViolenceTestCards";
+import ViolenceTestHeader from "../../components/ViolenceTestHeader";
+import ViolenceTestCards from "../../components/ViolenceTestCards";
 
 const ViolenceTestPage = () => {
   return (
