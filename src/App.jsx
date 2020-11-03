@@ -22,6 +22,7 @@ const App = () => (
         </Route>
         <Route exact path="/seekhelp">
           <SearchForHelpPage />
+        </Route>
         <Route exact path="/test">
           <ViolenceTestPage />
         </Route>
