@@ -55,7 +55,7 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
               src="mailIcon.svg"
             />
             <p>
-              office@mail.com
+              support@mail.com
             </p>
           </div>
         </div>

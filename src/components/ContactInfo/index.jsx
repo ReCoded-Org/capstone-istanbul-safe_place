@@ -27,7 +27,7 @@ export default function ContactInfo() {
         </Col>
         <Col>
           <img className="contactIcon" src={mailIcon} alt="Contact icon" />
-          <p>office@mail.com</p>
+          <p>support@mail.com</p>
         </Col>
       </Row>
     </Col>
