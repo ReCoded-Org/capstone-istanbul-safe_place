@@ -7,7 +7,7 @@
     margin-bottom: 1rem;
   }
 
-  .contactMethod {
+  .contactMethods {
     padding-top: 1rem;
   }
 
@@ -15,12 +15,5 @@
     width: 2rem;
     height: 2rem;
     margin-bottom: 1rem;
-  }
-
-  .phoneIcon {
-      display: block;
-      background-color: $darkColor;
-      mask: url(../../images/icons/phone.svg) no-repeat center;
-      mask-size: contain;
   }
 }
