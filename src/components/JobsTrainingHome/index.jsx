@@ -6,9 +6,10 @@ import OpportunitiesCard from "../OpportunitiesCard";
 
 export default function JobsTrainingHome() {
   const { t } = useTranslation();
-  const [eventType, setEventType] = useState("jobOpportunities");
-  const cardsArr = [...t(`home.${eventType}`, { returnObjects: true })];
-  const showTwoOpportunitiesCards = cardsArr.slice(0, 2);
+  const [translationKey, setTranslationKey] = useState("jobOpportunities");
+  const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
+  const NUM_CARDS_TO_SHOW = 2
+  const showTwoOpportunitiesCards = cardsArr.slice(0, NUM_CARDS_TO_SHOW);
   const cards = showTwoOpportunitiesCards.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
@@ -23,18 +24,18 @@ export default function JobsTrainingHome() {
           <Col md={3}>
             <div>
               <button
-                eventType="button"
+                translationKey="button"
                 className="jobsBtn"
-                onClick={() => setEventType("jobOpportunities")}
+                onClick={() => setTranslationKey("jobOpportunities")}
               >
                 Job Opportunities
               </button>
             </div>
             <div>
               <button
-                eventType="button"
+                translationKey="button"
                 className="trainingsBtn"
-                onClick={() => setEventType("trainings")}
+                onClick={() => setTranslationKey("trainings")}
               >
                 Trainings / Workshops
               </button>
