@@ -30,7 +30,8 @@
 
   button {
     @include primaryBtn;
-    margin-right: 0.5rem;
+    margin-right: 1.4rem;
+    padding: 0;
     min-height: 2rem;
     width: 8rem;
     font-weight: bold;
