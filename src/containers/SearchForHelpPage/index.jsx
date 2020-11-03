@@ -11,13 +11,7 @@ const SearchForHelpPage = () => {
   return (
     <div>
       <SearchBar handleSearch={handleSearch} />
-      <SeekHelpMap
-        mapStyle={{
-          height: "70vh",
-          width: "50%",
-          marginTop: "3rem",
-        }}
-      />
+      <SeekHelpMap />
     </div>
   );
 };
