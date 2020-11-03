@@ -13,6 +13,7 @@ export default function OpportunitiesCard(opportunity) {
       <span className="borderLine"></span>
       <div className="contactsDetails">
         <div className="address">{t(opportunity.address)}</div>
+        <div className="nameOfOpportunityOwner">{t(opportunity.name)}</div>
         <div className="phoneNumber">{t(opportunity.phoneNumber)}</div>
       </div>
     </Col>

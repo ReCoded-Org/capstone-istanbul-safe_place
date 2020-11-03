@@ -37,17 +37,19 @@
     "jobOpportunities": [
       {
         "title": "Cook",
+        "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
-        "phoneNumber": "Dameon Peterson +906467291373",
+        "phoneNumber": "+906467291373",
         "date": "27/10/2020",
         "id": 0
       },
       {
         "title": "Web Developer",
+        "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
-        "phoneNumber": "Dameon Peterson +906467291373",
+        "phoneNumber": "+906467291373",
         "date": "27/10/2020",
         "id": 1
       }
@@ -55,17 +57,19 @@
     "trainings": [
       {
         "title": "Web Development Bootcamp training",
+        "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
-        "phoneNumber": "Dameon Peterson +906467291373",
+        "phoneNumber": "+906467291373",
         "date": "27/10/2020",
         "id": 0
       },
       {
-        "title": "Cookin training",
+        "title": "cooking training",
+        "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
-        "phoneNumber": "Dameon Peterson +906467291373",
+        "phoneNumber": "+906467291373",
         "date": "27/10/2020",
         "id": 1
       }

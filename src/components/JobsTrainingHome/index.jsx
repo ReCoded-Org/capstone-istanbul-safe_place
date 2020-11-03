@@ -9,15 +9,15 @@ export default function JobsTrainingHome() {
   const [translationKey, setTranslationKey] = useState("jobOpportunities");
   const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
   const NUM_CARDS_TO_SHOW = 2;
-  const showTwoOpportunitiesCards = cardsArr.slice(0, NUM_CARDS_TO_SHOW);
-  const cards = showTwoOpportunitiesCards.map((opportunity) => (
+  const shownOpportunitiesCards = cardsArr.slice(0, NUM_CARDS_TO_SHOW);
+  const cards = shownOpportunitiesCards.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
   return (
     <div className="jobsTrainingSection">
-      <h2 className="jobsTrainingTitle">Jobs / Trainings Opportunities</h2>
+      <h2 className="jobsTrainingTitle">Job / Training Opportunities</h2>
       <p className="description">
-        Browse our list of job opportunities, trainings or workshops.{" "}
+        Browse our list of job opportunities, trainings or workshops.
       </p>
       <Container>
         <Row>

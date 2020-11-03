@@ -7,13 +7,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
   <h2
     className="jobsTrainingTitle"
   >
-    Jobs / Trainings Opportunities
+    Job / Training Opportunities
   </h2>
   <p
     className="description"
   >
     Browse our list of job opportunities, trainings or workshops.
-     
   </p>
   <div
     className="container"
@@ -71,6 +70,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
                 className="address"
               />
               <div
+                className="nameOfOpportunityOwner"
+              />
+              <div
                 className="phoneNumber"
               />
             </div>
@@ -95,6 +97,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
             >
               <div
                 className="address"
+              />
+              <div
+                className="nameOfOpportunityOwner"
               />
               <div
                 className="phoneNumber"
