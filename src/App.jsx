@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
+import SearchForHelpPage from "./containers/SearchForHelpPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,6 +15,7 @@ const App = () => (
     <div>
       <HelpNavbar />
       <MainNavbar />
+      <SearchForHelpPage />
       <Switch>
         <Route exact path="/">
           <Home />
