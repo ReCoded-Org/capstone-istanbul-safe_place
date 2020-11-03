@@ -11,7 +11,9 @@ const SeekHelp = () => {
         Find immediate access to information of nearby shelters, psychologist,
         lawyers or doctors.
       </h6>
-      <SeekHelpMap />
+      <SeekHelpMap
+        mapStyle={{ height: "70vh", width: "100%", marginTop: "3rem" }}
+      />
       <SeekHelpCarousel />
     </div>
   );
