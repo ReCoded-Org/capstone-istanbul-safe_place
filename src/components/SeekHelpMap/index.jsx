@@ -39,7 +39,7 @@ const SeekHelpMap = ({ mapStyle }) => {
   };
 
   return (
-    <div style={mapStyle}>
+    <div className="mapStyle">
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyDaUQrW9mjOOZbwb5r1lD809Tx9fC0CmA4" }}
         defaultCenter={DEFAULT_CENTER}
