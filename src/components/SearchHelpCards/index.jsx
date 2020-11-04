@@ -33,7 +33,11 @@ const SearchHelpCards = () => {
                   <div>
                     <div className="contactDetails">
                       <div>
-                        <img src={phoneSvg} alt="Phone Icon" />
+                        <img
+                          src={phoneSvg}
+                          alt="Phone Icon"
+                          className="phoneSvg"
+                        />
                       </div>
                       <div>
                         <p>{t(el.phoneNumber)}</p>

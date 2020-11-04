@@ -1,9 +1,11 @@
 @import "../../style/variables";
 
 .singleCard {
-  background-color: $warningColor;
   border-radius: 20px;
   padding: 2rem;
+  border: 0.15rem solid;
+  border-color: $warningColor;
+  margin-left: 0.3rem;
 
   h3 {
     color: $darkColor;
@@ -11,14 +13,30 @@
     font-weight: bold;
     font-family: $mainFontFamily;
   }
+
   h4 {
     color: $darkColor;
     font-size: 20px;
     font-family: $mainFontFamily;
   }
+
   p {
-    color: $lightColor;
+    color: $darkColor;
     font-size: 12px;
+  }
+
+  .phoneSvg path {
+    fill: $darkColor;
+  }
+
+  &:hover {
+    background-color: $warningColor;
+    cursor: pointer;
+
+    p {
+      color: $lightColor;
+      font-size: 12px;
+    }
   }
 }
 
