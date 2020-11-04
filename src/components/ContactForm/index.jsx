@@ -25,9 +25,7 @@ export default function ContactForm({ submit }) {
               id="fullName"
               ref={register()}
             />
-            {errors?.fullName && (
-              <InputErrorMessage message={errors.fullName.message} />
-            )}
+
           </label>
         </div>
 
@@ -52,12 +50,7 @@ export default function ContactForm({ submit }) {
                 },
               })}
             />
-            {errors?.email?.type === "required" && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
-            {errors?.email?.type === "pattern" && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
+            {errors?.email && <InputErrorMessage message={errors.email.message} />}
           </label>
         </div>
 
@@ -85,13 +78,7 @@ export default function ContactForm({ submit }) {
                 },
               })}
             />
-            {errors?.messageContent?.type === "required" && (
-              <InputErrorMessage message={errors.messageContent.message} />
-            )}
-            {errors?.messageContent?.type === "minLength" && (
-              <InputErrorMessage message={errors.messageContent.message} />
-            )}
-            {errors?.messageContent?.type === "maxLength" && (
+            {errors?.messageContent && (
               <InputErrorMessage message={errors.messageContent.message} />
             )}
           </label>
