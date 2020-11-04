@@ -23,9 +23,11 @@ const SeekHelpCarousel = () => {
       <Row>
         <Col md={{ span: 7, offset: 5 }}>
           <Slider {...settings}>
-            {t("home.seekHelpSection", { returnObjects: true }).map((el) => {
-              return <SeekHelpSingleCard cardDetails={el} />;
-            })}
+            {t("home.seekHelpSection", { returnObjects: true }).map(
+              (details) => {
+                return <SeekHelpSingleCard {...details} />;
+              }
+            )}
           </Slider>
         </Col>
       </Row>

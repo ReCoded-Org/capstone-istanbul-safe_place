@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="carouselItem"
+>
+  <div
+    className="carouselHeaderAndImage"
+  >
+    <div>
+      <h3 />
+      <h4 />
+    </div>
+    <div>
+      <img
+        alt="Specialist"
+        src="defaultImg.svg"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="contactDetails"
+    >
+      <div>
+        <img
+          alt="Phone Icon"
+          src="phone.svg"
+        />
+      </div>
+      <div>
+        <p />
+      </div>
+    </div>
+    <div
+      className="contactDetails"
+    >
+      <div>
+        <img
+          alt="Location Icon"
+          src="map-marker.svg"
+        />
+      </div>
+      <div>
+        <p />
+      </div>
+    </div>
+    <p />
+  </div>
+</div>
+`;
