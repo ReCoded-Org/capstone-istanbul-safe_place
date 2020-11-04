@@ -20,7 +20,7 @@ export default function ContactForm({ submit }) {
             <input
               className={errors.fullName && "inputError"}
               type="text"
-              placeholder="Louis Li (Optional)"
+              placeholder="Louis Li (optional)"
               name="fullName"
               id="fullName"
               ref={register()}
