@@ -1,5 +1,7 @@
 import React from "react";
 import SearchBar from "../../components/SearchBar";
+import SeekHelpMap from "../../components/SeekHelpMap";
+import SearchHelpCards from "../../components/SearchHelpCards";
 
 const SearchForHelpPage = () => {
   // TODO(jennethydyrova): Finish implementing search here.
@@ -8,8 +10,10 @@ const SearchForHelpPage = () => {
   };
 
   return (
-    <div>
+    <div className="searchHelpPage">
       <SearchBar handleSearch={handleSearch} />
+      <SeekHelpMap />
+      {/* <SearchHelpCards /> */}
     </div>
   );
 };
