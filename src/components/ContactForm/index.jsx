@@ -25,7 +25,6 @@ export default function ContactForm({ submit }) {
               id="fullName"
               ref={register()}
             />
-
           </label>
         </div>
 
@@ -50,7 +49,9 @@ export default function ContactForm({ submit }) {
                 },
               })}
             />
-            {errors?.email && <InputErrorMessage message={errors.email.message} />}
+            {errors?.email && (
+              <InputErrorMessage message={errors.email.message} />
+            )}
           </label>
         </div>
 

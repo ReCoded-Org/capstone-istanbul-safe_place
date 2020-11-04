@@ -22,7 +22,7 @@
     @include inputErrorBorder;
   }
 
-  /* Submit Button Style */ 
+  /* Submit Button Style */
   button.submitBtn {
     @include primaryBtn;
     background-color: $successColor;
