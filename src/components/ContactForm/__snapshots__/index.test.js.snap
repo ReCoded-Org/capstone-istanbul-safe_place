@@ -17,7 +17,7 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
         <input
           id="fullName"
           name="fullName"
-          placeholder="Louis Li (Optional)"
+          placeholder="Louis Li (optional)"
           type="text"
         />
       </label>
