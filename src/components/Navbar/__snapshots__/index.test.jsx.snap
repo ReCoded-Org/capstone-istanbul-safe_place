@@ -9,7 +9,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
   >
     <a
       className="navbar-brand"
-      href="/home"
+      href="/"
     >
       <img
         alt="logo"

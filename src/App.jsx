@@ -10,19 +10,25 @@ import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
+import ViolenceTestPage from "./containers/ViolenceTestPage";
 
 const App = () => (
   <Router>
     <div>
       <HelpNavbar />
       <MainNavbar />
-      <SearchForHelpPage />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/sign-in">
           <SignIn />
+        </Route>
+        <Route exact path="/seekhelp">
+          <SearchForHelpPage />
+        </Route>
+        <Route exact path="/test">
+          <ViolenceTestPage />
         </Route>
       </Switch>
       <Footer />
