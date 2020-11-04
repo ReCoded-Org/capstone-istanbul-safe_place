@@ -6,6 +6,7 @@
 .contactForm {
   font: inherit;
 
+  /* Inputs Style */
   input[type="text"],
   input[type="email"],
   textarea {
@@ -16,6 +17,12 @@
     height: 8rem;
   }
 
+  input.inputError,
+  textarea.inputError {
+    @include inputErrorBorder;
+  }
+
+  /* Submit Button Style */ 
   button.submitBtn {
     @include primaryBtn;
     background-color: $successColor;
@@ -27,6 +34,7 @@
     }
   }
 
+  /* Input & Label block Style */
   .formInput {
     margin-bottom: 1.4rem;
     position: relative;
@@ -35,11 +43,6 @@
       width: 100%;
       font-weight: 500;
     }
-  }
-
-  input.inputError,
-  textarea.inputError {
-    @include inputErrorBorder;
   }
 }
 
