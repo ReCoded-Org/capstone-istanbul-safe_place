@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
+<div
+  className="contactInfo col-md-6 col-12"
+>
+  <h2>
+    Leave us a message
+  </h2>
+  <p>
+    Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium nos causae confidere, sed animo etiam erga nos causae confidere, sed uti oratione perpetua malo quam ostendis sed quia dolor repellendus temporibus autem.
+  </p>
+  <div
+    className="contactMethods row"
+  >
+    <div
+      className="col"
+    >
+      <img
+        alt="Location icon"
+        className="contactIcon"
+        src="locationIcon.svg"
+      />
+      <p>
+        9094 Bay Meadows Street Conyers, GA 30012
+      </p>
+    </div>
+    <div
+      className="col"
+    >
+      <img
+        alt="Phone icon"
+        className="contactIcon"
+        src="phoneIcon.svg"
+      />
+      <p>
+        +229-955-5388-336
+      </p>
+    </div>
+    <div
+      className="col"
+    >
+      <img
+        alt="Contact icon"
+        className="contactIcon"
+        src="mailIcon.svg"
+      />
+      <p>
+        support@mail.com
+      </p>
+    </div>
+  </div>
+</div>
+`;
