@@ -6,7 +6,7 @@ import logo from "../../images/Logo.svg";
 const MainNavbar = () => (
   <Navbar expand="lg" collapseOnSelect className="mainNavbar">
     <Container>
-      <Navbar.Brand href="/home">
+      <Navbar.Brand href="/">
         <img src={logo} alt="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
