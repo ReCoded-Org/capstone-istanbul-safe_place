@@ -1,5 +1,32 @@
-.searchHelpPage .mapStyle {
-  height: 100vh;
-  width: 100%;
-  margin-top: 3rem;
+@import "../../style/variables";
+
+.searchHelpPage {
+  .mapStyle {
+    height: 70vh;
+  }
+  h2 {
+    color: $primaryColor;
+    text-align: center;
+    font-family: $mainFontFamily;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  h6 {
+    color: $darkColor;
+    text-align: center;
+    font-size: 14px;
+    margin: 2rem 0;
+    font-family: $mainFontFamily;
+  }
+  .searchHelpCards {
+    height: 70vh;
+    overflow: auto;
+    padding: 0;
+  }
+  .singleCard {
+    margin-bottom: 1rem;
+  }
+  .container {
+    margin-bottom: 2rem;
+  }
 }

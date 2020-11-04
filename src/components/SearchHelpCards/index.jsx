@@ -5,6 +5,7 @@ import locationSvg from "../../images/icons/map-marker.svg";
 import doctorImg from "../../images/doctorImage.svg";
 import { useTranslation, I18nextProvider } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
+import "./index.scss";
 
 const SearchHelpCards = () => {
   const { t } = useTranslation();
@@ -14,13 +15,13 @@ const SearchHelpCards = () => {
 
   return (
     <I18nextProvider>
-      <Container>
+      <Container className="searchHelpCards">
         <Row>
-          <Col md={{ span: 7, offset: 5 }}>
+          <Col>
             {t("home.seekHelpSection", { returnObjects: true }).map((el) => {
               return (
-                <div className="carouselItem" key={el.name}>
-                  <div className="carouselHeaderAndImage">
+                <div className="singleCard" key={el.name}>
+                  <div className="cardImgAndHeader">
                     <div>
                       <h3>{t(el.title)}</h3>
                       <h4>{t(el.name)}</h4>
