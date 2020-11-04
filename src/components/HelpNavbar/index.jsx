@@ -1,5 +1,12 @@
 import React from "react";
-import { Navbar, Form, FormControl, Container, Col } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Container,
+  Col,
+} from "react-bootstrap";
 import phoneIcon from "../../images/icons/phone.svg";
 import "./index.scss";
 
@@ -17,7 +24,9 @@ const HelpNavbar = () => (
           placeholder="Find a shelter"
           className="mr-sm-2"
         />
-        <button type="button">Search</button>
+        <Nav.Link href="/seekhelp">
+          <button type="button">Search</button>
+        </Nav.Link>
       </Form>
     </Container>
   </Navbar>
