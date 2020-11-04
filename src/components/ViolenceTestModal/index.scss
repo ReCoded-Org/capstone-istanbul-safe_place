@@ -1,0 +1,13 @@
+@import "../../style/variables";
+@import "../../style/bootstrapImports";
+@import "../../style/buttons";
+
+.violenceModal {
+  margin-bottom: 3rem;
+
+  button {
+    @include primaryBtn;
+    height:3em;
+    width:12rem;
+  }
+}
