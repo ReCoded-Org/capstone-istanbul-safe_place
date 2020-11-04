@@ -1,0 +1,23 @@
+@import "../../style/variables";
+
+.testHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: $mainFontFamily;
+
+  h1 {
+    color: $primaryColor;
+    padding-top: 0.8rem;
+  }
+
+  p {
+    color: $darkColor;
+  }
+
+  a {
+    color: $darkColor;
+    text-decoration: underline;
+  }
+}
