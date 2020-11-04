@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./index.scss";
 
 const ViolenceTestCards = () => {
@@ -87,7 +87,8 @@ const ViolenceTestCards = () => {
           </label>
           <label>
             <input type="checkbox" />
-            Ridiculed or insulted your most valued beliefs? (i.e. religion, heritage, or class)
+            Ridiculed or insulted your most valued beliefs? (i.e. religion,
+            heritage, or class)
           </label>
           <label>
             <input type="checkbox" />
