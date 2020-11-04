@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SignInForm from "../SignInForm";
 import womenGroupHuggingTogether from "../../images/womenGroupHuggingTogether.png";
-import googleIcon from '../../images/icons/googleIcon.svg'
-import twitterIcon from '../../images/icons/twitterIcon.svg'
-import facebookIcon from '../../images/icons/facebookIcon.svg'
+import googleIcon from "../../images/icons/googleIcon.svg";
+import twitterIcon from "../../images/icons/twitterIcon.svg";
+import facebookIcon from "../../images/icons/facebookIcon.svg";
 import "./index.scss";
 
 export default function SignIn() {
@@ -46,7 +46,9 @@ export default function SignIn() {
 
             <SignInForm submit={setSignInData} />
 
-            <p>New here? <a href="/sign-up">Create an account</a></p>
+            <p>
+              New here? <a href="/sign-up">Create an account</a>
+            </p>
           </Col>
         </Row>
       </Container>

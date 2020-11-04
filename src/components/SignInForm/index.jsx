@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-export default function SignInForm({submit}) {
-    return (
-        <div>
-            {/* TODO */}
-            sign in form
-        </div>
-    )
+export default function SignInForm({ submit }) {
+  return (
+    <div>
+      {/* TODO */}
+      sign in form
+    </div>
+  );
 }
