@@ -9,7 +9,7 @@ import "./index.scss";
 
 export default function SignIn() {
   const [signInData, setSignInData] = React.useState({});
-  // TODO: implement the siging in functinoality
+  // TODO: implement the signing in functionality
   console.log(signInData);
 
   return (
