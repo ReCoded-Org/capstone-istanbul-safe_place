@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import "./index.scss";
 
 const ViolenceTestCards = () => {
+  
   const TEST_SPEC = [
     {
       category: "Physical Abuse",
