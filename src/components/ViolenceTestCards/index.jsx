@@ -9,103 +9,103 @@ const ViolenceTestCards = () => {
         <h3>Physical Abuse</h3>
         <h5>Has your partner:</h5>
         <form className="test">
-          <label>
+          <div>
             <input type="checkbox" />
             Pushed or shoved you?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Held you to keep you from leaving?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Slapped or bit you?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Kicked or choked you?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Hit or punched you?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Thrown objects at you?
-          </label>
+          </div>
         </form>
       </Col>
       <Col className="card">
         <h3>Sexual Abuse</h3>
         <h5>Has your partner:</h5>
         <form className="test">
-          <label>
+          <div>
             <input type="checkbox" />
             Been jealously angry, assuming you would have sex with others?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Insisted you dress in a more sexual/less sexual way than you wanted?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Criticized you sexually?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Insisted on unwanted or uncomfortable touching?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Withheld sex and/or affection?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Called you sexual names? (e.g. “whore” or “frigid”)
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Demanding monogamy from you, while insisting on freedom for self?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Forced sex with them or others or forced you to watch others?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Forced sex after beating?
-          </label>
+          </div>
         </form>
       </Col>
       <Col className="card">
         <h3>Emotional Abuse</h3>
         <h5>Has your partner:</h5>
         <form className="test">
-          <label>
+          <div>
             <input type="checkbox" />
             Ignored your feelings?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Ridiculed or insulted your most valued beliefs? (i.e. religion,
             heritage, or class)
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Withheld approval, appreciation or affection as punishment?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Continually criticized you, called you names, shouted?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Insulted or drove away your friends or family?
-          </label>
-          <label>
+          </div>
+          <div>
             <input type="checkbox" />
             Humiliated you in private or public?
-          </label>
+          </div>
         </form>
       </Col>
     </Row>
