@@ -26,10 +26,7 @@ const SeekHelpSingleCard = ({
             <h4>{name}</h4>
           </div>
           <div>
-            <img
-              src={imageMap[portraitImg] ? imageMap[portraitImg] : defaultImg}
-              alt="Specialist"
-            />
+            <img src={imageMap[portraitImg] || defaultImg} alt="Specialist" />
           </div>
         </div>
         <div>
