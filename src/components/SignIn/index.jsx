@@ -9,50 +9,48 @@ import "./index.scss";
 
 export default function SignIn() {
   return (
-    <section className="singInSection">
-      <Container fluid="md" className="contactContainer">
-        <Row>
-          <Col className="signInImg" md={6} xs={12}>
-            <img
-              src={womenGroupHuggingTogether}
-              alt="Women Group Hugging Together"
-            />
-          </Col>
-          <Col className="signInForm" md={6} xs={12}>
-            <h2>Welcome Back!</h2>
-            <h4>Sign in with</h4>
-            <ul className="signInIcons">
-              <li className="signInIcon">
-                <a href="/">
-                  <img src={twitterIcon} alt="Twitter icon" />
-                </a>
-              </li>
-              <li className="signInIcon">
-                <a href="/">
-                  <img src={facebookIcon} alt="Facebook icon" />
-                </a>
-              </li>
-              <li className="signInIcon">
-                <a href="/">
-                  <img src={googleIcon} alt="Google icon" />
-                </a>
-              </li>
-            </ul>
-            <hr className="divider" />
+    <Container fluid="md" className="signInSection">
+      <Row>
+        <Col className="signInImg" md={6} xs={12}>
+          <img
+            src={womenGroupHuggingTogether}
+            alt="Women Group Hugging Together"
+          />
+        </Col>
+        <Col className="signInForm" md={6} xs={12}>
+          <h2>Welcome Back!</h2>
+          <h4>Sign in with</h4>
+          <ul className="signInIcons">
+            <li className="signInIcon">
+              <a href="#/">
+                <img src={twitterIcon} alt="Twitter icon" />
+              </a>
+            </li>
+            <li className="signInIcon">
+              <a href="#/">
+                <img src={facebookIcon} alt="Facebook icon" />
+              </a>
+            </li>
+            <li className="signInIcon">
+              <a href="#/">
+                <img src={googleIcon} alt="Google icon" />
+              </a>
+            </li>
+          </ul>
+          <hr className="divider" />
 
-            <SignInForm
-              submit={() => {
-                /* TODO: implement the signing in functionality */
-              }}
-            />
+          <SignInForm
+            submit={() => {
+              /* TODO: implement the signing in functionality */
+            }}
+          />
 
-            <p>
-              New here?
-              <a href="/sign-up">Create an account</a>
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+          <p>
+            New here?
+            <a href="/sign-up"> Create an account</a>
+          </p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
