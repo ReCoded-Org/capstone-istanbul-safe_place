@@ -3,9 +3,45 @@ import { Col, Row } from "react-bootstrap";
 import "./index.scss";
 
 const ViolenceTestCards = () => {
+  const TEST_SPEC = [
+    {
+      category: "Physical Abuse",
+      subtitle: "Has your partner:",
+      checkboxItems: ["Pushed or shoved you"],
+    },
+    {
+      category: "Physical Abuse",
+      subtitle: "Has your partner:",
+      checkboxItems: ["Pushed or shoved you"],
+    },
+    {
+      category: "Physical Abuse",
+      subtitle: "Has your partner:",
+      checkboxItems: ["Pushed or shoved you"],
+    },
+  ]; 
+  
+  const cards = TEST_SPEC.map((test) => (
+    <Col className="card">
+      <h3>{test.category}</h3>
+      <h5>{test.subtitle}</h5>
+      <form className="test">
+        {test.checkboxItems.map((item) => (
+          <div>
+            <input type="checkbox" />
+            {item}
+          </div>
+        ))}
+      </form>
+    </Col>
+  ));
+
   return (
     <Row className="justify-content-md-center">
-      <Col className="card">
+      {/* <Col className="card">  */}
+      {cards}
+      {/* </Col> */}
+      {/* <Col className="card">
         <h3>Physical Abuse</h3>
         <h5>Has your partner:</h5>
         <form className="test">
@@ -34,8 +70,8 @@ const ViolenceTestCards = () => {
             Thrown objects at you?
           </div>
         </form>
-      </Col>
-      <Col className="card">
+      </Col> */}
+      {/* <Col className="card">
         <h3>Sexual Abuse</h3>
         <h5>Has your partner:</h5>
         <form className="test">
@@ -107,7 +143,7 @@ const ViolenceTestCards = () => {
             Humiliated you in private or public?
           </div>
         </form>
-      </Col>
+      </Col> */}
     </Row>
   );
 };
