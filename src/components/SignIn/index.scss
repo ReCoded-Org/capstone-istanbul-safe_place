@@ -7,17 +7,14 @@
   /* All section style */
   width: 100%;
 
-  /* Image Style */
   .signInImg {
     background-color: $secondaryColor;
   }
 
-  /* Form Style */
   .signInForm {
     background-color: $lightColor;
   }
 
-  /* Heading Style */
   h2 {
     @include mainHeading;
     color: $primaryColor;
@@ -40,7 +37,6 @@
     }
   }
 
-  /* Link Style */
   a {
     color: $primaryColor;
 
@@ -50,7 +46,6 @@
     }
   }
 
-  /* Section divider Style */
   hr.divider {
     overflow: visible;
     padding: 0;
