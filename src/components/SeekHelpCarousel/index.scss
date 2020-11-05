@@ -1,44 +1,3 @@
-@import "../../style/variables";
-
-.carouselItem {
-  background-color: $warningColor;
-  border-radius: 20px;
-  padding: 2rem;
-
-  h3 {
-    color: $darkColor;
-    font-size: 42px;
-    font-weight: bold;
-    font-family: $mainFontFamily;
-  }
-  h4 {
-    color: $darkColor;
-    font-size: 20px;
-    font-family: $mainFontFamily;
-  }
-  p {
-    color: $lightColor;
-    font-size: 12px;
-  }
-}
-
-.carouselHeaderAndImage {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.contactDetails {
-  display: flex;
-  flex-direction: row;
-}
-
-.carousel {
-  position: absolute;
-  z-index: 1;
-  bottom: 12rem;
-}
-
 .slick-slide {
   padding: 0 1rem;
 }
@@ -47,4 +6,9 @@
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
+}
+
+.carousel {
+  z-index: 1;
+  bottom: 12rem;
 }
