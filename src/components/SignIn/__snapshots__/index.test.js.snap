@@ -74,7 +74,7 @@ exports[`renders correctly 1`] = `
           sign in form
         </div>
         <p>
-          New here? 
+          New here?
           <a
             href="/sign-up"
           >

@@ -8,10 +8,6 @@ import facebookIcon from "../../images/icons/facebookIcon.svg";
 import "./index.scss";
 
 export default function SignIn() {
-  const [signInData, setSignInData] = React.useState({});
-  // TODO: implement the signing in functionality
-  console.log(signInData);
-
   return (
     <section className="singInSection">
       <Container fluid="md" className="contactContainer">
@@ -44,10 +40,15 @@ export default function SignIn() {
             </ul>
             <hr className="divider" />
 
-            <SignInForm submit={setSignInData} />
+            <SignInForm
+              submit={() => {
+                /* TODO: implement the signing in functionality */
+              }}
+            />
 
             <p>
-              New here? <a href="/sign-up">Create an account</a>
+              New here?
+              <a href="/sign-up">Create an account</a>
             </p>
           </Col>
         </Row>
