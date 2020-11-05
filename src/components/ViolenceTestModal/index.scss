@@ -5,9 +5,35 @@
 .violenceModal {
   margin-bottom: 3rem;
 
-  button {
-    @include primaryBtn;
-    height:3em;
-    width:12rem;
+}
+
+.btn {
+  @include primaryBtn;
+  height:3em;
+  width:12rem;
+
+  &:active{
+    background-color: $primaryColor!important;
+    border-color: $primaryColor!important;
   }
+
+  &:focus{
+    background-color: $primaryColor;
+    border-color:$primaryColor;
+    box-shadow: 0 0 0 0.2rem $warningColor!important;
+  }
+}
+
+.modal-content {
+  display: flex !important;
+  flex-direction: column!important;
+  justify-content: baseline!important;
+  align-content: center!important;
+  align-items: !important;
+}
+
+.try {
+  @include primaryBtn;
+  height:3em;
+  width:12rem;
 }
