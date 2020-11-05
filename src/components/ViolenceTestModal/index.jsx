@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Row, Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./index.scss";
+
 
 const ViolenceTestModal = () => {
   const [show, setShow] = useState(false);
@@ -14,22 +16,26 @@ const ViolenceTestModal = () => {
         Result
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="modalCard">
         <Modal.Body>
-          <p>
-            If you answered YES to ANY or ALL of these questions, you may be in
-            an abusive relationship. Please call for information and assistance
-          </p>
-          <Button variant="primary" onClick={handleClose} className="try">
-            +1-340-5558-235
-          </Button>
-          <p>
-            or Gain immediate access to infomration of nearby shelters,
-            psychologist, lawyers or doctors.
-          </p>
-          <Button variant="primary">
-            Search for help
-          </Button>
+          <button type="button" className="close" onClick={handleClose}>
+            <span aria-hidden="true">×</span>
+          </button>
+          <div className="modalBody">
+            <p>
+              If you answered YES to ANY or ALL of these questions, you may be
+              in an abusive relationship. Please call for information and
+              assistance
+            </p>
+            <Button type="button">+1-340-5558-235</Button>
+            <p>
+              or Gain immediate access to information of nearby shelters,
+              psychologist, lawyers or doctors.
+            </p>
+            <Link to="/seekhelp">
+              <Button type="button">Search for help</Button>
+            </Link>
+          </div>
         </Modal.Body>
       </Modal>
     </Row>
