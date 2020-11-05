@@ -3,31 +3,35 @@
 @import "../../style/headings";
 @import "../../style/bootstrapImports";
 
-.singInSection {
+.signInSection {
   /* All section style */
   width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 
-  /* Image Style */
   .signInImg {
-    background-color: $secondaryColor;
+    background-color: $lightColor;
+
+    img {
+      width: 100%;
+    }
   }
 
-  /* Form Style */
   .signInForm {
     background-color: $lightColor;
   }
 
-  /* Heading Style */
   h2 {
     @include mainHeading;
+    font-size: 2.8rem;
     color: $primaryColor;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   h4 {
     font-size: 1.25rem;
     color: $primaryColor;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     &::before {
       display: inline-block;
@@ -40,7 +44,6 @@
     }
   }
 
-  /* Link Style */
   a {
     color: $primaryColor;
 
@@ -50,7 +53,6 @@
     }
   }
 
-  /* Section devider Style */
   hr.divider {
     overflow: visible;
     padding: 0;
@@ -64,7 +66,7 @@
       content: "Or";
       display: inline-block;
       position: relative;
-      top: -13px;
+      top: -0.8rem;
       font: normal 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
         Arial, sans-serif;
       padding: 0 16px;
@@ -77,10 +79,11 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2rem;
   }
   .signInIcon {
     list-style: none;
-    background-color: $secondaryColor;
+    background-color: $successColor;
     border-radius: 50px;
     padding: 0.6rem;
     margin: 1rem 0;
@@ -91,7 +94,7 @@
   }
 
   .signInIcon img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
