@@ -26,32 +26,6 @@ describe("LeaveMessageForm", () => {
     expect(mockSubmit).not.toBeCalled();
   });
 
-  // TODO: uncomment this unite test when add the email address validation
-  // it("should display matching error when email is invalid", async () => {
-  //   fireEvent.input(screen.getByRole("textbox", { name: /Email address/i }), {
-  //     target: {
-  //       value: "test",
-  //     },
-  //   });
-
-  //   fireEvent.input(screen.getByRole("textbox", { name: /message/i }), {
-  //     target: {
-  //       value: "New message to send to us",
-  //     },
-  //   });
-
-  //   fireEvent.submit(screen.getByRole("button"));
-
-  //   expect(await screen.findAllByRole("alert")).toHaveLength(1);
-  //   expect(mockSubmit).not.toBeCalled();
-  //   expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
-  //     "test"
-  //   );
-  //   expect(screen.getByRole("textbox", { name: /message/i }).value).toBe(
-  //     "New message to send to us"
-  //   );
-  // });
-
   it("should display min length error when message is short", async () => {
     fireEvent.input(screen.getByRole("textbox", { name: /Email address/i }), {
       target: {
