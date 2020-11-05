@@ -30,7 +30,7 @@ export default function ContactForm({ submit }) {
 
         <div className="formInput">
           <label htmlFor="email">
-            E-mail Address
+            Email address
             <input
               className={errors.email && "inputError"}
               type="email"
@@ -42,11 +42,7 @@ export default function ContactForm({ submit }) {
                   value: true,
                   message: "Your email address is required.",
                 },
-                pattern: {
-                  // TODO: intall joi and use it for email validation
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "Invalid email address.",
-                },
+                // TODO: intall joi and use it for email validation
               })}
             />
             {errors?.email && (

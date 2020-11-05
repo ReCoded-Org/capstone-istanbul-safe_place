@@ -87,7 +87,7 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="email"
             >
-              E-mail Address
+              Email address
               <input
                 id="email"
                 name="email"
