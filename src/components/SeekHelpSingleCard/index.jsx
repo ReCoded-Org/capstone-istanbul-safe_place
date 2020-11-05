@@ -3,7 +3,6 @@ import phoneSvg from "./images/phone.svg";
 import locationSvg from "./images/map-marker.svg";
 import doctorImg from "./images/doctorImage.svg";
 import defaultImg from "./images/defaultImg.svg";
-import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const SeekHelpSingleCard = ({
@@ -14,8 +13,7 @@ const SeekHelpSingleCard = ({
   address,
   moreInfo,
 }) => {
-  const { t } = useTranslation();
-  const translationImageMap = {
+  const imageMap = {
     doctorImg: doctorImg,
   };
 
@@ -24,16 +22,12 @@ const SeekHelpSingleCard = ({
       <div className="carouselItem" key={name}>
         <div className="carouselHeaderAndImage">
           <div>
-            <h3>{t(title)}</h3>
-            <h4>{t(name)}</h4>
+            <h3>{title}</h3>
+            <h4>{name}</h4>
           </div>
           <div>
             <img
-              src={
-                translationImageMap[portraitImg]
-                  ? translationImageMap[portraitImg]
-                  : defaultImg
-              }
+              src={imageMap[portraitImg] ? imageMap[portraitImg] : defaultImg}
               alt="Specialist"
             />
           </div>
@@ -44,7 +38,7 @@ const SeekHelpSingleCard = ({
               <img src={phoneSvg} alt="Phone Icon" />
             </div>
             <div>
-              <p>{t(phoneNumber)}</p>
+              <p>{phoneNumber}</p>
             </div>
           </div>
           <div className="contactDetails">
@@ -52,10 +46,10 @@ const SeekHelpSingleCard = ({
               <img src={locationSvg} alt="Location Icon" />
             </div>
             <div>
-              <p>{t(address)}</p>
+              <p>{address}</p>
             </div>
           </div>
-          <p>{t(moreInfo)}</p>
+          <p>{moreInfo}</p>
         </div>
       </div>
     </>

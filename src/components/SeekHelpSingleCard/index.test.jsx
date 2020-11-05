@@ -12,10 +12,6 @@ const mockData = {
     "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis",
 };
 
-jest.mock("react-i18next", () => ({
-  useTranslation: () => ({ t: (key) => key }),
-}));
-
 it("renders correctly and matches the snapshot", () => {
   const tree = renderer
     .create(<SeekHelpSingleCard cardDetails={mockData} />)
