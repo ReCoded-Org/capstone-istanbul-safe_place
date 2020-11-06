@@ -1,0 +1,50 @@
+@import "../../style/variables";
+
+.opportunities {
+  width: 22.8rem;
+  height: 17.6rem;
+  background: $lightColor;
+  padding: 1.25rem;
+  margin: 1.25rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .postDate {
+    font-size: 0.625rem;
+    padding-left: 80%;
+    width: 4.375rem;
+  }
+
+  .title {
+    padding-bottom: 2%;
+    font-size: 1.125rem;
+    color: $primaryColor;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  .contactsDetails {
+    font-size: 0.8125rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .address {
+    text-align: left;
+    padding-right: 30%;
+  }
+  .phoneNumber {
+    padding-left: 62%;
+  }
+
+  .borderLine {
+    padding: 7%;
+    border-bottom: 0.125rem solid $warningColor;
+  }
+}

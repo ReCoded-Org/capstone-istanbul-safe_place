@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="jobsTrainingSection"
+>
+  <h2
+    className="jobsTrainingTitle"
+  >
+    Job / Training Opportunities
+  </h2>
+  <p
+    className="description"
+  >
+    Browse our list of job opportunities, trainings or workshops.
+  </p>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-3"
+      >
+        <div>
+          <button
+            className="jobsBtn"
+            onClick={[Function]}
+            translationKey="button"
+          >
+            Job Opportunities
+          </button>
+        </div>
+        <div>
+          <button
+            className="trainingsBtn"
+            onClick={[Function]}
+            translationKey="button"
+          >
+            Trainings / Workshops
+          </button>
+        </div>
+      </div>
+      <div
+        className="col-md-9"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="opportunities col"
+          >
+            <div
+              className="postDate"
+            />
+            <div
+              className="title"
+            />
+            <div
+              className="description"
+            />
+            <span
+              className="borderLine"
+            />
+            <div
+              className="contactsDetails"
+            >
+              <div
+                className="address"
+              />
+              <div
+                className="nameOfOpportunityOwner"
+              />
+              <div
+                className="phoneNumber"
+              />
+            </div>
+          </div>
+          <div
+            className="opportunities col"
+          >
+            <div
+              className="postDate"
+            />
+            <div
+              className="title"
+            />
+            <div
+              className="description"
+            />
+            <span
+              className="borderLine"
+            />
+            <div
+              className="contactsDetails"
+            >
+              <div
+                className="address"
+              />
+              <div
+                className="nameOfOpportunityOwner"
+              />
+              <div
+                className="phoneNumber"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
