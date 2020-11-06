@@ -72,8 +72,6 @@ describe("LeaveMessageForm", () => {
 
     fireEvent.submit(screen.getByRole("button"));
 
-    // expect(await screen.findAllByRole("alert")).toHaveLength(0);
-
     await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
     expect(mockSubmit).toBeCalledWith({
       email: "test@mail.com",
