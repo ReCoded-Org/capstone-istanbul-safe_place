@@ -1,13 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const ViolenceTestCards = () => {
-
   const { t } = useTranslation();
-  const [translationKey, setTranslationKey] = useState("TestSpec");
-  const cardsArr = [...t(`violenceTestPage.${translationKey}`, { returnObjects: true })];
+  const cardsArr = [...t(`violenceTestPage.TestSpec`, { returnObjects: true })];
 
   const cards = cardsArr.map((test) => (
     <Col className="card">
@@ -24,11 +22,7 @@ const ViolenceTestCards = () => {
     </Col>
   ));
 
-  return (
-    <Row className="justify-content-md-center">
-      {cards}
-    </Row>
-  );
+  return <Row className="justify-content-md-center">{cards}</Row>;
 };
 
 export default ViolenceTestCards;
