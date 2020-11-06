@@ -3,7 +3,6 @@ import { Row, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./index.scss";
 
-
 const ViolenceTestModal = () => {
   const [show, setShow] = useState(false);
 
@@ -27,7 +26,9 @@ const ViolenceTestModal = () => {
               in an abusive relationship. Please call for information and
               assistance
             </p>
-            <Button type="button">+1-340-5558-235</Button>
+            <Button type="button">
+              <a href="tel:+1-555-555-1212">340-5558-235</a>
+            </Button>
             <p>
               or Gain immediate access to information of nearby shelters,
               psychologist, lawyers or doctors.

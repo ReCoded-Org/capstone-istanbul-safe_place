@@ -45,5 +45,14 @@
       text-align: justify;
       text-justify: inter-word;
     }
+
+    a {
+      color: $lightColor !important;
+      text-decoration: underline;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
   }
 }
