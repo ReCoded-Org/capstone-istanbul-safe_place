@@ -7,8 +7,8 @@ import "./index.scss";
 
 const schema = Joi.object({
   email: Joi.string()
-    .email({ tlds: { allow: ['com', 'net', 'edu'] } })
     .required()
+    .email({ tlds: { allow: ['com', 'net', 'edu'] } })
     .messages({
       'string.empty': `Email field cannot be empty`,
       'string.email': `You should type a valid email`
@@ -45,6 +45,7 @@ export default function SignInForm({ submit }) {
             type="email"
             placeholder="Your Email"
             name="email"
+            aria-label="email"
             ref={register()}
           />
           {errors?.email && <InputErrorMessage message={errors.email.message} />}
@@ -57,6 +58,7 @@ export default function SignInForm({ submit }) {
             type="password"
             placeholder="Password"
             name="password"
+            aria-label="password"
             ref={register()}
           />
           {errors?.password && <InputErrorMessage message={errors.password.message} />}
