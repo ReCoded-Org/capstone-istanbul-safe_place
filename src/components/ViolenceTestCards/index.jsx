@@ -6,21 +6,24 @@ import "./index.scss";
 const ViolenceTestCards = () => {
   const { t } = useTranslation();
   const cardsArr = [...t(`violenceTestPage.TestSpec`, { returnObjects: true })];
-
-  const cards = cardsArr.map((test) => (
-    <Col className="card">
-      <h3>{test.category}</h3>
-      <h5>{test.subtitle}</h5>
-      <form className="test">
-        {test.checkboxItems.map((item) => (
-          <div>
-            <input type="checkbox" />
-            {item}
-          </div>
-        ))}
-      </form>
-    </Col>
-  ));
+  const cards = [];
+  
+  for (const testCategory of cardsArr) {
+    cards.push(
+      <Col className="card">
+        <h3>{testCategory.category}</h3>
+        <h5>{testCategory.subtitle}</h5>
+        <form className="test">
+          {testCategory.checkboxItems.map((item) => (
+            <div>
+              <input type="checkbox" />
+              {item}
+            </div>
+          ))}
+        </form>
+      </Col>
+    );
+  }
 
   return <Row className="justify-content-md-center">{cards}</Row>;
 };
