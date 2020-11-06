@@ -1,28 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import { Col, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const ViolenceTestCards = () => {
+
+  const { t } = useTranslation();
+  const [translationKey, setTranslationKey] = useState("TestSpec");
+  const cardsArr = [...t(`violenceTestPage.${translationKey}`, { returnObjects: true })];
   
-  const TEST_SPEC = [
-    {
-      category: "Physical Abuse",
-      subtitle: "Has your partner:",
-      checkboxItems: ["Pushed or shoved you"],
-    },
-    {
-      category: "Physical Abuse",
-      subtitle: "Has your partner:",
-      checkboxItems: ["Pushed or shoved you"],
-    },
-    {
-      category: "Physical Abuse",
-      subtitle: "Has your partner:",
-      checkboxItems: ["Pushed or shoved you"],
-    },
-  ]; 
+  // const TEST_SPEC = [
+  //   {
+  //     category: "Physical Abuse",
+  //     subtitle: "Has your partner:",
+  //     checkboxItems: ["Pushed or shoved you"],
+  //   },
+  //   {
+  //     category: "Physical Abuse",
+  //     subtitle: "Has your partner:",
+  //     checkboxItems: ["Pushed or shoved you"],
+  //   },
+  //   {
+  //     category: "Physical Abuse",
+  //     subtitle: "Has your partner:",
+  //     checkboxItems: ["Pushed or shoved you"],
+  //   },
+  // ]; 
   
-  const cards = TEST_SPEC.map((test) => (
+  const cards = cardsArr.map((test) => (
     <Col className="card">
       <h3>{test.category}</h3>
       <h5>{test.subtitle}</h5>

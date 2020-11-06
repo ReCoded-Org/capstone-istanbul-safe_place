@@ -73,5 +73,49 @@
         "id": 1
       }
     ]
+  },
+  "violenceTestPage": {
+    "TestSpec": [
+      {
+        "category": "Physical Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Pushed or shoved you",
+          "Held you to keep you from leaving?",
+          "Slapped or bit you?",
+          "Kicked or choked you?",
+          "Hit or punched you?",
+          "Thrown objects at you?"
+        ]
+      },
+      {
+        "category": "Sexual Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Been jealously angry, assuming you would have sex with others?",
+          "Insisted you dress in a more sexual/less sexual way than you wanted?",
+          "Criticized you sexually?",
+          "Insisted on unwanted or uncomfortable touching?",
+          "Withheld sex and/or affection?",
+          "Called you sexual names? (e.g. “whore” or “frigid”)",
+          "Demanding monogamy from you, while insisting on freedom for self?",
+          "Held you to keep you from leaving?",
+          "Forced sex with them or others or forced you to watch others?",
+          "Forced sex after beating?"
+        ]
+      },
+      {
+        "category": "Emotional Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Ignored your feelings?",
+          "Ridiculed or insulted your most valued beliefs? (i.e. religion, heritage, or class)",
+          "Withheld approval, appreciation or affection as punishment?",
+          "Continually criticized you, called you names, shouted?",
+          "Insulted or drove away your friends or family?",
+          "Humiliated you in private or public?"
+        ]
+      }
+    ]
   }
 }
