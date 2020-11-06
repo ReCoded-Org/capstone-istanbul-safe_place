@@ -1,10 +1,35 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-// import InputErrorMessage from "../InputErrorMessage";
+import Joi from 'joi';
+import { joiResolver } from '@hookform/resolvers/joi';
+import InputErrorMessage from "../InputErrorMessage";
 import "./index.scss";
 
+const schema = Joi.object({
+  email: Joi.string()
+    .email({ tlds: { allow: ['com', 'net', 'edu'] } })
+    .required()
+    .messages({
+      'string.empty': `Email field cannot be empty`,
+      'string.email': `You should type a valid email`
+    })
+  ,
+  password: Joi.string()
+    .required()
+    .min(8)
+    .max(64)
+    .strict()
+    .messages({
+      'string.empty': `Password field cannot be empty`,
+    })
+
+});
+
 export default function SignInForm({ submit }) {
-  const { register, handleSubmit, errors, reset } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm({
+    resolver: joiResolver(schema),
+  });
+
   const onSubmit = (data) => {
     submit(data);
     reset();
@@ -20,32 +45,21 @@ export default function SignInForm({ submit }) {
             type="email"
             placeholder="Your Email"
             name="email"
-            ref={register({
-              required: {
-                value: true,
-                message: "Your email address is required.",
-              },
-              pattern: {
-                // TODO: intall joi and use it for email validation
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Invalid email address.",
-              },
-            })}
+            ref={register()}
           />
-          {errors?.email && (
-            {/* <InputErrorMessage message={errors.email.message} /> */ }
-          )}
+          {errors?.email && <InputErrorMessage message={errors.email.message} />}
+
         </div>
 
         <div className="formInput">
           <input
-            className={errors.fullName && "inputError"}
+            className={errors.password && "inputError"}
             type="password"
             placeholder="Password"
-            name="fullName"
-            id="fullName"
+            name="password"
             ref={register()}
           />
+          {errors?.password && <InputErrorMessage message={errors.password.message} />}
         </div>
 
         <div className="formInput">
@@ -54,9 +68,6 @@ export default function SignInForm({ submit }) {
             Remember me next time
           </label>
 
-          {errors?.messageContent && (
-            {/* <InputErrorMessage message={errors.messageContent.message} /> */ }
-          )}
         </div>
 
         <button type="submit" className="submitBtn">
