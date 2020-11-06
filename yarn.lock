@@ -7367,11 +7367,6 @@ jest@24.9.0, jest@^24.9.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
-joi-password-complexity@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/joi-password-complexity/-/joi-password-complexity-4.2.1.tgz#9f7f2e5fc6fb2ad5179909a557491d646d6636ee"
-  integrity sha512-fXVk0sRjOLRM753q0cCoRdv+HwvadAF6BTeOYFl4deNV0rml2RCRrJhJlBTEDf4/K2+smBbU0wq0RAJ0CP66nQ==
-
 joi@^17.3.0:
   version "17.3.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-17.3.0.tgz#f1be4a6ce29bc1716665819ac361dfa139fff5d2"
