@@ -6,6 +6,7 @@ import "./index.scss";
 const ViolenceTestCards = () => {
   const { t } = useTranslation();
   const cardsArr = [...t(`violenceTestPage.TestSpec`, { returnObjects: true })];
+  const checkboxItems = [...t(`violenceTestPage.TestSpec.checkboxItems`, { returnObjects: true })];
   const cards = [];
   
   for (const testCategory of cardsArr) {
@@ -14,7 +15,7 @@ const ViolenceTestCards = () => {
         <h3>{testCategory.category}</h3>
         <h5>{testCategory.subtitle}</h5>
         <form className="test">
-          {testCategory.checkboxItems.map((item) => (
+          {checkboxItems.map((item) => (
             <div>
               <input type="checkbox" />
               {item}
