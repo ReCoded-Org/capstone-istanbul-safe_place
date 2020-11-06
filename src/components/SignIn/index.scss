@@ -11,6 +11,7 @@
 
   .signInImg {
     background-color: $lightColor;
+    margin: auto 0;
 
     img {
       width: 100%;
@@ -81,6 +82,7 @@
     justify-content: space-around;
     margin-bottom: 2rem;
   }
+  
   .signInIcon {
     list-style: none;
     background-color: $successColor;
