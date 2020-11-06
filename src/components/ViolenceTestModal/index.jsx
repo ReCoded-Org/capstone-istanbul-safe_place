@@ -27,7 +27,7 @@ const ViolenceTestModal = () => {
               assistance
             </p>
             <Button type="button">
-              <a href="tel:+1-555-555-1212">340-5558-235</a>
+              <a href="tel:+1-340-5558-235">340-5558-235</a>
             </Button>
             <p>
               or Gain immediate access to information of nearby shelters,
