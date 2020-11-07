@@ -11,7 +11,7 @@ const SearchForHelpPage = () => {
   return (
     <Container className="searchHelpPage">
       <h2>{t("searchHelpPage.header")}</h2>
-      <h6>{t("searchHelpPage.subheader")}</h6>
+      <h6>{t("searchHelpPage.subHeader")}</h6>
       <Row>
         <DropdownButton title="Location">
           {t("searchHelpPage.locations", { returnObjects: true }).map((key) => (
