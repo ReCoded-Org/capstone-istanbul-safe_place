@@ -3,6 +3,7 @@
     "seekHelpSection": [
       {
         "title": "Doctor",
+        "professionId": 0,
         "name": "Jenny Wilson",
         "portraitImg": "doctorImg",
         "phoneNumber": "+1-340-5558-235 ",
@@ -10,14 +11,16 @@
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Lawyer",
+        "professionId": 1,
         "name": "Jenny Wilson",
         "phoneNumber": "+1-340-5558-235 ",
         "address": "9094 Bay Meadows Street, Conyers, GA 30012",
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Psychologist",
+        "professionId": 2,
         "name": "Jenny Wilson",
         "portraitImg": "doctorImg",
         "phoneNumber": "+1-340-5558-235 ",
@@ -25,7 +28,8 @@
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Social worker",
+        "professionId": 3,
         "name": "Jenny Wilson",
         "portraitImg": "doctorImg",
         "phoneNumber": "+1-340-5558-235 ",
@@ -73,5 +77,11 @@
         "id": 1
       }
     ]
+  },
+  "searchHelpPage": {
+    "header": "Search for help",
+    "subheader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
+    "locations": ["Istanbul", "Ankara", "Izmir"],
+    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"]
   }
 }
