@@ -21,7 +21,6 @@ const SearchForHelpPage = () => {
           <Dropdown.Item eventKey="2">Ankara</Dropdown.Item>
           <Dropdown.Item eventKey="3">Izmir</Dropdown.Item>
         </DropdownButton>
-
         <DropdownButton title="Type of help">
           <Dropdown.Item eventKey="1">Doctor</Dropdown.Item>
           <Dropdown.Item eventKey="2">Lawyer</Dropdown.Item>
