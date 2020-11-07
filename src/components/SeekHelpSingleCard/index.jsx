@@ -1,8 +1,8 @@
 import React from "react";
-import phoneSvg from "./images/phone.svg";
-import locationSvg from "./images/mapMarker.svg";
-import doctorImg from "./images/doctorImage.svg";
-import defaultImg from "./images/defaultImg.svg";
+import phoneSvg from "../../images/icons/phone.svg";
+import locationSvg from "../../images/icons/mapMarker.svg";
+import doctorImg from "../../images/icons/doctorImage.svg";
+import defaultImg from "../../images/icons/defaultImg.svg";
 import "./index.scss";
 
 const SeekHelpSingleCard = ({

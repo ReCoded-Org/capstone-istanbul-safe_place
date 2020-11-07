@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SeekHelpMap from "../../components/SeekHelpMap";
 import SeekHelpSingleCard from "../../components/SeekHelpSingleCard";
 import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
