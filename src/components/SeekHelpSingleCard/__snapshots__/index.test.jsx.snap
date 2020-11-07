@@ -38,7 +38,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <div>
         <img
           alt="Location Icon"
-          src="map-marker.svg"
+          src="mapMarker.svg"
         />
       </div>
       <div>

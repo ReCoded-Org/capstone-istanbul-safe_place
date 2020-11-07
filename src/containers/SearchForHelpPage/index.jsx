@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SeekHelpMap from "../../components/SeekHelpMap";
 import SeekHelpSingleCard from "../../components/SeekHelpSingleCard";
 import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
@@ -12,20 +12,20 @@ const SearchForHelpPage = () => {
     <Container className="searchHelpPage">
       <h2>Search for help</h2>
       <h6>
-        Search and immediate access to infomration of nearby shelters,
+        Search and immediate access to information of nearby shelters,
         psychologist, lawyers or doctors
       </h6>
       <Row>
         <DropdownButton title="Location">
-          <Dropdown.Item eventKey="1">Istanbul</Dropdown.Item>
-          <Dropdown.Item eventKey="2">Ankara</Dropdown.Item>
-          <Dropdown.Item eventKey="3">Izmir</Dropdown.Item>
+          <Dropdown.Item eventKey="0">Istanbul</Dropdown.Item>
+          <Dropdown.Item eventKey="1">Ankara</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Izmir</Dropdown.Item>
         </DropdownButton>
         <DropdownButton title="Type of help">
-          <Dropdown.Item eventKey="1">Doctor</Dropdown.Item>
-          <Dropdown.Item eventKey="2">Lawyer</Dropdown.Item>
-          <Dropdown.Item eventKey="3">Psychologist</Dropdown.Item>
-          <Dropdown.Item eventKey="4">Social worker</Dropdown.Item>
+          <Dropdown.Item eventKey="0">Doctor</Dropdown.Item>
+          <Dropdown.Item eventKey="1">Lawyer</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Psychologist</Dropdown.Item>
+          <Dropdown.Item eventKey="3">Social worker</Dropdown.Item>
         </DropdownButton>
       </Row>
       <Row>
