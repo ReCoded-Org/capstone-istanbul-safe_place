@@ -13,13 +13,14 @@ const SeekHelpSingleCard = ({
   address,
   moreInfo,
 }) => {
+  console.log(portraitImg);
   const imageMap = {
     doctorImg: doctorImg,
   };
 
   return (
     <>
-      <div className="carouselItem" key={name}>
+      <div className="singleCard" key={name}>
         <div className="carouselHeaderAndImage">
           <div>
             <h3>{title}</h3>
