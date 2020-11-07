@@ -12,10 +12,7 @@ export default function SignUp() {
     <Container fluid="md" className="signUpSection">
       <Row>
         <Col className="signInImg" md={6} xs={12}>
-          <img
-            src={womenSupportEachOther}
-            alt="Women Group Hugging Together"
-          />
+          <img src={womenSupportEachOther} alt="Women Group Hugging Together" />
         </Col>
         <Col className="signInForm" md={6} xs={12}>
           <h2>Welcome to Safe Place!</h2>
