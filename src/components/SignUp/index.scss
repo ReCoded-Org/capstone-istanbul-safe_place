@@ -8,17 +8,10 @@
   width: 100%;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  background-color: $lightColor;
 
-  .signInImg {
-    background-color: $lightColor;
-
-    img {
+  .signInImg img{
       width: 100%;
-    }
-  }
-
-  .signInForm {
-    background-color: $lightColor;
   }
 
   h2 {
@@ -80,6 +73,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
+    padding: 0;
   }
   .signInIcon {
     list-style: none;
