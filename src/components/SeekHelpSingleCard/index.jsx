@@ -13,7 +13,6 @@ const SeekHelpSingleCard = ({
   address,
   moreInfo,
 }) => {
-  console.log(portraitImg);
   const imageMap = {
     doctorImg: doctorImg,
   };
