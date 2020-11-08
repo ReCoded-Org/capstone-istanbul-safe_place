@@ -5,27 +5,55 @@ import "./index.scss";
 
 const ViolenceTestCards = () => {
   const { t } = useTranslation();
-  const cardsArr = [...t(`violenceTestPage.TestSpec`, { returnObjects: true })];
-  const cards = [];
-  
-  for (const testCategory of cardsArr) {
-    cards.push(
-      <Col className="card">
-        <h3>{testCategory.category}</h3>
-        <h5>{testCategory.subtitle}</h5>
-        <form className="test">
-          {testCategory.checkboxItems.map((item) => (
-            <div>
-              <input type="checkbox" />
-              {item}
-            </div>
-          ))}
-        </form>
-      </Col>
-    );
-  }
+  const cardsArr = [...t("violenceTestPage.testSpec", { returnObjects: true })];
+  const checkboxItemsArr = [
+    [
+      ...t("violenceTestPage.testSpec.0.checkboxItems", {
+        returnObjects: true,
+      }),
+    ],
+    [
+      ...t("violenceTestPage.testSpec.1.checkboxItems", {
+        returnObjects: true,
+      }),
+    ],
+    [
+      ...t("violenceTestPage.testSpec.2.checkboxItems", {
+        returnObjects: true,
+      }),
+    ],
+  ];
 
-  return <Row className="justify-content-md-center">{cards}</Row>;
+  const cards = cardsArr.map((card) => {
+    return (
+      <div className="col" key={card.id}>
+        <h3>{t(card.category)}</h3>
+        <h5>{t(card.subtitle)}</h5>
+      </div>
+    );
+  });
+
+  const checkboxItems = checkboxItemsArr.map((items) => {
+    return (
+      <form className="test col" key={items.id}>
+        {items.map((item) => (
+          <div key={item.id}>
+            <input type="checkbox" />
+            {item}
+          </div>
+        ))}
+      </form>
+    );
+  });
+
+  return (
+    <Row className="justify-content-md-center">
+      <Col className="card">
+        <Row>{cards}</Row>
+        <Row>{checkboxItems}</Row>
+      </Col>
+    </Row>
+  );
 };
 
 export default ViolenceTestCards;

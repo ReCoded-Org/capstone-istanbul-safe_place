@@ -75,7 +75,7 @@
     ]
   },
   "violenceTestPage": {
-    "TestSpec": [
+    "testSpec": [
       {
         "category": "Physical Abuse",
         "subtitle": "Has your partner:",
