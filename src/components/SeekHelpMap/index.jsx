@@ -12,8 +12,7 @@ const MAP_ZOOM = 13;
 
 // Example code for markers is here https://developers.google.com/maps/documentation/javascript/infowindows
 
-const SeekHelpMap = (filteredCity) => {
-  console.log(filteredCity);
+const SeekHelpMap = ({ coordinates }) => {
   const modelsMap = (map, maps) => {
     const dataArray = [];
     locationData.map((markerJson) => dataArray.push(markerJson));
@@ -45,7 +44,7 @@ const SeekHelpMap = (filteredCity) => {
         bootstrapURLKeys={{ key: "AIzaSyDaUQrW9mjOOZbwb5r1lD809Tx9fC0CmA4" }}
         defaultCenter={DEFAULT_CENTER}
         defaultZoom={MAP_ZOOM}
-        center={filteredCity.coordinates}
+        center={coordinates}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => modelsMap(map, maps)}
       />

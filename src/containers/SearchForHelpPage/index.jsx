@@ -7,7 +7,7 @@ import "./index.scss";
 
 const SearchForHelpPage = () => {
   const { t } = useTranslation();
-  const [searchHelpCards, setSearchHelpCards] = useState(
+  const [seekHelpCards, setSeekHelpCards] = useState(
     t("home.seekHelpSection", { returnObjects: true })
   );
   const [filteredCity, setfilteredCity] = useState({
@@ -17,6 +17,7 @@ const SearchForHelpPage = () => {
       lng: 28.97953,
     },
   });
+
   const citiesCoordinates = [
     {
       name: "Istanbul",
@@ -44,7 +45,7 @@ const SearchForHelpPage = () => {
   ];
 
   const handleSpecialistFilter = (e) => {
-    setSearchHelpCards(() => {
+    setSeekHelpCards(() => {
       if (e === "All") {
         return t("home.seekHelpSection", { returnObjects: true });
       }
@@ -88,7 +89,7 @@ const SearchForHelpPage = () => {
       <Row>
         <Col>
           <div className="seekHelpCards">
-            {searchHelpCards.map((details) => {
+            {seekHelpCards.map((details) => {
               return <SeekHelpSingleCard {...details} />;
             })}
           </div>
