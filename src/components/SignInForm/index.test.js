@@ -131,7 +131,7 @@ describe("SigninForm", () => {
 
     fireEvent.input(screen.getByPlaceholderText(/password/i), {
       target: {
-        value: "str0ngp@$$w0rd",
+        value: "fooobaar",
       },
     });
 
@@ -140,7 +140,7 @@ describe("SigninForm", () => {
     await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
     expect(mockSubmit).toBeCalledWith({
       email: "test@mail.com",
-      password: "str0ngp@$$w0rd",
+      password: "fooobaar",
     });
     expect(screen.getByRole("textbox", { name: /email/i }).value).toBe("");
     expect(screen.getByPlaceholderText(/password/i).value).toBe("");
