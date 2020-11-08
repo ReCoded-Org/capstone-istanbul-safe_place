@@ -10,11 +10,11 @@ const schema = Joi.object({
     .required()
     .email({ tlds: { allow: ["com", "net", "edu"] } })
     .messages({
-      "string.empty": `Email field cannot be empty`,
-      "string.email": `You should type a valid email`,
+      "string.empty": `Please provide your email`,
+      "string.email": `Please provide a valid email`,
     }),
   password: Joi.string().required().min(8).max(64).strict().messages({
-    "string.empty": `Password field cannot be empty`,
+    "string.empty": `Please provide a password`,
   }),
 });
 
