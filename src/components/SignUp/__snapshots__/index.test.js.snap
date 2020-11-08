@@ -8,15 +8,15 @@ exports[`renders correctly 1`] = `
     className="row"
   >
     <div
-      className="signInImg col-md-6 col-12"
+      className="signUpImg col-md-6 col-12"
     >
       <img
-        alt="Women Group Hugging Together"
+        alt="Two Women Support Each Other"
         src="womenSupportEachOther.png"
       />
     </div>
     <div
-      className="signInForm col-md-6 col-12"
+      className="signUpForm col-md-6 col-12"
     >
       <h2>
         Welcome to Safe Place!
@@ -25,10 +25,10 @@ exports[`renders correctly 1`] = `
         Sign up with
       </h4>
       <ul
-        className="signInIcons"
+        className="signUpIcons"
       >
         <li
-          className="signInIcon"
+          className="signUpIcon"
         >
           <a
             href="#/"
@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="signInIcon"
+          className="signUpIcon"
         >
           <a
             href="#/"
@@ -52,7 +52,7 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="signInIcon"
+          className="signUpIcon"
         >
           <a
             href="#/"

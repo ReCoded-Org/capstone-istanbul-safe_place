@@ -11,24 +11,24 @@ export default function SignUp() {
   return (
     <Container fluid="md" className="signUpSection">
       <Row>
-        <Col className="signInImg" md={6} xs={12}>
-          <img src={womenSupportEachOther} alt="Women Group Hugging Together" />
+        <Col className="signUpImg" md={6} xs={12}>
+          <img src={womenSupportEachOther} alt="Two Women Support Each Other" />
         </Col>
-        <Col className="signInForm" md={6} xs={12}>
+        <Col className="signUpForm" md={6} xs={12}>
           <h2>Welcome to Safe Place!</h2>
           <h4>Sign up with</h4>
-          <ul className="signInIcons">
-            <li className="signInIcon">
+          <ul className="signUpIcons">
+            <li className="signUpIcon">
               <a href="#/">
                 <img src={twitterIcon} alt="Twitter icon" />
               </a>
             </li>
-            <li className="signInIcon">
+            <li className="signUpIcon">
               <a href="#/">
                 <img src={facebookIcon} alt="Facebook icon" />
               </a>
             </li>
-            <li className="signInIcon">
+            <li className="signUpIcon">
               <a href="#/">
                 <img src={googleIcon} alt="Google icon" />
               </a>
@@ -38,7 +38,7 @@ export default function SignUp() {
 
           <SignUpForm
             submit={() => {
-              /* TODO: implement the signing in functionality */
+              /* TODO: implement the signing up functionality */
             }}
           />
 
