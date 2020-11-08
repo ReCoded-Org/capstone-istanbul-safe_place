@@ -13,7 +13,7 @@ const MainNavbar = () => (
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
           <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link href="/blogs">Blogs</Nav.Link>
           <Nav.Link href="/opportunities">Opportunities</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
           <button type="button" className="signInBtn" to="/signin">
