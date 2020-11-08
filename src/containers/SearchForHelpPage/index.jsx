@@ -5,6 +5,32 @@ import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
 
+const CITIES_WITH_HELP = [
+  {
+    name: "Istanbul",
+    coordinates: {
+      lat: 41.015137,
+      lng: 28.97953,
+    },
+  },
+
+  {
+    name: "Ankara",
+    coordinates: {
+      lat: 39.92077,
+      lng: 32.85411,
+    },
+  },
+
+  {
+    name: "Izmir",
+    coordinates: {
+      lat: 38.41885,
+      lng: 27.12872,
+    },
+  },
+];
+
 const SearchForHelpPage = () => {
   const { t } = useTranslation();
   const [seekHelpCards, setSeekHelpCards] = useState(
@@ -18,50 +44,20 @@ const SearchForHelpPage = () => {
     },
   });
 
-  const cities = [
-    {
-      name: "Istanbul",
-      coordinates: {
-        lat: 41.015137,
-        lng: 28.97953,
-      },
-    },
-
-    {
-      name: "Ankara",
-      coordinates: {
-        lat: 39.92077,
-        lng: 32.85411,
-      },
-    },
-
-    {
-      name: "Izmir",
-      coordinates: {
-        lat: 38.41885,
-        lng: 27.12872,
-      },
-    },
-  ];
-
   const handleSpecialistFilter = (e) => {
     setSeekHelpCards(() => {
       if (e === "All") {
         return t("home.seekHelpSection", { returnObjects: true });
       }
       return t("home.seekHelpSection", { returnObjects: true }).filter(
-        (specialist) => {
-          return specialist.title === e;
-        }
+        (specialist) => specialist.title === e
       );
     });
   };
 
   const handleCityFilter = (e) => {
     setfilteredCity(() => {
-      return cities.find((city) => {
-        return city.name === e;
-      });
+      return CITIES_WITH_HELP.find((city) => city.name === e);
     });
   };
 
@@ -91,9 +87,9 @@ const SearchForHelpPage = () => {
       <Row>
         <Col>
           <div className="seekHelpCards">
-            {seekHelpCards.map((details) => {
-              return <SeekHelpSingleCard {...details} />;
-            })}
+            {seekHelpCards.map((details) => (
+              <SeekHelpSingleCard {...details} />
+            ))}
           </div>
         </Col>
         <Col>
