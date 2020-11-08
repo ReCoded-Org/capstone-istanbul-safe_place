@@ -24,7 +24,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
     >
       <div>
         <img
-          alt="Phone Icon"
+          alt="Phone icon"
           src="phone.svg"
         />
       </div>
@@ -37,7 +37,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
     >
       <div>
         <img
-          alt="Location Icon"
+          alt="Location icon"
           src="mapMarker.svg"
         />
       </div>

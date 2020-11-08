@@ -32,7 +32,7 @@ const SeekHelpSingleCard = ({
         <div>
           <div className="contactDetails">
             <div>
-              <img src={phoneSvg} alt="Phone Icon" />
+              <img src={phoneSvg} alt="Phone icon" />
             </div>
             <div>
               <p>{phoneNumber}</p>
@@ -40,7 +40,7 @@ const SeekHelpSingleCard = ({
           </div>
           <div className="contactDetails">
             <div>
-              <img src={locationSvg} alt="Location Icon" />
+              <img src={locationSvg} alt="Location icon" />
             </div>
             <div>
               <p>{address}</p>
