@@ -26,7 +26,7 @@ const ViolenceTestCards = () => {
 
   const cards = cardsArr.map((card) => {
     return (
-      <div className="col">
+      <div className="col" key={card.id}>
         <h3>{t(card.category)}</h3>
         <h5>{t(card.subtitle)}</h5>
       </div>
