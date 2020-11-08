@@ -34,9 +34,9 @@
     &::before {
       display: inline-block;
       border-top: 0.4rem solid #fe8f7c;
-      border-radius: 10px;
-      width: 56px;
-      height: 0px;
+      border-radius: $borderRadius;
+      width: 3.5rem;
+      height: 0;
       content: "";
       margin: auto 0.5rem auto 0;
     }
@@ -54,7 +54,7 @@
   hr.divider {
     overflow: visible;
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     border: none;
     border-top: 1px solid #e0e0e0;
     color: #6e6d7a;
@@ -65,9 +65,7 @@
       display: inline-block;
       position: relative;
       top: -0.8rem;
-      font: normal 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
-        Arial, sans-serif;
-      padding: 0 16px;
+      padding: 0 1rem;
       background: $lightColor;
     }
   }
@@ -80,6 +78,7 @@
     margin-bottom: 2rem;
     padding: 0;
   }
+
   .signInIcon {
     list-style: none;
     background-color: $successColor;
