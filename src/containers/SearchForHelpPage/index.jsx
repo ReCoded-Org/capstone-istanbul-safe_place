@@ -34,7 +34,7 @@ const SearchForHelpPage = () => {
   const [seekHelpCards, setSeekHelpCards] = useState(
     t("home.seekHelpSection", { returnObjects: true })
   );
-  const [filteredCity, setfilteredCity] = useState({
+  const [filteredCity, setFilteredCity] = useState({
     name: "Istanbul",
     coordinates: {
       lat: 41.015137,
@@ -54,7 +54,7 @@ const SearchForHelpPage = () => {
   };
 
   const handleCityFilter = (e) => {
-    setfilteredCity(() => {
+    setFilteredCity(() => {
       return CITIES_WITH_HELP.find((city) => city.name === e);
     });
   };
