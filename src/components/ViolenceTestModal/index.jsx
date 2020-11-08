@@ -11,7 +11,6 @@ const ViolenceTestModal = () => {
 
   return (
     <Row className="justify-content-md-center violenceModal">
-    
       <Button variant="primary" onClick={handleShow}>
         Result
       </Button>
