@@ -26,7 +26,7 @@ const ViolenceTestCards = () => {
 
   const cards = cardsArr.map((card) => {
     return (
-      <div className="col" key={card.id}>
+      <div className="col">
         <h3>{t(card.category)}</h3>
         <h5>{t(card.subtitle)}</h5>
       </div>
@@ -35,9 +35,9 @@ const ViolenceTestCards = () => {
 
   const checkboxItems = checkboxItemsArr.map((items) => {
     return (
-      <form className="test col" key={items.id}>
+      <form className="test col">
         {items.map((item) => (
-          <div key={item.id}>
+          <div>
             <input type="checkbox" />
             {item}
           </div>
@@ -48,7 +48,7 @@ const ViolenceTestCards = () => {
 
   return (
     <Row className="justify-content-md-center">
-      <Col className="card">
+      <Col className="violenceTestCard">
         <Row>{cards}</Row>
         <Row>{checkboxItems}</Row>
       </Col>

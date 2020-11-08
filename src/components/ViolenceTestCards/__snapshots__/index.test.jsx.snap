@@ -5,7 +5,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
   className="justify-content-md-center row"
 >
   <div
-    className="card col"
+    className="violenceTestCard col"
   >
     <div
       className="row"

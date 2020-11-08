@@ -79,8 +79,7 @@
     "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
     "locations": ["Istanbul", "Ankara", "Izmir"],
     "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"]
-  }
-  ,
+  },
   "violenceTestPage": {
     "testSpec": [
       {
