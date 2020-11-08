@@ -10,7 +10,7 @@
   margin-bottom: 4rem;
   background-color: $lightColor;
 
-  .signInImg {
+  .signUpImg {
     background-color: $lightColor;
     margin: auto 0;
 
@@ -71,7 +71,7 @@
   }
 
   /* Icons Style */
-  .signInIcons {
+  .signUpIcons {
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
@@ -79,7 +79,7 @@
     padding: 0;
   }
 
-  .signInIcon {
+  .signUpIcon {
     list-style: none;
     background-color: $successColor;
     border-radius: 50px;
@@ -91,7 +91,7 @@
     }
   }
 
-  .signInIcon img {
+  .signUpIcon img {
     width: 2rem;
     height: 2rem;
   }
