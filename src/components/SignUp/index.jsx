@@ -43,8 +43,8 @@ export default function SignUp() {
           />
 
           <p>
-            Already have an account?
-            <a href="/signin"> Sign in</a>
+            <span>Already have an account? </span>
+            <a href="/signin">Sign in</a>
           </p>
         </Col>
       </Row>
