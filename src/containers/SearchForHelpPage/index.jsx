@@ -18,7 +18,7 @@ const SearchForHelpPage = () => {
     },
   });
 
-  const citiesCoordinates = [
+  const cities = [
     {
       name: "Istanbul",
       coordinates: {
@@ -59,7 +59,7 @@ const SearchForHelpPage = () => {
 
   const handleCityFilter = (e) => {
     setfilteredCity(() => {
-      return citiesCoordinates.find((city) => {
+      return cities.find((city) => {
         return city.name === e;
       });
     });
