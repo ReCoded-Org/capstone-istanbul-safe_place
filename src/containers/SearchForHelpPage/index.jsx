@@ -71,7 +71,9 @@ const SearchForHelpPage = () => {
       <h6>{t("searchHelpPage.subHeader")}</h6>
       <Row>
         <DropdownButton title="Location" onSelect={(e) => handleCityFilter(e)}>
-          {t("searchHelpPage.locations", { returnObjects: true }).map((key) => (
+          {t("searchHelpPage.locations", {
+            returnObjects: true,
+          }).map((key) => (
             <Dropdown.Item eventKey={key}>{t(key)}</Dropdown.Item>
           ))}
         </DropdownButton>
