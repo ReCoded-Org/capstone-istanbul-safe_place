@@ -43,7 +43,7 @@ export default function SignUp() {
           />
 
           <p>
-            Alredy have an account?
+            Already have an account?
             <a href="/signin"> Sign in</a>
           </p>
         </Col>
