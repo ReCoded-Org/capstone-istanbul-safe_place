@@ -13,7 +13,6 @@ const CITIES_WITH_HELP = [
       lng: 28.97953,
     },
   },
-
   {
     name: "Ankara",
     coordinates: {
@@ -21,7 +20,6 @@ const CITIES_WITH_HELP = [
       lng: 32.85411,
     },
   },
-
   {
     name: "Izmir",
     coordinates: {
