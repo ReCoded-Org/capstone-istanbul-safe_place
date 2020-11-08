@@ -30,7 +30,7 @@ const ViolenceTestModal = () => {
               <a href="tel:+1-340-5558-235">340-5558-235</a>
             </Button>
             <p>
-              or Gain immediate access to information of nearby shelters,
+              or gain immediate access to information of nearby shelters,
               psychologist, lawyers or doctors.
             </p>
             <Link to="/seekhelp">
