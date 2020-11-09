@@ -11,6 +11,7 @@ import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
+import AboutPage from "./containers/AboutPage";
 
 const App = () => (
   <Router>
@@ -29,6 +30,9 @@ const App = () => (
         </Route>
         <Route exact path="/test">
           <ViolenceTestPage />
+        </Route>
+        <Route exact path="/about">
+          <AboutPage />
         </Route>
       </Switch>
       <Footer />
