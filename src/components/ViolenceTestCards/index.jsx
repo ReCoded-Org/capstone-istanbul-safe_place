@@ -26,7 +26,7 @@ const ViolenceTestCards = () => {
 
   const cards = cardsArr.map((card) => {
     return (
-      <div className="col" key={card.id}>
+      <div className="col" key={card.category}>
         <h3>{t(card.category)}</h3>
         <h5>{t(card.subtitle)}</h5>
       </div>
@@ -37,7 +37,7 @@ const ViolenceTestCards = () => {
     return (
       <form className="test col">
         {items.map((item) => (
-          <div>
+          <div key={item}>
             <input type="checkbox" />
             {item}
           </div>

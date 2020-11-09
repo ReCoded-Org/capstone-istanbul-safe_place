@@ -92,8 +92,7 @@
           "Kicked or choked you?",
           "Hit or punched you?",
           "Thrown objects at you?"
-        ],
-        "id":0
+        ]
       },
       {
         "category": "Sexual Abuse",
@@ -109,8 +108,7 @@
           "Held you to keep you from leaving?",
           "Forced sex with them or others or forced you to watch others?",
           "Forced sex after beating?"
-        ],
-        "id":1
+        ]
       },
       {
         "category": "Emotional Abuse",
@@ -122,8 +120,7 @@
           "Continually criticized you, called you names, shouted?",
           "Insulted or drove away your friends or family?",
           "Humiliated you in private or public?"
-        ],
-        "id":2
+        ]
       }
     ]
   }
