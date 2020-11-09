@@ -1,0 +1,86 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+
+.searchHelpPage {
+  margin: 1rem 0;
+
+  .mapStyle {
+    height: 70vh;
+  }
+
+  h2 {
+    color: $primaryColor;
+    text-align: center;
+    font-family: $mainFontFamily;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+
+  h6 {
+    color: $darkColor;
+    text-align: center;
+    font-size: 14px;
+    margin: 2rem 0;
+    font-family: $mainFontFamily;
+  }
+
+  .seekHelpCards {
+    height: 70vh;
+    overflow: auto;
+    padding: 0;
+  }
+
+  p {
+    color: $darkColor;
+  }
+
+  .singleCard {
+    margin-bottom: 1rem;
+    background-color: $lightColor;
+    border: 0.12rem solid;
+    border-color: $warningColor;
+
+    &:hover {
+      background-color: $warningColor;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    margin-bottom: 2rem;
+  }
+
+  // Bootstrap class
+  .btn,
+  .btn-primary {
+    @include primaryBtn;
+    background-color: $lightColor;
+    color: $warningColor;
+    border: 0.12rem solid;
+    border-color: $warningColor;
+    margin: 1rem 1rem;
+    padding: 0;
+    min-height: 2rem;
+    width: 8rem;
+    font-weight: bold;
+
+    &:focus {
+      color: $lightColor;
+      background-color: $warningColor !important;
+      box-shadow: none !important;
+      border-color: $warningColor !important;
+    }
+
+    &:hover {
+      color: $lightColor !important;
+      background-color: $warningColor !important;
+      border-color: $warningColor !important;
+    }
+  }
+
+  .dropdown-item {
+    &:focus {
+      background-color: $warningColor !important;
+    }
+  }
+}

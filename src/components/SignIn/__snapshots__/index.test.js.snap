@@ -67,8 +67,54 @@ exports[`renders correctly 1`] = `
       <hr
         className="divider"
       />
-      <div>
-        sign in form
+      <div
+        className="signInForm"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="formInput"
+          >
+            <input
+              aria-label="email"
+              name="email"
+              placeholder="Your Email"
+              type="email"
+            />
+          </div>
+          <div
+            className="formInput"
+          >
+            <input
+              aria-label="password"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="formInput"
+          >
+            <label
+              htmlFor="remembered"
+            >
+              <input
+                id="remembered"
+                name="remembered"
+                type="checkbox"
+                value="toBeRemembered"
+              />
+              Remember me next time
+            </label>
+          </div>
+          <button
+            className="submitBtn"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </form>
       </div>
       <p>
         New here?
