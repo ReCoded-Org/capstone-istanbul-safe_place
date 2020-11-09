@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       className="signUpImg col-md-6 col-12"
     >
       <img
-        alt="Two Women Support Each Other"
+        alt="Two women support each other"
         src="womenSupportEachOther.png"
       />
     </div>
