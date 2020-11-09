@@ -1,26 +1,48 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
-// import { joiResolver } from "@hookform/resolvers/joi";
+import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
 import "./index.scss";
 
-// const schema = Joi.object({
-//   email: Joi.string()
-//     .required()
-//     .email({ tlds: { allow: ["com", "net", "edu"] } })
-//     .messages({
-//       "string.empty": `Email field cannot be empty`,
-//       "string.email": `You should type a valid email`,
-//     }),
-//   password: Joi.string().required().min(8).max(64).strict().messages({
-//     "string.empty": `Password field cannot be empty`,
-//   }),
-// });
+const schema = Joi.object({
+  firstName: Joi.string()
+    .required()
+    .messages({
+      "string.empty": `Please provide your first name`,
+    }),
+  lastName: Joi.string()
+    .required()
+    .messages({
+      "string.empty": `Please provide your last name`,
+    }),
+  email: Joi.string()
+    .required()
+    .email({ tlds: { allow: ["com", "net", "edu"] } })
+    .messages({
+      "string.empty": `Please provide your email`,
+      "string.email": `Please provide a valid email`,
+    }),
+  password: Joi.string().required().min(8).max(64).strict().messages({
+    "string.empty": `Please provide a password`,
+  }),
+  confirmPassword: Joi.string()
+    .valid(Joi.ref('password'))
+    .required()
+    .strict()
+    .messages({
+      "any.only": "Those passwords didn't match",
+    }),
+  acceptTerms: Joi.valid("accepted")
+    .required()
+    .messages({
+      "any.only": `You should accept our terms of service and privcey policy`,
+    })
+});
 
 export default function SignUpForm({ submit }) {
   const { register, handleSubmit, errors, reset } = useForm({
-    // resolver: joiResolver(schema),
+    resolver: joiResolver(schema),
   });
 
   const onSubmit = (data) => {
@@ -29,11 +51,11 @@ export default function SignUpForm({ submit }) {
   };
 
   return (
-    <div className="signInForm">
+    <div className="signUpForm">
       <form onSubmit={handleSubmit(onSubmit)}>
 
         <div className="formInputGroup">
-          <div className="formInput width-50">
+          <div className="formInput">
             <input
               className={errors.email && "inputError"}
               type="text"
@@ -42,12 +64,12 @@ export default function SignUpForm({ submit }) {
               aria-label="firstName"
               ref={register()}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
+            {errors?.firstName && (
+              <InputErrorMessage message={errors.firstName.message} />
             )}
           </div>
 
-          <div className="formInput width-50">
+          <div className="formInput">
             <input
               className={errors.email && "inputError"}
               type="text"
@@ -56,8 +78,8 @@ export default function SignUpForm({ submit }) {
               aria-label="lastName"
               ref={register()}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
+            {errors?.lastName && (
+              <InputErrorMessage message={errors.lastName.message} />
             )}
           </div>
         </div>
@@ -77,7 +99,7 @@ export default function SignUpForm({ submit }) {
         </div>
 
         <div className="formInputGroup">
-          <div className="formInput width-50">
+          <div className="formInput">
             <input
               className={errors.password && "inputError"}
               type="password"
@@ -91,34 +113,39 @@ export default function SignUpForm({ submit }) {
             )}
           </div>
 
-          <div className="formInput width-50">
+          <div className="formInput">
             <input
-              className={errors.password && "inputError"}
+              className={errors.confirmPassword && "inputError"}
               type="password"
               placeholder="Repeat password"
-              name="passwordRepeat"
-              aria-label="passwordRepeat"
+              name="confirmPassword"
+              aria-label="confirmPassword"
               ref={register()}
             />
-            {errors?.password && (
-              <InputErrorMessage message={errors.password.message} />
+            {errors?.confirmPassword && (
+              <InputErrorMessage message={errors.confirmPassword.message} />
             )}
           </div>
         </div>
 
         <div className="formInput">
-          <label htmlFor="remembered">
+          <label htmlFor="acceptTerms">
             <input
+              className={errors.acceptTerms && "inputError"}
               type="checkbox"
-              id="remembered"
-              name="remembered"
-              value="toBeRemembered"
+              id="acceptTerms"
+              name="acceptTerms"
+              value="accepted"
+              ref={register()}
             />
-            I have read and agree with
-            <a href="/terms"> Terms of Service </a>
-            and our
-            <a href="/policy"> Privecy Policy </a>
+            I have read and agree with&nbsp;
+            <a href="/terms">Terms of Service</a>
+            &nbsp;and our&nbsp;
+            <a href="/policy">Privecy Policy</a>
           </label>
+          {errors?.acceptTerms && (
+            <InputErrorMessage message={errors.acceptTerms.message} />
+          )}
         </div>
 
         <button type="submit" className="submitBtn">
