@@ -71,9 +71,7 @@ exports[`renders correctly 1`] = `
         SignUpForm Component
       </div>
       <p>
-        <span>
-          Already have an account? 
-        </span>
+        Already have an account? 
         <a
           href="/signin"
         >
