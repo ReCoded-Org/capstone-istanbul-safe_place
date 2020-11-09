@@ -3,7 +3,7 @@
 @import "../../style/forms";
 @import "../../style/bootstrapImports";
 
-.signInForm {
+.signUpForm {
   font: inherit;
   width: 100%;
   margin: 4rem 0;
@@ -17,8 +17,7 @@
     height: 2.6rem;
   }
 
-  input.inputError,
-  textarea.inputError {
+  input.inputError {
     @include inputErrorBorder;
   }
 
@@ -93,7 +92,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .signInForm {
+  .signUpForm {
     button.submitBtn {
       width: 100%;
     }
