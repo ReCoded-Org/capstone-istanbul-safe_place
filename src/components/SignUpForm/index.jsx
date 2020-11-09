@@ -6,16 +6,12 @@ import InputErrorMessage from "../InputErrorMessage";
 import "./index.scss";
 
 const schema = Joi.object({
-  firstName: Joi.string()
-    .required()
-    .messages({
-      "string.empty": `Please provide your first name`,
-    }),
-  lastName: Joi.string()
-    .required()
-    .messages({
-      "string.empty": `Please provide your last name`,
-    }),
+  firstName: Joi.string().required().messages({
+    "string.empty": `Please provide your first name`,
+  }),
+  lastName: Joi.string().required().messages({
+    "string.empty": `Please provide your last name`,
+  }),
   email: Joi.string()
     .required()
     .email({ tlds: { allow: ["com", "net", "edu"] } })
@@ -27,17 +23,15 @@ const schema = Joi.object({
     "string.empty": `Please provide a password`,
   }),
   confirmPassword: Joi.string()
-    .valid(Joi.ref('password'))
+    .valid(Joi.ref("password"))
     .required()
     .strict()
     .messages({
       "any.only": "Those passwords didn't match",
     }),
-  acceptTerms: Joi.valid("accepted")
-    .required()
-    .messages({
-      "any.only": `You should accept our terms of service and privcey policy`,
-    })
+  acceptTerms: Joi.valid("accepted").required().messages({
+    "any.only": `You should accept our terms of service and privcey policy`,
+  }),
 });
 
 export default function SignUpForm({ submit }) {
@@ -53,7 +47,6 @@ export default function SignUpForm({ submit }) {
   return (
     <div className="signUpForm">
       <form onSubmit={handleSubmit(onSubmit)}>
-
         <div className="formInputGroup">
           <div className="formInput">
             <input
