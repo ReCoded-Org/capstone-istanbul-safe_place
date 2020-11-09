@@ -1,6 +1,6 @@
 import React from "react";
-import phoneSvg from "../../images/icons/phone.svg";
-import locationSvg from "../../images/icons/mapMarker.svg";
+import phoneSvg from "../../images/icons/phoneIcon.svg";
+import locationSvg from "../../images/icons/locationIcon.svg";
 import doctorImg from "../../images/icons/doctorImage.svg";
 import defaultImg from "../../images/icons/defaultImg.svg";
 import "./index.scss";
