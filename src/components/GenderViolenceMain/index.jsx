@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import stopGenderViolenceImg from "../../images/home/stop-gender-violence.svg";
 import "./index.scss";
 
@@ -23,7 +24,9 @@ export default function GenderViolenceMain() {
             of violence. We offer a shelter, psychological help, lawyers and
             doctors.
           </p>
-          <button type="button">Find Help</button>
+          <Link to="/seekhelp">
+            <button type="button">Find Help</button>
+          </Link>
         </Col>
         <Col md={{ span: 6, order: "last" }} xs={{ span: 12, order: "first" }}>
           <img src={stopGenderViolenceImg} alt="Stop Gender Violence" />

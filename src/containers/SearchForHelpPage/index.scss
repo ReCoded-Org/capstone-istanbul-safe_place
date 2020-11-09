@@ -43,10 +43,6 @@
     &:hover {
       background-color: $warningColor;
       cursor: pointer;
-
-      p {
-        color: $lightColor;
-      }
     }
   }
 
@@ -74,6 +70,7 @@
       box-shadow: none !important;
       border-color: $warningColor !important;
     }
+
     &:hover {
       color: $lightColor !important;
       background-color: $warningColor !important;
