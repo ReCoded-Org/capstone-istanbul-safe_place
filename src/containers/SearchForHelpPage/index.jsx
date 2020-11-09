@@ -35,15 +35,17 @@ const SearchForHelpPage = () => {
     t("home.seekHelpSection", { returnObjects: true })
   );
   const [filteredCity, setFilteredCity] = useState(
+    // Fall back to first city in case Istanbul not found
     CITIES_WITH_HELP.find((c) => c.name === "Istanbul") || CITIES_WITH_HELP[0]
   );
+  const allSpecialists = t("home.seekHelpSection", { returnObjects: true });
 
   const handleSpecialistFilter = (eventKey) => {
     setSeekHelpCards(() => {
       if (eventKey === "All") {
-        return t("home.seekHelpSection", { returnObjects: true });
+        return allSpecialists;
       }
-      return t("home.seekHelpSection", { returnObjects: true }).filter(
+      return allSpecialists.filter(
         (specialist) => specialist.title === eventKey
       );
     });
