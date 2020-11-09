@@ -67,8 +67,103 @@ exports[`renders correctly 1`] = `
       <hr
         className="divider"
       />
-      <div>
-        SignUpForm Component
+      <div
+        className="signUpForm"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="formInputGroup"
+          >
+            <div
+              className="formInput"
+            >
+              <input
+                aria-label="firstName"
+                name="firstName"
+                placeholder="First name"
+                type="text"
+              />
+            </div>
+            <div
+              className="formInput"
+            >
+              <input
+                aria-label="lastName"
+                name="lastName"
+                placeholder="Last name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            className="formInput"
+          >
+            <input
+              aria-label="email"
+              name="email"
+              placeholder="Your email"
+              type="email"
+            />
+          </div>
+          <div
+            className="formInputGroup"
+          >
+            <div
+              className="formInput"
+            >
+              <input
+                aria-label="password"
+                name="password"
+                placeholder="Password"
+                type="password"
+              />
+            </div>
+            <div
+              className="formInput"
+            >
+              <input
+                aria-label="confirmPassword"
+                name="confirmPassword"
+                placeholder="Repeat password"
+                type="password"
+              />
+            </div>
+          </div>
+          <div
+            className="formInput"
+          >
+            <label
+              htmlFor="acceptTerms"
+            >
+              <input
+                id="acceptTerms"
+                name="acceptTerms"
+                type="checkbox"
+                value="accepted"
+              />
+              I have read and agree with 
+              <a
+                href="/terms"
+              >
+                Terms of Service
+              </a>
+               and our 
+              <a
+                href="/policy"
+              >
+                Privecy Policy
+              </a>
+            </label>
+          </div>
+          <button
+            className="submitBtn"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </form>
       </div>
       <p>
         Alredy have an account?

@@ -16,16 +16,24 @@ describe("SignUpForm", () => {
         lastName,
         email,
         password,
-        pawsswordRepeat
+        confirmPassword,
+        acceptTerms
     ) => {
-        return Promise.resolve({ firstName, lastName, email, password, pawsswordRepeat });
+        return Promise.resolve({
+            firstName,
+            lastName,
+            email,
+            password,
+            confirmPassword,
+            acceptTerms
+        });
     });
 
     beforeEach(() => {
         render(<SignUpForm submit={mockSubmit} />);
     });
 
-    it("should display required error when value is invalid", async () => {
+    it("should display required error when value is empty", async () => {
         fireEvent.submit(screen.getByRole("button"));
 
         expect(await screen.findAllByRole("alert")).toHaveLength(5);
@@ -51,18 +59,19 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
-                value: "password123",
+                value: "password",
             },
         });
 
         fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
             target: {
-                value: "password123",
+                value: "password",
             },
         });
 
+        fireEvent.click(screen.getByRole("checkbox"));
 
         fireEvent.submit(screen.getByRole("button"));
 
@@ -71,8 +80,9 @@ describe("SignUpForm", () => {
         expect(screen.getByRole("textbox", { name: /firstName/i }).value).toBe("name");
         expect(screen.getByRole("textbox", { name: /lastName/i }).value).toBe("surname");
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe("test");
-        expect(screen.getByPlaceholderText(/password/i).value).toBe("password123");
-        expect(screen.getByPlaceholderText(/repeat password/i).value).toBe("password123");
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe("password");
+        expect(screen.getByPlaceholderText(/repeat password/i).value).toBe("password");
+        expect(screen.getByRole("checkbox").checked).toBe(true);
     });
 
     it("should display matching error when email domain is invalid", async () => {
@@ -94,17 +104,20 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
-                value: "password123",
+                value: "password",
             },
         });
 
         fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
             target: {
-                value: "password123",
+                value: "password",
             },
         });
+
+        fireEvent.click(screen.getByRole("checkbox"));
+
         fireEvent.submit(screen.getByRole("button"));
 
         expect(await screen.findAllByRole("alert")).toHaveLength(1);
@@ -114,8 +127,9 @@ describe("SignUpForm", () => {
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
             "test@test.co"
         );
-        expect(screen.getByPlaceholderText(/password/i).value).toBe("password123");
-        expect(screen.getByPlaceholderText(/repeat password/i).value).toBe("password123");
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe("password");
+        expect(screen.getByPlaceholderText(/repeat password/i).value).toBe("password");
+        expect(screen.getByRole("checkbox").checked).toBe(true);
     });
 
     it("should display min length error when password is short", async () => {
@@ -138,7 +152,7 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
                 value: `${"a".repeat(MIN_CHAR - 1)}`,
             },
@@ -150,6 +164,8 @@ describe("SignUpForm", () => {
             },
         });
 
+        fireEvent.click(screen.getByRole("checkbox"));
+
         fireEvent.submit(screen.getByRole("button"));
 
         expect(await screen.findAllByRole("alert")).toHaveLength(1);
@@ -159,12 +175,14 @@ describe("SignUpForm", () => {
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
             "test@mail.com"
         );
-        expect(screen.getByPlaceholderText(/password/i).value).toBe(
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe(
             `${"a".repeat(MIN_CHAR - 1)}`
         );
         expect(screen.getByPlaceholderText(/repeat password/i).value).toBe(
             `${"a".repeat(MIN_CHAR - 1)}`
         );
+        expect(screen.getByRole("checkbox").checked).toBe(true);
+
     });
 
     it("should display max length error when password is long", async () => {
@@ -187,7 +205,7 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
                 value: `${"a".repeat(MAX_CHAR + 1)}`,
             },
@@ -199,6 +217,8 @@ describe("SignUpForm", () => {
             },
         });
 
+        fireEvent.click(screen.getByRole("checkbox"));
+
         fireEvent.submit(screen.getByRole("button"));
 
         expect(await screen.findAllByRole("alert")).toHaveLength(1);
@@ -208,12 +228,14 @@ describe("SignUpForm", () => {
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
             "test@mail.com"
         );
-        expect(screen.getByPlaceholderText(/password/i).value).toBe(
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe(
             `${"a".repeat(MAX_CHAR + 1)}`
         );
         expect(screen.getByPlaceholderText(/repeat password/i).value).toBe(
             `${"a".repeat(MAX_CHAR + 1)}`
         );
+        expect(screen.getByRole("checkbox").checked).toBe(true);
+
     });
 
     it("should display password not match error when password repeat does not match", async () => {
@@ -235,15 +257,67 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
-                value: "str0ngp@$$w0rd",
+                value: "password",
             },
         });
 
         fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
             target: {
-                value: "strongp@$$word",
+                value: "passcode",
+            },
+        });
+
+        fireEvent.click(screen.getByRole("checkbox"));
+
+        fireEvent.submit(screen.getByRole("button"));
+
+        expect(await screen.findAllByRole("alert")).toHaveLength(1);
+        expect(mockSubmit).not.toBeCalled();
+        expect(screen.getByRole("textbox", { name: /firstName/i }).value).toBe("name");
+        expect(screen.getByRole("textbox", { name: /lastName/i }).value).toBe("surname");
+        expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
+            "test@mail.com"
+        );
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe(
+            "password"
+        );
+        expect(screen.getByPlaceholderText(/repeat password/i).value).toBe(
+            "passcode"
+        );
+        expect(screen.getByRole("checkbox").checked).toBe(true);
+
+    });
+
+    it("should display accept terms error when not accept terms", async () => {
+        fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
+            target: {
+                value: "name",
+            },
+        });
+
+        fireEvent.input(screen.getByRole("textbox", { name: /lastName/i }), {
+            target: {
+                value: "surname",
+            },
+        });
+
+        fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
+            target: {
+                value: "test@mail.com",
+            },
+        });
+
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
+            target: {
+                value: "password",
+            },
+        });
+
+        fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
+            target: {
+                value: "password",
             },
         });
 
@@ -256,14 +330,15 @@ describe("SignUpForm", () => {
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
             "test@mail.com"
         );
-        expect(screen.getByPlaceholderText(/password/i).value).toBe(
-            "str0ngp@$$w0rd"
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe(
+            "password"
         );
         expect(screen.getByPlaceholderText(/repeat password/i).value).toBe(
-            "strongp@$$word"
+            "password"
         );
+        expect(screen.getByRole("checkbox").checked).toBe(false);
     });
-
+    
     it("should not display error when value is valid", async () => {
         fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
             target: {
@@ -283,17 +358,19 @@ describe("SignUpForm", () => {
             },
         });
 
-        fireEvent.input(screen.getByPlaceholderText(/password/i), {
+        fireEvent.input(screen.getByPlaceholderText(/^password/i), {
             target: {
-                value: "str0ngp@$$w0rd",
+                value: "password",
             },
         });
 
         fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
             target: {
-                value: "str0ngp@$$w0rd",
+                value: "password",
             },
         });
+
+        fireEvent.click(screen.getByRole("checkbox"));
 
         fireEvent.submit(screen.getByRole("button"));
 
@@ -302,13 +379,15 @@ describe("SignUpForm", () => {
             firstName: "name",
             lastName: "surname",
             email: "test@mail.com",
-            password: "str0ngp@$$w0rd",
-            pawsswordRepeat: "str0ngp@$$w0rd",
+            password: "password",
+            confirmPassword: "password",
+            acceptTerms: "accepted"
         });
         expect(screen.getByRole("textbox", { name: /firstName/i }).value).toBe("");
         expect(screen.getByRole("textbox", { name: /lastName/i }).value).toBe("");
         expect(screen.getByRole("textbox", { name: /email/i }).value).toBe("");
-        expect(screen.getByPlaceholderText(/password/i).value).toBe("");
+        expect(screen.getByPlaceholderText(/^password/i).value).toBe("");
         expect(screen.getByPlaceholderText(/repeat password/i).value).toBe("");
+        expect(screen.getByRole("checkbox").checked).toBe(false);
     });
 });
