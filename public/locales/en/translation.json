@@ -124,5 +124,51 @@
         ]
       }
     ]
+  },
+  "aboutPage": {
+    "header": "About Us",
+    "aboutUsText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "subHeader": "Our team",
+    "ourTeamMemberInfo": [
+      {
+        "name": "Louis Li",
+        "title": "Lead engineer",
+        "githubLink": "bla",
+        "linkedInLink": "bla"
+      },
+      {
+        "name": "Ammar Sammour",
+        "title": "Lead engineer",
+        "githubLink": "bla",
+        "linkedInLink": "bla"
+      },
+      {
+        "name": "Hiba Machfej",
+        "title": "Junior Engineer",
+        "githubLink": "bla",
+        "linkedInLink": "bla"
+      },
+      {
+        "name": "Jennet Hydyrova",
+        "title": "Junior Engineer",
+        "githubLink": "bla",
+        "linkedInLink": "bla",
+        "memberImg": "../../../src/components/OurTeam/images/jennetHydyrovaSmiling.png"
+      },
+      {
+        "name": "Jamil Bailony",
+        "title": "Junior Engineer",
+        "githubLink": "bla",
+        "linkedInLink": "bla",
+        "memberImg": "../../../src/components/OurTeam/images/jamilBailonySmiling.png"
+      },
+      {
+        "name": "Mohammad Jundi",
+        "title": "Junior Engineer",
+        "githubLink": "https://github.com/mohammad-jundi",
+        "linkedInLink": "https://www.linkedin.com/in/mohammad-jundi/",
+        "memberImg": "../../../src/components/OurTeam/images/mohammadJundiSmiling.png"
+      }
+    ]
   }
 }

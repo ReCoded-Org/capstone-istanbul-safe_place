@@ -1,15 +1,17 @@
 @import "../../style/variables";
 
-h2 {
-  color: $primaryColor;
-  font: $mainFontFamily;
-  margin-top: 4rem;
-  font-size: 48px;
-}
+.aboutPage {
+  h2 {
+    color: $primaryColor;
+    font: $mainFontFamily;
+    margin-top: 4rem;
+    font-size: 48px;
+  }
 
-p {
-  color: $primaryColor;
-  font: $mainFontFamily;
-  margin-top: 2rem;
-  font-size: 18px;
+  p {
+    color: $primaryColor;
+    font: $mainFontFamily;
+    margin-top: 2rem;
+    font-size: 18px;
+  }
 }

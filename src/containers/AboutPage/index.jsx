@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import OurTeam from "../../components/OurTeam";
 import "./index.scss";
 
 const AboutPage = () => {
   return (
-    <Container>
+    <Container className="aboutPage">
       <Row>
         <h2>About Us</h2>
         <p>
@@ -17,6 +18,7 @@ const AboutPage = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </Row>
+      <OurTeam />
     </Container>
   );
 };

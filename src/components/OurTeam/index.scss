@@ -1,8 +1,12 @@
 @import "../../style/variables";
 
-h4 {
-  color: $successColor;
-  font-weight: bold;
-  font-size: 24px;
-  font-family: $mainFontFamily;
+.ourTeam {
+  h4 {
+    color: $successColor;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: $mainFontFamily;
+    text-align: center;
+    margin-top: 3rem;
+  }
 }
