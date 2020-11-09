@@ -78,6 +78,7 @@
     "header": "Search for help",
     "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
     "locations": ["Istanbul", "Ankara", "Izmir"],
-    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"]
+    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"],
+    "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
   }
 }

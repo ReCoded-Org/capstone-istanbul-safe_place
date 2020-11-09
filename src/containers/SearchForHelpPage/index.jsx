@@ -34,28 +34,24 @@ const SearchForHelpPage = () => {
   const [seekHelpCards, setSeekHelpCards] = useState(
     t("home.seekHelpSection", { returnObjects: true })
   );
-  const [filteredCity, setFilteredCity] = useState({
-    name: "Istanbul",
-    coordinates: {
-      lat: 41.015137,
-      lng: 28.97953,
-    },
-  });
+  const [filteredCity, setFilteredCity] = useState(
+    CITIES_WITH_HELP.find((c) => c.name === "Istanbul") || CITIES_WITH_HELP[0]
+  );
 
-  const handleSpecialistFilter = (e) => {
+  const handleSpecialistFilter = (eventKey) => {
     setSeekHelpCards(() => {
-      if (e === "All") {
+      if (eventKey === "All") {
         return t("home.seekHelpSection", { returnObjects: true });
       }
       return t("home.seekHelpSection", { returnObjects: true }).filter(
-        (specialist) => specialist.title === e
+        (specialist) => specialist.title === eventKey
       );
     });
   };
 
-  const handleCityFilter = (e) => {
+  const handleCityFilter = (eventKey) => {
     setFilteredCity(() => {
-      return CITIES_WITH_HELP.find((city) => city.name === e);
+      return CITIES_WITH_HELP.find((city) => city.name === eventKey);
     });
   };
 
@@ -64,7 +60,10 @@ const SearchForHelpPage = () => {
       <h2>{t("searchHelpPage.header")}</h2>
       <h6>{t("searchHelpPage.subHeader")}</h6>
       <Row>
-        <DropdownButton title="Location" onSelect={(e) => handleCityFilter(e)}>
+        <DropdownButton
+          title={t("searchHelpPage.dropdownTitles.location")}
+          onSelect={(e) => handleCityFilter(e)}
+        >
           {t("searchHelpPage.locations", {
             returnObjects: true,
           }).map((key) => (
@@ -72,7 +71,7 @@ const SearchForHelpPage = () => {
           ))}
         </DropdownButton>
         <DropdownButton
-          title="Type of help"
+          title={t("searchHelpPage.dropdownTitles.typeOfHelp")}
           onSelect={(e) => handleSpecialistFilter(e)}
         >
           {t("searchHelpPage.specialists", { returnObjects: true }).map(
