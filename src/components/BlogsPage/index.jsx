@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar";
+import { Col, Row, Container, Image } from 'react-bootstrap';
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState([]);
@@ -18,18 +19,29 @@ export default function BlogsPage() {
   }, []);
 
   return (
-      <div>
+      <Container>
           <h2>Our Blog</h2>
           <p>Infomration about violence, women and health. Read different topics < br />
               that contribute positivley to the mental health of women.</p>
           <SearchBar />
-          {blogs.map( blog => 
-              <div>
-                  <div>{blog.slug}</div>
-                  <div></div>
-                  <div></div>
+          {blogs.map( (blog) =>{
+            return (
+              <div> 
+                <span
+              className="blogBody"
+              dangerouslySetInnerHTML={{
+                __html: blog.content.rendered,
+              }}
+            ></span>
+                {/* {blog.content.rendered} */}
+              <Container>
+              {/* <Image src={blog.post.jetpack_featured_media_url} className="blogImage" /> */}
+              <h3>{blog.title.rendered}</h3>
+              </Container>
               </div>
+            )
+          }
           )}
-    </div>
+    </Container>
   );
 }
