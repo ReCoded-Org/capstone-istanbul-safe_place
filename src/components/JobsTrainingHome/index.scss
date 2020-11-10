@@ -9,6 +9,13 @@
   width: 100%;
   text-align: center;
   font-family: $mainFontFamily;
+
+  h6 {
+    padding: 2rem;
+    margin: 2rem;
+    text-align: right;
+    color: $primaryColor;
+  }
 }
 
 .jobsTrainingTitle {
