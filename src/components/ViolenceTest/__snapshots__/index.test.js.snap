@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="violenceIntro"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="justify-content-md-center row"
+    >
+      <div
+        className="col-lg-6 col-md-12"
+      >
+        <img
+          alt="A woman trapped by fear"
+          src="trappedWomen.png"
+        />
+      </div>
+      <div
+        className="col-lg-6 col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <img
+              alt="A man not allowing woman to speak"
+              src="dontSpeak.png"
+            />
+          </div>
+          <div
+            className="col"
+          >
+            <img
+              alt="A women saying stop to violence"
+              src="womenStopViolence.png"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <h3>
+              What is violence against women?
+            </h3>
+            <p>
+              According to the first article of the Declaration on the Prevention of Violence Against Women, adopted by the United Nations General Assembly in 1993; It is the threat or coercion of any kind of gender-based violence or act that results in or is likely to result in physical, sexual and emotional harm to women in the public and private spheres, and arbitrarily restricting freedom.
+            </p>
+            <div
+              className="violenceTest"
+            >
+              <h5>
+                Are you in an abusive relationship?
+                <span>
+                  Take our test
+                </span>
+              </h5>
+              <a
+                href="/test"
+                onClick={[Function]}
+              >
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="button"
+                >
+                   Find out now
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
