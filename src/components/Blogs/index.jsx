@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar";
 import { Container } from "react-bootstrap";
 import "./index.scss";
 
-export default function BlogsPage() {
+export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const URL =
     "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts";
@@ -20,7 +20,7 @@ export default function BlogsPage() {
   const fetchedBlogsArr = blogs.slice(0, NUM_BLOGS_TO_SHOW);
   console.log(fetchedBlogsArr);
   return (
-    <div className="blogsHeader">
+    <div className="blogsMainContainer">
       <h2 className="ourBlogTitle">Our Blog</h2>
       <p>
         Infomration about violence, women and health. Read different topics
@@ -32,15 +32,13 @@ export default function BlogsPage() {
         {fetchedBlogsArr.map((blog) => {
           return (
             <div className="blogsContainer">
-              <div className="blogImagesContainer">
                 <div className="shadowEffect"></div>
                 <h3 className="blogTitles">{blog.title.rendered}</h3>
                 <img
-                  className="blogImages"
+                  className="blogImgs"
                   alt="blog image"
                   src={blog.jetpack_featured_media_url}
                 ></img>
-              </div>
             </div>
           );
         })}

@@ -1,6 +1,6 @@
 @import "../../style/variables";
 
-.blogsHeader {
+.blogsMainContainer {
   text-align: center;
   font-family: $mainFontFamily;
 
@@ -19,7 +19,7 @@
     width: 100%;
   }
 
-  .blogImages {
+  .blogImgs {
     width: 21.875rem;
     height: 21.875rem;
     padding: 4%;

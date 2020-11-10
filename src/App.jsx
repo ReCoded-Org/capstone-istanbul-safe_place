@@ -11,7 +11,7 @@ import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
-import BlogsPage from "./components/BlogsPage"
+import BlogPage from "./containers/BlogPage"
 
 const App = () => (
   <Router>
@@ -32,7 +32,7 @@ const App = () => (
           <ViolenceTestPage />
         </Route>
         <Route exact path="/blogs">
-          <BlogsPage />
+          <BlogPage />
         </Route>
       </Switch>
       <Footer />
