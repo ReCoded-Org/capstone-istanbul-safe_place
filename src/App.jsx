@@ -11,7 +11,11 @@ import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
+<<<<<<< HEAD
 import AboutPage from "./containers/AboutPage";
+=======
+import AboutUsPage from "./containers/AboutUsPage";
+>>>>>>> dev
 
 const App = () => (
   <Router>
@@ -32,7 +36,11 @@ const App = () => (
           <ViolenceTestPage />
         </Route>
         <Route exact path="/about">
+<<<<<<< HEAD
           <AboutPage />
+=======
+          <AboutUsPage />
+>>>>>>> dev
         </Route>
       </Switch>
       <Footer />
