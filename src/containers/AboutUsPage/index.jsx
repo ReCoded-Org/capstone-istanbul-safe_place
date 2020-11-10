@@ -7,7 +7,6 @@ import "./index.scss";
 const AboutPage = () => {
   const { t } = useTranslation();
 
-  // ToDo(jennethydyrova): Add team members' info and create card for each member
   return (
     <Container className="aboutUsPage">
       <Row>

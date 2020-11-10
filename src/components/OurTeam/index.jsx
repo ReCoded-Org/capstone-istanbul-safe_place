@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import githubIcon from "../../images/icons/githubLogo.svg";
 import linkedInIcon from "../../images/icons/linkedInLogo.svg";
@@ -25,9 +25,9 @@ const OurTeam = () => {
 
   return (
     <Container className="ourTeamInfo">
-      <h4>{t("aboutPage.subHeader")}</h4>
+      <h4>{t("aboutUsPage.subHeader")}</h4>
       <Row className="justify-content-md-center">
-        {t("aboutPage.ourTeamInfo", { returnObjects: true }).map((member) => {
+        {t("aboutUsPage.ourTeamInfo", { returnObjects: true }).map((member) => {
           return (
             <div className="singleMemberInfo" key={member.name}>
               <img
