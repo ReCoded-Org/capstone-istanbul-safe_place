@@ -12,6 +12,7 @@ import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import AboutUsPage from "./containers/AboutUsPage";
+import BlogPage from "./containers/BlogPage";
 
 const App = () => (
   <Router>
@@ -33,6 +34,9 @@ const App = () => (
         </Route>
         <Route exact path="/about">
           <AboutUsPage />
+        </Route>
+        <Route exact path="/blog">
+          <BlogPage />
         </Route>
       </Switch>
       <Footer />
