@@ -134,42 +134,42 @@
         "name": "Louis Li",
         "title": "Lead engineer",
         "githubLink": "https://github.com/louisrli",
-        "image": "louisImage"
+        "image": "louisImg"
       },
       {
         "name": "Ammar Sammour",
         "title": "Lead engineer",
         "githubLink": "https://github.com/Ammar-64",
         "linkedInLink": "https://www.linkedin.com/in/ammar-sam/",
-        "image": "ammarImage"
+        "image": "ammarImg"
       },
       {
         "name": "Hiba Machfej",
         "title": "Junior Engineer",
         "githubLink": "https://github.com/hiba-machfej",
         "linkedInLink": "https://www.linkedin.com/in/hiba-machfej-09400189/",
-        "image": "hibaImage"
+        "image": "hibaImg"
       },
       {
         "name": "Jennet Hydyrova",
         "title": "Junior Engineer",
         "githubLink": "https://github.com/jennethydyrova",
         "linkedInLink": "https://www.linkedin.com/in/jennet-hydyrova-a60685122/",
-        "image": "jennetImage"
+        "image": "jennetImg"
       },
       {
         "name": "Jamil Bailony",
         "title": "Junior Engineer",
         "githubLink": "https://github.com/Jamil-Bailony",
         "linkedInLink": "https://www.linkedin.com/in/jamil-bailony-17b723159/",
-        "image": "jamilImage"
+        "image": "jamilImg"
       },
       {
         "name": "Mohammad Jundi",
         "title": "Junior Engineer",
         "githubLink": "https://github.com/mohammad-jundi",
         "linkedInLink": "https://www.linkedin.com/in/mohammad-jundi/",
-        "image": "mohammadImage"
+        "image": "mohammadImg"
       }
     ]
   }

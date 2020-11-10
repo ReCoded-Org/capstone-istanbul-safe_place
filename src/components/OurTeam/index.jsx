@@ -4,10 +4,25 @@ import { useTranslation } from "react-i18next";
 import githubLogo from "../../images/icons/githubLogo.svg";
 import linkedInLogo from "../../images/icons/linkedInLogo.svg";
 import defaultImg from "../../images/icons/defaultImg.svg";
+import louisImg from "./images/louisLiSmiling.jpeg";
+import ammarImg from "./images/ammarSammourSmiling.jpeg";
+import jennetImg from "./images/jennetHydyrovaSmiling.jpg";
+import hibaImg from "./images/hibaMachfejSmiling.jpg";
+import jamilImg from "./images/jamilBailonySmiling.png";
+import mohammadImg from "./images/mohammadJundiSmiling.jpg";
 import "./index.scss";
 
 const OurTeam = () => {
   const { t } = useTranslation();
+
+  const memberImage = {
+    louisImg: louisImg,
+    ammarImg: ammarImg,
+    jennetImg: jennetImg,
+    hibaImg: hibaImg,
+    jamilImg: jamilImg,
+    mohammadImg: mohammadImg,
+  };
 
   return (
     <Container className="ourTeam">
@@ -16,7 +31,7 @@ const OurTeam = () => {
         (member) => {
           return (
             <>
-              <img src={member.image || defaultImg} alt={member.name} />
+              <img src={memberImage.image || defaultImg} alt={member.name} />
               {member.githubLink && (
                 <a
                   href={member.githubLink}
