@@ -7,11 +7,14 @@
     margin-top: 4rem;
     font-size: 48px;
   }
-
   p {
     color: $primaryColor;
     font: $mainFontFamily;
     margin-top: 2rem;
     font-size: 18px;
+  }
+  .aboutUsText {
+    margin-left: 3.5rem;
+    max-width: 90%;
   }
 }
