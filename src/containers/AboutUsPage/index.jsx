@@ -1,21 +1,15 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
   return (
     <Container className="aboutUsPage">
       <Row>
-        <h2>About Us</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h2>{t("aboutUsPage.header")}</h2>
+        <p>{t("aboutUsPage.infoAboutUs")}</p>
       </Row>
     </Container>
   );
