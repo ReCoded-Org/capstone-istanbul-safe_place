@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="signInSection container-md"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="signInImg col-md-6 col-12"
+    >
+      <img
+        alt="Women Group Hugging Together"
+        src="womenGroupHuggingTogether.png"
+      />
+    </div>
+    <div
+      className="signInForm col-md-6 col-12"
+    >
+      <h2>
+        Welcome Back!
+      </h2>
+      <h4>
+        Sign in with
+      </h4>
+      <ul
+        className="signInIcons"
+      >
+        <li
+          className="signInIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Twitter icon"
+              src="twitterIcon.svg"
+            />
+          </a>
+        </li>
+        <li
+          className="signInIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Facebook icon"
+              src="facebookIcon.svg"
+            />
+          </a>
+        </li>
+        <li
+          className="signInIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Google icon"
+              src="googleIcon.svg"
+            />
+          </a>
+        </li>
+      </ul>
+      <hr
+        className="divider"
+      />
+      <div
+        className="signInForm"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="formInput"
+          >
+            <input
+              aria-label="email"
+              name="email"
+              placeholder="Your Email"
+              type="email"
+            />
+          </div>
+          <div
+            className="formInput"
+          >
+            <input
+              aria-label="password"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div
+            className="formInput"
+          >
+            <label
+              htmlFor="remembered"
+            >
+              <input
+                id="remembered"
+                name="remembered"
+                type="checkbox"
+                value="toBeRemembered"
+              />
+              Remember me next time
+            </label>
+          </div>
+          <button
+            className="submitBtn"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </form>
+      </div>
+      <p>
+        New here?
+        <a
+          href="/sign-up"
+        >
+           Create an account
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

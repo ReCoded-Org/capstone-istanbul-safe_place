@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
+import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import BlogsPage from "./components/BlogsPage"
@@ -20,6 +21,9 @@ const App = () => (
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
         </Route>
         <Route exact path="/seekhelp">
           <SearchForHelpPage />

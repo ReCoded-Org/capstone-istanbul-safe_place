@@ -1,0 +1,34 @@
+@import "../../style/variables";
+
+.singleCard {
+  background-color: $warningColor;
+  border-radius: 20px;
+  padding: 2rem;
+
+  h3 {
+    color: $darkColor;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: $mainFontFamily;
+  }
+  h4 {
+    color: $darkColor;
+    font-size: 20px;
+    font-family: $mainFontFamily;
+  }
+  p {
+    color: $darkColor;
+    font-size: 12px;
+  }
+}
+
+.carouselHeaderAndImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: row;
+}
