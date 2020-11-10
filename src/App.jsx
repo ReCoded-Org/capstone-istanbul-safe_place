@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import AboutUsPage from "./containers/AboutUsPage";
@@ -24,6 +25,9 @@ const App = () => (
         </Route>
         <Route exact path="/signin">
           <SignIn />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
         </Route>
         <Route exact path="/seekhelp">
           <SearchForHelpPage />
