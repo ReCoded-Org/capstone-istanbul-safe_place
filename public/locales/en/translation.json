@@ -133,41 +133,43 @@
       {
         "name": "Louis Li",
         "title": "Lead engineer",
-        "githubLink": "bla",
-        "linkedInLink": "bla"
+        "githubLink": "https://github.com/louisrli",
+        "image": "louisImage"
       },
       {
         "name": "Ammar Sammour",
         "title": "Lead engineer",
-        "githubLink": "bla",
-        "linkedInLink": "bla"
+        "githubLink": "https://github.com/Ammar-64",
+        "linkedInLink": "https://www.linkedin.com/in/ammar-sam/",
+        "image": "ammarImage"
       },
       {
         "name": "Hiba Machfej",
         "title": "Junior Engineer",
-        "githubLink": "bla",
-        "linkedInLink": "bla"
+        "githubLink": "https://github.com/hiba-machfej",
+        "linkedInLink": "https://www.linkedin.com/in/hiba-machfej-09400189/",
+        "image": "hibaImage"
       },
       {
         "name": "Jennet Hydyrova",
         "title": "Junior Engineer",
-        "githubLink": "bla",
-        "linkedInLink": "bla",
-        "memberImg": "../../../src/components/OurTeam/images/jennetHydyrovaSmiling.png"
+        "githubLink": "https://github.com/jennethydyrova",
+        "linkedInLink": "https://www.linkedin.com/in/jennet-hydyrova-a60685122/",
+        "image": "jennetImage"
       },
       {
         "name": "Jamil Bailony",
         "title": "Junior Engineer",
-        "githubLink": "bla",
-        "linkedInLink": "bla",
-        "memberImg": "../../../src/components/OurTeam/images/jamilBailonySmiling.png"
+        "githubLink": "https://github.com/Jamil-Bailony",
+        "linkedInLink": "https://www.linkedin.com/in/jamil-bailony-17b723159/",
+        "image": "jamilImage"
       },
       {
         "name": "Mohammad Jundi",
         "title": "Junior Engineer",
         "githubLink": "https://github.com/mohammad-jundi",
         "linkedInLink": "https://www.linkedin.com/in/mohammad-jundi/",
-        "memberImg": "../../../src/components/OurTeam/images/mohammadJundiSmiling.png"
+        "image": "mohammadImage"
       }
     ]
   }
