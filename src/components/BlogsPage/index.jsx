@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar";
-import { Col, Row, Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./index.scss";
 
 export default function BlogsPage() {
@@ -9,7 +9,6 @@ export default function BlogsPage() {
     "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts";
   const fetchBlogs = async () => {
     const data = await fetch(URL);
-    //console.log(data)
     const fetchedBlogs = await data.json();
     setBlogs(fetchedBlogs);
     console.log(fetchedBlogs);
@@ -28,37 +27,21 @@ export default function BlogsPage() {
         <br />
         that contribute positivley to the mental health of women.
       </p>
-        <SearchBar />
+      <SearchBar />
       <Container>
         {fetchedBlogsArr.map((blog) => {
           return (
             <div className="blogsContainer">
               <div className="blogImagesContainer">
-              <div className="shadowEffect"></div>
-              <h3 className="blogTitles">{blog.title.rendered}</h3>
+                <div className="shadowEffect"></div>
+                <h3 className="blogTitles">{blog.title.rendered}</h3>
                 <img
                   className="blogImages"
+                  alt="blog image"
                   src={blog.jetpack_featured_media_url}
                 ></img>
               </div>
             </div>
-            // <Container className="blogImagesContainer">
-            // <div >
-            // <Row >
-            //   <Col xs={12} md={6} >
-            //     {/* <Container className="blogImagesContainer"> */}
-            //     <div >
-            //     <h3 className="blogTitles">{blog.title.rendered}</h3>
-            //     <img
-            //       className="blogImages"
-            //       src={blog.jetpack_featured_media_url}
-            //     ></img>
-            //     </div>
-            //     {/* </Container> */}
-            //   </Col>
-            // </Row>
-            // </div>
-            // </Container>
           );
         })}
       </Container>
