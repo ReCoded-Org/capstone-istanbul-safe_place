@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar";
-import { Col, Row, Container, Image } from 'react-bootstrap';
+import { Col, Row, Container, Image } from "react-bootstrap";
+import "./index.scss";
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState([]);
   const URL =
     "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts";
-
   const fetchBlogs = async () => {
     const data = await fetch(URL);
     //console.log(data)
@@ -17,31 +17,51 @@ export default function BlogsPage() {
   useEffect(() => {
     fetchBlogs();
   }, []);
-
+  const NUM_BLOGS_TO_SHOW = 9;
+  const fetchedBlogsArr = blogs.slice(0, NUM_BLOGS_TO_SHOW);
+  console.log(fetchedBlogsArr);
   return (
+    <div className="blogsHeader">
+      <h2 className="ourBlogTitle">Our Blog</h2>
+      <p>
+        Infomration about violence, women and health. Read different topics
+        <br />
+        that contribute positivley to the mental health of women.
+      </p>
+        <SearchBar />
       <Container>
-          <h2>Our Blog</h2>
-          <p>Infomration about violence, women and health. Read different topics < br />
-              that contribute positivley to the mental health of women.</p>
-          <SearchBar />
-          {blogs.map( (blog) =>{
-            return (
-              <div> 
-                <span
-              className="blogBody"
-              dangerouslySetInnerHTML={{
-                __html: blog.content.rendered,
-              }}
-            ></span>
-                {/* {blog.content.rendered} */}
-              <Container>
-              {/* <Image src={blog.post.jetpack_featured_media_url} className="blogImage" /> */}
-              <h3>{blog.title.rendered}</h3>
-              </Container>
+        {fetchedBlogsArr.map((blog) => {
+          return (
+            <div className="blogsContainer">
+              <div className="blogImagesContainer">
+              <div className="shadowEffect"></div>
+              <h3 className="blogTitles">{blog.title.rendered}</h3>
+                <img
+                  className="blogImages"
+                  src={blog.jetpack_featured_media_url}
+                ></img>
               </div>
-            )
-          }
-          )}
-    </Container>
+            </div>
+            // <Container className="blogImagesContainer">
+            // <div >
+            // <Row >
+            //   <Col xs={12} md={6} >
+            //     {/* <Container className="blogImagesContainer"> */}
+            //     <div >
+            //     <h3 className="blogTitles">{blog.title.rendered}</h3>
+            //     <img
+            //       className="blogImages"
+            //       src={blog.jetpack_featured_media_url}
+            //     ></img>
+            //     </div>
+            //     {/* </Container> */}
+            //   </Col>
+            // </Row>
+            // </div>
+            // </Container>
+          );
+        })}
+      </Container>
+    </div>
   );
 }
