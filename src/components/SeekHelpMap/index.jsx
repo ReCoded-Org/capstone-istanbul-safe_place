@@ -41,7 +41,9 @@ const SeekHelpMap = ({ coordinates }) => {
   return (
     <div className="mapStyle">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDaUQrW9mjOOZbwb5r1lD809Tx9fC0CmA4" }}
+        bootstrapURLKeys={{
+          key: atob("QUl6YVN5RGFVUXJXOW1qT09aYndiNXIxbEQ4MDlUeDlmQzBDbUE0"),
+        }}
         defaultCenter={DEFAULT_CENTER}
         defaultZoom={MAP_ZOOM}
         center={coordinates}

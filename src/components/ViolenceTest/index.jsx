@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import trappedWomen from "../../images/trappedWomen.png";
 import dontSpeak from "../../images/dontSpeak.png";
 import womenStopViolence from "../../images/womenStopViolence.png";
@@ -42,7 +43,9 @@ const ViolenceTest = () => {
                     Are you in an abusive relationship?
                     <span>Take our test</span>
                   </h5>
-                  <Button> Find out now</Button>
+                  <Link to="/test">
+                    <Button> Find out now</Button>
+                  </Link>
                 </div>
               </Col>
             </Row>
