@@ -32,13 +32,13 @@ export default function Blogs() {
         {fetchedBlogsArr.map((blog) => {
           return (
             <div className="blogsContainer">
-                <div className="shadowEffect"></div>
-                <h3 className="blogTitles">{blog.title.rendered}</h3>
-                <img
-                  className="blogImgs"
-                  alt="blog image"
-                  src={blog.jetpack_featured_media_url}
-                ></img>
+              <div className="shadowEffect"></div>
+              <h3 className="blogTitles">{blog.title.rendered}</h3>
+              <img
+                className="blogImgs"
+                alt="blog image"
+                src={blog.jetpack_featured_media_url}
+              ></img>
             </div>
           );
         })}

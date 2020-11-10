@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blogs renders correctly and matches the snapshot 1`] = `
+<div
+  className="blogsMainContainer"
+>
+  <h2
+    className="ourBlogTitle"
+  >
+    Our Blog
+  </h2>
+  <p>
+    Infomration about violence, women and health. Read different topics
+    <br />
+    that contribute positivley to the mental health of women.
+  </p>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <input
+          className="mr-sm-2 searchBarInput"
+          onChange={[Function]}
+          placeholder="Search"
+        />
+        <img
+          alt="Search Icon"
+          className="searchIcon"
+          onClick={[Function]}
+          src="searchIcon.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  />
+</div>
+`;
