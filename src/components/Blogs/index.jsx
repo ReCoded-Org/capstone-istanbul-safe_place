@@ -36,7 +36,7 @@ export default function Blogs() {
               <h3 className="blogTitles">{blog.title.rendered}</h3>
               <img
                 className="blogImgs"
-                alt="blog image"
+                alt="blog Img"
                 src={blog.jetpack_featured_media_url}
               ></img>
             </div>
