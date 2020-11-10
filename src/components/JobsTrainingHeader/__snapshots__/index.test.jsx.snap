@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="jobsTrainingHeader"
+>
+  <h2>
+    Job / Training Opportunities
+  </h2>
+  <h6>
+    Browse our list of job opportunities, trainings or workshops.
+  </h6>
+</div>
+`;
