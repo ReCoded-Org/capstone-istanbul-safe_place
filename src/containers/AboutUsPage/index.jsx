@@ -11,7 +11,7 @@ const AboutPage = () => {
     <Container className="aboutUsPage">
       <Row>
         <h2>{t("aboutUsPage.header")}</h2>
-        <p>{t("aboutUsPage.infoAboutUs")}</p>
+        <p>{t("aboutUsPage.bodyText")}</p>
       </Row>
     </Container>
   );
