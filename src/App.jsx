@@ -12,6 +12,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
+import AboutUsPage from "./containers/AboutUsPage";
 
 const App = () => (
   <Router>
@@ -33,6 +34,9 @@ const App = () => (
         </Route>
         <Route exact path="/test">
           <ViolenceTestPage />
+        </Route>
+        <Route exact path="/about">
+          <AboutUsPage />
         </Route>
       </Switch>
       <Footer />

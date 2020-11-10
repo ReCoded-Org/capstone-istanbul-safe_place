@@ -10,14 +10,14 @@
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Lawyer",
         "name": "Jenny Wilson",
         "phoneNumber": "+1-340-5558-235 ",
         "address": "9094 Bay Meadows Street, Conyers, GA 30012",
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Psychologist",
         "name": "Jenny Wilson",
         "portraitImg": "doctorImg",
         "phoneNumber": "+1-340-5558-235 ",
@@ -25,7 +25,7 @@
         "moreInfo": "In oculis quidem faciunt, ut dolore magnam aliquam causam ista, quae sine causa? quae fuerit causa, nollem me ab eo delectu rerum, quem modo ista sis"
       },
       {
-        "title": "Doctor",
+        "title": "Social worker",
         "name": "Jenny Wilson",
         "portraitImg": "doctorImg",
         "phoneNumber": "+1-340-5558-235 ",
@@ -73,5 +73,60 @@
         "id": 1
       }
     ]
+  },
+  "searchHelpPage": {
+    "header": "Search for help",
+    "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
+    "locations": ["Istanbul", "Ankara", "Izmir"],
+    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"],
+    "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
+  },
+  "violenceTestPage": {
+    "testSpec": [
+      {
+        "category": "Physical Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Pushed or shoved you",
+          "Held you to keep you from leaving?",
+          "Slapped or bit you?",
+          "Kicked or choked you?",
+          "Hit or punched you?",
+          "Thrown objects at you?"
+        ]
+      },
+      {
+        "category": "Sexual Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Been jealously angry, assuming you would have sex with others?",
+          "Insisted you dress in a more sexual/less sexual way than you wanted?",
+          "Criticized you sexually?",
+          "Insisted on unwanted or uncomfortable touching?",
+          "Withheld sex and/or affection?",
+          "Called you sexual names? (e.g. “whore” or “frigid”)",
+          "Demanding monogamy from you, while insisting on freedom for self?",
+          "Held you to keep you from leaving?",
+          "Forced sex with them or others or forced you to watch others?",
+          "Forced sex after beating?"
+        ]
+      },
+      {
+        "category": "Emotional Abuse",
+        "subtitle": "Has your partner:",
+        "checkboxItems": [
+          "Ignored your feelings?",
+          "Ridiculed or insulted your most valued beliefs? (i.e. religion, heritage, or class)",
+          "Withheld approval, appreciation or affection as punishment?",
+          "Continually criticized you, called you names, shouted?",
+          "Insulted or drove away your friends or family?",
+          "Humiliated you in private or public?"
+        ]
+      }
+    ]
+  },
+  "aboutUsPage": {
+    "header": "About Us",
+    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 }

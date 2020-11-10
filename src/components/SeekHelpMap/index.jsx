@@ -12,7 +12,7 @@ const MAP_ZOOM = 13;
 
 // Example code for markers is here https://developers.google.com/maps/documentation/javascript/infowindows
 
-const SeekHelpMap = () => {
+const SeekHelpMap = ({ coordinates }) => {
   const modelsMap = (map, maps) => {
     const dataArray = [];
     locationData.map((markerJson) => dataArray.push(markerJson));
@@ -41,9 +41,12 @@ const SeekHelpMap = () => {
   return (
     <div className="mapStyle">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDaUQrW9mjOOZbwb5r1lD809Tx9fC0CmA4" }}
+        bootstrapURLKeys={{
+          key: atob("QUl6YVN5RGFVUXJXOW1qT09aYndiNXIxbEQ4MDlUeDlmQzBDbUE0"),
+        }}
         defaultCenter={DEFAULT_CENTER}
         defaultZoom={MAP_ZOOM}
+        center={coordinates}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => modelsMap(map, maps)}
       />

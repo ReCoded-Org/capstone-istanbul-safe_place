@@ -1,0 +1,58 @@
+@import "../../style/variables";
+@import "../../style/bootstrapImports";
+@import "../../style/buttons";
+
+.violenceModal {
+  margin-bottom: 3rem;
+  font-family: $mainFontFamily;
+}
+
+.btn {
+  @include primaryBtn;
+  height: 3em;
+  width: 12rem;
+  margin-bottom: 1rem;
+
+  &:active {
+    background-color: $primaryColor !important;
+    border-color: $primaryColor !important;
+  }
+
+  &:focus {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    box-shadow: 0 0 0 0.2rem $warningColor !important;
+  }
+}
+
+.modal-content {
+  width: 40rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modalBody {
+    margin: 1rem 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-content: center;
+    align-items: center;
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    a {
+      color: $lightColor !important;
+      text-decoration: underline;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

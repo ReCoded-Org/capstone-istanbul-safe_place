@@ -1,6 +1,6 @@
 @import "../../style/variables";
 
-.carouselItem {
+.singleCard {
   background-color: $warningColor;
   border-radius: 20px;
   padding: 2rem;
@@ -17,7 +17,7 @@
     font-family: $mainFontFamily;
   }
   p {
-    color: $lightColor;
+    color: $darkColor;
     font-size: 12px;
   }
 }
