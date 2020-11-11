@@ -10,9 +10,9 @@ exports[`Blogs renders correctly and matches the snapshot 1`] = `
     Our Blog
   </h2>
   <p>
-    Infomration about violence, women and health. Read different topics
+    Information about violence, women and health. Read different topics
     <br />
-    that contribute positivley to the mental health of women.
+    that contribute positively to the mental health of women.
   </p>
   <div
     className="container"
