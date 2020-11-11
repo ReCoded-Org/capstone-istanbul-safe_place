@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import githubIcon from "../../images/icons/githubLogo.svg";
+import gitHubIcon from "../../images/icons/githubLogo.svg";
 import linkedInIcon from "../../images/icons/linkedInLogo.svg";
 import defaultImg from "../../images/icons/defaultImg.svg";
 import louisImg from "../../images/louisLiSmiling.jpeg";
@@ -39,13 +39,13 @@ const OurTeamCards = () => {
                 className="portraitImg"
               />
               <div>
-                {member.githubLink && (
+                {member.gitHubLink && (
                   <a
-                    href={member.githubLink}
+                    href={member.gitHubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={githubIcon} alt="Github icon" />
+                    <img src={gitHubIcon} alt="GitHub icon" />
                   </a>
                 )}
                 {member.linkedInLink && (
