@@ -1,0 +1,17 @@
+@import "../../style/variables";
+
+.aboutUsPage {
+  h2 {
+    color: $primaryColor;
+    font-family: $mainFontFamily;
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+
+  p {
+    color: $primaryColor;
+    font-family: $mainFontFamily;
+    margin-top: 2rem;
+    font-size: 1.125rem;
+  }
+}
