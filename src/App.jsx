@@ -12,6 +12,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
+import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
 
 const App = () => (
@@ -34,6 +35,9 @@ const App = () => (
         </Route>
         <Route exact path="/test">
           <ViolenceTestPage />
+        </Route>
+        <Route exact path="/jobs">
+          <JobsTrainingPage />
         </Route>
         <Route exact path="/about">
           <AboutUsPage />
