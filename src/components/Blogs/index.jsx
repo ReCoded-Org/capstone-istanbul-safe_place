@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar";
 import { Container } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 const NUM_BLOGS_TO_SHOW = 9;
 const BLOGS_URL =
   "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts";
 
 export default function Blogs() {
+  const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
   const fetchBlogPosts = async () => {
     const data = await fetch(BLOGS_URL);
@@ -29,9 +31,9 @@ export default function Blogs() {
       <Container>
         {fetchedBlogPostsArr.map((blogPost) => {
           return (
-            <div className="blogsContainer">
+            <div className="blogsSection">
               <div className="shadowEffect"></div>
-              <h3 className="blogPostTitle">{blogPost.title.rendered}</h3>
+              <h3 className="blogPostTitle">{t(blogPost.title.rendered)}</h3>
               <img
                 className="blogPostImg"
                 alt="blog Img"
