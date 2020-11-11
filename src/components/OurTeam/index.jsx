@@ -14,6 +14,10 @@ import "./index.scss";
 
 const OurTeam = () => {
   const { t } = useTranslation();
+  const membersInfoArr = [
+    ...t("aboutUsPage.ourTeamInfo", { returnObjects: true }),
+  ];
+
   const memberImagesMap = {
     louisImg: louisImg,
     ammarImg: ammarImg,
@@ -27,7 +31,7 @@ const OurTeam = () => {
     <Container className="ourTeamInfo">
       <h4>{t("aboutUsPage.subHeader")}</h4>
       <Row className="justify-content-md-center">
-        {t("aboutUsPage.ourTeamInfo", { returnObjects: true }).map((member) => {
+        {membersInfoArr.map((member) => {
           return (
             <div className="singleMemberInfo" key={member.name}>
               <img
