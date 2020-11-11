@@ -131,10 +131,10 @@ export default function SignUpForm({ submit }) {
               value="accepted"
               ref={register()}
             />
-            I have read and agree with&nbsp;
+            I have read and agree with the&nbsp;
             <a href="/terms">Terms of Service</a>
             &nbsp;and our&nbsp;
-            <a href="/policy">Privecy Policy</a>
+            <a href="/policy">Privacy Policy</a>
           </label>
           {errors?.acceptTerms && (
             <InputErrorMessage message={errors.acceptTerms.message} />
