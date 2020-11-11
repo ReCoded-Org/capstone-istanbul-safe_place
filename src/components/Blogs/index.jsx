@@ -7,17 +7,16 @@ const BLOGS_URL =
   "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts";
 
 export default function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-  const fetchBlogs = async () => {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const fetchBlogPosts = async () => {
     const data = await fetch(BLOGS_URL);
-    const fetchedBlogs = await data.json();
-    setBlogs(fetchedBlogs);
+    const fetchedBlogPosts = await data.json();
+    setBlogPosts(fetchedBlogPosts);
   };
   useEffect(() => {
-    fetchBlogs();
+    fetchBlogPosts();
   }, []);
-  const fetchedBlogsArr = blogs.slice(0, NUM_BLOGS_TO_SHOW);
-  console.log(fetchedBlogsArr);
+  const fetchedBlogPostsArr = blogPosts.slice(0, NUM_BLOGS_TO_SHOW);
   return (
     <div className="blogsMainContainer">
       <h2 className="ourBlogTitle">Our Blog</h2>
@@ -28,15 +27,15 @@ export default function Blogs() {
       </p>
       <SearchBar />
       <Container>
-        {fetchedBlogsArr.map((blog) => {
+        {fetchedBlogPostsArr.map((blogPost) => {
           return (
             <div className="blogsContainer">
               <div className="shadowEffect"></div>
-              <h3 className="blogTitle">{blog.title.rendered}</h3>
+              <h3 className="blogPostTitle">{blogPost.title.rendered}</h3>
               <img
-                className="blogImg"
+                className="blogPostImg"
                 alt="blog Img"
-                src={blog.jetpack_featured_media_url}
+                src={blogPost.jetpack_featured_media_url}
               />
             </div>
           );
