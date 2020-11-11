@@ -12,7 +12,7 @@ import jamilImg from "../../images/jamilBailonySmiling.png";
 import mohammadImg from "../../images/mohammadJundiSmiling.jpg";
 import "./index.scss";
 
-const OurTeam = () => {
+const OurTeamCards = () => {
   const { t } = useTranslation();
   const membersInfoArr = [
     ...t("aboutUsPage.ourTeamInfo", { returnObjects: true }),
@@ -69,4 +69,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
+export default OurTeamCards;
