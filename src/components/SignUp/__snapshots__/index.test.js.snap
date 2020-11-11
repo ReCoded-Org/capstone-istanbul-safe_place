@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="signUpSection container-md"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="signUpImg col-md-6 col-12"
+    >
+      <img
+        alt="Two women support each other"
+        src="womenSupportEachOther.png"
+      />
+    </div>
+    <div
+      className="signUpForm col-md-6 col-12"
+    >
+      <h2>
+        Welcome to Safe Place!
+      </h2>
+      <h4>
+        Sign up with
+      </h4>
+      <ul
+        className="signUpIcons"
+      >
+        <li
+          className="signUpIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Twitter icon"
+              src="twitterIcon.svg"
+            />
+          </a>
+        </li>
+        <li
+          className="signUpIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Facebook icon"
+              src="facebookIcon.svg"
+            />
+          </a>
+        </li>
+        <li
+          className="signUpIcon"
+        >
+          <a
+            href="#/"
+          >
+            <img
+              alt="Google icon"
+              src="googleIcon.svg"
+            />
+          </a>
+        </li>
+      </ul>
+      <hr
+        className="divider"
+      />
+      <div>
+        SignUpForm Component
+      </div>
+      <p>
+        Already have an account? 
+        <a
+          href="/signin"
+        >
+          Sign in
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;
