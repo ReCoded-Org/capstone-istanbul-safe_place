@@ -1,5 +1,5 @@
 import React from "react";
-import OurTeam from "./index.jsx";
+import OurTeamCards from "./index.jsx";
 import renderer from "react-test-renderer";
 
 jest.mock("react-i18next", () => ({
@@ -7,6 +7,6 @@ jest.mock("react-i18next", () => ({
 }));
 
 it("renders correctly and matches the snapshot", () => {
-  const tree = renderer.create(<OurTeam />).toJSON();
+  const tree = renderer.create(<OurTeamCards />).toJSON();
   expect(tree).toMatchSnapshot();
 });

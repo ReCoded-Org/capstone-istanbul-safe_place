@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import OurTeam from "../../components/OurTeam";
+import OurTeamCards from "../../components/OurTeamCards";
 import "./index.scss";
 
 const AboutPage = () => {
@@ -13,7 +13,7 @@ const AboutPage = () => {
         <h2>{t("aboutUsPage.header")}</h2>
         <p>{t("aboutUsPage.bodyText")}</p>
       </Row>
-      <OurTeam />
+      <OurTeamCards />
     </Container>
   );
 };

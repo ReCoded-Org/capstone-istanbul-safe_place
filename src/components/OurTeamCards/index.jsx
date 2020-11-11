@@ -17,7 +17,6 @@ const OurTeam = () => {
   const membersInfoArr = [
     ...t("aboutUsPage.ourTeamInfo", { returnObjects: true }),
   ];
-
   const memberImagesMap = {
     louisImg: louisImg,
     ammarImg: ammarImg,
@@ -60,7 +59,6 @@ const OurTeam = () => {
                   </a>
                 )}
               </div>
-
               <h5>{member.name}</h5>
               <h6>{member.title}</h6>
             </div>
