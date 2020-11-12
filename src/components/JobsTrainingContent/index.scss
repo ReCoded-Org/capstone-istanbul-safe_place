@@ -1,0 +1,59 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+
+.jobsTrainingSection {
+  padding-top: 3.125rem;
+  margin-top: 1.875rem;
+  padding-bottom: 3.125rem;
+  width: 100%;
+  text-align: center;
+  font-family: $mainFontFamily;
+}
+
+.jobsTrainingTitle {
+  color: $primaryColor;
+  font-size: 1.75rem;
+}
+
+.trainingsBtn,
+.jobsBtn {
+  @include primaryBtn;
+  width: 12.75rem;
+  border-radius: 0;
+  text-align: right;
+  color: $darkColor;
+  background-color: transparent;
+
+  &:focus,
+  &:active,
+  &:hover {
+    border-right: solid $primaryColor;
+    outline: 0;
+    color: $primaryColor;
+    background-color: transparent;
+  }
+}
+
+.cards-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.greenBorder > * {
+  border: solid 0.15rem $secondaryColor;
+
+  .title {
+    color: $secondaryColor;
+  }
+
+  .borderLine {
+    border-bottom: 0.125rem solid $secondaryColor;
+  }
+}
+
+.peachBorder > * {
+  border: solid 0.15rem $warningColor;
+}
+
+.jobsBtn {
+  margin-top: 1.875rem;
+}
