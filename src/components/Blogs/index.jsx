@@ -19,25 +19,25 @@ export default function Blogs() {
     fetchBlogPosts();
   }, []);
   return (
-      <Container>
-        {blogPosts.map((blogPost) => {
-          return (
-            <div className="blogsSection">
-              <div className="shadowEffect"></div>
-              <h3
-                className="blogPostTitle"
-                dangerouslySetInnerHTML={{
-                  __html: t(blogPost.title.rendered)
-                }}
-              ></h3>
-              <img
-                className="blogPostImg"
-                alt="Blog post cover"
-                src={t(blogPost.jetpack_featured_media_url)}
-              />
-            </div>
-          );
-        })}
-      </Container>
+    <Container>
+      {blogPosts.map((blogPost) => {
+        return (
+          <div className="blogsSection">
+            <div className="shadowEffect"></div>
+            <h3
+              className="blogPostTitle"
+              dangerouslySetInnerHTML={{
+                __html: t(blogPost.title.rendered),
+              }}
+            ></h3>
+            <img
+              className="blogPostImg"
+              alt="Blog post cover"
+              src={t(blogPost.jetpack_featured_media_url)}
+            />
+          </div>
+        );
+      })}
+    </Container>
   );
 }
