@@ -1,58 +1,39 @@
 @import "../../style/variables";
 
-.blogsMainContainer {
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   font-family: $mainFontFamily;
+}
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.blogPostImg {
+  width: 21.875rem;
+  height: 21.875rem;
+  padding: 4%;
+  border-radius: 11%;
+}
 
-  // Bootstrap class
-  .col {
-    width: 66.7rem;
-    margin-left: 1.5%;
-  }
+.blogPostTitle {
+  text-align: center;
+  position: absolute;
+  width: 19.3125rem;
+  font-size: 1.125rem;
+  z-index: 2;
+  margin-top: 18rem;
+  padding: 0 0 1rem 1.7rem;
+}
 
-  // Bootstrap class
-  .mr-sm-2 {
-    width: 100%;
-  }
-
-  .blogPostImg {
-    width: 21.875rem;
-    height: 21.875rem;
-    padding: 4%;
-    border-radius: 11%;
-  }
-
-  .blogPostTitle {
-    text-align: center;
-    position: absolute;
-    width: 19.3125rem;
-    font-size: 1.125rem;
-    z-index: 2;
-    margin-top: 18rem;
-    padding: 0 0 1rem 1.7rem;
-  }
-
-  .shadowEffect {
-    background: linear-gradient(
-      0deg,
-      rgba(255, 254, 252, 0.8015581232492998) 0%,
-      rgba(255, 254, 252, 0) 42%
-    );
-    width: 21.875rem;
-    height: 21.875rem;
-    border-radius: 1.5rem;
-    z-index: 1;
-    position: absolute;
-  }
-
-  .ourBlogTitle {
-    size: 1.75rem;
-    color: $primaryColor;
-  }
+.shadowEffect {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 254, 252, 0.8015581232492998) 0%,
+    rgba(255, 254, 252, 0) 42%
+  );
+  width: 21.875rem;
+  height: 21.875rem;
+  border-radius: 1.5rem;
+  z-index: 1;
+  position: absolute;
 }

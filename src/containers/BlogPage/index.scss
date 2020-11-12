@@ -1,0 +1,21 @@
+@import "../../style/variables";
+
+.blogsMainContainer {
+  text-align: center;
+  font-family: $mainFontFamily;
+
+  .ourBlogTitle {
+    size: 1.75rem;
+    color: $primaryColor;
+  }
+
+  .ourBlogSubTitle {
+      padding: 0 30% 0 30%
+     }
+
+  //Bootstrap class for search bar part
+  .col {
+    width: 66.7rem;
+    margin-left: 1.5%;
+  }
+}
