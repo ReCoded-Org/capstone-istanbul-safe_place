@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
 import OpportunitiesCard from "../OpportunitiesCard";
-import SearchBar from "../SearchBar";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
@@ -13,7 +12,7 @@ const JobsTrainingContent = () => {
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
 
-  const listCards = cards.map((card, index) => {
+  const cardsList = cards.map((card, index) => {
     return (
       <Col
         sm={12}
@@ -28,9 +27,6 @@ const JobsTrainingContent = () => {
 
   return (
     <Container className="jobsTrainingContent">
-      <Row className="searchBar">
-        <SearchBar cards={cards}/>
-      </Row>
       <Row>
         <Col md={3}>
           <div>
@@ -55,7 +51,7 @@ const JobsTrainingContent = () => {
           </div>
         </Col>
         <Col className="cards-reverse" md={9}>
-          <Row className="cards">{listCards}</Row>
+          <Row className="cards">{cardsList}</Row>
         </Col>
       </Row>
     </Container>
