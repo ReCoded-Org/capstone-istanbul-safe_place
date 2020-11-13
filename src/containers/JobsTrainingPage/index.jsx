@@ -5,6 +5,7 @@ import JobsTrainingContent from "../../components/JobsTrainingContent";
 import SearchBar from "../../components/SearchBar";
 
 const JobsTrainingPage = () => {
+  // ToDo(hibaMachfej): Add search functionality to jobs/training page.
   return (
     <Container>
       <JobsTrainingHeader />
