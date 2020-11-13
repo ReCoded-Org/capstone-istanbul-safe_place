@@ -5,12 +5,12 @@
   font-family: $mainFontFamily;
 
   .ourBlogTitle {
-    size: 1.75rem;
+    font-size: 1.75rem;
     color: $primaryColor;
   }
 
   .ourBlogSubtitle {
-    padding: 0 30% 0 30%;
+    padding: 0 30%;
   }
 
   //Bootstrap class for search bar part

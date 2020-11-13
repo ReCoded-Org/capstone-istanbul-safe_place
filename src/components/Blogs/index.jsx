@@ -3,8 +3,9 @@ import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./index.scss";
 
+const POSTS_PER_PAGE = 9
 const BLOG_API_URL =
-  "https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=9";
+  `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
 
 export default function Blogs() {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ export default function Blogs() {
   useEffect(() => {
     fetchBlogPosts();
   }, []);
+  
   return (
     <Container>
       {blogPosts.map((blogPost) => {

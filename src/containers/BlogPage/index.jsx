@@ -9,10 +9,9 @@ export default function BlogPage() {
 
   return (
     <div className="blogsMainContainer">
-      <h2 className="ourBlogTitle">Our Blog</h2>
+      <h2 className="ourBlogTitle">{t("blogPage.title")}</h2>
       <p className="ourBlogSubtitle">
-        {t(`Information about violence, women and health. Read different topics
-          that contribute positively to the mental health of women.`)}
+        {t("blogPage.subtitle")}
       </p>
       <SearchBar />
       <Blogs />
