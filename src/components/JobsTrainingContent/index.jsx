@@ -57,4 +57,5 @@ const JobsTrainingContent = () => {
     </Container>
   );
 };
+
 export default JobsTrainingContent;
