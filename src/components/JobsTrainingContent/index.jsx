@@ -50,7 +50,7 @@ const JobsTrainingContent = () => {
             </button>
           </div>
         </Col>
-        <Col className="cards-reverse" md={9}>
+        <Col>
           <Row className="cards">{cardsList}</Row>
         </Col>
       </Row>
