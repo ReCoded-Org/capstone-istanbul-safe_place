@@ -3,6 +3,8 @@ import { Container, Row } from "react-bootstrap";
 import UserDetail from '../../components/UserDetail';
 import UserEmail from '../../components/UserEmail';
 import UserPassword from '../../components/UserPassword';
+import defaultProfileImage from '../../images/default-profile-image.png'
+import './index.scss';
 
 // object mapper to map API props to const props
 const userInfoObj = {
@@ -35,6 +37,7 @@ const userInfoObj = {
 
 export default function ProfilePage() {
   const [user, setUser] = React.useState();
+  const [elementSelected, setElementSelected] = React.useState("userDetail");
 
   const updateUserField = (updatedValues) => {
     setUser((prevUser) => {
@@ -50,30 +53,97 @@ export default function ProfilePage() {
     <Container fluid="md" className="profileContainer">
       <Row className="profilePortrait">
         <h2>Profile</h2>
-        <div>
+        <div className="userPortrait">
           <img
-            className="userPortrait"
-            src={user?.portraitURL}
+            src={user?.portraitURL || defaultProfileImage}
             alt="User portrait"
           />
         </div>
       </Row>
-      <Row className="userDetail">
-        <UserDetail
-          userDetail={user?.userDetail}
-          updateUserField={updateUserField}
-        />
+      <Row className="section userDetail">
+        <button
+          className="sectionTitle"
+          onClick={() => setElementSelected('userDetail')}
+          type="button"
+        >
+          <i
+            className={
+              elementSelected === 'userDetail'
+                ? 'arrow down'
+                : 'arrow right'
+            }
+          />
+          User Details
+        </button>
+        <div
+          className={`
+            sectionContent 
+            ${elementSelected !== 'userDetail' ? `collapsed` : ``}
+          `}
+        >
+          <UserDetail
+            className="sectionContent"
+            userDetail={user?.userDetail}
+            updateUserField={updateUserField}
+          />
+        </div>
       </Row>
-      <Row className="userEmail">
-        <UserEmail email={user?.email} updateUserField={updateUserField} />
+      <Row className="section userEmail">
+        <button
+          className="sectionTitle"
+          type="button"
+          onClick={() => setElementSelected('userEmail')}
+        >
+          <i
+            className={
+              elementSelected === 'userEmail'
+                ? 'arrow down'
+                : 'arrow right'
+            }
+          />
+          Email Address
+        </button>
+        <div
+          className={`
+            sectionContent 
+            ${elementSelected !== 'userEmail' ? `collapsed` : ``}
+          `}
+        >
+          <UserEmail
+            email={user?.email}
+            updateUserField={updateUserField}
+          />
+        </div>
       </Row>
-      <Row className="userPassword">
-        <UserPassword
-          password={user?.password}
-          updateUserField={updateUserField}
-        />
+      <Row className="section userPassword">
+        <button
+          className="sectionTitle"
+          type="button"
+          onClick={() => setElementSelected('userPassword')}
+        >
+          <i
+            className={
+              elementSelected === 'userPassword'
+                ? 'arrow down'
+                : 'arrow right'
+            }
+          />
+          Change Password
+        </button>
+        <div
+          className={`
+            sectionContent 
+            ${elementSelected !== 'userPassword' ? `collapsed` : ``}
+          `}
+        >
+          <UserPassword
+            className="sectionContent"
+            password={user?.password}
+            updateUserField={updateUserField}
+          />
+        </div>
       </Row>
-      <Row className="submitUserInfo">
+      <Row className="submitBtn">
         <button type="button">Save Changes</button>
       </Row>
     </Container>
