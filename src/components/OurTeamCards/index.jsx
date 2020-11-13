@@ -39,18 +39,18 @@ const OurTeamCards = () => {
                 className="portraitImg"
               />
               <div>
-                {member.gitHubLink && (
+                {member.gitHubUrl && (
                   <a
-                    href={member.gitHubLink}
+                    href={member.gitHubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={gitHubIcon} alt="GitHub icon" />
                   </a>
                 )}
-                {member.linkedInLink && (
+                {member.linkedInUrl && (
                   <a
-                    href={member.linkedInLink}
+                    href={member.linkedInUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="linkedInIcon"
