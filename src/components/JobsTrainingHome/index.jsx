@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
 import OpportunitiesCard from "../OpportunitiesCard";
@@ -45,6 +46,11 @@ export default function JobsTrainingHome() {
             <Row>{cards}</Row>
           </Col>
         </Row>
+        <Link to="/jobs">
+          <h6>
+            All opportunities <span>&#8594;</span>
+          </h6>
+        </Link>
       </Container>
     </div>
   );
