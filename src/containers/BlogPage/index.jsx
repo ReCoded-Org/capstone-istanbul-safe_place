@@ -10,9 +10,7 @@ export default function BlogPage() {
   return (
     <div className="blogsMainContainer">
       <h2 className="ourBlogTitle">{t("blogPage.title")}</h2>
-      <p className="ourBlogSubtitle">
-        {t("blogPage.subtitle")}
-      </p>
+      <p className="ourBlogSubtitle">{t("blogPage.subtitle")}</p>
       <SearchBar />
       <Blogs />
     </div>
