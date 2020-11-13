@@ -127,6 +127,50 @@
   },
   "aboutUsPage": {
     "header": "About Us",
-    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "subHeader": "Our team",
+    "ourTeamInfo": [
+      {
+        "name": "Hiba Machfej",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/hiba-machfej",
+        "linkedInUrl": "https://www.linkedin.com/in/hiba-machfej-09400189/",
+        "portraitImg": "hibaImg"
+      },
+      {
+        "name": "Jennet Hydyrova",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/jennethydyrova",
+        "linkedInUrl": "https://www.linkedin.com/in/jennet-hydyrova-a60685122/",
+        "portraitImg": "jennetImg"
+      },
+      {
+        "name": "Mohammad Jundi",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/mohammad-jundi",
+        "linkedInUrl": "https://www.linkedin.com/in/mohammad-jundi/",
+        "portraitImg": "mohammadImg"
+      },
+      {
+        "name": "Jamil Bailony",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/Jamil-Bailony",
+        "linkedInUrl": "https://www.linkedin.com/in/jamil-bailony-17b723159/",
+        "portraitImg": "jamilImg"
+      },
+      {
+        "name": "Louis Li",
+        "title": "Lead Engineer",
+        "gitHubUrl": "https://github.com/louisrli",
+        "portraitImg": "louisImg"
+      },
+      {
+        "name": "Ammar Sammour",
+        "title": "Lead Engineer",
+        "gitHubUrl": "https://github.com/Ammar-64",
+        "linkedInUrl": "https://www.linkedin.com/in/ammar-sam/",
+        "portraitImg": "ammarImg"
+      }
+    ]
   }
 }
