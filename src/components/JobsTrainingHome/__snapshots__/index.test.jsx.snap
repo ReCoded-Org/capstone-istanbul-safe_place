@@ -109,6 +109,17 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </div>
       </div>
     </div>
+    <a
+      href="/jobs"
+      onClick={[Function]}
+    >
+      <h6>
+        All opportunities 
+        <span>
+          →
+        </span>
+      </h6>
+    </a>
   </div>
 </div>
 `;
