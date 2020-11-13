@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="ourTeamInfo container"
+>
+  <h4>
+    aboutUsPage.subHeader
+  </h4>
+  <div
+    className="justify-content-md-center row"
+  >
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+    <div
+      className="singleMemberInfo"
+    >
+      <img
+        className="portraitImg"
+        src="defaultImg.svg"
+      />
+      <div />
+      <h5 />
+      <h6 />
+    </div>
+  </div>
+</div>
+`;
