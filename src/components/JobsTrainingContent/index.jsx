@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
 import OpportunitiesCard from "../OpportunitiesCard";
+import SearchBar from "../SearchBar";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
@@ -13,7 +14,6 @@ const JobsTrainingContent = () => {
   ));
 
   const listCards = cards.map((card, index) => {
-    const colors = ["peachBorder", "greenBorder"]
     return (
       <Col
         sm={12}
@@ -27,37 +27,38 @@ const JobsTrainingContent = () => {
   });
 
   return (
-    <div>
-      <Container>
-        <Row>
-          <Col md={3}>
-            <div>
-              <button
-                type="button"
-                translationKey="button"
-                className="jobsBtn"
-                onClick={() => setTranslationKey("jobOpportunities")}
-              >
-                Job Opportunities
-              </button>
-            </div>
-            <div>
-              <button
-                type="button"
-                translationKey="button"
-                className="trainingsBtn"
-                onClick={() => setTranslationKey("trainings")}
-              >
-                Trainings / Workshops
-              </button>
-            </div>
-          </Col>
-          <Col className="cards-reverse" md={9}>
-            <Row className="cards">{listCards}</Row>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container className="jobsTrainingContent">
+      <Row className="searchBar">
+        <SearchBar cards={cards}/>
+      </Row>
+      <Row>
+        <Col md={3}>
+          <div>
+            <button
+              type="button"
+              translationKey="button"
+              className="jobsBtn"
+              onClick={() => setTranslationKey("jobOpportunities")}
+            >
+              Job Opportunities
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              translationKey="button"
+              className="trainingsBtn"
+              onClick={() => setTranslationKey("trainings")}
+            >
+              Trainings / Workshops
+            </button>
+          </div>
+        </Col>
+        <Col className="cards-reverse" md={9}>
+          <Row className="cards">{listCards}</Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 export default JobsTrainingContent;
