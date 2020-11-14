@@ -14,7 +14,7 @@ const schema = Joi.object({
   }),
   email: Joi.string()
     .required()
-    .email({ tlds: { allow: ["com", "net", "edu"] } })
+    .email({ tlds: {  } })
     .messages({
       "string.empty": `Please provide your email`,
       "string.email": `Please provide a valid email`,
