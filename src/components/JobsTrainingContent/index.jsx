@@ -22,8 +22,9 @@ const JobsTrainingContent = () => {
   const handleSearch = (e, keyword) => {
     e.preventDefault();
     setSearchCards(cardsArr);
-    setSearchCards(() => {
-      return searchCard.filter((card) =>
+    setSearchCards((prevState) => {
+      const searchedCards = [...prevState];
+      return searchedCards.filter((card) =>
         card.title.toLowerCase().includes(keyword)
       );
     });
