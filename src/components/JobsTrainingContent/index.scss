@@ -15,7 +15,8 @@
 
     &:focus,
     &:active,
-    &:hover {
+    &:hover,
+    &:disabled {
       border-right: solid $primaryColor;
       outline: 0;
       color: $primaryColor;

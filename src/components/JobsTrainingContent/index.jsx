@@ -25,16 +25,26 @@ const JobsTrainingContent = () => {
     );
   });
 
+  const [isDisabled, disableButtons] = useState(true);
+
+  const selectButton = () => {
+    disableButtons(!isDisabled);
+  };
+
   return (
     <Container className="jobsTrainingContent">
       <Row>
         <Col md={3}>
           <div>
             <button
+              disabled={isDisabled}
               type="button"
               translationKey="button"
               className="jobsBtn"
-              onClick={() => setTranslationKey("jobOpportunities")}
+              onClick={() => {
+                selectButton();
+                setTranslationKey("jobOpportunities");
+              }}
             >
               Job Opportunities
             </button>
@@ -44,7 +54,10 @@ const JobsTrainingContent = () => {
               type="button"
               translationKey="button"
               className="trainingsBtn"
-              onClick={() => setTranslationKey("trainings")}
+              onClick={() => {
+                selectButton();
+                setTranslationKey("trainings");
+              }}
             >
               Trainings / Workshops
             </button>

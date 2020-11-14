@@ -13,6 +13,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <div>
         <button
           className="jobsBtn"
+          disabled={true}
           onClick={[Function]}
           translationKey="button"
           type="button"
