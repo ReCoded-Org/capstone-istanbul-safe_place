@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="profileContainer container-md"
+>
+  <div
+    className="profilePortrait row"
+  >
+    <h2>
+      Profile
+    </h2>
+    <div
+      className="userPortrait"
+    >
+      <img
+        alt="User portrait"
+        src="default-profile-image.png"
+      />
+    </div>
+  </div>
+  <div
+    className="section userDetail row"
+  >
+    <button
+      className="sectionTitle"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="arrow down"
+      />
+      User Details
+    </button>
+    <div
+      className="
+            sectionContent 
+            false
+          "
+    >
+      <div>
+        UserDetail
+      </div>
+    </div>
+  </div>
+  <div
+    className="section userEmail row"
+  >
+    <button
+      className="sectionTitle"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="arrow right"
+      />
+      Email Address
+    </button>
+    <div
+      className="
+            sectionContent 
+            collapsed
+          "
+    >
+      <div>
+        UserEmail
+      </div>
+    </div>
+  </div>
+  <div
+    className="section userPassword row"
+  >
+    <button
+      className="sectionTitle"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="arrow right"
+      />
+      Change Password
+    </button>
+    <div
+      className="
+            sectionContent 
+            collapsed
+          "
+    >
+      <div>
+        UserPassword
+      </div>
+    </div>
+  </div>
+  <div
+    className="submitBtn row"
+  >
+    <button
+      type="button"
+    >
+      Save Changes
+    </button>
+  </div>
+</div>
+`;
