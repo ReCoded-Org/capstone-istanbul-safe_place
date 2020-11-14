@@ -62,13 +62,18 @@ exports[`renders correctly and matches the snapshot 1`] = `
                   Take our test
                 </span>
               </h5>
-              <button
-                className="btn btn-primary"
-                disabled={false}
-                type="button"
+              <a
+                href="/test"
+                onClick={[Function]}
               >
-                 Find out now
-              </button>
+                <button
+                  className="btn btn-primary"
+                  disabled={false}
+                  type="button"
+                >
+                   Find out now
+                </button>
+              </a>
             </div>
           </div>
         </div>
