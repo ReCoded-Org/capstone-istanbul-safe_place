@@ -116,6 +116,7 @@ export default function SignUpForm({ submit }) {
               id="acceptTerms"
               name="acceptTerms"
               value="accepted"
+              aria-label="acceptTerms"
               ref={register()}
             />
             I have read and agree with the <a href="/terms">Terms of Service</a>{" "}

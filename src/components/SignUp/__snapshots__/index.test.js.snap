@@ -138,6 +138,7 @@ exports[`renders correctly 1`] = `
               htmlFor="acceptTerms"
             >
               <input
+                aria-label="acceptTerms"
                 id="acceptTerms"
                 name="acceptTerms"
                 type="checkbox"

@@ -4,6 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 import SignUpForm from "./index";
 
+// TODO: refactor the code and extract repetitive code to helper functions
 describe("SignUpForm", () => {
   const mockSubmit = jest.fn(
     (firstName, lastName, email, password, confirmPassword, acceptTerms) => {
@@ -31,6 +32,14 @@ describe("SignUpForm", () => {
   });
 
   it("should display matching error when email is invalid", async () => {
+    // insert an invalid email address
+    fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
+      target: {
+        value: "test",
+      },
+    });
+
+    // insert a valid values into other fields
     // insert a valid first name
     fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
       target: {
@@ -42,13 +51,6 @@ describe("SignUpForm", () => {
     fireEvent.input(screen.getByRole("textbox", { name: /lastName/i }), {
       target: {
         value: "surname",
-      },
-    });
-
-    // insert an invalid email address
-    fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
-      target: {
-        value: "test",
       },
     });
 
@@ -92,6 +94,22 @@ describe("SignUpForm", () => {
   });
 
   it("should display min length error when password is short", async () => {
+    // insert a short invalid password
+    const MIN_CHAR = 8;
+    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
+      target: {
+        value: `${"a".repeat(MIN_CHAR - 1)}`,
+      },
+    });
+
+    // provide a valid values for other fields
+    // insert the same password again
+    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
+      target: {
+        value: `${"a".repeat(MIN_CHAR - 1)}`,
+      },
+    });
+
     // insert a valid first name
     fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
       target: {
@@ -110,21 +128,6 @@ describe("SignUpForm", () => {
     fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
       target: {
         value: "test@mail.com",
-      },
-    });
-
-    // insert a short password
-    const MIN_CHAR = 8;
-    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
-      target: {
-        value: `${"a".repeat(MIN_CHAR - 1)}`,
-      },
-    });
-
-    // insert the same password again
-    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
-      target: {
-        value: `${"a".repeat(MIN_CHAR - 1)}`,
       },
     });
 
@@ -158,6 +161,22 @@ describe("SignUpForm", () => {
   });
 
   it("should display max length error when password is long", async () => {
+    // insert a too long password
+    const MAX_CHAR = 64;
+    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
+      target: {
+        value: `${"a".repeat(MAX_CHAR + 1)}`,
+      },
+    });
+
+    // insert the same password again
+    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
+      target: {
+        value: `${"a".repeat(MAX_CHAR + 1)}`,
+      },
+    });
+
+    // provide a valid values for other fields
     // insert a valid first name
     fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
       target: {
@@ -176,21 +195,6 @@ describe("SignUpForm", () => {
     fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
       target: {
         value: "test@mail.com",
-      },
-    });
-
-    // insert a too long password
-    const MAX_CHAR = 64;
-    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
-      target: {
-        value: `${"a".repeat(MAX_CHAR + 1)}`,
-      },
-    });
-
-    // insert the same password again
-    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
-      target: {
-        value: `${"a".repeat(MAX_CHAR + 1)}`,
       },
     });
 
@@ -224,6 +228,21 @@ describe("SignUpForm", () => {
   });
 
   it("should display password not match error when password repeat does not match", async () => {
+    // insert a valid password
+    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
+      target: {
+        value: "password",
+      },
+    });
+
+    // insert a different password than provided one
+    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
+      target: {
+        value: "passcode",
+      },
+    });
+
+    // provide a valid values for other fields
     // insert a valid first name
     fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
       target: {
@@ -242,20 +261,6 @@ describe("SignUpForm", () => {
     fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
       target: {
         value: "test@mail.com",
-      },
-    });
-
-    // insert a valid password
-    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
-      target: {
-        value: "password",
-      },
-    });
-
-    // insert a different password than provided one
-    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
-      target: {
-        value: "passcode",
       },
     });
 
