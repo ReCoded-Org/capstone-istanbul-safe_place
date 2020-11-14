@@ -10,7 +10,7 @@ import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
 import Footer from "./components/Footer";
-import ProfilePage from './containers/ProfilePage'
+import ProfilePage from "./containers/ProfilePage";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 
 const App = () => (
