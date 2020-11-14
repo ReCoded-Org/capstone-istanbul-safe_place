@@ -80,59 +80,6 @@ describe("SignUpForm", () => {
     expect(screen.getByRole("checkbox").checked).toBe(true);
   });
 
-  it("should display matching error when email domain is invalid", async () => {
-    fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {
-      target: {
-        value: "name",
-      },
-    });
-
-    fireEvent.input(screen.getByRole("textbox", { name: /lastName/i }), {
-      target: {
-        value: "surname",
-      },
-    });
-
-    fireEvent.input(screen.getByRole("textbox", { name: /email/i }), {
-      target: {
-        value: "test@test.co",
-      },
-    });
-
-    fireEvent.input(screen.getByPlaceholderText(/^password/i), {
-      target: {
-        value: "password",
-      },
-    });
-
-    fireEvent.input(screen.getByPlaceholderText(/repeat password/i), {
-      target: {
-        value: "password",
-      },
-    });
-
-    fireEvent.click(screen.getByRole("checkbox"));
-
-    fireEvent.submit(screen.getByRole("button"));
-
-    expect(await screen.findAllByRole("alert")).toHaveLength(1);
-    expect(mockSubmit).not.toBeCalled();
-    expect(screen.getByRole("textbox", { name: /firstName/i }).value).toBe(
-      "name"
-    );
-    expect(screen.getByRole("textbox", { name: /lastName/i }).value).toBe(
-      "surname"
-    );
-    expect(screen.getByRole("textbox", { name: /email/i }).value).toBe(
-      "test@test.co"
-    );
-    expect(screen.getByPlaceholderText(/^password/i).value).toBe("password");
-    expect(screen.getByPlaceholderText(/repeat password/i).value).toBe(
-      "password"
-    );
-    expect(screen.getByRole("checkbox").checked).toBe(true);
-  });
-
   it("should display min length error when password is short", async () => {
     const MIN_CHAR = 8;
     fireEvent.input(screen.getByRole("textbox", { name: /firstName/i }), {

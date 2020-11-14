@@ -12,13 +12,10 @@ const schema = Joi.object({
   lastName: Joi.string().required().messages({
     "string.empty": `Please provide your last name`,
   }),
-  email: Joi.string()
-    .required()
-    .email({ tlds: {  } })
-    .messages({
-      "string.empty": `Please provide your email`,
-      "string.email": `Please provide a valid email`,
-    }),
+  email: Joi.string().required().email({ tlds: {} }).messages({
+    "string.empty": `Please provide your email`,
+    "string.email": `Please provide a valid email`,
+  }),
   password: Joi.string().required().min(8).max(64).strict().messages({
     "string.empty": `Please provide a password`,
   }),
@@ -57,9 +54,7 @@ export default function SignUpForm({ submit }) {
               aria-label="firstName"
               ref={register()}
             />
-            {errors?.firstName && (
-              <InputErrorMessage message={errors.firstName.message} />
-            )}
+            <InputErrorMessage errors={errors} name="firstName" />
           </div>
 
           <div className="formInput">
@@ -71,9 +66,7 @@ export default function SignUpForm({ submit }) {
               aria-label="lastName"
               ref={register()}
             />
-            {errors?.lastName && (
-              <InputErrorMessage message={errors.lastName.message} />
-            )}
+            <InputErrorMessage errors={errors} name="lastName" />
           </div>
         </div>
 
@@ -86,9 +79,7 @@ export default function SignUpForm({ submit }) {
             aria-label="email"
             ref={register()}
           />
-          {errors?.email && (
-            <InputErrorMessage message={errors.email.message} />
-          )}
+          <InputErrorMessage errors={errors} name="email" />
         </div>
 
         <div className="formInputGroup">
@@ -101,9 +92,7 @@ export default function SignUpForm({ submit }) {
               aria-label="password"
               ref={register()}
             />
-            {errors?.password && (
-              <InputErrorMessage message={errors.password.message} />
-            )}
+            <InputErrorMessage errors={errors} name="password" />
           </div>
 
           <div className="formInput">
@@ -115,9 +104,7 @@ export default function SignUpForm({ submit }) {
               aria-label="confirmPassword"
               ref={register()}
             />
-            {errors?.confirmPassword && (
-              <InputErrorMessage message={errors.confirmPassword.message} />
-            )}
+            <InputErrorMessage errors={errors} name="confirmPassword" />
           </div>
         </div>
 
@@ -136,9 +123,7 @@ export default function SignUpForm({ submit }) {
             &nbsp;and our&nbsp;
             <a href="/policy">Privacy Policy</a>
           </label>
-          {errors?.acceptTerms && (
-            <InputErrorMessage message={errors.acceptTerms.message} />
-          )}
+          <InputErrorMessage errors={errors} name="acceptTerms" />
         </div>
 
         <button type="submit" className="submitBtn">

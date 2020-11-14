@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly and matches the snapshot 1`] = `
-<div
-  className="errorMessage"
-  role="alert"
->
-  <img
-    alt="Error Logo"
-    height="32"
-    src="patchExclamationFill.svg"
-    width="32"
-  />
-  <p />
-</div>
-`;
+exports[`renders correctly and matches the snapshot 1`] = `null`;
