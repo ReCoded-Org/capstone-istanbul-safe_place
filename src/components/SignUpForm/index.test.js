@@ -1,16 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import SignUpForm from "./index";
 
 describe("SignUpForm", () => {
-  it("renders correctly and matches the snapshot", () => {
-    const tree = renderer.create(<SignUpForm />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   const mockSubmit = jest.fn(
     (firstName, lastName, email, password, confirmPassword, acceptTerms) => {
       return Promise.resolve({
