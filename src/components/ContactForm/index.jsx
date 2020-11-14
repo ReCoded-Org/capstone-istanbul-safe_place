@@ -45,9 +45,7 @@ export default function ContactForm({ submit }) {
                 // TODO: intall joi and use it for email validation
               })}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
+            <InputErrorMessage errors={errors} name="email" />
           </label>
         </div>
 
@@ -75,9 +73,7 @@ export default function ContactForm({ submit }) {
                 },
               })}
             />
-            {errors?.messageContent && (
-              <InputErrorMessage message={errors.messageContent.message} />
-            )}
+            <InputErrorMessage errors={errors} name="messageContent" />
           </label>
         </div>
 
