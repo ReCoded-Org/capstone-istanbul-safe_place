@@ -25,10 +25,10 @@ const JobsTrainingContent = () => {
     );
   });
 
-  const [isDisabled, disableButtons] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const selectButton = () => {
-    disableButtons(!isDisabled);
+    setIsDisabled(!isDisabled);
   };
 
   return (
