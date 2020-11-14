@@ -118,10 +118,8 @@ export default function SignUpForm({ submit }) {
               value="accepted"
               ref={register()}
             />
-            I have read and agree with the&nbsp;
-            <a href="/terms">Terms of Service</a>
-            &nbsp;and our&nbsp;
-            <a href="/policy">Privacy Policy</a>
+            I have read and agree with the <a href="/terms">Terms of Service</a>{" "}
+            and our <a href="/policy">Privacy Policy</a>
           </label>
           <InputErrorMessage errors={errors} name="acceptTerms" />
         </div>
