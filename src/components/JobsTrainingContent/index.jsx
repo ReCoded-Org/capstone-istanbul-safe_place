@@ -1,4 +1,4 @@
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
@@ -7,7 +7,9 @@ import SearchBar from "../SearchBar";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
-  const [cardsArr, setCardsArr] = useState([...t(`home.jobOpportunities`, { returnObjects: true })]);
+  const [cardsArr, setCardsArr] = useState([
+    ...t(`home.jobOpportunities`, { returnObjects: true }),
+  ]);
   //  const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
   //  const [cardsArr, setCardsArr] = useState([...t(`home.jobOpportunities`, { returnObjects: true }]);
   const [searchCard, setSearchCards] = useState(cardsArr);
@@ -17,15 +19,17 @@ const JobsTrainingContent = () => {
   ));
   // console.log(cards)
 
-  const handleSearch = (e, keyword) => {    
-      e.preventDefault();
-      const filteredCard = searchCard.filter((card) => card.title.toLowerCase() === keyword)
-      setSearchCards(filteredCard)
-      console.log(filteredCard)
-
+  const handleSearch = (e, keyword) => {
+    e.preventDefault();
+    setSearchCards(cardsArr);
+    setSearchCards(() => {
+      return searchCard.filter((card) =>
+        card.title.toLowerCase().includes(keyword)
+      );
+    });
   };
-  console.log(cardsArr)
-  
+  console.log(searchCard);
+
   const cardsList = cards.map((card, index) => {
     return (
       <Col
@@ -38,7 +42,6 @@ const JobsTrainingContent = () => {
       </Col>
     );
   });
-
 
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -59,9 +62,10 @@ const JobsTrainingContent = () => {
               type="button"
               className="jobsBtn"
               onClick={() => {
-                setCardsArr([...t(`home.jobOpportunities`, { returnObjects: true })]);
+                setCardsArr([
+                  ...t(`home.jobOpportunities`, { returnObjects: true }),
+                ]);
                 selectButton();
-       
               }}
             >
               Job Opportunities
@@ -74,7 +78,6 @@ const JobsTrainingContent = () => {
               onClick={() => {
                 setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
                 selectButton();
-         
               }}
             >
               Trainings / Workshops
