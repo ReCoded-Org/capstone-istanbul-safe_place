@@ -40,9 +40,7 @@ export default function SignInForm({ submit }) {
             aria-label="email"
             ref={register()}
           />
-          {errors?.email && (
-            <InputErrorMessage message={errors.email.message} />
-          )}
+          <InputErrorMessage errors={errors} name="email" />
         </div>
 
         <div className="formInput">
@@ -54,9 +52,7 @@ export default function SignInForm({ submit }) {
             aria-label="password"
             ref={register()}
           />
-          {errors?.password && (
-            <InputErrorMessage message={errors.password.message} />
-          )}
+          <InputErrorMessage errors={errors} name="password" />
         </div>
 
         <div className="formInput">
