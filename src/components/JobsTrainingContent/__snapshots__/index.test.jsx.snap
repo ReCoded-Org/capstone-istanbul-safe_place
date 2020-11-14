@@ -5,6 +5,33 @@ exports[`renders correctly and matches the snapshot 1`] = `
   className="jobsTrainingContent container"
 >
   <div
+    className="searchBar row"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col"
+        >
+          <input
+            className="mr-sm-2 searchBarInput"
+            onChange={[Function]}
+            placeholder="Search"
+          />
+          <img
+            alt="Search Icon"
+            className="searchIcon"
+            onClick={[Function]}
+            src="searchIcon.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
     className="row"
   >
     <div

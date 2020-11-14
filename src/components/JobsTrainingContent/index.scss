@@ -2,7 +2,9 @@
 @import "../../style/buttons";
 
 .jobsTrainingContent {
-  margin-top: 3rem;
+  .searchBar {
+    margin: 3rem 0;
+  }
 
   .trainingsBtn,
   .jobsBtn {

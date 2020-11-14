@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
 import OpportunitiesCard from "../OpportunitiesCard";
+import SearchBar from "../SearchBar";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
@@ -33,6 +34,9 @@ const JobsTrainingContent = () => {
 
   return (
     <Container className="jobsTrainingContent">
+      <Row className="searchBar">
+        <SearchBar />
+      </Row>
       <Row>
         <Col md={3}>
           <div>
