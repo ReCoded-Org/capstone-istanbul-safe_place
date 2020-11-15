@@ -247,7 +247,9 @@
   },
   "chatBotSettings": {
     "headerTitle": "Find help",
-    "redirectToSeekHelpPageText": "Redirecting to Search Help page",
+    "gotToSeekHelpPageText": "Redirecting to search help page",
+    "goToOpportunitiesPageText": "Redirecting to jobs / training pportunities page",
+    "goToBlogPageText": "Redirecting to blog page",
     "welcomingMessage": "Hello! How can we help you?",
     "helpLabel": "Immidiate help",
     "findLabel": "Find specialists / shelter",

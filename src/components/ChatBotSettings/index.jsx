@@ -26,8 +26,26 @@ const ChatBotSettings = () => {
   const GoToSearhHelpPage = () => {
     return (
       <div>
-        <p>{t("chatBotSettings.redirectToSeekHelpPageText")}</p>
+        <p>{t("chatBotSettings.gotToSeekHelpPageText")}</p>
         <Redirect to="/seekhelp" />
+      </div>
+    );
+  };
+
+  const GoToOpportunitiesPage = () => {
+    return (
+      <div>
+        <p>{t("chatBotSettings.goToOpportunitiesPageText")}</p>
+        <Redirect to="/opportunities" />
+      </div>
+    );
+  };
+
+  const GoToBlogPage = () => {
+    return (
+      <div>
+        <p>{t("chatBotSettings.goToBlogPageText")}</p>
+        <Redirect to="/blog" />
       </div>
     );
   };
@@ -72,16 +90,16 @@ const ChatBotSettings = () => {
       asMessage: true,
       trigger: 1,
     },
-
-    // Messages below will be removed once pages are ready
     {
       id: "5",
-      message: "Read our blog",
+      component: <GoToOpportunitiesPage />,
+      asMessage: true,
       trigger: 1,
     },
     {
       id: "6",
-      message: "Check job / training opportunities ",
+      component: <GoToBlogPage />,
+      asMessage: true,
       trigger: 1,
     },
   ];
