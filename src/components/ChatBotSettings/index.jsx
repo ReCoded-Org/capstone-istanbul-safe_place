@@ -61,7 +61,6 @@ const ChatBotSettings = () => {
       options: [
         { value: 1, label: t("chatBotSettings.helpLabel"), trigger: "3" },
         { value: 2, label: t("chatBotSettings.findLabel"), trigger: "4" },
-        // Two options below will be working after these pages are ready
         { value: 3, label: t("chatBotSettings.blogLabel"), trigger: "5" },
         {
           value: 4,
