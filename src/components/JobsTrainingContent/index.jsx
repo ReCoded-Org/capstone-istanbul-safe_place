@@ -7,17 +7,12 @@ import SearchBar from "../SearchBar";
 import JobsTrainingButtons from "../JobsTrainingButtons";
 
 const JobsTrainingContent = () => {
-
   const { t } = useTranslation();
   const [cardsArr, setCardsArr] = useState([
     ...t(`home.jobOpportunities`, { returnObjects: true }),
   ]);
- 
-  const [searchCard, setSearchCards] = useState(cardsArr);
 
-  const cards = searchCard.map((opportunity) => (
-    <OpportunitiesCard {...opportunity} key={opportunity.id} />
-  ));
+  const [searchCard, setSearchCards] = useState(cardsArr);
 
   const handleSearch = (e, keyword) => {
     e.preventDefault();
@@ -31,18 +26,18 @@ const JobsTrainingContent = () => {
   };
   // console.log(searchCard);
 
-  const cardsList = cards.map((card, index) => {
-    return (
-      <Col
-        sm={12}
-        md={6}
-        className={index % 2 === 0 ? "peachBorder" : "greenBorder"}
-        key={card.props.id}
-      >
-        {card}
-      </Col>
-    );
-  });
+  // const cardsList = cards.map((card, index) => {
+  //   return (
+  //     <Col
+  //       sm={12}
+  //       md={6}
+  //       className={index % 2 === 0 ? "peachBorder" : "greenBorder"}
+  //       key={card.props.id}
+  //     >
+  //       {card}
+  //     </Col>
+  //   );
+  // });
 
   return (
     <Container className="jobsTrainingContent">
@@ -52,7 +47,7 @@ const JobsTrainingContent = () => {
       <Row>
         <Col md={3}>
           <JobsTrainingButtons
-            setCardsArr={setCardsArr}
+            setCardsArr={setSearchCards}
             cardsArr={cardsArr}
           />
           {/* <div>
@@ -84,7 +79,17 @@ const JobsTrainingContent = () => {
           </div> */}
         </Col>
         <Col>
-          <Row className="cards">{cardsList}</Row>
+          <Row className="cards">
+            {searchCard.map((opportunity, index) => (
+              <Col
+                sm={12}
+                md={6}
+                className={index % 2 === 0 ? "peachBorder" : "greenBorder"}
+              >
+                <OpportunitiesCard {...opportunity} key={opportunity.id} />
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
     </Container>

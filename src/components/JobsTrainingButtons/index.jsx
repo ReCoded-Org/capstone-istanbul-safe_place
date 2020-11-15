@@ -6,9 +6,9 @@ const JobsTrainingButtons = ({ cardsArr, setCardsArr }) => {
   const { t } = useTranslation();
   const [isDisabled, setIsDisabled] = useState(true);
   const buttonText = ["Job Opportunities", "Trainings / Workshops"];
-
+  console.log(cardsArr);
   const selectOpportunityButton = () => {
-    if (isDisabled ===true) {
+    if (isDisabled === true) {
       setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
       setIsDisabled(!isDisabled);
     } else {
