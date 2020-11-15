@@ -3,11 +3,21 @@ import { Container, Row } from "react-bootstrap";
 import UserDetail from "../../components/UserDetail";
 import UserEmail from "../../components/UserEmail";
 import UserPassword from "../../components/UserPassword";
-import defaultProfileImage from "../../images/default-profile-image.png";
+import defaultProfileImage from "../../images/defaultProfileImage.png";
 import "./index.scss";
 
+function getArrowClass(selectedElm, currentElm) {
+  return selectedElm === currentElm ? "arrow down" : "arrow right";
+}
+
+function checkCollapseClass(selectedElm, currentElm) {
+  if (selectedElm === currentElm) return "";
+
+  return `collapsed`;
+}
+
 export default function ProfilePage() {
-  const [elementSelected, setElementSelected] = React.useState("userDetail");
+  const [selectedElement, setSelectedElement] = React.useState("userDetail");
 
   return (
     <Container fluid="md" className="profileContainer">
@@ -20,20 +30,16 @@ export default function ProfilePage() {
       <Row className="section userDetail">
         <button
           className="sectionTitle"
-          onClick={() => setElementSelected("userDetail")}
+          onClick={() => setSelectedElement("userDetail")}
           type="button"
         >
-          <i
-            className={
-              elementSelected === "userDetail" ? "arrow down" : "arrow right"
-            }
-          />
+          <i className={getArrowClass(selectedElement, "userDetail")} />
           User Details
         </button>
         <div
           className={`
             sectionContent 
-            ${elementSelected !== "userDetail" && `collapsed`}
+            ${checkCollapseClass(selectedElement, "userDetail")}
           `}
         >
           <UserDetail />
@@ -43,19 +49,15 @@ export default function ProfilePage() {
         <button
           className="sectionTitle"
           type="button"
-          onClick={() => setElementSelected("userEmail")}
+          onClick={() => setSelectedElement("userEmail")}
         >
-          <i
-            className={
-              elementSelected === "userEmail" ? "arrow down" : "arrow right"
-            }
-          />
+          <i className={getArrowClass(selectedElement, "userEmail")} />
           Email Address
         </button>
         <div
           className={`
             sectionContent 
-            ${elementSelected !== "userEmail" && `collapsed`}
+            ${checkCollapseClass(selectedElement, "userEmail")}
           `}
         >
           <UserEmail />
@@ -65,19 +67,15 @@ export default function ProfilePage() {
         <button
           className="sectionTitle"
           type="button"
-          onClick={() => setElementSelected("userPassword")}
+          onClick={() => setSelectedElement("userPassword")}
         >
-          <i
-            className={
-              elementSelected === "userPassword" ? "arrow down" : "arrow right"
-            }
-          />
+          <i className={getArrowClass(selectedElement, "userPassword")} />
           Change Password
         </button>
         <div
           className={`
             sectionContent 
-            ${elementSelected !== "userPassword" && `collapsed`}
+            ${checkCollapseClass(selectedElement, "userPassword")}
           `}
         >
           <UserPassword />

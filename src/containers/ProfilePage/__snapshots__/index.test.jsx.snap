@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="User portrait"
-        src="default-profile-image.png"
+        src="defaultProfileImage.png"
       />
     </div>
   </div>
@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
     <div
       className="
             sectionContent 
-            false
+            
           "
     >
       <div>
