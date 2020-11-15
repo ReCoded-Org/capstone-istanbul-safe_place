@@ -6,10 +6,12 @@ it("renders correctly and matches the snapshot", () => {
   const mockError = {
     email: {
       message: "Please provide your email",
-      type: "string.empty"
-    }
-  }
+      type: "string.empty",
+    },
+  };
 
-  const tree = renderer.create(<ErrorMessage error={mockError.email} />).toJSON();
+  const tree = renderer
+    .create(<ErrorMessage error={mockError.email} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

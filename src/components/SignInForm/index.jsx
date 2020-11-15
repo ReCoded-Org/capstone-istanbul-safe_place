@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
-import {getErrorClass} from '../../helperFunctions'
+import { getErrorClass } from "../../helperFunctions";
 import "./index.scss";
 
 const schema = Joi.object({

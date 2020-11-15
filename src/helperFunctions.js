@@ -1,7 +1,7 @@
 export function getErrorClass(error) {
-    if (!error) return "";
+  if (!error) return "";
 
-    return "inputError";
-};
+  return "inputError";
+}
 
-export default {getErrorClass};
+export default { getErrorClass };
