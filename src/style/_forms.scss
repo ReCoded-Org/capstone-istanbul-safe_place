@@ -53,3 +53,23 @@
     box-shadow: 0 0 0.4rem 0.1rem $errorColor;
   }
 }
+
+@mixin inputContainer {
+  position: relative;
+  margin-top: 0.3rem;
+
+  label {
+    width: 100%;
+    font-weight: 500;
+  }
+}
+
+@mixin inputsGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & > div {
+    width: 47%;
+  }
+}
