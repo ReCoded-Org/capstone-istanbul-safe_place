@@ -4,6 +4,7 @@ import "./index.scss";
 import { useTranslation } from "react-i18next";
 import OpportunitiesCard from "../OpportunitiesCard";
 import SearchBar from "../SearchBar";
+import JobsTrainingButtons from "../JobsTrainingButtons";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
@@ -34,6 +35,12 @@ const JobsTrainingContent = () => {
         <SearchBar />
       </Row>
       <Row>
+        <Col md={3}>
+          <JobsTrainingButtons
+            setTranslationKey={setTranslationKey}
+            translationKey={translationKey}
+          />
+        </Col>
         <Col>
           <Row className="cards">{cardsList}</Row>
         </Col>
