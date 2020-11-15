@@ -6,26 +6,6 @@
     margin: 3rem 0;
   }
 
-  .trainingsBtn,
-  .jobsBtn {
-    @include primaryBtn;
-    width: 12.75rem;
-    border-radius: 0;
-    text-align: right;
-    color: $darkColor;
-    background-color: transparent;
-
-    &:focus,
-    &:active,
-    &:hover,
-    &:disabled {
-      border-right: solid $primaryColor;
-      outline: 0;
-      color: $primaryColor;
-      background-color: transparent;
-    }
-  }
-
   .cards {
     width: 100%;
   }

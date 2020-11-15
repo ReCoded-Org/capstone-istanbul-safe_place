@@ -8,12 +8,14 @@ import SearchBar from "../SearchBar";
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
   const [translationKey, setTranslationKey] = useState("jobOpportunities");
-  const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
-  const cards = cardsArr.map((opportunity) => (
+  const OpportunityData = [
+    ...t(`home.${translationKey}`, { returnObjects: true }),
+  ];
+  const cardsArr = OpportunityData.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
 
-  const cardsList = cards.map((card, index) => {
+  const cardsList = cardsArr.map((card, index) => {
     return (
       <Col
         sm={12}
@@ -26,47 +28,12 @@ const JobsTrainingContent = () => {
     );
   });
 
-  const [isDisabled, setIsDisabled] = useState(true);
-
-  const selectButton = () => {
-    setIsDisabled(!isDisabled);
-  };
-
   return (
     <Container className="jobsTrainingContent">
       <Row className="searchBar">
         <SearchBar />
       </Row>
       <Row>
-        <Col md={3}>
-          <div>
-            <button
-              disabled={isDisabled}
-              type="button"
-              translationKey="button"
-              className="jobsBtn"
-              onClick={() => {
-                selectButton();
-                setTranslationKey("jobOpportunities");
-              }}
-            >
-              Job Opportunities
-            </button>
-          </div>
-          <div>
-            <button
-              type="button"
-              translationKey="button"
-              className="trainingsBtn"
-              onClick={() => {
-                selectButton();
-                setTranslationKey("trainings");
-              }}
-            >
-              Trainings / Workshops
-            </button>
-          </div>
-        </Col>
         <Col>
           <Row className="cards">{cardsList}</Row>
         </Col>
