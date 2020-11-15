@@ -35,6 +35,28 @@ exports[`renders correctly and matches the snapshot 1`] = `
     className="row"
   >
     <div
+      className="col-md-3"
+    >
+      <div>
+        <button
+          className="opportunityListBtn"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          Job Opportunities
+        </button>
+        <button
+          className="opportunityListBtn"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Trainings / Workshops
+        </button>
+      </div>
+    </div>
+    <div
       className="col"
     >
       <div

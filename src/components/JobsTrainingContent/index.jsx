@@ -24,20 +24,6 @@ const JobsTrainingContent = () => {
       );
     });
   };
-  // console.log(searchCard);
-
-  // const cardsList = cards.map((card, index) => {
-  //   return (
-  //     <Col
-  //       sm={12}
-  //       md={6}
-  //       className={index % 2 === 0 ? "peachBorder" : "greenBorder"}
-  //       key={card.props.id}
-  //     >
-  //       {card}
-  //     </Col>
-  //   );
-  // });
 
   return (
     <Container className="jobsTrainingContent">
@@ -47,36 +33,9 @@ const JobsTrainingContent = () => {
       <Row>
         <Col md={3}>
           <JobsTrainingButtons
-            setCardsArr={setSearchCards}
-            cardsArr={cardsArr}
+            setSearchCards={setSearchCards}
+            setCardsArr={setCardsArr}
           />
-          {/* <div>
-            <button
-              disabled={isDisabled}
-              type="button"
-              className="jobsBtn"
-              onClick={() => {
-                setCardsArr([
-                  ...t(`home.jobOpportunities`, { returnObjects: true }),
-                ]);
-                selectButton();
-              }}
-            >
-              Job Opportunities
-            </button>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="trainingsBtn"
-              onClick={() => {
-                setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
-                selectButton();
-              }}
-            >
-              Trainings / Workshops
-            </button>
-          </div> */}
         </Col>
         <Col>
           <Row className="cards">
