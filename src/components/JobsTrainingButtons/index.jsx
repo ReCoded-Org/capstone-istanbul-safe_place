@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
-const JobsTrainingButtons = ({ translationKey, setTranslationKey }) => {
+const JobsTrainingButtons = ({ cardsArr, setCardsArr }) => {
+  const { t } = useTranslation();
   const [isDisabled, setIsDisabled] = useState(true);
   const buttonText = ["Job Opportunities", "Trainings / Workshops"];
 
   const selectOpportunityButton = () => {
-    if (translationKey === "jobOpportunities") {
-      setTranslationKey("trainings");
+    if (isDisabled ===true) {
+      setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
       setIsDisabled(!isDisabled);
     } else {
-      setTranslationKey("jobOpportunities");
+      setCardsArr([...t(`home.jobOpportunities`, { returnObjects: true })]);
       setIsDisabled(!isDisabled);
     }
   };

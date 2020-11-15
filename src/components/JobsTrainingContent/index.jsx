@@ -7,23 +7,17 @@ import SearchBar from "../SearchBar";
 import JobsTrainingButtons from "../JobsTrainingButtons";
 
 const JobsTrainingContent = () => {
+
   const { t } = useTranslation();
-  const [translationKey, setTranslationKey] = useState("jobOpportunities");
-  const OpportunityData = [
-    ...t(`home.${translationKey}`, { returnObjects: true }),
-  ];
-  // const cardsArr = OpportunityData.map((opportunity) => (
-  // const [cardsArr, setCardsArr] = useState([
-  //   ...t(`home.jobOpportunities`, { returnObjects: true }),
-  // ]);
-  //  const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
-  //  const [cardsArr, setCardsArr] = useState([...t(`home.jobOpportunities`, { returnObjects: true }]);
-  // const [searchCard, setSearchCards] = useState(cardsArr);
+  const [cardsArr, setCardsArr] = useState([
+    ...t(`home.jobOpportunities`, { returnObjects: true }),
+  ]);
+ 
+  const [searchCard, setSearchCards] = useState(cardsArr);
 
   const cards = searchCard.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
-  // console.log(cards)
 
   const handleSearch = (e, keyword) => {
     e.preventDefault();
@@ -35,9 +29,9 @@ const JobsTrainingContent = () => {
       );
     });
   };
-  console.log(searchCard);
+  // console.log(searchCard);
 
-  const cardsList = cardsArr.map((card, index) => {
+  const cardsList = cards.map((card, index) => {
     return (
       <Col
         sm={12}
@@ -58,8 +52,8 @@ const JobsTrainingContent = () => {
       <Row>
         <Col md={3}>
           <JobsTrainingButtons
-            setTranslationKey={setTranslationKey}
-            translationKey={translationKey}
+            setCardsArr={setCardsArr}
+            cardsArr={cardsArr}
           />
           {/* <div>
             <button
