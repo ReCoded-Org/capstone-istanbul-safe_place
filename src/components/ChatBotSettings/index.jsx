@@ -1,11 +1,16 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
+import { useTranslation } from "react-i18next";
 import womanBot from "./images/woman.svg";
 import womanSeeksHelp from "./images/womanSeeksHelp.svg";
 import "./index.scss";
+import { Redirect } from "react-router-dom";
 
 const ChatBotSettings = () => {
+  const { t } = useTranslation();
+
+  // You can find chatbot documentation here https://lucasbassetti.com.br/react-simple-chatbot/#/
   const theme = {
     background: "#FFFEFC",
     fontFamily: "Roboto",
@@ -19,24 +24,32 @@ const ChatBotSettings = () => {
   };
 
   const GoToSearhHelpPage = () => {
-    window.open("http://localhost:3001/seekhelp");
-    return <p>Redirecting to Search Help page</p>;
+    return (
+      <div>
+        <p>{t("chatBotSettings.redirectToSeekHelpPageText")}</p>
+        <Redirect to="/seekhelp" />
+      </div>
+    );
   };
 
   const steps = [
     {
       id: "1",
-      message: "Hello! How can we help you?",
+      message: t("chatBotSettings.welcomingMessage"),
       trigger: "2",
     },
     {
       id: "2",
       options: [
-        { value: 1, label: "Immidiate help", trigger: "3" },
-        { value: 2, label: "Find specialists / shelter", trigger: "4" },
+        { value: 1, label: t("chatBotSettings.helpLabel"), trigger: "3" },
+        { value: 2, label: t("chatBotSettings.findLabel"), trigger: "4" },
         // Two options below will be working after these pages are ready
-        { value: 3, label: "Read our blog", trigger: "5" },
-        { value: 4, label: "Check job / training opportunities", trigger: "6" },
+        { value: 3, label: t("chatBotSettings.blogLabel"), trigger: "5" },
+        {
+          value: 4,
+          label: t("chatBotSettings.opportunityLabel"),
+          trigger: "6",
+        },
       ],
     },
     {
@@ -44,8 +57,9 @@ const ChatBotSettings = () => {
       component: (
         <div>
           <p>
-            Please call <a href="tel:+1123-456-7890">123-456-7890</a> to get an
-            immidiate help
+            {t("chatBotSettings.immidiateHelpMessagePt1")}
+            <a href="tel:+1123-456-7890"> 123-456-7890 </a>
+            {t("chatBotSettings.immidiateHelpMessagePt2")}
           </p>
         </div>
       ),
@@ -58,6 +72,8 @@ const ChatBotSettings = () => {
       asMessage: true,
       trigger: 1,
     },
+
+    // Messages below will be removed once pages are ready
     {
       id: "5",
       message: "Read our blog",
@@ -74,7 +90,7 @@ const ChatBotSettings = () => {
     <>
       <ThemeProvider theme={theme}>
         <ChatBot
-          headerTitle="Find help"
+          headerTitle={t("chatBotSettings.headerTitle")}
           steps={steps}
           floating={true}
           botAvatar={womanBot}

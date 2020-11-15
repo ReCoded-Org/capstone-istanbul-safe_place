@@ -244,5 +244,16 @@
         "portraitImg": "ammarImg"
       }
     ]
+  },
+  "chatBotSettings": {
+    "headerTitle": "Find help",
+    "redirectToSeekHelpPageText": "Redirecting to Search Help page",
+    "welcomingMessage": "Hello! How can we help you?",
+    "helpLabel": "Immidiate help",
+    "findLabel": "Find specialists / shelter",
+    "blogLabel": "Read our blog",
+    "opportunityLabel": "Check job / training opportunities",
+    "immidiateHelpMessagePt1": "Please call",
+    "immidiateHelpMessagePt2": "to get an immidiate help"
   }
 }
