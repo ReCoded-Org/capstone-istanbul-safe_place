@@ -144,7 +144,7 @@ export default function UserDetail({ register }) {
           <label htmlFor="country">
             Country
             <select name="countryCode" id="country" ref={register()}>
-              <option value="">--Please choose your country--</option>
+              <option value="">Please choose your country</option>
               {Countries.map((country) => (
                 <option key={country.id} value={country.alpha2}>
                   {country.name}
