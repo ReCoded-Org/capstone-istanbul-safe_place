@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
+import {getErrorClass} from '../../helperFunctions'
 import "./index.scss";
 
 const schema = Joi.object({
@@ -27,7 +28,7 @@ const schema = Joi.object({
       "any.only": "Those passwords didn't match",
     }),
   acceptTerms: Joi.valid("accepted").required().messages({
-    "any.only": `You should accept our terms of service and privcey policy`,
+    "any.only": `You must accept our terms of service and privacy policy`,
   }),
 });
 
@@ -47,71 +48,71 @@ export default function SignUpForm({ submit }) {
         <div className="formInputGroup">
           <div className="formInput">
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors.firstName)}
               type="text"
               placeholder="First name"
               name="firstName"
               aria-label="firstName"
               ref={register()}
             />
-            <InputErrorMessage errors={errors} name="firstName" />
+            <InputErrorMessage error={errors.firstName} />
           </div>
 
           <div className="formInput">
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors.lastName)}
               type="text"
               placeholder="Last name"
               name="lastName"
               aria-label="lastName"
               ref={register()}
             />
-            <InputErrorMessage errors={errors} name="lastName" />
+            <InputErrorMessage error={errors.lastName} />
           </div>
         </div>
 
         <div className="formInput">
           <input
-            className={errors.email && "inputError"}
+            className={getErrorClass(errors.email)}
             type="email"
             placeholder="Your email"
             name="email"
             aria-label="email"
             ref={register()}
           />
-          <InputErrorMessage errors={errors} name="email" />
+          <InputErrorMessage error={errors.email} />
         </div>
 
         <div className="formInputGroup">
           <div className="formInput">
             <input
-              className={errors.password && "inputError"}
+              className={getErrorClass(errors.password)}
               type="password"
               placeholder="Password"
               name="password"
               aria-label="password"
               ref={register()}
             />
-            <InputErrorMessage errors={errors} name="password" />
+            <InputErrorMessage error={errors.password} />
           </div>
 
           <div className="formInput">
             <input
-              className={errors.confirmPassword && "inputError"}
+              className={getErrorClass(errors.confirmPassword)}
               type="password"
               placeholder="Repeat password"
               name="confirmPassword"
               aria-label="confirmPassword"
               ref={register()}
             />
-            <InputErrorMessage errors={errors} name="confirmPassword" />
+            <InputErrorMessage error={errors.confirmPassword} />
           </div>
         </div>
 
         <div className="formInput">
           <label htmlFor="acceptTerms">
             <input
-              className={errors.acceptTerms && "inputError"}
+              className={getErrorClass(errors.acceptTerms)}
               type="checkbox"
               id="acceptTerms"
               name="acceptTerms"
@@ -122,7 +123,7 @@ export default function SignUpForm({ submit }) {
             I have read and agree with the <a href="/terms">Terms of Service</a>{" "}
             and our <a href="/privacy">Privacy Policy</a>
           </label>
-          <InputErrorMessage errors={errors} name="acceptTerms" />
+          <InputErrorMessage error={errors.acceptTerms} />
         </div>
 
         <button type="submit" className="submitBtn">

@@ -81,6 +81,7 @@ exports[`renders correctly 1`] = `
             >
               <input
                 aria-label="firstName"
+                className=""
                 name="firstName"
                 placeholder="First name"
                 type="text"
@@ -91,6 +92,7 @@ exports[`renders correctly 1`] = `
             >
               <input
                 aria-label="lastName"
+                className=""
                 name="lastName"
                 placeholder="Last name"
                 type="text"
@@ -102,6 +104,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               aria-label="email"
+              className=""
               name="email"
               placeholder="Your email"
               type="email"
@@ -115,6 +118,7 @@ exports[`renders correctly 1`] = `
             >
               <input
                 aria-label="password"
+                className=""
                 name="password"
                 placeholder="Password"
                 type="password"
@@ -125,6 +129,7 @@ exports[`renders correctly 1`] = `
             >
               <input
                 aria-label="confirmPassword"
+                className=""
                 name="confirmPassword"
                 placeholder="Repeat password"
                 type="password"
@@ -139,6 +144,7 @@ exports[`renders correctly 1`] = `
             >
               <input
                 aria-label="acceptTerms"
+                className=""
                 id="acceptTerms"
                 name="acceptTerms"
                 type="checkbox"
