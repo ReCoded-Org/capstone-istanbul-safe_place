@@ -12,9 +12,30 @@ const JobsTrainingContent = () => {
   const OpportunityData = [
     ...t(`home.${translationKey}`, { returnObjects: true }),
   ];
-  const cardsArr = OpportunityData.map((opportunity) => (
+  // const cardsArr = OpportunityData.map((opportunity) => (
+  // const [cardsArr, setCardsArr] = useState([
+  //   ...t(`home.jobOpportunities`, { returnObjects: true }),
+  // ]);
+  //  const cardsArr = [...t(`home.${translationKey}`, { returnObjects: true })];
+  //  const [cardsArr, setCardsArr] = useState([...t(`home.jobOpportunities`, { returnObjects: true }]);
+  // const [searchCard, setSearchCards] = useState(cardsArr);
+
+  const cards = searchCard.map((opportunity) => (
     <OpportunitiesCard {...opportunity} key={opportunity.id} />
   ));
+  // console.log(cards)
+
+  const handleSearch = (e, keyword) => {
+    e.preventDefault();
+    setSearchCards(cardsArr);
+    setSearchCards((prevState) => {
+      const searchedCards = [...prevState];
+      return searchedCards.filter((card) =>
+        card.title.toLowerCase().includes(keyword)
+      );
+    });
+  };
+  console.log(searchCard);
 
   const cardsList = cardsArr.map((card, index) => {
     return (
@@ -32,7 +53,7 @@ const JobsTrainingContent = () => {
   return (
     <Container className="jobsTrainingContent">
       <Row className="searchBar">
-        <SearchBar />
+        <SearchBar handleSearch={handleSearch} />
       </Row>
       <Row>
         <Col md={3}>
@@ -40,6 +61,33 @@ const JobsTrainingContent = () => {
             setTranslationKey={setTranslationKey}
             translationKey={translationKey}
           />
+          {/* <div>
+            <button
+              disabled={isDisabled}
+              type="button"
+              className="jobsBtn"
+              onClick={() => {
+                setCardsArr([
+                  ...t(`home.jobOpportunities`, { returnObjects: true }),
+                ]);
+                selectButton();
+              }}
+            >
+              Job Opportunities
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              className="trainingsBtn"
+              onClick={() => {
+                setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
+                selectButton();
+              }}
+            >
+              Trainings / Workshops
+            </button>
+          </div> */}
         </Col>
         <Col>
           <Row className="cards">{cardsList}</Row>
