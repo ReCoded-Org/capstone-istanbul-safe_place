@@ -120,7 +120,7 @@ export default function SignUpForm({ submit }) {
               ref={register()}
             />
             I have read and agree with the <a href="/terms">Terms of Service</a>{" "}
-            and our <a href="/policy">Privacy Policy</a>
+            and our <a href="/privacy">Privacy Policy</a>
           </label>
           <InputErrorMessage errors={errors} name="acceptTerms" />
         </div>
