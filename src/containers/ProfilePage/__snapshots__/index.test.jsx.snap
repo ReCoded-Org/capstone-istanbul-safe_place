@@ -4,101 +4,105 @@ exports[`renders correctly 1`] = `
 <div
   className="profileContainer container-md"
 >
-  <div
-    className="profilePortrait row"
+  <form
+    onSubmit={[Function]}
   >
-    <h2>
-      Profile
-    </h2>
     <div
-      className="userPortrait"
+      className="profilePortrait row"
     >
-      <img
-        alt="User portrait"
-        src="defaultProfileImage.png"
-      />
+      <h2>
+        Profile
+      </h2>
+      <div
+        className="userPortrait"
+      >
+        <img
+          alt="User portrait"
+          src="defaultProfileImage.png"
+        />
+      </div>
     </div>
-  </div>
-  <div
-    className="section userDetail row"
-  >
-    <button
-      className="sectionTitle"
-      onClick={[Function]}
-      type="button"
-    >
-      <i
-        className="arrow down"
-      />
-      User Details
-    </button>
     <div
-      className="
+      className="userDetail row"
+    >
+      <button
+        className="sectionTitle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="arrow down"
+        />
+        User Details
+      </button>
+      <div
+        className="
             sectionContent 
             
           "
-    >
-      <div>
-        UserDetail
+      >
+        <div>
+          UserDetail
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="section userEmail row"
-  >
-    <button
-      className="sectionTitle"
-      onClick={[Function]}
-      type="button"
-    >
-      <i
-        className="arrow right"
-      />
-      Email Address
-    </button>
     <div
-      className="
+      className="userEmail row"
+    >
+      <button
+        className="sectionTitle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="arrow right"
+        />
+        Email Address
+      </button>
+      <div
+        className="
             sectionContent 
             collapsed
           "
-    >
-      <div>
-        UserEmail
+      >
+        <div>
+          UserEmail
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="section userPassword row"
-  >
-    <button
-      className="sectionTitle"
-      onClick={[Function]}
-      type="button"
-    >
-      <i
-        className="arrow right"
-      />
-      Change Password
-    </button>
     <div
-      className="
+      className="userPassword row"
+    >
+      <button
+        className="sectionTitle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="arrow right"
+        />
+        Change Password
+      </button>
+      <div
+        className="
             sectionContent 
             collapsed
           "
-    >
-      <div>
-        UserPassword
+      >
+        <div>
+          UserPassword
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="submitBtn row"
-  >
-    <button
-      type="button"
+    <div
+      className="submitBtn row"
     >
-      Save Changes
-    </button>
-  </div>
+      <button
+        type="submit"
+      >
+        Save Changes
+      </button>
+    </div>
+  </form>
 </div>
 `;

@@ -35,7 +35,7 @@ export default function ProfilePage({ submit }) {
             <img src={defaultProfileImage} alt="User portrait" />
           </div>
         </Row>
-        <Row className="section userDetail">
+        <Row className="userDetail">
           <button
             className="sectionTitle"
             onClick={() => setSelectedElement("userDetail")}
@@ -53,7 +53,7 @@ export default function ProfilePage({ submit }) {
             <UserDetail register={register} validErrors={errors} />
           </div>
         </Row>
-        <Row className="section userEmail">
+        <Row className="userEmail">
           <button
             className="sectionTitle"
             type="button"
@@ -71,7 +71,7 @@ export default function ProfilePage({ submit }) {
             <UserEmail register={register} validErrors={errors} />
           </div>
         </Row>
-        <Row className="section userPassword">
+        <Row className="userPassword">
           <button
             className="sectionTitle"
             type="button"
