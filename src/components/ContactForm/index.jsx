@@ -2,6 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import InputErrorMessage from "../InputErrorMessage";
+import {getErrorClass} from '../../helperFunctions'
 import "./index.scss";
 
 export default function ContactForm({ submit }) {
@@ -18,7 +19,7 @@ export default function ContactForm({ submit }) {
           <label htmlFor="fullName">
             Full Name
             <input
-              className={errors.fullName && "inputError"}
+              className={getErrorClass(errors.fullName)}
               type="text"
               placeholder="Louis Li (optional)"
               name="fullName"
@@ -32,7 +33,7 @@ export default function ContactForm({ submit }) {
           <label htmlFor="email">
             Email address
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors.email)}
               type="email"
               placeholder="louis@example.com"
               name="email"
@@ -45,7 +46,7 @@ export default function ContactForm({ submit }) {
                 // TODO: intall joi and use it for email validation
               })}
             />
-            <InputErrorMessage errors={errors} name="email" />
+            <InputErrorMessage error={errors.email} />
           </label>
         </div>
 
@@ -53,7 +54,7 @@ export default function ContactForm({ submit }) {
           <label htmlFor="messageContent">
             Message
             <textarea
-              className={errors.message && "inputError"}
+              className={getErrorClass(errors.message)}
               name="messageContent"
               id="messageContent"
               placeholder="type your message here ..."
@@ -73,7 +74,7 @@ export default function ContactForm({ submit }) {
                 },
               })}
             />
-            <InputErrorMessage errors={errors} name="messageContent" />
+            <InputErrorMessage error={errors.messageContent} />
           </label>
         </div>
 
