@@ -4,7 +4,7 @@ import "./index.scss";
 
 const JobsTrainingButtons = ({ setCardsArr, setSearchCards }) => {
   const { t } = useTranslation();
-  //The selected button is disabled to let the user which cards he is viewing.
+  //The selected button is disabled to let the user know which data he is viewing (jobs or training)
   const [isDisabled, setIsDisabled] = useState(true);
 
   // If a button is disabled it means it's data is already fetched. So, on the click of the other button this function detects the disabled button and fetches the opposite data.
