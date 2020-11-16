@@ -19,32 +19,12 @@ const CHATBOT_THEME = {
   userFontColor: "#fff",
 };
 
-const GoToSearchHelpPage = () => {
+const BotRedirectMessage = ({ path, message }) => {
   const { t } = useTranslation();
   return (
     <div>
-      <p>{t("chatBotMessages.goToSeekHelpPageText")}</p>
-      <Redirect to="/seekhelp" />
-    </div>
-  );
-};
-
-const GoToOpportunitiesPage = () => {
-  const { t } = useTranslation();
-  return (
-    <div>
-      <p>{t("chatBotMessages.goToOpportunitiesPageText")}</p>
-      <Redirect to="/opportunities" />
-    </div>
-  );
-};
-
-const GoToBlogPage = () => {
-  const { t } = useTranslation();
-  return (
-    <div>
-      <p>{t("chatBotMessages.goToBlogPageText")}</p>
-      <Redirect to="/blog" />
+      <p>{t(message)}</p>
+      <Redirect to={path} />
     </div>
   );
 };
@@ -75,12 +55,9 @@ const ChatBotMessages = () => {
     {
       id: "3",
       component: (
-        <div>
-          <p>
-            {t("chatBotMessages.immediateHelpMessagePt1")}
-            <a href="tel:+1123-456-7890"> 123-456-7890 </a>
-            {t("chatBotMessages.immediateHelpMessagePt2")}
-          </p>
+        <div className="immediateHelpLine">
+          {t("chatBotMessages.immediateHelpMessage")}
+          <a href="tel:+1123-456-7890">123-456-7890</a>
         </div>
       ),
       asMessage: true,
@@ -88,19 +65,34 @@ const ChatBotMessages = () => {
     },
     {
       id: "4",
-      component: <GoToSearchHelpPage />,
+      component: (
+        <BotRedirectMessage
+          message="chatBotMessages.goToSeekHelpPageText"
+          path="/seekhelp"
+        />
+      ),
       asMessage: true,
       trigger: 2,
     },
     {
       id: "5",
-      component: <GoToOpportunitiesPage />,
+      component: (
+        <BotRedirectMessage
+          message="chatBotMessages.goToBlogPageText"
+          path="/blog"
+        />
+      ),
       asMessage: true,
       trigger: 2,
     },
     {
       id: "6",
-      component: <GoToBlogPage />,
+      component: (
+        <BotRedirectMessage
+          message="chatBotMessages.goToOpportunitiesPageText"
+          path="/opportunities"
+        />
+      ),
       asMessage: true,
       trigger: 2,
     },

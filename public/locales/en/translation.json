@@ -255,7 +255,6 @@
     "findLabel": "Find specialists / shelters",
     "blogLabel": "Read our blog",
     "opportunityLabel": "Check job / training opportunities",
-    "immediateHelpMessagePt1": "Please call",
-    "immediateHelpMessagePt2": "to get an immediate help"
+    "immediateHelpMessage": "To reach an immediate help, please call this number: "
   }
 }
