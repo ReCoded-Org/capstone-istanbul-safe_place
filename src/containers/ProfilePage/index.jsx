@@ -7,17 +7,18 @@ import UserPassword from "../../components/profile/UserPassword";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import "./index.scss";
 
-function getArrowClass(selectedElm, currentElm) {
-  return selectedElm === currentElm ? "arrow down" : "arrow right";
+function getArrowClass(selectedElement, currentElement) {
+  return selectedElement === currentElement ? "arrow down" : "arrow right";
 }
 
-function checkCollapseClass(selectedElm, currentElm) {
-  if (selectedElm === currentElm) return "";
+function checkCollapseClass(selectedElement, currentElement) {
+  if (selectedElement === currentElement) return "";
 
-  return `collapsed`;
+  return "collapsed";
 }
 
 export default function ProfilePage({ submit }) {
+  // track the active and inactive sections to show/hide them
   const [selectedElement, setSelectedElement] = React.useState("userDetail");
   const { register, handleSubmit, errors } = useForm();
 
@@ -42,7 +43,7 @@ export default function ProfilePage({ submit }) {
             type="button"
           >
             <i className={getArrowClass(selectedElement, "userDetail")} />
-            User Details
+            User details
           </button>
           <div
             className={`
@@ -60,7 +61,7 @@ export default function ProfilePage({ submit }) {
             onClick={() => setSelectedElement("userEmail")}
           >
             <i className={getArrowClass(selectedElement, "userEmail")} />
-            Email Address
+            Email address
           </button>
           <div
             className={`
@@ -78,7 +79,7 @@ export default function ProfilePage({ submit }) {
             onClick={() => setSelectedElement("userPassword")}
           >
             <i className={getArrowClass(selectedElement, "userPassword")} />
-            Change Password
+            Change password
           </button>
           <div
             className={`
@@ -90,7 +91,7 @@ export default function ProfilePage({ submit }) {
           </div>
         </Row>
         <Row className="submitBtn">
-          <button type="submit">Save Changes</button>
+          <button type="submit">Save changes</button>
         </Row>
       </form>
     </Container>
