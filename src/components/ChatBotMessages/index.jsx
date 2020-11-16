@@ -7,53 +7,56 @@ import womanSeeksHelp from "./images/womanSeeksHelp.svg";
 import "./index.scss";
 import { Redirect } from "react-router-dom";
 
+const CHATBOT_THEME = {
+  background: "#FFFEFC",
+  fontFamily: "Roboto",
+  headerBgColor: "#FFBFB5",
+  headerFontColor: "#fff",
+  headerFontSize: "15px",
+  botBubbleColor: "#C8D7C2",
+  botFontColor: "#fff",
+  userBubbleColor: "#FFBFB5",
+  userFontColor: "#fff",
+};
+
+const GoToSearchHelpPage = () => {
+  const { t } = useTranslation();
+  return (
+    <div>
+      <p>{t("chatBotMessages.goToSeekHelpPageText")}</p>
+      <Redirect to="/seekhelp" />
+    </div>
+  );
+};
+
+const GoToOpportunitiesPage = () => {
+  const { t } = useTranslation();
+  return (
+    <div>
+      <p>{t("chatBotMessages.goToOpportunitiesPageText")}</p>
+      <Redirect to="/opportunities" />
+    </div>
+  );
+};
+
+const GoToBlogPage = () => {
+  const { t } = useTranslation();
+  return (
+    <div>
+      <p>{t("chatBotMessages.goToBlogPageText")}</p>
+      <Redirect to="/blog" />
+    </div>
+  );
+};
+
 const ChatBotMessages = () => {
   const { t } = useTranslation();
 
   // You can find chatbot documentation here https://lucasbassetti.com.br/react-simple-chatbot/#/
-  const theme = {
-    background: "#FFFEFC",
-    fontFamily: "Roboto",
-    headerBgColor: "#FFBFB5",
-    headerFontColor: "#fff",
-    headerFontSize: "15px",
-    botBubbleColor: "#C8D7C2",
-    botFontColor: "#fff",
-    userBubbleColor: "#FFBFB5",
-    userFontColor: "#fff",
-  };
-
-  const GoToSearhHelpPage = () => {
-    return (
-      <div>
-        <p>{t("chatBotMessages.goToSeekHelpPageText")}</p>
-        <Redirect to="/seekhelp" />
-      </div>
-    );
-  };
-
-  const GoToOpportunitiesPage = () => {
-    return (
-      <div>
-        <p>{t("chatBotMessages.goToOpportunitiesPageText")}</p>
-        <Redirect to="/opportunities" />
-      </div>
-    );
-  };
-
-  const GoToBlogPage = () => {
-    return (
-      <div>
-        <p>{t("chatBotMessages.goToBlogPageText")}</p>
-        <Redirect to="/blog" />
-      </div>
-    );
-  };
-
   const steps = [
     {
       id: "1",
-      message: t("chatBotMessages.welcomingMessage"),
+      message: t("chatBotMessages.welcomeMessage"),
       trigger: "2",
     },
     {
@@ -85,7 +88,7 @@ const ChatBotMessages = () => {
     },
     {
       id: "4",
-      component: <GoToSearhHelpPage />,
+      component: <GoToSearchHelpPage />,
       asMessage: true,
       trigger: 2,
     },
@@ -105,7 +108,7 @@ const ChatBotMessages = () => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={CHATBOT_THEME}>
         <ChatBot
           headerTitle={t("chatBotMessages.headerTitle")}
           steps={steps}
