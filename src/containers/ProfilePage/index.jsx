@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import UserDetail from "../../components/UserDetail";
-import UserEmail from "../../components/UserEmail";
-import UserPassword from "../../components/UserPassword";
+import UserDetail from "../../components/profile/UserDetail";
+import UserEmail from "../../components/profile/UserEmail";
+import UserPassword from "../../components/profile/UserPassword";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import "./index.scss";
 
