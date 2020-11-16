@@ -1,7 +1,7 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import womanBot from "./images/woman.svg";
 import womanSeeksHelp from "./images/womanSeeksHelp.svg";
 import "./index.scss";
