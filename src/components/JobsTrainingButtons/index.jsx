@@ -12,17 +12,16 @@ const JobsTrainingButtons = ({ setCardsArr, setSearchCards }) => {
     if (isDisabled) {
       setSearchCards([...t(`home.trainings`, { returnObjects: true })]);
       setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
-      setIsDisabled(!isDisabled);
     } else {
       setSearchCards([...t(`home.jobOpportunities`, { returnObjects: true })]);
       setCardsArr([...t(`home.jobOpportunities`, { returnObjects: true })]);
-      setIsDisabled(!isDisabled);
     }
+    setIsDisabled(!isDisabled);
   };
 
-  const buttonNames = ["Job Opportunities", "Trainings / Workshops"];
+  const BUTTON_NAMES = ["Job Opportunities", "Trainings / Workshops"];
   // This variables maps the two button Names and returns a button for each. One for Jobs and one for training to fetch data accordingly.
-  const opportunityListBtns = buttonNames.map((name, index) => {
+  const opportunityListBtns = BUTTON_NAMES.map((name, index) => {
     return (
       <button
         key={name}
