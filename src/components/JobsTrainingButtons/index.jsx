@@ -4,11 +4,13 @@ import "./index.scss";
 
 const JobsTrainingButtons = ({ setCardsArr, setSearchCards }) => {
   const { t } = useTranslation();
+  //The selected button is disabled to let the user which cards he is viewing.
   const [isDisabled, setIsDisabled] = useState(true);
-  const buttonText = ["Job Opportunities", "Trainings / Workshops"];
+  const buttonNames = ["Job Opportunities", "Trainings / Workshops"];
 
-  const selectOpportunityButton = () => {
-    if (isDisabled === true) {
+  // If a button is disabled it means it's data is already fetched. So, on the click of the other button this function detects the disabled button and fetches the opposite data.
+  const fetchOpportunityData = () => {
+    if (isDisabled) {
       setSearchCards([...t(`home.trainings`, { returnObjects: true })]);
       setCardsArr([...t(`home.trainings`, { returnObjects: true })]);
       setIsDisabled(!isDisabled);
@@ -19,23 +21,24 @@ const JobsTrainingButtons = ({ setCardsArr, setSearchCards }) => {
     }
   };
 
-  const opportunityListBtn = buttonText.map((text, index) => {
+  // This variables maps the two button Names and returns a button for each. One for Jobs and one for training to fetch data accordingly.
+  const opportunityListBtns = buttonNames.map((name, index) => {
     return (
       <button
-        key={text}
+        key={name}
         type="button"
         className="opportunityListBtn"
         onClick={() => {
-          selectOpportunityButton();
+          fetchOpportunityData();
         }}
         disabled={index === 0 ? isDisabled : !isDisabled}
       >
-        {text}
+        {name}
       </button>
     );
   });
 
-  return <div>{opportunityListBtn}</div>;
+  return <div>{opportunityListBtns}</div>;
 };
 
 export default JobsTrainingButtons;
