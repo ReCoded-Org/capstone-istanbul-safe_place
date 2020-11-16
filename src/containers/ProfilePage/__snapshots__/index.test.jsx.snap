@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
         <i
           className="arrow down"
         />
-        User Details
+        User details
       </button>
       <div
         className="
@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
         <i
           className="arrow right"
         />
-        Email Address
+        Email address
       </button>
       <div
         className="
@@ -81,7 +81,7 @@ exports[`renders correctly 1`] = `
         <i
           className="arrow right"
         />
-        Change Password
+        Change password
       </button>
       <div
         className="
@@ -100,7 +100,7 @@ exports[`renders correctly 1`] = `
       <button
         type="submit"
       >
-        Save Changes
+        Save changes
       </button>
     </div>
   </form>
