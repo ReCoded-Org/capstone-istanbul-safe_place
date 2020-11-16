@@ -1,7 +1,7 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import womanBot from "./images/woman.svg";
 import womanSeeksHelp from "./images/womanSeeksHelp.svg";
 import "./index.scss";
@@ -55,9 +55,15 @@ const ChatBotMessages = () => {
     {
       id: "3",
       component: (
-        <div className="immediateHelpLine">
-          {t("chatBotMessages.immediateHelpMessage")}
-          <a href="tel:+1123-456-7890">123-456-7890</a>
+        <div>
+          <p
+            className="immediateHelpLine"
+            dangerouslySetInnerHTML={{
+              __html: t("chatBotMessages.immediateHelpMessage", {
+                link: '<a href="tel:+1123-456-7890">123-456-7890</a>',
+              }),
+            }}
+          ></p>
         </div>
       ),
       asMessage: true,
