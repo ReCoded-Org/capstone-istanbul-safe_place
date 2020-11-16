@@ -12,7 +12,9 @@ function getArrowClass(selectedElement, currentElement) {
 }
 
 function checkCollapseClass(selectedElement, currentElement) {
-  if (selectedElement === currentElement) return "";
+  if (selectedElement === currentElement) {
+    return "";
+  };
 
   return "collapsed";
 }
