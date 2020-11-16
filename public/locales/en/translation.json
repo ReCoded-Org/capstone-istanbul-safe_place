@@ -245,17 +245,17 @@
       }
     ]
   },
-  "chatBotSettings": {
+  "chatBotMessages": {
     "headerTitle": "Find help",
-    "gotToSeekHelpPageText": "Redirecting to search help page",
-    "goToOpportunitiesPageText": "Redirecting to jobs / training pportunities page",
+    "goToSeekHelpPageText": "Redirecting to search help page",
+    "goToOpportunitiesPageText": "Redirecting to jobs / training opportunities page",
     "goToBlogPageText": "Redirecting to blog page",
     "welcomingMessage": "Hello! How can we help you?",
-    "helpLabel": "Immidiate help",
+    "helpLabel": "Immediate help",
     "findLabel": "Find specialists / shelter",
     "blogLabel": "Read our blog",
     "opportunityLabel": "Check job / training opportunities",
-    "immidiateHelpMessagePt1": "Please call",
-    "immidiateHelpMessagePt2": "to get an immidiate help"
+    "immediateHelpMessagePt1": "Please call",
+    "immediateHelpMessagePt2": "to get an immediate help"
   }
 }

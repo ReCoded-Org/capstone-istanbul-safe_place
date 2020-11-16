@@ -7,7 +7,7 @@ import womanSeeksHelp from "./images/womanSeeksHelp.svg";
 import "./index.scss";
 import { Redirect } from "react-router-dom";
 
-const ChatBotSettings = () => {
+const ChatBotMessages = () => {
   const { t } = useTranslation();
 
   // You can find chatbot documentation here https://lucasbassetti.com.br/react-simple-chatbot/#/
@@ -26,7 +26,7 @@ const ChatBotSettings = () => {
   const GoToSearhHelpPage = () => {
     return (
       <div>
-        <p>{t("chatBotSettings.gotToSeekHelpPageText")}</p>
+        <p>{t("chatBotMessages.goToSeekHelpPageText")}</p>
         <Redirect to="/seekhelp" />
       </div>
     );
@@ -35,7 +35,7 @@ const ChatBotSettings = () => {
   const GoToOpportunitiesPage = () => {
     return (
       <div>
-        <p>{t("chatBotSettings.goToOpportunitiesPageText")}</p>
+        <p>{t("chatBotMessages.goToOpportunitiesPageText")}</p>
         <Redirect to="/opportunities" />
       </div>
     );
@@ -44,7 +44,7 @@ const ChatBotSettings = () => {
   const GoToBlogPage = () => {
     return (
       <div>
-        <p>{t("chatBotSettings.goToBlogPageText")}</p>
+        <p>{t("chatBotMessages.goToBlogPageText")}</p>
         <Redirect to="/blog" />
       </div>
     );
@@ -53,18 +53,18 @@ const ChatBotSettings = () => {
   const steps = [
     {
       id: "1",
-      message: t("chatBotSettings.welcomingMessage"),
+      message: t("chatBotMessages.welcomingMessage"),
       trigger: "2",
     },
     {
       id: "2",
       options: [
-        { value: 1, label: t("chatBotSettings.helpLabel"), trigger: "3" },
-        { value: 2, label: t("chatBotSettings.findLabel"), trigger: "4" },
-        { value: 3, label: t("chatBotSettings.blogLabel"), trigger: "5" },
+        { value: 1, label: t("chatBotMessages.helpLabel"), trigger: "3" },
+        { value: 2, label: t("chatBotMessages.findLabel"), trigger: "4" },
+        { value: 3, label: t("chatBotMessages.blogLabel"), trigger: "5" },
         {
           value: 4,
-          label: t("chatBotSettings.opportunityLabel"),
+          label: t("chatBotMessages.opportunityLabel"),
           trigger: "6",
         },
       ],
@@ -74,32 +74,32 @@ const ChatBotSettings = () => {
       component: (
         <div>
           <p>
-            {t("chatBotSettings.immidiateHelpMessagePt1")}
+            {t("chatBotMessages.immediateHelpMessagePt1")}
             <a href="tel:+1123-456-7890"> 123-456-7890 </a>
-            {t("chatBotSettings.immidiateHelpMessagePt2")}
+            {t("chatBotMessages.immediateHelpMessagePt2")}
           </p>
         </div>
       ),
       asMessage: true,
-      trigger: 1,
+      trigger: 2,
     },
     {
       id: "4",
       component: <GoToSearhHelpPage />,
       asMessage: true,
-      trigger: 1,
+      trigger: 2,
     },
     {
       id: "5",
       component: <GoToOpportunitiesPage />,
       asMessage: true,
-      trigger: 1,
+      trigger: 2,
     },
     {
       id: "6",
       component: <GoToBlogPage />,
       asMessage: true,
-      trigger: 1,
+      trigger: 2,
     },
   ];
 
@@ -107,7 +107,7 @@ const ChatBotSettings = () => {
     <>
       <ThemeProvider theme={theme}>
         <ChatBot
-          headerTitle={t("chatBotSettings.headerTitle")}
+          headerTitle={t("chatBotMessages.headerTitle")}
           steps={steps}
           floating={true}
           botAvatar={womanBot}
@@ -118,4 +118,4 @@ const ChatBotSettings = () => {
   );
 };
 
-export default ChatBotSettings;
+export default ChatBotMessages;
