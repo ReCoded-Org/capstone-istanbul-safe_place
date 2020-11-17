@@ -14,12 +14,14 @@ import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
+import ChatBotMessages from "./components/ChatBotMessages";
 
 const App = () => (
   <Router>
     <div>
       <HelpNavbar />
       <MainNavbar />
+      <ChatBotMessages />
       <Switch>
         <Route exact path="/">
           <Home />
