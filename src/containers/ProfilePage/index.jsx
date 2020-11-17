@@ -11,18 +11,18 @@ import "./index.scss";
 export default function ProfilePage({ submit }) {
   const { register, handleSubmit, errors } = useForm();
 
-  const SECTIONS = [
+  const sections = [
     {
       label: "User details",
-      component: <UserDetailForm register={register} errors={errors} />,
+      children: <UserDetailForm register={register} errors={errors} />,
     },
     {
       label: "Email address",
-      component: <UserEmailForm register={register} errors={errors} />,
+      children: <UserEmailForm register={register} errors={errors} />,
     },
     {
       label: "Change password",
-      component: <UserPasswordForm register={register} errors={errors} />,
+      children: <UserPasswordForm register={register} errors={errors} />,
     },
   ];
 
@@ -41,13 +41,13 @@ export default function ProfilePage({ submit }) {
               <img src={defaultProfileImage} alt="User portrait" />
             </div>
           </Row>
-          {SECTIONS.map((section, index) => (
+          {sections.map((section, index) => (
             <ProfileSection
               key={section.label}
               eventKey={index.toString()}
               label={section.label}
             >
-              {section.component}
+              {section.children}
             </ProfileSection>
           ))}
 
