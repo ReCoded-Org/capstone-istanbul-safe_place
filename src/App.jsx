@@ -42,6 +42,9 @@ const App = () => (
         <Route exact path="/about">
           <AboutUsPage />
         </Route>
+        <Route exact path="/blog/:id" 
+        render={(props) => <SingleBlog {...props} />}>
+        </Route>
       </Switch>
       <Footer />
     </div>
