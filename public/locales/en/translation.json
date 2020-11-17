@@ -270,6 +270,7 @@
       "nameInputLabel": "Full Name",
       "emailInputLabel": "Email Address",
       "messageInputLabel": "Message",
+      "submitBtn": "Send",
       "nameInputPlaceholder": "Please enter your name (optional)",
       "emailInputPlaceholder": "Please enter your email",
       "messageInputPlaceholder": "Please enter your message",

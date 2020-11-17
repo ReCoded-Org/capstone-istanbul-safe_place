@@ -101,7 +101,7 @@ export default function ContactForm() {
         </div>
 
         <button type="submit" className="submitBtn">
-          Send
+          {t("contactUs.contactUsForm.submitBtn")}
         </button>
       </form>
     </Col>
