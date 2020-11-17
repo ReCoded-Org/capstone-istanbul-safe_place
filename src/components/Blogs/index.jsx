@@ -8,44 +8,30 @@ const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace1025
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
-
   const fetchBlogPosts = async () => {
     const data = await fetch(BLOG_API_URL);
     const fetchedBlogPosts = await data.json();
     setBlogPosts(fetchedBlogPosts);
-    // console.log(fetchedBlogPosts)
   };
   useEffect(() => {
     fetchBlogPosts();
   }, []);
-  console.log(blogPosts)
 
-
-  // const [searchBlogs, setSearchBlogs] = useState(blogPosts);
-
+  // search function
   const handleSearch = (e, keyword) => {
-    //console.log(keyword)
     e.preventDefault();
-
-    const filterPost = blogPosts.filter(blog => {
-      console.log(blog)
-      const blogTitle = blog.title.rendered
-      console.log(blogTitle)
+    const filterPost = blogPosts.filter((blog) => {
+      const blogTitle = blog.title.rendered;
       const results = blogTitle.toLowerCase().includes(keyword.toLowerCase());
-      console.log(results)
-      return results
-
-    })
-    console.log(filterPost)
-    setBlogPosts(filterPost)
-
+      return results;
+    });
+    setBlogPosts(filterPost);
   };
 
   return (
     <Container>
-      <SearchBar handleSearch={handleSearch}/>
-      {blogPosts.map((blogPost) => 
-      { 
+      <SearchBar handleSearch={handleSearch} />
+      {blogPosts.map((blogPost) => {
         return (
           <div className="blogsSection">
             <div className="shadowEffect"></div>
@@ -62,8 +48,7 @@ export default function Blogs() {
             />
           </div>
         );
-      }
-      )}
+      })}
     </Container>
   );
 }

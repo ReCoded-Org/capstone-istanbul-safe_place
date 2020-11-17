@@ -245,11 +245,9 @@
       }
     ]
   },
-<<<<<<< HEAD
   "blogPage": {
     "title": "Our Blog",
-    "subtitle": "Information about violence, women and health. Read different topics that contribute positively to the mental health of women."
-=======
+    "subtitle": "Information about violence, women and health. Read different topics that contribute positively to the mental health of women."},
   "chatBotMessages": {
     "headerTitle": "Find help",
     "goToSeekHelpPageText": "Redirecting to search help page",
@@ -269,6 +267,5 @@
       "jobOpportunities": "Job Opportunities",
       "trainings": "Trainings / Workshops"
     }
->>>>>>> dev
   }
 }
