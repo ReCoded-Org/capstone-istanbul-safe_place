@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import UserDetail from "../../components/profile/UserDetail";
-import UserEmail from "../../components/profile/UserEmail";
-import UserPassword from "../../components/profile/UserPassword";
+import UserDetailForm from "../../components/profile/UserDetailForm";
+import UserEmailForm from "../../components/profile/UserEmailForm";
+import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import "./index.scss";
 
@@ -21,7 +21,7 @@ function checkCollapseClass(selectedElement, currentElement) {
 
 export default function ProfilePage({ submit }) {
   // track the active and inactive sections to show/hide them
-  const [selectedElement, setSelectedElement] = React.useState("userDetail");
+  const [selectedElement, setSelectedElement] = React.useState("UserDetailForm");
   const { register, handleSubmit, errors } = useForm();
 
   const onSave = (data) => {
@@ -38,58 +38,58 @@ export default function ProfilePage({ submit }) {
             <img src={defaultProfileImage} alt="User portrait" />
           </div>
         </Row>
-        <Row className="userDetail">
+        <Row className="UserDetailForm">
           <button
             className="sectionTitle"
-            onClick={() => setSelectedElement("userDetail")}
+            onClick={() => setSelectedElement("UserDetailForm")}
             type="button"
           >
-            <i className={getArrowClass(selectedElement, "userDetail")} />
+            <i className={getArrowClass(selectedElement, "UserDetailForm")} />
             User details
           </button>
           <div
             className={`
             sectionContent 
-            ${checkCollapseClass(selectedElement, "userDetail")}
+            ${checkCollapseClass(selectedElement, "UserDetailForm")}
           `}
           >
-            <UserDetail register={register} validErrors={errors} />
+            <UserDetailForm register={register} validErrors={errors} />
           </div>
         </Row>
-        <Row className="userEmail">
+        <Row className="UserEmailForm">
           <button
             className="sectionTitle"
             type="button"
-            onClick={() => setSelectedElement("userEmail")}
+            onClick={() => setSelectedElement("UserEmailForm")}
           >
-            <i className={getArrowClass(selectedElement, "userEmail")} />
+            <i className={getArrowClass(selectedElement, "UserEmailForm")} />
             Email address
           </button>
           <div
             className={`
             sectionContent 
-            ${checkCollapseClass(selectedElement, "userEmail")}
+            ${checkCollapseClass(selectedElement, "UserEmailForm")}
           `}
           >
-            <UserEmail register={register} validErrors={errors} />
+            <UserEmailForm register={register} validErrors={errors} />
           </div>
         </Row>
-        <Row className="userPassword">
+        <Row className="UserPasswordForm">
           <button
             className="sectionTitle"
             type="button"
-            onClick={() => setSelectedElement("userPassword")}
+            onClick={() => setSelectedElement("UserPasswordForm")}
           >
-            <i className={getArrowClass(selectedElement, "userPassword")} />
+            <i className={getArrowClass(selectedElement, "UserPasswordForm")} />
             Change password
           </button>
           <div
             className={`
             sectionContent 
-            ${checkCollapseClass(selectedElement, "userPassword")}
+            ${checkCollapseClass(selectedElement, "UserPasswordForm")}
           `}
           >
-            <UserPassword register={register} validErrors={errors} />
+            <UserPasswordForm register={register} validErrors={errors} />
           </div>
         </Row>
         <Row className="submitBtn">

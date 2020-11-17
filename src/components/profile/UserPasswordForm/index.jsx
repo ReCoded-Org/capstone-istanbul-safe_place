@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function UserPassword() {
+export default function UserPasswordForm() {
   return <div>UserPassword</div>;
 }
