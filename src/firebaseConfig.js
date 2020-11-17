@@ -2,7 +2,7 @@ import * as firebase from "firebase/app";
 import "firebase/firestore";
 
 let firebaseConfig = {
-  apiKey: "AIzaSyC_w_kN4OnIlQ9YxUt4CnCfAzNqPYSWl9E",
+  apiKey: atob("QUl6YVN5Q193X2tONE9uSWxROVl4VXQ0Q25DZkF6TnFQWVNXbDlF"),
   authDomain: "capstone-project-safe-place.firebaseapp.com",
   databaseURL: "https://capstone-project-safe-place.firebaseio.com",
   projectId: "capstone-project-safe-place",
