@@ -1,8 +1,5 @@
-import React from 'react'
-import {
-  useAccordionToggle,
-  AccordionContext,
-} from "react-bootstrap";
+import React from "react";
+import { useAccordionToggle, AccordionContext } from "react-bootstrap";
 
 function getArrowClass(isCurrentElementSelected) {
   return isCurrentElementSelected ? "arrow down" : "arrow right";
