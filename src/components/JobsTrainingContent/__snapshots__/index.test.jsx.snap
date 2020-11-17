@@ -44,7 +44,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Job Opportunities
+          jobsTrainingPage.buttons.jobOpportunities
         </button>
         <button
           className="opportunityListBtn"
@@ -52,7 +52,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Trainings / Workshops
+          jobsTrainingPage.buttons.trainings
         </button>
       </div>
     </div>

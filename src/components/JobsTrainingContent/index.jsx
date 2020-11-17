@@ -12,15 +12,12 @@ const JobsTrainingContent = () => {
     ...t(`home.jobOpportunities`, { returnObjects: true }),
   ]);
 
-  const [searchCard, setSearchCards] = useState(cardsArr);
-
   const handleSearch = (e, keyword) => {
     e.preventDefault();
-    setSearchCards(cardsArr);
-    setSearchCards((prevState) => {
-      const searchedCards = [...prevState];
+    setCardsArr(() => {
+      const searchedCards = [...cardsArr];
       return searchedCards.filter((card) =>
-        card.title.toLowerCase().includes(keyword)
+        card.title.toLowerCase().includes(keyword.toLowerCase())
       );
     });
   };
@@ -32,14 +29,11 @@ const JobsTrainingContent = () => {
       </Row>
       <Row>
         <Col md={3}>
-          <JobsTrainingButtons
-            setSearchCards={setSearchCards}
-            setCardsArr={setCardsArr}
-          />
+          <JobsTrainingButtons setCardsArr={setCardsArr} />
         </Col>
         <Col>
           <Row className="cards">
-            {searchCard.map((opportunity, index) => (
+            {cardsArr.map((opportunity, index) => (
               <Col
                 sm={12}
                 md={6}
