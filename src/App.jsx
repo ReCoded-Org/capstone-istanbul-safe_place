@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
+import ChatBotMessages from "./components/ChatBotMessages";
 import BlogPage from "./containers/BlogPage";
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
     <div>
       <HelpNavbar />
       <MainNavbar />
+      <ChatBotMessages />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -37,7 +39,7 @@ const App = () => (
         <Route exact path="/test">
           <ViolenceTestPage />
         </Route>
-        <Route exact path="/jobs">
+        <Route exact path="/opportunities">
           <JobsTrainingPage />
         </Route>
         <Route exact path="/about">
