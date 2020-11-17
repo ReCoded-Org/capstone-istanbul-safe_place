@@ -17,7 +17,6 @@ const JobsTrainingButtons = ({ setCardsArr }) => {
   const { t } = useTranslation();
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 
-  // This variables maps the button returns a button for each.
   const opportunityListBtns = BUTTON_SPECS.map((button, index) => {
     const opportunityData = [
       ...t(`${button.contentTranslationKey}`, { returnObjects: true }),
