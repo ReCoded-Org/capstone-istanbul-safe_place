@@ -40,7 +40,7 @@ const App = () => (
         <Route exact path="/profile">
           <ProfilePage />
         </Route>
-        <Route exact path="/jobs">
+        <Route exact path="/opportunities">
           <JobsTrainingPage />
         </Route>
         <Route exact path="/about">
