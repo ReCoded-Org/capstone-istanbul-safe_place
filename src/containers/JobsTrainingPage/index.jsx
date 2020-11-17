@@ -1,13 +1,13 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import JobsTrainingHeader from "../../components/JobsTrainingHeader";
-import JobsTrainingContent from "../../components/JobsTrainingContent";
+import OpportunitiesContent from "../../components/OpportunitiesContent";
 
 const JobsTrainingPage = () => {
   return (
     <Container>
       <JobsTrainingHeader />
-      <JobsTrainingContent />
+      <OpportunitiesContent />
     </Container>
   );
 };
