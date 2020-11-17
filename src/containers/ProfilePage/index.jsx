@@ -13,6 +13,21 @@ import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import "./index.scss";
 
+const SECTINOS = [
+  {
+    label: "User details",
+    componentName: UserDetailForm,
+  },
+  {
+    label: "Email address",
+    componentName: UserEmailForm,
+  },
+  {
+    label: "Change password",
+    componentName: UserPasswordForm,
+  },
+];
+
 function getArrowClass(isCurrentElementSelected) {
   return isCurrentElementSelected ? "arrow down" : "arrow right";
 }
@@ -43,6 +58,17 @@ export default function ProfilePage({ submit }) {
     );
   }
 
+  const Section = ({ eventKey, label, Component }) => (
+    <Row className="section">
+      <ToggleButton eventKey={eventKey}>{label}</ToggleButton>
+      <div className="sectionContent">
+        <Accordion.Collapse eventKey={eventKey}>
+          <Component register={register} validErrors={errors} />
+        </Accordion.Collapse>
+      </div>
+    </Row>
+  );
+
   return (
     <Container fluid="md" className="profileContainer">
       <form onSubmit={handleSubmit(onSave)}>
@@ -53,30 +79,15 @@ export default function ProfilePage({ submit }) {
               <img src={defaultProfileImage} alt="User portrait" />
             </div>
           </Row>
-          <Row className="UserDetailSection section">
-            <ToggleButton eventKey="0">User details</ToggleButton>
-            <div className="sectionContent">
-              <Accordion.Collapse eventKey="0">
-                <UserDetailForm register={register} validErrors={errors} />
-              </Accordion.Collapse>
-            </div>
-          </Row>
-          <Row className="UserEmailSection section">
-            <ToggleButton eventKey="1">Email address</ToggleButton>
-            <div className="sectionContent">
-              <Accordion.Collapse eventKey="1">
-                <UserEmailForm register={register} validErrors={errors} />
-              </Accordion.Collapse>
-            </div>
-          </Row>
-          <Row className="UserPasswordSection section">
-            <ToggleButton eventKey="2">Change password</ToggleButton>
-            <div className="sectionContent">
-              <Accordion.Collapse eventKey="2">
-                <UserPasswordForm register={register} validErrors={errors} />
-              </Accordion.Collapse>
-            </div>
-          </Row>
+          {SECTINOS.map((section, index) => (
+            <Section
+              key={section.label}
+              eventKey={index.toString()}
+              label={section.label}
+              Component={section.componentName}
+            />
+          ))}
+
           <Row className="submitBtn">
             <button type="submit">Save changes</button>
           </Row>

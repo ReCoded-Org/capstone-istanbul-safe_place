@@ -26,7 +26,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="UserDetailSection section row"
+        className="section row"
       >
         <button
           className="sectionTitle"
@@ -52,7 +52,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="UserEmailSection section row"
+        className="section row"
       >
         <button
           className="sectionTitle"
@@ -78,7 +78,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="UserPasswordSection section row"
+        className="section row"
       >
         <button
           className="sectionTitle"
