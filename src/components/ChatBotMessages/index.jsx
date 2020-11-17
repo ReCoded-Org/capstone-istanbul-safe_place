@@ -20,10 +20,9 @@ const CHATBOT_THEME = {
 };
 
 const BotRedirectMessage = ({ path, message }) => {
-  const { t } = useTranslation();
   return (
     <div>
-      <p>{t(message)}</p>
+      <p>{message}</p>
       <Redirect to={path} />
     </div>
   );
@@ -32,7 +31,7 @@ const BotRedirectMessage = ({ path, message }) => {
 const ChatBotMessages = () => {
   const { t } = useTranslation();
 
-  // You can find chatbot documentation here https://lucasbassetti.com.br/react-simple-chatbot/#/
+  // Chatbot documentation here: https://lucasbassetti.com.br/react-simple-chatbot/#/
   const steps = [
     {
       id: "1",
@@ -60,7 +59,7 @@ const ChatBotMessages = () => {
             className="immediateHelpLine"
             dangerouslySetInnerHTML={{
               __html: t("chatBotMessages.immediateHelpMessage", {
-                link: '<a href="tel:+1123-456-7890">123-456-7890</a>',
+                link: '<a href="tel:02126569696">0212 656 96 96</a>',
               }),
             }}
           ></p>
@@ -73,7 +72,7 @@ const ChatBotMessages = () => {
       id: "4",
       component: (
         <BotRedirectMessage
-          message="chatBotMessages.goToSeekHelpPageText"
+          message={t("chatBotMessages.goToSeekHelpPageText")}
           path="/seekhelp"
         />
       ),
@@ -84,7 +83,7 @@ const ChatBotMessages = () => {
       id: "5",
       component: (
         <BotRedirectMessage
-          message="chatBotMessages.goToBlogPageText"
+          message={t("chatBotMessages.goToBlogPageText")}
           path="/blog"
         />
       ),
@@ -95,7 +94,7 @@ const ChatBotMessages = () => {
       id: "6",
       component: (
         <BotRedirectMessage
-          message="chatBotMessages.goToOpportunitiesPageText"
+          message={t("chatBotMessages.goToOpportunitiesPageText")}
           path="/opportunities"
         />
       ),

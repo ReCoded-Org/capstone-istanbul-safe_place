@@ -255,6 +255,6 @@
     "findLabel": "Find specialists / shelters",
     "blogLabel": "Read our blog",
     "opportunityLabel": "Check job / training opportunities",
-    "immediateHelpMessage": "Please call {{link}} to get an immediate help"
+    "immediateHelpMessage": "Please call {{link}} to get immediate help"
   }
 }
