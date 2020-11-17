@@ -39,7 +39,7 @@ export default function SingleBlog(props) {
         <img className="blogImg" alt="blog img" src={props.jetpack_featured_media_url}/>
         </NavLink>
 
-        <title className="singleBlogTitle">Women and health</title>
+        {/* <title className="singleBlogTitle">Women and health</title>
         <h3 className="author">By SafePlace October 10, 2020</h3>
         <h4 className="article" dangerouslySetInnerHTML={{
                 __html: blogPost.content.rendered
@@ -50,7 +50,7 @@ export default function SingleBlog(props) {
           <img className="instagramIdon" src={twitterIcon} alt="instagram"/>
           <img className="linkedinIcon" src={linkedInIcon} alt="linkedin"/>
           <img className="twitterIcon" src={instagramIcon} alt="twitter"/>
-        </div>
+        </div> */}
       </Col>
       <Col className="relatedPosts">
         <h3>Related Posts</h3>

@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
+import SingleBlog from "./components/SingleBlog"
 
 const App = () => (
   <Router>
