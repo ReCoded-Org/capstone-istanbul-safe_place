@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div>
+  <button
+    className="opportunityListBtn"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    jobsTrainingPage.buttons.jobOpportunities
+  </button>
+  <button
+    className="opportunityListBtn"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    jobsTrainingPage.buttons.trainings
+  </button>
+</div>
+`;

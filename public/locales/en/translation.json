@@ -244,5 +244,25 @@
         "portraitImg": "ammarImg"
       }
     ]
+  },
+  "chatBotMessages": {
+    "headerTitle": "Find help",
+    "goToSeekHelpPageText": "Redirecting to search help page",
+    "goToOpportunitiesPageText": "Redirecting to jobs / training opportunities page",
+    "goToBlogPageText": "Redirecting to blog page",
+    "welcomeMessage": "Hello! How can we help you?",
+    "helpLabel": "Immediate help",
+    "findLabel": "Find specialists / shelters",
+    "blogLabel": "Read our blog",
+    "opportunityLabel": "Check job / training opportunities",
+    "immediateHelpMessage": "Please call {{link}} to get immediate help"
+  },
+  "jobsTrainingPage": {
+    "header": "Job / Training Opportunities",
+    "subHeader": "Browse our list of job opportunities, trainings or workshops.",
+    "buttons": {
+      "jobOpportunities": "Job Opportunities",
+      "trainings": "Trainings / Workshops"
+    }
   }
 }
