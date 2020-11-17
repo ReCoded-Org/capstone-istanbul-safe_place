@@ -3,17 +3,16 @@ import {
   Container,
   Row,
   Accordion,
-  useAccordionToggle,
-  AccordionContext,
 } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import UserDetailForm from "../../components/profile/UserDetailForm";
 import UserEmailForm from "../../components/profile/UserEmailForm";
 import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
+import ToggleButton from './ToggleButton'
 import "./index.scss";
 
-const SECTINOS = [
+const SECTIONS = [
   {
     label: "User details",
     componentName: UserDetailForm,
@@ -28,10 +27,6 @@ const SECTINOS = [
   },
 ];
 
-function getArrowClass(isCurrentElementSelected) {
-  return isCurrentElementSelected ? "arrow down" : "arrow right";
-}
-
 export default function ProfilePage({ submit }) {
   const { register, handleSubmit, errors } = useForm();
 
@@ -39,24 +34,6 @@ export default function ProfilePage({ submit }) {
     // TODO: save data in the database
     submit(data);
   };
-
-  function ToggleButton({ children, eventKey, callback }) {
-    const currentEventKey = React.useContext(AccordionContext);
-
-    const decoratedOnClick = useAccordionToggle(
-      eventKey,
-      () => callback && callback(eventKey)
-    );
-
-    const isCurrentEventKey = currentEventKey === eventKey;
-
-    return (
-      <button type="button" onClick={decoratedOnClick} className="sectionTitle">
-        <i className={getArrowClass(isCurrentEventKey)} />
-        {children}
-      </button>
-    );
-  }
 
   const Section = ({ eventKey, label, Component }) => (
     <Row className="section">
@@ -79,7 +56,7 @@ export default function ProfilePage({ submit }) {
               <img src={defaultProfileImage} alt="User portrait" />
             </div>
           </Row>
-          {SECTINOS.map((section, index) => (
+          {SECTIONS.map((section, index) => (
             <Section
               key={section.label}
               eventKey={index.toString()}
