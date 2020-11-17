@@ -316,6 +316,9 @@
   "jobsTrainingPage": {
     "header": "Job / Training Opportunities",
     "subHeader": "Browse our list of job opportunities, trainings or workshops.",
-    "buttons": { "jobOpportunities": "Job Opportunities", "trainings":"Trainings / Workshops" }
+    "buttons": {
+      "jobOpportunities": "Job Opportunities",
+      "trainings": "Trainings / Workshops"
+    }
   }
 }
