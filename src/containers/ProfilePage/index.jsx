@@ -1,50 +1,35 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Accordion,
-} from "react-bootstrap";
+import { Container, Row, Accordion } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import UserDetailForm from "../../components/profile/UserDetailForm";
 import UserEmailForm from "../../components/profile/UserEmailForm";
 import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
-import ToggleButton from './ToggleButton'
+import ProfileSection from "./ProfileSection";
 import "./index.scss";
-
-const SECTIONS = [
-  {
-    label: "User details",
-    componentName: UserDetailForm,
-  },
-  {
-    label: "Email address",
-    componentName: UserEmailForm,
-  },
-  {
-    label: "Change password",
-    componentName: UserPasswordForm,
-  },
-];
 
 export default function ProfilePage({ submit }) {
   const { register, handleSubmit, errors } = useForm();
+
+  const SECTIONS = [
+    {
+      label: "User details",
+      component: <UserDetailForm register={register} errors={errors} />,
+    },
+    {
+      label: "Email address",
+      component: <UserEmailForm register={register} errors={errors} />,
+    },
+    {
+      label: "Change password",
+      component: <UserPasswordForm register={register} errors={errors} />,
+    },
+  ];
 
   const onSave = (data) => {
     // TODO: save data in the database
     submit(data);
   };
-
-  const Section = ({ eventKey, label, Component }) => (
-    <Row className="section">
-      <ToggleButton eventKey={eventKey}>{label}</ToggleButton>
-      <div className="sectionContent">
-        <Accordion.Collapse eventKey={eventKey}>
-          <Component register={register} validErrors={errors} />
-        </Accordion.Collapse>
-      </div>
-    </Row>
-  );
 
   return (
     <Container fluid="md" className="profileContainer">
@@ -57,12 +42,13 @@ export default function ProfilePage({ submit }) {
             </div>
           </Row>
           {SECTIONS.map((section, index) => (
-            <Section
+            <ProfileSection
               key={section.label}
               eventKey={index.toString()}
               label={section.label}
-              Component={section.componentName}
-            />
+            >
+              {section.component}
+            </ProfileSection>
           ))}
 
           <Row className="submitBtn">
