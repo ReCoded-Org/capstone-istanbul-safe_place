@@ -264,5 +264,19 @@
       "jobOpportunities": "Job Opportunities",
       "trainings": "Trainings / Workshops"
     }
+  },
+  "contactUs": {
+    "contactUsForm": {
+      "nameInputLabel": "Full Name",
+      "emailInputLabel": "Email Address",
+      "messageInputLabel": "Message",
+      "nameInputPlaceholder": "Please enter your name (optional)",
+      "emailInputPlaceholder": "Please enter your email",
+      "messageInputPlaceholder": "Please enter your message",
+      "emailInputErrorMessage": "Your email address is required",
+      "messageInputErrorMessage0": "Your message address is required",
+      "messageInputErrorMessage1": "Your message is too short. Write us more!",
+      "messageInputErrorMessage2": "Your message is too long. Be specific please!"
+    }
   }
 }

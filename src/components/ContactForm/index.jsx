@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
+import firebase from "../../firebaseConfig";
 import "./index.scss";
 
-export default function ContactForm({ submit }) {
+export default function ContactForm() {
   const { register, handleSubmit, errors, reset } = useForm();
+  const { t } = useTranslation();
+
   const onSubmit = (data) => {
-    submit(data);
+    console.log(data);
+    const newMessage = firebase
+      .firestore()
+      .collection("contactUsMessages")
+      .doc();
+    newMessage.set({
+      name: data.fullName,
+      email: data.email,
+      message: data.messageContent,
+    });
     reset();
   };
 
@@ -16,11 +29,11 @@ export default function ContactForm({ submit }) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <label htmlFor="fullName">
-            Full Name
+            {t("contactUs.contactUsForm.nameInputLabel")}
             <input
               className={errors.fullName && "inputError"}
               type="text"
-              placeholder="Louis Li (optional)"
+              placeholder={t("contactUs.contactUsForm.nameInputPlaceholder")}
               name="fullName"
               id="fullName"
               ref={register()}
@@ -30,17 +43,17 @@ export default function ContactForm({ submit }) {
 
         <div className="formInput">
           <label htmlFor="email">
-            Email address
+            {t("contactUs.contactUsForm.emailInputLabel")}
             <input
               className={errors.email && "inputError"}
               type="email"
-              placeholder="louis@example.com"
+              placeholder={t("contactUs.contactUsForm.emailInputPlaceholder")}
               name="email"
               id="email"
               ref={register({
                 required: {
                   value: true,
-                  message: "Your email address is required.",
+                  message: t("contactUs.contactUsForm.emailInputErrorMessage"),
                 },
                 // TODO: intall joi and use it for email validation
               })}
@@ -53,25 +66,31 @@ export default function ContactForm({ submit }) {
 
         <div className="formInput">
           <label htmlFor="messageContent">
-            Message
+            {t("contactUs.contactUsForm.messageInputLabel")}
             <textarea
               className={errors.message && "inputError"}
               name="messageContent"
               id="messageContent"
-              placeholder="type your message here ..."
+              placeholder={t("contactUs.contactUsForm.messageInputPlaceholder")}
               aria-label="message"
               ref={register({
                 required: {
                   value: true,
-                  message: "You should write your message.",
+                  message: t(
+                    "contactUs.contactUsForm.messageInputErrorMessage0"
+                  ),
                 },
                 minLength: {
                   value: 10,
-                  message: "Your message is too short. Write us more!",
+                  message: t(
+                    "contactUs.contactUsForm.messageInputErrorMessage1"
+                  ),
                 },
                 maxLength: {
                   value: 2000,
-                  message: "Your message is too long. Be specific please!",
+                  message: t(
+                    "contactUs.contactUsForm.messageInputErrorMessage3"
+                  ),
                 },
               })}
             />
