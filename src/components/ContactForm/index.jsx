@@ -11,7 +11,6 @@ export default function ContactForm() {
   const { t } = useTranslation();
 
   const onSubmit = (data) => {
-    console.log(data);
     const newMessage = firebase
       .firestore()
       .collection("contactUsMessages")
