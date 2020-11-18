@@ -17,7 +17,7 @@ export default function LeaveMessage() {
       <Container fluid="md" className="contactContainer">
         <Row>
           <ContactInfo />
-          <ContactForm handleShow={(e) => handleShow(e)} />
+          <ContactForm handleShow={handleShow} />
           <Modal show={isShown} onHide={handleClose}>
             <Modal.Body>
               <button type="button" className="close" onClick={handleClose}>
