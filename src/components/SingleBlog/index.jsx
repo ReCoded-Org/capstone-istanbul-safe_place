@@ -31,16 +31,16 @@ export default function SingleBlog(props) {
     return (
       <Container>
         <Col>
-          <Link to="./blog">
+          <Link to="./">
             <h6 className="backToBlogBtn">
-              <span>&#8594;</span>Back to blog
+              <span>&#8592;</span>Back to blog
             </h6>
           </Link>
-          <h6>Related articles</h6>
+          {/* <h6>Related articles</h6> */}
         </Col>
         <Col xs={12} md={8}>
           <NavLink to={`/blog/${props.id}`}>
-            <img className="blogImg" alt="blog img" src={blogPost.jetpack_featured_media_url}/>
+            {/* <img className="blogImg" alt="blog img" src={blogPost.jetpack_featured_media_url} /> */}
           </NavLink>
 
           {/* <title className="singleBlogTitle">Women and health</title>
@@ -51,15 +51,21 @@ export default function SingleBlog(props) {
               __html: blogPost.content.rendered,
             }}
           ></h4>
-          {/* <p>Share on social media</p>
+          <p>Share on social media</p>
         <div className="socialMediaIcons">
           <img className="facebookIcon" src={facebookIcon} alt="facebook"/>
           <img className="instagramIdon" src={twitterIcon} alt="instagram"/>
           <img className="linkedinIcon" src={linkedInIcon} alt="linkedin"/>
           <img className="twitterIcon" src={instagramIcon} alt="twitter"/>
-        </div> */}
+        </div>
         </Col>
         <Col className="relatedPosts">
+          <h3>Related articles</h3>
+          {/* <div>{blogPost._jetpack_related_posts.map((relatedPosts) => {
+            return (
+            <div>{relatedPosts.title}</div>
+            )
+          })}</div> */}
           {/* <h3>Related Posts</h3>
         <div className="firstRelatedPost">
           <h4 className="relatedPosttitle">post 1</h4>

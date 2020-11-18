@@ -2,9 +2,15 @@
 @import "../../style/buttons";
 
 .article{
-    text-align: center;
+    color: $darkColor;
+    text-align: left;
 }
 .blogImg{
     width: 45.625rem;
     height: 21.875rem;
+}
+.socialMediaIcons {
+width: 10rem;
+background-color: $darkColor;
+
 }
