@@ -1,4 +1,15 @@
 {
+  "navbar": {
+    "about": "About",
+    "blog": "Blog",
+    "opportunities":"Opportunities",
+    "contact":"Contact",
+    "language":"Language",
+    "buttons": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up"
+    }
+  },
   "home": {
     "seekHelpSection": [
       {
