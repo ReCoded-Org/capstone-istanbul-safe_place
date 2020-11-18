@@ -33,13 +33,24 @@ const schema = Joi.object({
 });
 
 export default function SignUpForm({ submit }) {
-  const { register, handleSubmit, errors, reset } = useForm({
+  const { register, handleSubmit, errors, reset, setError } = useForm({
     resolver: joiResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    submit(data);
-    reset();
+  const onSubmit = async (data) => {
+    const status = await submit(data);
+    switch (status) {
+      case 'auth/email-already-in-use':
+        setError("email", {
+          type: "already taken",
+          message: "Email is already taken! Please enter another one or sign in."
+        });
+        break;
+      case 'succeed':
+        reset();
+        break;
+      default:
+    }
   };
 
   return (
