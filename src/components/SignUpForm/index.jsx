@@ -51,6 +51,7 @@ export default function SignUpForm({ submit }) {
         reset();
         break;
       default:
+        reset();
     }
   };
 
