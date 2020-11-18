@@ -8,6 +8,7 @@ import JobsTrainingButtons from "../JobsTrainingButtons";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
+  // cardsList includes all cards while filteredCards include cards that were selected based on search.
   const [cardsList, setCardsList] = useState([
     ...t(`home.jobOpportunities`, { returnObjects: true }),
   ]);
