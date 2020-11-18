@@ -5,7 +5,6 @@ import firebase from "../../../firebaseConfig";
 import "./index.scss";
 
 export default function UserSetting({ currentUser }) {
-  console.log(currentUser);
   const handleSignOut = () => {
     firebase.auth().signOut();
   };
