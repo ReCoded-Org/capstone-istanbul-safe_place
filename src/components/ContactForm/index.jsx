@@ -55,9 +55,7 @@ export default function ContactForm() {
               ref={register({
                 required: {
                   value: true,
-                  message: t(
-                    "contactUs.contactUsForm.email.error.addressRequired"
-                  ),
+                  message: t("contactUs.contactUsForm.email.error.required"),
                 },
                 // TODO: intall joi and use it for email validation
               })}

@@ -275,7 +275,7 @@
         "label": "Email Address",
         "placeholder": "Please enter your email",
         "error": {
-          "addressRequired": "Your email address is required"
+          "required": "Your email address is required"
         }
       },
       "message": {
