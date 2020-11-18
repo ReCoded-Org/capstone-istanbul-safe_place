@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/buttons";
 
 .violenceIntro {
   background-color: $secondaryColor;
@@ -8,8 +9,7 @@
   .violenceTest {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    align-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
   }
 
@@ -29,6 +29,7 @@
   }
 
   button {
+    width: 8rem;
     color: $lightColor;
     background-color: $primaryColor;
     border: none;
