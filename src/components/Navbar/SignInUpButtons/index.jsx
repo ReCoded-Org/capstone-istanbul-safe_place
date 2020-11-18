@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function SignInUpButtons() {
@@ -9,10 +8,10 @@ export default function SignInUpButtons() {
     <div>
       <div>
         <button type="button" className="signInBtn">
-          <Link to="/signin">{t("navbar.buttons.signIn")}</Link>
+          <a href="/signin">{t("navbar.buttons.signIn")}</a>
         </button>
         <button type="button" className="signUpBtn">
-          <Link to="/signup">{t("navbar.buttons.signUp")}</Link>
+          <a href="/signup">{t("navbar.buttons.signUp")}</a>
         </button>
       </div>
     </div>
