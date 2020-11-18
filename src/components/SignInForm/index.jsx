@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
+import { getErrorClass } from "../../utils/formErrorHelpers";
 import "./index.scss";
 
 const schema = Joi.object({
@@ -33,30 +34,26 @@ export default function SignInForm({ submit }) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <input
-            className={errors.email && "inputError"}
+            className={getErrorClass(errors.email)}
             type="email"
             placeholder="Your Email"
             name="email"
             aria-label="email"
             ref={register()}
           />
-          {errors?.email && (
-            <InputErrorMessage message={errors.email.message} />
-          )}
+          <InputErrorMessage error={errors.email} />
         </div>
 
         <div className="formInput">
           <input
-            className={errors.password && "inputError"}
+            className={getErrorClass(errors.password)}
             type="password"
             placeholder="Password"
             name="password"
             aria-label="password"
             ref={register()}
           />
-          {errors?.password && (
-            <InputErrorMessage message={errors.password.message} />
-          )}
+          <InputErrorMessage error={errors.password} />
         </div>
 
         <div className="formInput">

@@ -12,6 +12,7 @@ exports[`SigninForm renders correctly and matches the snapshot 1`] = `
     >
       <input
         aria-label="email"
+        className=""
         name="email"
         placeholder="Your Email"
         type="email"
@@ -22,6 +23,7 @@ exports[`SigninForm renders correctly and matches the snapshot 1`] = `
     >
       <input
         aria-label="password"
+        className=""
         name="password"
         placeholder="Password"
         type="password"

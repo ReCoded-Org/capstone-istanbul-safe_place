@@ -40,37 +40,109 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020",
+        "postingDate": "27/10/2020",
         "id": 0
       },
       {
-        "title": "Web Developer",
+        "title": "Web developer",
         "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020",
+        "postingDate": "27/10/2020",
         "id": 1
+      },
+      {
+        "title": "Translator",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 2
+      },
+      {
+        "title": "Architect",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 3
+      },
+      {
+        "title": "HR manager",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 4
+      },
+      {
+        "title": "Teacher",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 5
       }
     ],
     "trainings": [
       {
-        "title": "Web Development Bootcamp training",
+        "title": "Web development bootcamp",
         "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020",
+        "postingDate": "27/10/2020",
         "id": 0
       },
       {
-        "title": "cooking training",
+        "title": "Cooking class",
         "name": "Dameon Peterson",
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "date": "27/10/2020",
+        "postingDate": "27/10/2020",
         "id": 1
+      },
+      {
+        "title": "Child psychology course",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 2
+      },
+      {
+        "title": "Graphic design for beginners",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 3
+      },
+      {
+        "title": "UI/UX training course",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 4
+      },
+      {
+        "title": "Montessori methods course",
+        "name": "Dameon Peterson",
+        "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
+        "address": "Istanbul, Turkey",
+        "phoneNumber": "+906467291373",
+        "postingDate": "27/10/2020",
+        "id": 5
       }
     ]
   },
@@ -127,6 +199,70 @@
   },
   "aboutUsPage": {
     "header": "About Us",
-    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "subHeader": "Our team",
+    "ourTeamInfo": [
+      {
+        "name": "Hiba Machfej",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/hiba-machfej",
+        "linkedInUrl": "https://www.linkedin.com/in/hiba-machfej-09400189/",
+        "portraitImg": "hibaImg"
+      },
+      {
+        "name": "Jennet Hydyrova",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/jennethydyrova",
+        "linkedInUrl": "https://www.linkedin.com/in/jennet-hydyrova-a60685122/",
+        "portraitImg": "jennetImg"
+      },
+      {
+        "name": "Mohammad Jundi",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/mohammad-jundi",
+        "linkedInUrl": "https://www.linkedin.com/in/mohammad-jundi/",
+        "portraitImg": "mohammadImg"
+      },
+      {
+        "name": "Jamil Bailony",
+        "title": "Junior Engineer",
+        "gitHubUrl": "https://github.com/Jamil-Bailony",
+        "linkedInUrl": "https://www.linkedin.com/in/jamil-bailony-17b723159/",
+        "portraitImg": "jamilImg"
+      },
+      {
+        "name": "Louis Li",
+        "title": "Lead Engineer",
+        "gitHubUrl": "https://github.com/louisrli",
+        "portraitImg": "louisImg"
+      },
+      {
+        "name": "Ammar Sammour",
+        "title": "Lead Engineer",
+        "gitHubUrl": "https://github.com/Ammar-64",
+        "linkedInUrl": "https://www.linkedin.com/in/ammar-sam/",
+        "portraitImg": "ammarImg"
+      }
+    ]
+  },
+  "chatBotMessages": {
+    "headerTitle": "Find help",
+    "goToSeekHelpPageText": "Redirecting to search help page",
+    "goToOpportunitiesPageText": "Redirecting to jobs / training opportunities page",
+    "goToBlogPageText": "Redirecting to blog page",
+    "welcomeMessage": "Hello! How can we help you?",
+    "helpLabel": "Immediate help",
+    "findLabel": "Find specialists / shelters",
+    "blogLabel": "Read our blog",
+    "opportunityLabel": "Check job / training opportunities",
+    "immediateHelpMessage": "Please call {{link}} to get immediate help"
+  },
+  "jobsTrainingPage": {
+    "header": "Job / Training Opportunities",
+    "subHeader": "Browse our list of job opportunities, trainings or workshops.",
+    "buttons": {
+      "jobOpportunities": "Job Opportunities",
+      "trainings": "Trainings / Workshops"
+    }
   }
 }
