@@ -11,7 +11,7 @@ describe("ContactForm", () => {
   });
 
   beforeEach(() => {
-    render(<ContactForm submit={mockSubmit} />);
+    render(<ContactForm />);
   });
 
   it("should display required error when value is invalid", async () => {
@@ -65,6 +65,9 @@ describe("ContactForm", () => {
     fireEvent.submit(screen.getByRole("button"));
 
     await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
+  });
+
+  it("should empty input fields after submission", async () => {
     expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
     expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
       ""
