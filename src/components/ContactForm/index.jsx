@@ -3,11 +3,8 @@ import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
-<<<<<<< HEAD
 import firebase from "../../firebaseConfig";
-=======
 import { getErrorClass } from "../../utils/formErrorHelpers";
->>>>>>> dev
 import "./index.scss";
 
 export default function ContactForm() {
