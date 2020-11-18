@@ -43,31 +43,31 @@ describe("ContactForm", () => {
     );
   });
 
-  // it("should not display error when value is valid", async () => {
-  //   fireEvent.input(screen.getByRole("textbox", { name: /Full Name/i }), {
-  //     target: {
-  //       value: "Name Nami",
-  //     },
-  //   });
+  it("should not display error when value is valid", async () => {
+    fireEvent.input(screen.getByRole("textbox", { name: /Full Name/i }), {
+      target: {
+        value: "Name Nami",
+      },
+    });
 
-  //   fireEvent.input(screen.getByRole("textbox", { name: /Email address/i }), {
-  //     target: {
-  //       value: "test@mail.com",
-  //     },
-  //   });
+    fireEvent.input(screen.getByRole("textbox", { name: /Email address/i }), {
+      target: {
+        value: "test@mail.com",
+      },
+    });
 
-  //   fireEvent.input(screen.getByRole("textbox", { name: /message/i }), {
-  //     target: {
-  //       value: "Long message to be sent",
-  //     },
-  //   });
+    fireEvent.input(screen.getByRole("textbox", { name: /message/i }), {
+      target: {
+        value: "Long message to be sent",
+      },
+    });
 
-  //   await fireEvent.submit(screen.getByRole("button"));
-  //   await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
-  //   expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
-  //   expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
-  //     ""
-  //   );
-  //   expect(screen.getByRole("textbox", { name: /message/i }).value).toBe("");
-  // });
+    await fireEvent.submit(screen.getByRole("button"));
+    await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
+    expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
+    expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
+      ""
+    );
+    expect(screen.getByRole("textbox", { name: /message/i }).value).toBe("");
+  });
 });
