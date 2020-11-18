@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-export default function EmailConrtrol({ userEmail, actions }) {
+export default function emailControl({ userEmail, actions }) {
   return (
     <Container fluid className="emailBlock">
       <div className="emailAddress">
