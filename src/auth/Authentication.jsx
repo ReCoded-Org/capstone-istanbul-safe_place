@@ -4,24 +4,24 @@ import firebase from "../firebaseConfig";
 export const AuthContext = React.createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const [pending, setPending] = useState(true);
-    
+  const [currentUser, setCurrentUser] = useState(null);
+  const [pending, setPending] = useState(true);
+
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      setCurrentUser(user)
-      setPending(false)
+      setCurrentUser(user);
+      setPending(false);
     });
   }, []);
 
-  if(pending){
-    return <>Please wait...</>
+  if (pending) {
+    return <>Please wait...</>;
   }
-  
+
   return (
     <AuthContext.Provider
       value={{
-        currentUser
+        currentUser,
       }}
     >
       {children}

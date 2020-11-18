@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory } from "react-router-dom";
 import SignUpForm from "../SignUpForm";
 import womenSupportEachOther from "../../images/womenSupportEachOther.png";
 import googleIcon from "../../images/icons/googleIcon.svg";
@@ -11,17 +11,23 @@ import "./index.scss";
 
 export default function SignUp() {
   const history = useHistory();
-  const handleSignUp = React.useCallback(async data => {
-    const { email, password } = data;
-    try {
-      await firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password);
-      history.push("/");
-    } catch (error) {
-      alert(error);
-    }
-  }, [history]);
+  const handleSignUp = React.useCallback(
+    async (data) => {
+      const { email, password } = data;
+
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+        history.push("/");
+      } catch (error) {
+        if (error.code === "auth/email-already-in-use") {
+          return "auth/email-already-in-use";
+        }
+        alert(error);
+      }
+      return "succeed";
+    },
+    [history]
+  );
 
   return (
     <Container fluid="md" className="signUpSection">
@@ -51,9 +57,7 @@ export default function SignUp() {
           </ul>
           <hr className="divider" />
 
-          <SignUpForm
-            submit={handleSignUp}
-          />
+          <SignUpForm submit={handleSignUp} />
 
           <p>
             Already have an account?&nbsp;

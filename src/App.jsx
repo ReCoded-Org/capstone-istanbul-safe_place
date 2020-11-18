@@ -16,8 +16,8 @@ import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
 import ChatBotMessages from "./components/ChatBotMessages";
-import {AuthProvider} from './auth/Authentication';
-import PrivateRoute from './auth/PrivateRoute';
+import { AuthProvider } from "./auth/Authentication";
+import PrivateRoute from "./auth/PrivateRoute";
 
 const App = () => (
   <AuthProvider>

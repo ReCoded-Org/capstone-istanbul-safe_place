@@ -1,6 +1,6 @@
 import * as firebase from "firebase/app";
 import "firebase/firestore";
-import 'firebase/auth';
+import "firebase/auth";
 
 let firebaseConfig = {
   apiKey: atob("QUl6YVN5Q193X2tONE9uSWxROVl4VXQ0Q25DZkF6TnFQWVNXbDlF"),

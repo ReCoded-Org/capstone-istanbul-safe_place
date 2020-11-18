@@ -6,11 +6,7 @@ const PrivateRoute = ({ children, ...rest }) => {
   const { currentUser } = useContext(AuthContext);
   return (
     <Route {...rest}>
-      {!!currentUser ? (
-        children
-      ) : (
-        <Redirect to="/signin" />
-        )}
+      {!!currentUser ? children : <Redirect to="/signin" />}
     </Route>
   );
 };

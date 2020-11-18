@@ -40,13 +40,14 @@ export default function SignUpForm({ submit }) {
   const onSubmit = async (data) => {
     const status = await submit(data);
     switch (status) {
-      case 'auth/email-already-in-use':
+      case "auth/email-already-in-use":
         setError("email", {
           type: "already taken",
-          message: "Email is already taken! Please enter another one or sign in."
+          message:
+            "Email is already taken! Please enter another one or sign in.",
         });
         break;
-      case 'succeed':
+      case "succeed":
         reset();
         break;
       default:
