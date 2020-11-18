@@ -3,19 +3,19 @@ import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
-import InputErrorMessage from "../../InputErrorMessage";
+import InputErrorMessage from "../../../InputErrorMessage";
 
 const schema = Joi.object({
   email: Joi.string()
     .required()
-    .email({ tlds: { allow: ["com", "net", "edu"] } })
+    .email({ tlds: { allow: [] } })
     .messages({
       "string.empty": `Please provide your email`,
       "string.email": `Please provide a valid email`,
     }),
 });
 
-export default function EmailAdd({addNewEmail}) {
+export default function EmailAdd({ addNewEmail }) {
   const { register, getValues, errors, reset, trigger } = useForm({
     mode: 'onBlur',
     resolver: joiResolver(schema),
@@ -23,13 +23,11 @@ export default function EmailAdd({addNewEmail}) {
 
   const handleClick = async () => {
     const isValid = await trigger('email');
-    if(!isValid) {
-      return
+    if (isValid) {
+      const email = getValues('email');
+      addNewEmail(email);
+      reset();
     }
-
-    const email = getValues('email');
-    addNewEmail(email);
-    reset();
   };
 
   return (

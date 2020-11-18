@@ -1,7 +1,7 @@
-@import "../../style/variables";
-@import "../../style/buttons";
-@import "../../style/forms";
-@import "../../style/bootstrapImports";
+@import "../../../style/variables";
+@import "../../../style/buttons";
+@import "../../../style/forms";
+@import "../../../style/bootstrapImports";
 
 .userEmailSection {
   font: inherit;
@@ -30,20 +30,15 @@
     height: 2.6rem;
   }
 
-  input.inputError,
-  textarea.inputError {
+  input.inputError {
     @include inputErrorBorder;
   }
 }
 
 @include media-breakpoint-down(sm) {
   .userEmailSection {
-    .formInputGroup {
-      display: block;
-
       .formInput {
         width: 100%;
       }
     }
   }
-}
