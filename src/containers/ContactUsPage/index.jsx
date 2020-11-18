@@ -1,5 +1,4 @@
 import React from "react";
-import ContactInfo from "../../components/ContactInfo";
 import { Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Contact from "../../components/Contact";
