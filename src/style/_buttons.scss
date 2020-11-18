@@ -6,7 +6,8 @@
   border: 0;
   border-radius: $borderRadius;
 
-  &:hover {
+  &:hover,
+  &:disabled {
     background-color: $secondaryColor;
   }
 }
