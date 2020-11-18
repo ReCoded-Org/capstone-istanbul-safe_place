@@ -1,0 +1,36 @@
+@import "../../style/variables";
+@import "../../style/headings";
+
+.contactUsPage {
+  h2 {
+    color: $primaryColor;
+    font-family: $mainFontFamily;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  h6 {
+    color: $darkColor;
+    text-align: center;
+    font-family: $mainFontFamily;
+    margin-bottom: 4rem;
+  }
+  .contactForm {
+    background-color: $warningColor;
+    padding: 4rem;
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+  .contactInfo {
+    max-width: 90%;
+    padding: 0;
+    h2 {
+      text-align: left;
+      margin-top: 2rem;
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+  }
+}
