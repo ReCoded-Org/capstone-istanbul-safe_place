@@ -3,7 +3,11 @@ import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
+<<<<<<< HEAD
 import firebase from "../../firebaseConfig";
+=======
+import { getErrorClass } from "../../utils/formErrorHelpers";
+>>>>>>> dev
 import "./index.scss";
 
 export default function ContactForm() {
@@ -30,7 +34,7 @@ export default function ContactForm() {
           <label htmlFor="fullName">
             {t("contactUs.contactUsForm.nameInputLabel")}
             <input
-              className={errors.fullName && "inputError"}
+              className={getErrorClass(errors.fullName)}
               type="text"
               placeholder={t("contactUs.contactUsForm.nameInputPlaceholder")}
               name="fullName"
@@ -45,7 +49,7 @@ export default function ContactForm() {
           <label htmlFor="email">
             {t("contactUs.contactUsForm.emailInputLabel")}
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors.email)}
               type="email"
               placeholder={t("contactUs.contactUsForm.emailInputPlaceholder")}
               name="email"
@@ -59,9 +63,7 @@ export default function ContactForm() {
                 // TODO: intall joi and use it for email validation
               })}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
+            <InputErrorMessage error={errors.email} />
           </label>
         </div>
 
@@ -69,7 +71,7 @@ export default function ContactForm() {
           <label htmlFor="messageContent">
             {t("contactUs.contactUsForm.messageInputLabel")}
             <textarea
-              className={errors.message && "inputError"}
+              className={getErrorClass(errors.message)}
               name="messageContent"
               id="messageContent"
               placeholder={t("contactUs.contactUsForm.messageInputPlaceholder")}
@@ -95,9 +97,7 @@ export default function ContactForm() {
                 },
               })}
             />
-            {errors?.messageContent && (
-              <InputErrorMessage message={errors.messageContent.message} />
-            )}
+            <InputErrorMessage error={errors.messageContent} />
           </label>
         </div>
 

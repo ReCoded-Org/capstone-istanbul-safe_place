@@ -74,7 +74,11 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             >
               contactUs.contactUsForm.nameInputLabel
               <input
+<<<<<<< HEAD
                 aria-label="Full Name"
+=======
+                className=""
+>>>>>>> dev
                 id="fullName"
                 name="fullName"
                 placeholder="contactUs.contactUsForm.nameInputPlaceholder"
@@ -90,7 +94,11 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             >
               contactUs.contactUsForm.emailInputLabel
               <input
+<<<<<<< HEAD
                 aria-label="Email address"
+=======
+                className=""
+>>>>>>> dev
                 id="email"
                 name="email"
                 placeholder="contactUs.contactUsForm.emailInputPlaceholder"
@@ -107,6 +115,7 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
               contactUs.contactUsForm.messageInputLabel
               <textarea
                 aria-label="message"
+                className=""
                 id="messageContent"
                 name="messageContent"
                 placeholder="contactUs.contactUsForm.messageInputPlaceholder"
