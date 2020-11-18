@@ -9,32 +9,20 @@ import React from "react";
  * @param {string} label - (optional) if exist, label tag will be added with the name givien
  */
 export default function Input({ name, type, placeholder, ref, label }) {
-  if (!label) {
-    return (
-      <div className="formInput">
-        <input
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          id={name}
-          ref={ref}
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="formInput">
-      <label htmlFor={name}>
-        {label}
-        <input
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          id={name}
-          ref={ref}
-        />
-      </label>
+      {label && (
+        <label htmlFor={name}>
+          {label}
+        </label>
+      )}
+      <input
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        id={name}
+        ref={ref}
+      />
     </div>
   );
 }

@@ -58,13 +58,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="firstName"
                   >
                     Your first Name
-                    <input
-                      id="firstName"
-                      name="firstName"
-                      placeholder="Your first name"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Your first name"
+                    type="text"
+                  />
                 </div>
                 <div
                   className="formInput"
@@ -73,13 +73,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="lastName"
                   >
                     Last Name
-                    <input
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Your last name"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Your last name"
+                    type="text"
+                  />
                 </div>
               </div>
               <div
@@ -92,13 +92,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="nationality"
                   >
                     Your nationality
-                    <input
-                      id="nationality"
-                      name="nationality"
-                      placeholder="Your nationality"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="nationality"
+                    name="nationality"
+                    placeholder="Your nationality"
+                    type="text"
+                  />
                 </div>
                 <div
                   className="formInput"
@@ -107,13 +107,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="phoneNumber"
                   >
                     Phone Number
-                    <input
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      placeholder="+90 552 477 25 15"
-                      type="tel"
-                    />
                   </label>
+                  <input
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="+90 552 477 25 15"
+                    type="tel"
+                  />
                 </div>
               </div>
               <div
@@ -150,12 +150,12 @@ exports[`renders correctly 1`] = `
                     htmlFor="birthdate"
                   >
                     Birthdate
-                    <input
-                      id="birthdate"
-                      name="birthdate"
-                      type="date"
-                    />
                   </label>
+                  <input
+                    id="birthdate"
+                    name="birthdate"
+                    type="date"
+                  />
                 </div>
               </div>
               <div
@@ -165,13 +165,13 @@ exports[`renders correctly 1`] = `
                   htmlFor="address"
                 >
                   Address
-                  <input
-                    id="address"
-                    name="address"
-                    placeholder="1234 UTK  str.  Dumplinar Mah."
-                    type="text"
-                  />
                 </label>
+                <input
+                  id="address"
+                  name="address"
+                  placeholder="1234 UTK  str.  Dumplinar Mah."
+                  type="text"
+                />
               </div>
               <div
                 className="formInputGroup"
@@ -183,13 +183,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="city"
                   >
                     City
-                    <input
-                      id="city"
-                      name="city"
-                      placeholder="Bursa"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="city"
+                    name="city"
+                    placeholder="Bursa"
+                    type="text"
+                  />
                 </div>
                 <div
                   className="formInput"
@@ -198,13 +198,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="state"
                   >
                     State
-                    <input
-                      id="state"
-                      name="state"
-                      placeholder="Nilufer"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="state"
+                    name="state"
+                    placeholder="Nilufer"
+                    type="text"
+                  />
                 </div>
               </div>
               <div
@@ -217,13 +217,13 @@ exports[`renders correctly 1`] = `
                     htmlFor="zipCode"
                   >
                     ZIP Code
-                    <input
-                      id="zipCode"
-                      name="zipCode"
-                      placeholder="12345"
-                      type="text"
-                    />
                   </label>
+                  <input
+                    id="zipCode"
+                    name="zipCode"
+                    placeholder="12345"
+                    type="text"
+                  />
                 </div>
                 <div
                   className="formInput"
