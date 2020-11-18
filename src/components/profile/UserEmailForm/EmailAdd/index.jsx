@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
@@ -17,14 +17,14 @@ const schema = Joi.object({
 
 export default function EmailAdd({ addNewEmail }) {
   const { register, getValues, errors, reset, trigger } = useForm({
-    mode: 'onBlur',
+    mode: "onBlur",
     resolver: joiResolver(schema),
   });
 
   const handleClick = async () => {
-    const isValid = await trigger('email');
+    const isValid = await trigger("email");
     if (isValid) {
-      const email = getValues('email');
+      const email = getValues("email");
       addNewEmail(email);
       reset();
     }
@@ -62,6 +62,5 @@ export default function EmailAdd({ addNewEmail }) {
         </button>
       </div>
     </Container>
-
-  )
+  );
 }

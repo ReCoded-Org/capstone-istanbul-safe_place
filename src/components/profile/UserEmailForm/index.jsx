@@ -1,8 +1,8 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import EmailControl from './EmailControl'
-import EmailAdd from './EmailAdd'
-import './index.scss'
+import EmailControl from "./EmailControl";
+import EmailAdd from "./EmailAdd";
+import "./index.scss";
 
 // this object should come from the component parent
 const userEmails = [
@@ -12,28 +12,30 @@ const userEmails = [
     isPrimary: true,
     isConfirmed: true,
   },
-]
+];
 
 export default function UserEmail() {
   const [emails, setEmails] = React.useState(userEmails);
 
   const removeEmail = (emailId) => {
     if (emails.length === 1) {
-      return
+      return;
     }
 
-    setEmails(emails.filter(email => email.id !== emailId))
-  }
+    setEmails(emails.filter((email) => email.id !== emailId));
+  };
 
   const makeEmailPrimary = (emailId) => {
-    setEmails(emails.map(email => {
-      if (email.id === emailId) {
-        return { ...email, isPrimary: true }
-      }
+    setEmails(
+      emails.map((email) => {
+        if (email.id === emailId) {
+          return { ...email, isPrimary: true };
+        }
 
-      return { ...email, isPrimary: false }
-    }));
-  }
+        return { ...email, isPrimary: false };
+      })
+    );
+  };
 
   const addNewEmail = (email) => {
     // should be sent to the server
@@ -41,15 +43,15 @@ export default function UserEmail() {
       id: emails[emails.length - 1].id + 1,
       email,
       isPrimary: false,
-      isConfirmed: false
-    }
+      isConfirmed: false,
+    };
 
-    setEmails([...emails, {...newEmail}]);
-  }
+    setEmails([...emails, { ...newEmail }]);
+  };
 
   return (
     <Col xs={12} className="userEmailSection">
-      {emails.map(email => (
+      {emails.map((email) => (
         <EmailControl
           key={email.id}
           userEmail={email}

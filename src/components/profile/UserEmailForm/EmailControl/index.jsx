@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Container } from "react-bootstrap";
 
 export default function EmailConrtrol({ userEmail, actions }) {
@@ -6,9 +6,7 @@ export default function EmailConrtrol({ userEmail, actions }) {
     <Container fluid className="emailBlock">
       <div className="emailAddress">
         <p>
-          <strong>
-            {userEmail.email}
-          </strong>
+          <strong>{userEmail.email}</strong>
         </p>
       </div>
       <div className="emailControl">
@@ -33,5 +31,5 @@ export default function EmailConrtrol({ userEmail, actions }) {
         </button>
       </div>
     </Container>
-  )
+  );
 }
