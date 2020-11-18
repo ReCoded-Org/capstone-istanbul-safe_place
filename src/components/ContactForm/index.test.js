@@ -62,18 +62,15 @@ describe("ContactForm", () => {
       },
     });
 
-    const alertButton = screen.queryByText("alert");
-    expect(alertButton).toBeNull();
-
-    // await fireEvent.submit(screen.getByRole("button"));
-    // expect(await screen.getByRole("alert")).toBeNull();
+    const alertElement = screen.queryByRole("alert");
+    expect(alertElement).toBeNull();
   });
 
-  // it("should empty input fields after submission", async () => {
-  //   expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
-  //   expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
-  //     ""
-  //   );
-  //   expect(screen.getByRole("textbox", { name: /message/i }).value).toBe("");
-  // });
+  it("should empty input fields after submission", async () => {
+    expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
+    expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
+      ""
+    );
+    expect(screen.getByRole("textbox", { name: /message/i }).value).toBe("");
+  });
 });
