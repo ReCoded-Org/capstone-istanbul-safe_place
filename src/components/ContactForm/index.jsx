@@ -1,13 +1,27 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
+import firebase from "../../firebaseConfig";
+import { getErrorClass } from "../../utils/formErrorHelpers";
 import "./index.scss";
 
-export default function ContactForm({ submit }) {
+export default function ContactForm({ handleShow }) {
   const { register, handleSubmit, errors, reset } = useForm();
+  const { t } = useTranslation();
+
   const onSubmit = (data) => {
-    submit(data);
+    handleShow();
+    const newMessage = firebase
+      .firestore()
+      .collection("contactUsMessages")
+      .doc();
+    newMessage.set({
+      name: data.fullName,
+      email: data.email,
+      message: data.messageContent,
+    });
     reset();
   };
 
@@ -16,13 +30,14 @@ export default function ContactForm({ submit }) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <label htmlFor="fullName">
-            Full Name
+            {t("contactUs.contactUsForm.name.label")}
             <input
-              className={errors.fullName && "inputError"}
+              className={getErrorClass(errors.fullName)}
               type="text"
-              placeholder="Louis Li (optional)"
+              placeholder={t("contactUs.contactUsForm.name.placeholder")}
               name="fullName"
               id="fullName"
+              aria-label="Full Name"
               ref={register()}
             />
           </label>
@@ -30,59 +45,56 @@ export default function ContactForm({ submit }) {
 
         <div className="formInput">
           <label htmlFor="email">
-            Email address
+            {t("contactUs.contactUsForm.email.label")}
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors.email)}
               type="email"
-              placeholder="louis@example.com"
+              placeholder={t("contactUs.contactUsForm.email.placeholder")}
               name="email"
               id="email"
+              aria-label="Email address"
               ref={register({
                 required: {
                   value: true,
-                  message: "Your email address is required.",
+                  message: t("contactUs.contactUsForm.email.error.required"),
                 },
                 // TODO: intall joi and use it for email validation
               })}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
+            <InputErrorMessage error={errors.email} />
           </label>
         </div>
 
         <div className="formInput">
           <label htmlFor="messageContent">
-            Message
+            {t("contactUs.contactUsForm.message.label")}
             <textarea
-              className={errors.message && "inputError"}
+              className={getErrorClass(errors.message)}
               name="messageContent"
               id="messageContent"
-              placeholder="type your message here ..."
+              placeholder={t("contactUs.contactUsForm.message.placeholder")}
               aria-label="message"
               ref={register({
                 required: {
                   value: true,
-                  message: "You should write your message.",
+                  message: t("contactUs.contactUsForm.message.error.required"),
                 },
                 minLength: {
                   value: 10,
-                  message: "Your message is too short. Write us more!",
+                  message: t("contactUs.contactUsForm.message.error.minLength"),
                 },
                 maxLength: {
                   value: 2000,
-                  message: "Your message is too long. Be specific please!",
+                  message: t("contactUs.contactUsForm.message.error.maxLength"),
                 },
               })}
             />
-            {errors?.messageContent && (
-              <InputErrorMessage message={errors.messageContent.message} />
-            )}
+            <InputErrorMessage error={errors.messageContent} />
           </label>
         </div>
 
         <button type="submit" className="submitBtn">
-          Send
+          {t("contactUs.contactUsForm.submitBtn")}
         </button>
       </form>
     </Col>
