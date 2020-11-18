@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function index({ name, type, placeholder, ref, label }) {
+export default function Input({ name, type, placeholder, ref, label }) {
   if (!label) {
     return (
       <div className="formInput">
