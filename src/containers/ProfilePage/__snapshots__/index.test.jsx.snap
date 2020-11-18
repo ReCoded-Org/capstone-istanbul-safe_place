@@ -8,100 +8,110 @@ exports[`renders correctly 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="profilePortrait row"
+      className="accordion"
     >
-      <h2>
-        Profile
-      </h2>
       <div
-        className="userPortrait"
+        className="profilePortrait row"
       >
-        <img
-          alt="User portrait"
-          src="defaultProfileImage.png"
-        />
-      </div>
-    </div>
-    <div
-      className="userDetail row"
-    >
-      <button
-        className="sectionTitle"
-        onClick={[Function]}
-        type="button"
-      >
-        <i
-          className="arrow down"
-        />
-        User Details
-      </button>
-      <div
-        className="
-            sectionContent 
-            
-          "
-      >
-        <div>
-          UserDetail
+        <h2>
+          Profile
+        </h2>
+        <div
+          className="userPortrait"
+        >
+          <img
+            alt="User portrait"
+            src="defaultProfileImage.png"
+          />
         </div>
       </div>
-    </div>
-    <div
-      className="userEmail row"
-    >
-      <button
-        className="sectionTitle"
-        onClick={[Function]}
-        type="button"
-      >
-        <i
-          className="arrow right"
-        />
-        Email Address
-      </button>
       <div
-        className="
-            sectionContent 
-            collapsed
-          "
+        className="section row"
       >
-        <div>
-          UserEmail
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow down"
+          />
+          User details
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse show"
+          >
+            <div>
+              UserDetail
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="userPassword row"
-    >
-      <button
-        className="sectionTitle"
-        onClick={[Function]}
-        type="button"
-      >
-        <i
-          className="arrow right"
-        />
-        Change Password
-      </button>
       <div
-        className="
-            sectionContent 
-            collapsed
-          "
+        className="section row"
       >
-        <div>
-          UserPassword
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow right"
+          />
+          Email address
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <div>
+              UserEmail
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="submitBtn row"
-    >
-      <button
-        type="submit"
+      <div
+        className="section row"
       >
-        Save Changes
-      </button>
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow right"
+          />
+          Change password
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <div>
+              UserPassword
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="submitBtn row"
+      >
+        <button
+          type="submit"
+        >
+          Save changes
+        </button>
+      </div>
     </div>
   </form>
 </div>

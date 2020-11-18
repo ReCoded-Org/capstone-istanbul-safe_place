@@ -11,19 +11,14 @@ describe("LeaveMessageForm", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  const mockSubmit = jest.fn((name, email, messageContent) => {
-    return Promise.resolve({ name, email, messageContent });
-  });
-
   beforeEach(() => {
-    render(<LeaveMessageForm submit={mockSubmit} />);
+    render(<LeaveMessageForm />);
   });
 
   it("should display required error when value is invalid", async () => {
     fireEvent.submit(screen.getByRole("button"));
 
     expect(await screen.findAllByRole("alert")).toHaveLength(2);
-    expect(mockSubmit).not.toBeCalled();
   });
 
   it("should display min length error when message is short", async () => {
@@ -42,7 +37,6 @@ describe("LeaveMessageForm", () => {
     fireEvent.submit(screen.getByRole("button"));
 
     expect(await screen.findAllByRole("alert")).toHaveLength(1);
-    expect(mockSubmit).not.toBeCalled();
     expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
       "test@mail.com"
     );
@@ -73,11 +67,6 @@ describe("LeaveMessageForm", () => {
     fireEvent.submit(screen.getByRole("button"));
 
     await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
-    expect(mockSubmit).toBeCalledWith({
-      email: "test@mail.com",
-      fullName: "Name Nami",
-      messageContent: "Long message to be sent",
-    });
     expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
     expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
       ""
