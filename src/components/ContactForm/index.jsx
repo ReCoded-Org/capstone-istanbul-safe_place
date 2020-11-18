@@ -35,6 +35,7 @@ export default function ContactForm() {
               placeholder={t("contactUs.contactUsForm.nameInputPlaceholder")}
               name="fullName"
               id="fullName"
+              aria-label="Full Name"
               ref={register()}
             />
           </label>
@@ -49,6 +50,7 @@ export default function ContactForm() {
               placeholder={t("contactUs.contactUsForm.emailInputPlaceholder")}
               name="email"
               id="email"
+              aria-label="Email address"
               ref={register({
                 required: {
                   value: true,
