@@ -4,15 +4,13 @@ import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../../../InputErrorMessage";
+import { getErrorClass } from "../../../../utils/formErrorHelpers";
 
 const schema = Joi.object({
-  email: Joi.string()
-    .required()
-    .email({ tlds: { allow: [] } })
-    .messages({
-      "string.empty": `Please provide your email`,
-      "string.email": `Please provide a valid email`,
-    }),
+  email: Joi.string().required().email({ tlds: {} }).messages({
+    "string.empty": `Please provide your email`,
+    "string.email": `Please provide a valid email`,
+  }),
 });
 
 export default function EmailAdd({ addNewEmail }) {
@@ -22,6 +20,7 @@ export default function EmailAdd({ addNewEmail }) {
   });
 
   const handleClick = async () => {
+    console.log(errors);
     const isValid = await trigger("email");
     if (isValid) {
       const email = getValues("email");
@@ -36,16 +35,14 @@ export default function EmailAdd({ addNewEmail }) {
         <form>
           <div className="formInput">
             <input
-              className={errors.email && "inputError"}
+              className={getErrorClass(errors?.email)}
               type="email"
               placeholder="Add an email address"
               name="email"
               aria-label="email"
               ref={register()}
             />
-            {errors?.email && (
-              <InputErrorMessage message={errors.email.message} />
-            )}
+            <InputErrorMessage error={errors?.email} />
           </div>
         </form>
       </div>
