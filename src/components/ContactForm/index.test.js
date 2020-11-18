@@ -32,7 +32,7 @@ describe("ContactForm", () => {
       },
     });
 
-    fireEvent.submit(screen.getByRole("button"));
+    await fireEvent.submit(screen.getByRole("button"));
 
     expect(await screen.findAllByRole("alert")).toHaveLength(1);
     expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
@@ -62,7 +62,7 @@ describe("ContactForm", () => {
       },
     });
 
-    fireEvent.submit(screen.getByRole("button"));
+    await fireEvent.submit(screen.getByRole("button"));
     await waitFor(() => expect(screen.queryAllByRole("alert")).toHaveLength(0));
     expect(screen.getByRole("textbox", { name: /Full Name/i }).value).toBe("");
     expect(screen.getByRole("textbox", { name: /Email address/i }).value).toBe(
