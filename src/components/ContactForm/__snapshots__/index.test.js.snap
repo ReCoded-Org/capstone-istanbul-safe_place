@@ -15,6 +15,7 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       >
         Full Name
         <input
+          className=""
           id="fullName"
           name="fullName"
           placeholder="Louis Li (optional)"
@@ -30,6 +31,7 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       >
         Email address
         <input
+          className=""
           id="email"
           name="email"
           placeholder="louis@example.com"
@@ -46,6 +48,7 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
         Message
         <textarea
           aria-label="message"
+          className=""
           id="messageContent"
           name="messageContent"
           placeholder="type your message here ..."
