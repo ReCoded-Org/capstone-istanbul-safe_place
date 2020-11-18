@@ -122,6 +122,7 @@ exports[`renders correctly 1`] = `
                     >
                       <input
                         aria-label="email"
+                        className=""
                         name="email"
                         placeholder="Add an email address"
                         type="email"
