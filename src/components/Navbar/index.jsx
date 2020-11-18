@@ -6,11 +6,13 @@ import {
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
-import {Link} from "react-router-dom";
 import "./index.scss";
 import logo from "../../images/Logo.svg";
 import { useTranslation } from "react-i18next";
 import languageIcon from "../../images/icons/language.svg";
+import { AuthContext } from "../../auth/Authentication";
+import SignInUpButtons from "./SignInUpButtons";
+import UserSetting from "./UserSetting";
 
 const LANG_SPECS = [
   {
@@ -24,6 +26,8 @@ const LANG_SPECS = [
 ];
 
 const MainNavbar = () => {
+  const { currentUser } = React.useContext(AuthContext);
+
   const [t, i18n] = useTranslation();
 
   return (
@@ -63,17 +67,11 @@ const MainNavbar = () => {
                 );
               })}
             </DropdownButton>
-
-            <button type="button" className="signInBtn">
-              <Link to="/signin">
-                {t("navbar.buttons.signIn")}
-              </Link>
-            </button>
-            <button type="button" className="signUpBtn">
-              <Link to="/signup">
-                {t("navbar.buttons.signUp")}
-              </Link>
-            </button>
+            {currentUser ? (
+              <UserSetting currentUser={currentUser} />
+            ) : (
+              <SignInUpButtons />
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
