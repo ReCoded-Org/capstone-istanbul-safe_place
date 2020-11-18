@@ -9,31 +9,53 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HelpNavbar from "./components/HelpNavbar";
 import MainNavbar from "./components/Navbar";
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
+import ProfilePage from "./containers/ProfilePage";
 import ViolenceTestPage from "./containers/ViolenceTestPage";
+import JobsTrainingPage from "./containers/JobsTrainingPage";
+import AboutUsPage from "./containers/AboutUsPage";
+import ChatBotMessages from "./components/ChatBotMessages";
+import { AuthProvider } from "./auth/Authentication";
+import PrivateRoute from "./auth/PrivateRoute";
 
 const App = () => (
-  <Router>
-    <div>
-      <HelpNavbar />
-      <MainNavbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/signin">
-          <SignIn />
-        </Route>
-        <Route exact path="/seekhelp">
-          <SearchForHelpPage />
-        </Route>
-        <Route exact path="/test">
-          <ViolenceTestPage />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
-  </Router>
+  <AuthProvider>
+    <Router>
+      <div>
+        <HelpNavbar />
+        <MainNavbar />
+        <ChatBotMessages />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/signin">
+            <SignIn />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+          <Route exact path="/seekhelp">
+            <SearchForHelpPage />
+          </Route>
+          <Route exact path="/test">
+            <ViolenceTestPage />
+          </Route>
+          <PrivateRoute exact path="/profile">
+            <ProfilePage />
+          </PrivateRoute>
+          <Route exact path="/opportunities">
+            <JobsTrainingPage />
+          </Route>
+          <Route exact path="/about">
+            <AboutUsPage />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  </AuthProvider>
 );
 
 export default App;

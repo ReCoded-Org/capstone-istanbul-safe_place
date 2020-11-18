@@ -1,8 +1,8 @@
 import React from "react";
-import phoneSvg from "./images/phone.svg";
-import locationSvg from "./images/map-marker.svg";
-import doctorImg from "./images/doctorImage.svg";
-import defaultImg from "./images/defaultImg.svg";
+import phoneSvg from "../../images/icons/phoneIcon.svg";
+import locationSvg from "../../images/icons/locationIcon.svg";
+import doctorImg from "../../images/icons/doctorImage.svg";
+import defaultImg from "../../images/icons/defaultImg.svg";
 import "./index.scss";
 
 const SeekHelpSingleCard = ({
@@ -19,7 +19,7 @@ const SeekHelpSingleCard = ({
 
   return (
     <>
-      <div className="carouselItem" key={name}>
+      <div className="singleCard" key={name}>
         <div className="carouselHeaderAndImage">
           <div>
             <h3>{title}</h3>
@@ -32,7 +32,7 @@ const SeekHelpSingleCard = ({
         <div>
           <div className="contactDetails">
             <div>
-              <img src={phoneSvg} alt="Phone Icon" />
+              <img src={phoneSvg} alt="Phone icon" />
             </div>
             <div>
               <p>{phoneNumber}</p>
@@ -40,7 +40,7 @@ const SeekHelpSingleCard = ({
           </div>
           <div className="contactDetails">
             <div>
-              <img src={locationSvg} alt="Location Icon" />
+              <img src={locationSvg} alt="Location icon" />
             </div>
             <div>
               <p>{address}</p>

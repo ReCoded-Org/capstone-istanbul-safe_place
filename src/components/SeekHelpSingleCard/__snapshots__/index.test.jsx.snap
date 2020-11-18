@@ -2,7 +2,7 @@
 
 exports[`renders correctly and matches the snapshot 1`] = `
 <div
-  className="carouselItem"
+  className="singleCard"
 >
   <div
     className="carouselHeaderAndImage"
@@ -24,8 +24,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
     >
       <div>
         <img
-          alt="Phone Icon"
-          src="phone.svg"
+          alt="Phone icon"
+          src="phoneIcon.svg"
         />
       </div>
       <div>
@@ -37,8 +37,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
     >
       <div>
         <img
-          alt="Location Icon"
-          src="map-marker.svg"
+          alt="Location icon"
+          src="locationIcon.svg"
         />
       </div>
       <div>

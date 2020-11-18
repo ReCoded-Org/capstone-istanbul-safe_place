@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^1.0.0",
     "@testing-library/dom": "^7.26.3",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.1.0",
@@ -25,8 +26,10 @@
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-simple-chatbot": "^0.6.1",
     "react-slick": "^0.27.12",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -21,27 +21,6 @@ exports[`renders correctly 1`] = `
         +1-340-5558-235
       </p>
     </div>
-    <form
-      className="form-inline"
-    >
-      <input
-        className="mr-sm-2 form-control"
-        placeholder="Find a shelter"
-        type="text"
-      />
-      <a
-        className="nav-link"
-        href="/seekhelp"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-      >
-        <button
-          type="button"
-        >
-          Search
-        </button>
-      </a>
-    </form>
   </div>
 </nav>
 `;

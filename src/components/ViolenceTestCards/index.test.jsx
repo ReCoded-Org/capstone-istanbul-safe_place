@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import ViolenceTest from "./index";
+import ViolenceTestCards from "./index";
 
 it("renders correctly and matches the snapshot", () => {
-  const tree = renderer.create(<ViolenceTest />).toJSON();
+  const tree = renderer.create(<ViolenceTestCards t={(key) => key} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

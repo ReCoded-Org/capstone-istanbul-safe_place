@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SigninForm renders correctly and matches the snapshot 1`] = `
+<div
+  className="signInForm"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="formInput"
+    >
+      <input
+        aria-label="email"
+        className=""
+        name="email"
+        placeholder="Your Email"
+        type="email"
+      />
+    </div>
+    <div
+      className="formInput"
+    >
+      <input
+        aria-label="password"
+        className=""
+        name="password"
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <div
+      className="formInput"
+    >
+      <label
+        htmlFor="remembered"
+      >
+        <input
+          id="remembered"
+          name="remembered"
+          type="checkbox"
+          value="toBeRemembered"
+        />
+        Remember me next time
+      </label>
+    </div>
+    <button
+      className="submitBtn"
+      type="submit"
+    >
+      Sign in
+    </button>
+  </form>
+</div>
+`;

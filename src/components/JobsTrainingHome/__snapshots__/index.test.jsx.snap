@@ -4,16 +4,16 @@ exports[`renders correctly and matches the snapshot 1`] = `
 <div
   className="jobsTrainingSection"
 >
-  <h2
-    className="jobsTrainingTitle"
+  <div
+    className="jobsTrainingHeader"
   >
-    Job / Training Opportunities
-  </h2>
-  <p
-    className="description"
-  >
-    Browse our list of job opportunities, trainings or workshops.
-  </p>
+    <h2>
+      Job / Training Opportunities
+    </h2>
+    <h6>
+      Browse our list of job opportunities, trainings or workshops.
+    </h6>
+  </div>
   <div
     className="container"
   >
@@ -25,20 +25,20 @@ exports[`renders correctly and matches the snapshot 1`] = `
       >
         <div>
           <button
-            className="jobsBtn"
+            className="opportunityListBtn"
+            disabled={true}
             onClick={[Function]}
-            translationKey="button"
+            type="button"
           >
-            Job Opportunities
+            jobsTrainingPage.buttons.jobOpportunities
           </button>
-        </div>
-        <div>
           <button
-            className="trainingsBtn"
+            className="opportunityListBtn"
+            disabled={false}
             onClick={[Function]}
-            translationKey="button"
+            type="button"
           >
-            Trainings / Workshops
+            jobsTrainingPage.buttons.trainings
           </button>
         </div>
       </div>
@@ -109,6 +109,17 @@ exports[`renders correctly and matches the snapshot 1`] = `
         </div>
       </div>
     </div>
+    <a
+      href="/opportunities"
+      onClick={[Function]}
+    >
+      <h6>
+        All opportunities 
+        <span>
+          →
+        </span>
+      </h6>
+    </a>
   </div>
 </div>
 `;
