@@ -26,6 +26,11 @@
     margin: 0.1rem;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .btn {
     align-self: baseline !important;
     background-color: transparent;
@@ -86,16 +91,11 @@
       box-shadow: 0 0 0 0.2rem $primaryColor;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       color: $primaryColor;
       background-color: $lightColor;
       border-color: $lightColor;
-    }
-
-    &:active {
-      background-color: $primaryColor;
-      border-color: $lightColor;
-      box-shadow: 0 0 0 0.2rem $primaryColor;
     }
   }
 

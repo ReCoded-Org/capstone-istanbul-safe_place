@@ -6,6 +6,7 @@ import {
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
+import {Link} from "react-router-dom";
 import "./index.scss";
 import logo from "../../images/Logo.svg";
 import { useTranslation } from "react-i18next";
@@ -63,11 +64,15 @@ const MainNavbar = () => {
               })}
             </DropdownButton>
 
-            <button type="button" className="signInBtn" to="/signin">
-              {t("navbar.buttons.signIn")}
+            <button type="button" className="signInBtn">
+              <Link to="/signin">
+                {t("navbar.buttons.signIn")}
+              </Link>
             </button>
-            <button type="button" className="signUpBtn" to="/signup">
-              {t("navbar.buttons.signUp")}
+            <button type="button" className="signUpBtn">
+              <Link to="/signup">
+                {t("navbar.buttons.signUp")}
+              </Link>
             </button>
           </Nav>
         </Navbar.Collapse>
