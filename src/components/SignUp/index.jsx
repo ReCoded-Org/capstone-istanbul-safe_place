@@ -43,6 +43,9 @@ export default function SignUp() {
         case "facebook":
           provider = new firebase.auth.FacebookAuthProvider();
           break;
+        case "twitter":
+          provider = new firebase.auth.TwitterAuthProvider();
+          break;
         default:
           return null;
       }
@@ -72,7 +75,7 @@ export default function SignUp() {
           <h4>Sign up with</h4>
           <ul className="signUpIcons">
             <li className="signUpIcon">
-              <a href="#/">
+              <a href="#/" onClick={() => handleSignUpWithProvider("twitter")}>
                 <img src={twitterIcon} alt="Twitter icon" />
               </a>
             </li>
