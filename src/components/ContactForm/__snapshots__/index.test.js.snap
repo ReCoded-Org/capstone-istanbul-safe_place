@@ -13,11 +13,12 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       <label
         htmlFor="fullName"
       >
-        Full Name
+        contactUs.contactUsForm.nameInputLabel
         <input
+          aria-label="Full Name"
           id="fullName"
           name="fullName"
-          placeholder="Louis Li (optional)"
+          placeholder="contactUs.contactUsForm.nameInputPlaceholder"
           type="text"
         />
       </label>
@@ -28,11 +29,12 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       <label
         htmlFor="email"
       >
-        Email address
+        contactUs.contactUsForm.emailInputLabel
         <input
+          aria-label="Email address"
           id="email"
           name="email"
-          placeholder="louis@example.com"
+          placeholder="contactUs.contactUsForm.emailInputPlaceholder"
           type="email"
         />
       </label>
@@ -43,12 +45,12 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       <label
         htmlFor="messageContent"
       >
-        Message
+        contactUs.contactUsForm.messageInputLabel
         <textarea
           aria-label="message"
           id="messageContent"
           name="messageContent"
-          placeholder="type your message here ..."
+          placeholder="contactUs.contactUsForm.messageInputPlaceholder"
         />
       </label>
     </div>
@@ -56,7 +58,7 @@ exports[`LeaveMessageForm renders correctly and matches the snapshot 1`] = `
       className="submitBtn"
       type="submit"
     >
-      Send
+      contactUs.contactUsForm.submitBtn
     </button>
   </form>
 </div>
