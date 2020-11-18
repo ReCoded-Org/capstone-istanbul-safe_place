@@ -29,11 +29,11 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <label htmlFor="fullName">
-            {t("contactUs.contactUsForm.nameInputLabel")}
+            {t("contactUs.contactUsForm.name.label")}
             <input
               className={getErrorClass(errors.fullName)}
               type="text"
-              placeholder={t("contactUs.contactUsForm.nameInputPlaceholder")}
+              placeholder={t("contactUs.contactUsForm.name.placeholder")}
               name="fullName"
               id="fullName"
               aria-label="Full Name"
@@ -44,18 +44,20 @@ export default function ContactForm() {
 
         <div className="formInput">
           <label htmlFor="email">
-            {t("contactUs.contactUsForm.emailInputLabel")}
+            {t("contactUs.contactUsForm.email.label")}
             <input
               className={getErrorClass(errors.email)}
               type="email"
-              placeholder={t("contactUs.contactUsForm.emailInputPlaceholder")}
+              placeholder={t("contactUs.contactUsForm.email.placeholder")}
               name="email"
               id="email"
               aria-label="Email address"
               ref={register({
                 required: {
                   value: true,
-                  message: t("contactUs.contactUsForm.emailInputErrorMessage"),
+                  message: t(
+                    "contactUs.contactUsForm.email.error.addressRequired"
+                  ),
                 },
                 // TODO: intall joi and use it for email validation
               })}
@@ -66,31 +68,25 @@ export default function ContactForm() {
 
         <div className="formInput">
           <label htmlFor="messageContent">
-            {t("contactUs.contactUsForm.messageInputLabel")}
+            {t("contactUs.contactUsForm.message.label")}
             <textarea
               className={getErrorClass(errors.message)}
               name="messageContent"
               id="messageContent"
-              placeholder={t("contactUs.contactUsForm.messageInputPlaceholder")}
+              placeholder={t("contactUs.contactUsForm.message.placeholder")}
               aria-label="message"
               ref={register({
                 required: {
                   value: true,
-                  message: t(
-                    "contactUs.contactUsForm.messageInputErrorMessage0"
-                  ),
+                  message: t("contactUs.contactUsForm.message.error.required"),
                 },
                 minLength: {
                   value: 10,
-                  message: t(
-                    "contactUs.contactUsForm.messageInputErrorMessage1"
-                  ),
+                  message: t("contactUs.contactUsForm.message.error.minLength"),
                 },
                 maxLength: {
                   value: 2000,
-                  message: t(
-                    "contactUs.contactUsForm.messageInputErrorMessage3"
-                  ),
+                  message: t("contactUs.contactUsForm.message.error.maxLength"),
                 },
               })}
             />

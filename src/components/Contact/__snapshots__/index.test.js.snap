@@ -72,13 +72,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="fullName"
             >
-              contactUs.contactUsForm.nameInputLabel
+              contactUs.contactUsForm.name.label
               <input
                 aria-label="Full Name"
                 className=""
                 id="fullName"
                 name="fullName"
-                placeholder="contactUs.contactUsForm.nameInputPlaceholder"
+                placeholder="contactUs.contactUsForm.name.placeholder"
                 type="text"
               />
             </label>
@@ -89,13 +89,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="email"
             >
-              contactUs.contactUsForm.emailInputLabel
+              contactUs.contactUsForm.email.label
               <input
                 aria-label="Email address"
                 className=""
                 id="email"
                 name="email"
-                placeholder="contactUs.contactUsForm.emailInputPlaceholder"
+                placeholder="contactUs.contactUsForm.email.placeholder"
                 type="email"
               />
             </label>
@@ -106,13 +106,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="messageContent"
             >
-              contactUs.contactUsForm.messageInputLabel
+              contactUs.contactUsForm.message.label
               <textarea
                 aria-label="message"
                 className=""
                 id="messageContent"
                 name="messageContent"
-                placeholder="contactUs.contactUsForm.messageInputPlaceholder"
+                placeholder="contactUs.contactUsForm.message.placeholder"
               />
             </label>
           </div>
