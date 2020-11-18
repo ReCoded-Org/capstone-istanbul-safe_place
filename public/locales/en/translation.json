@@ -10,9 +10,9 @@
       "signUp": "Sign Up"
     },
     "userSettings": {
+      "userIcon":"User icon",
       "profile":"Your profile",
-      "signOut":"Sign out",
-      "userIcon":"User icon"
+      "signOut":"Sign out"
     }
   },
   "home": {
