@@ -24,7 +24,7 @@ export default function SignUp() {
         history.push("/");
       } catch (error) {
         if (error.code === "auth/email-already-in-use") {
-          return "auth/email-already-in-use";
+          return error.code;
         }
         signUpFailed(error);
       }
