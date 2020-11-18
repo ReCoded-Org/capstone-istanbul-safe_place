@@ -43,7 +43,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          About
+          navbar.about
         </a>
         <a
           className="nav-link"
@@ -52,7 +52,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Blog
+          navbar.blog
         </a>
         <a
           className="nav-link"
@@ -61,7 +61,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Opportunities
+          navbar.opportunities
         </a>
         <a
           className="nav-link"
@@ -70,21 +70,40 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Contact
+          navbar.contact
         </a>
+        <div
+          className="dropdown dropdown"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-none"
+            disabled={false}
+            id="dropdown-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <img
+              alt="Language icon"
+              src="language.svg"
+            />
+          </button>
+        </div>
         <button
           className="signInBtn"
           to="/signin"
           type="button"
         >
-          Sign In
+          navbar.buttons.signIn
         </button>
         <button
           className="signUpBtn"
           to="/signup"
           type="button"
         >
-          Sign Up
+          navbar.buttons.signUp
         </button>
       </div>
     </div>

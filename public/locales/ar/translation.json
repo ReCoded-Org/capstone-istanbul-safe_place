@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "about": "من نحن",
+    "blog": "المدونة",
+    "opportunities": "فرص عمل وتدريب",
+    "contact": "تواصل معنا",
+    "language":"اللغة",
+    "buttons": {
+      "signIn": "تسجيل الدخول",
+      "signUp": "الاشتراك"
+    }
+  }
+}

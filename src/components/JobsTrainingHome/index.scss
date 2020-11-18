@@ -7,42 +7,11 @@
   padding-bottom: 3.125rem;
   background-color: $secondaryColor;
   width: 100%;
-  text-align: center;
   font-family: $mainFontFamily;
 
   h6 {
-    padding: 2rem;
-    margin: 2rem;
+    margin-top: 1.5rem;
     text-align: right;
     color: $primaryColor;
   }
-}
-
-.jobsTrainingTitle {
-  color: $primaryColor;
-  font-size: 1.75rem;
-}
-
-.trainingsBtn,
-.jobsBtn {
-  @include primaryBtn;
-  width: 12.75rem;
-  border-radius: 0;
-  background-color: $secondaryColor;
-  text-align: right;
-
-  &:hover {
-    border-right: solid $primaryColor;
-    color: $primaryColor;
-  }
-
-  &:focus {
-    border-right: solid $primaryColor;
-    outline: 0;
-    color: $primaryColor;
-  }
-}
-
-.jobsBtn {
-  margin-top: 1.875rem;
 }
