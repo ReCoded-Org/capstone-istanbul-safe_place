@@ -91,20 +91,30 @@ exports[`renders correctly and matches the snapshot 1`] = `
             />
           </button>
         </div>
-        <button
-          className="signInBtn"
-          to="/signin"
-          type="button"
-        >
-          navbar.buttons.signIn
-        </button>
-        <button
-          className="signUpBtn"
-          to="/signup"
-          type="button"
-        >
-          navbar.buttons.signUp
-        </button>
+        <div>
+          <div>
+            <button
+              className="signInBtn"
+              type="button"
+            >
+              <a
+                href="/signin"
+              >
+                navbar.buttons.signIn
+              </a>
+            </button>
+            <button
+              className="signUpBtn"
+              type="button"
+            >
+              <a
+                href="/signup"
+              >
+                navbar.buttons.signUp
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
