@@ -1,13 +1,28 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link, useHistory } from 'react-router-dom';
 import SignUpForm from "../SignUpForm";
 import womenSupportEachOther from "../../images/womenSupportEachOther.png";
 import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
+import firebase from "../../firebaseConfig";
 import "./index.scss";
 
 export default function SignUp() {
+  const history = useHistory();
+  const handleSignUp = React.useCallback(async data => {
+    const { email, password } = data;
+    try {
+      await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
+      history.push("/");
+    } catch (error) {
+      alert(error);
+    }
+  }, [history]);
+
   return (
     <Container fluid="md" className="signUpSection">
       <Row>
@@ -37,9 +52,7 @@ export default function SignUp() {
           <hr className="divider" />
 
           <SignUpForm
-            submit={() => {
-              /* TODO: implement the signing up functionality */
-            }}
+            submit={handleSignUp}
           />
 
           <p>
