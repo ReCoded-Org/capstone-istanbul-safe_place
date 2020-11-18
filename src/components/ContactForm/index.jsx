@@ -7,12 +7,19 @@ import firebase from "../../firebaseConfig";
 import { getErrorClass } from "../../utils/formErrorHelpers";
 import "./index.scss";
 
+<<<<<<< HEAD
 export default function ContactForm({ handleShow }) {
+=======
+export default function ContactForm() {
+>>>>>>> dev
   const { register, handleSubmit, errors, reset } = useForm();
   const { t } = useTranslation();
 
   const onSubmit = (data) => {
+<<<<<<< HEAD
     handleShow();
+=======
+>>>>>>> dev
     const newMessage = firebase
       .firestore()
       .collection("contactUsMessages")
