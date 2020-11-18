@@ -6,11 +6,11 @@ exports[`renders correctly and matches the snapshot 1`] = `
   role="alert"
 >
   <img
-    alt="Error Logo"
-    height="32"
+    alt="Error logo"
     src="patchExclamationFill.svg"
-    width="32"
   />
-  <p />
+  <p>
+    Please provide your email
+  </p>
 </div>
 `;
