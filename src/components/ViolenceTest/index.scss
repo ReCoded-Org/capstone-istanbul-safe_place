@@ -8,8 +8,8 @@
   .violenceTest {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    align-content: flex-end;
+    align-items: baseline;
+    align-content: baseline;
     flex-wrap: wrap;
   }
 
@@ -29,6 +29,8 @@
   }
 
   button {
+    width: 8rem;
+    height: 2rem;
     color: $lightColor;
     background-color: $primaryColor;
     border: none;
