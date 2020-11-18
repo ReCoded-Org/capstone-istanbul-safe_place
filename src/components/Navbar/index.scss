@@ -10,12 +10,12 @@
   .navbar-nav {
     margin-left: auto;
     align-items: baseline;
+    align-content: baseline;
   }
 
   .nav-link {
     color: $lightColor !important;
     font-weight: bold;
-    margin-right: 1rem;
 
     &:hover {
       color: $primaryColor !important;
@@ -24,6 +24,49 @@
 
   p {
     margin: 0.1rem;
+  }
+
+  .btn {
+    align-self: baseline !important;
+    background-color: transparent;
+    width: 3em;
+    height: 3rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
+    &:focus {
+      background-color: transparent;
+      border: none;
+      box-shadow: none !important;
+    }
+    &:hover {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+
+  .dropdown {
+    align-self: center !important;
+    padding: 0;
+    img {
+      width: 1.2rem;
+      align-self: center !important;
+    }
+  }
+  .dropdown-menu {
+    background-color: $lightColor;
+    border-color: $warningColor;
+    align-self: center !important;
+  }
+
+  .dropdown-item {
+    color: $primaryColor;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $primaryColor;
+      color: $lightColor;
+    }
   }
 
   .signInBtn {
@@ -37,7 +80,6 @@
     background-color: transparent;
     border-radius: $borderRadius;
     border: 0.15rem solid $lightColor;
-    padding: 0 2rem;
     margin-left: 1.5rem;
 
     &:focus {
@@ -63,7 +105,7 @@
     font-weight: bold;
     width: 8rem;
     height: 2rem;
-    margin: 0 0.5rem;
+    margin-left: 0.5rem;
 
     &:hover {
       color: $primaryColor;

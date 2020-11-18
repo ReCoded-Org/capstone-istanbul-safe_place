@@ -1,4 +1,15 @@
 {
+  "navbar": {
+    "about": "About",
+    "blog": "Blog",
+    "opportunities": "Opportunities",
+    "contact": "Contact",
+    "language": "Language",
+    "buttons": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up"
+    }
+  },
   "home": {
     "seekHelpSection": [
       {
@@ -289,7 +300,12 @@
       },
       "submitBtn": "Send"
     },
-    "header": "Contact Us",
-    "subHeader": "If you have any question, please don't hesitate to talk to us"
+    "contactUsPage": {
+      "header": "Contact Us",
+      "subHeader": "If you have any question, please don't hesitate to talk to us"
+    },
+    "contactUsModal": {
+      "message": "Thank you for leaving us message!"
+    }
   }
 }
