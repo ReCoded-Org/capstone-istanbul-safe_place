@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import InputErrorMessage from "../InputErrorMessage";
-import { getErrorClass } from "../../helperFunctions";
+import { getErrorClass } from "../../utils/formErrorHelpers";
 import "./index.scss";
 
 export default function ContactForm({ submit }) {
