@@ -1,7 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import countries from "./countries.json";
-import Input from "../../form/Input";
+import COUNTRIES from "./countries.json";
+import Input from "../../form/SafePlaceInput";
 import "./index.scss";
 
 export default function UserDetail({ register }) {
@@ -38,7 +38,7 @@ export default function UserDetail({ register }) {
           type="tel"
           placeholder="+90 552 477 25 15"
           name="phoneNumber"
-          label="Phone Number"
+          label="Phone number"
           ref={register()}
         />
       </div>
@@ -74,7 +74,7 @@ export default function UserDetail({ register }) {
       <div className="formInputGroup">
         <Input
           type="text"
-          placeholder="Bursa"
+          placeholder="Istanbul"
           name="city"
           label="City"
           ref={register()}
@@ -82,7 +82,7 @@ export default function UserDetail({ register }) {
 
         <Input
           type="text"
-          placeholder="Nilufer"
+          placeholder="Fatih"
           name="state"
           label="State"
           ref={register()}
@@ -103,7 +103,7 @@ export default function UserDetail({ register }) {
             Country
             <select name="countryCode" id="country" ref={register()}>
               <option value="">Please choose your country</option>
-              {countries.map((country) => (
+              {COUNTRIES.map((country) => (
                 <option key={country.id} value={country.alpha2}>
                   {country.name}
                 </option>
