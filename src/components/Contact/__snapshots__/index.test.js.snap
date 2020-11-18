@@ -72,11 +72,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="fullName"
             >
-              Full Name
+              contactUs.contactUsForm.name.label
               <input
+                aria-label="Full Name"
+                className=""
                 id="fullName"
                 name="fullName"
-                placeholder="Louis Li (optional)"
+                placeholder="contactUs.contactUsForm.name.placeholder"
                 type="text"
               />
             </label>
@@ -87,11 +89,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="email"
             >
-              Email address
+              contactUs.contactUsForm.email.label
               <input
+                aria-label="Email address"
+                className=""
                 id="email"
                 name="email"
-                placeholder="louis@example.com"
+                placeholder="contactUs.contactUsForm.email.placeholder"
                 type="email"
               />
             </label>
@@ -102,12 +106,13 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             <label
               htmlFor="messageContent"
             >
-              Message
+              contactUs.contactUsForm.message.label
               <textarea
                 aria-label="message"
+                className=""
                 id="messageContent"
                 name="messageContent"
-                placeholder="type your message here ..."
+                placeholder="contactUs.contactUsForm.message.placeholder"
               />
             </label>
           </div>
@@ -115,7 +120,7 @@ exports[`LeaveMessage renders correctly and matches the snapshot 1`] = `
             className="submitBtn"
             type="submit"
           >
-            Send
+            contactUs.contactUsForm.submitBtn
           </button>
         </form>
       </div>

@@ -244,5 +244,50 @@
         "portraitImg": "ammarImg"
       }
     ]
+  },
+  "chatBotMessages": {
+    "headerTitle": "Find help",
+    "goToSeekHelpPageText": "Redirecting to search help page",
+    "goToOpportunitiesPageText": "Redirecting to jobs / training opportunities page",
+    "goToBlogPageText": "Redirecting to blog page",
+    "welcomeMessage": "Hello! How can we help you?",
+    "helpLabel": "Immediate help",
+    "findLabel": "Find specialists / shelters",
+    "blogLabel": "Read our blog",
+    "opportunityLabel": "Check job / training opportunities",
+    "immediateHelpMessage": "Please call {{link}} to get immediate help"
+  },
+  "jobsTrainingPage": {
+    "header": "Job / Training Opportunities",
+    "subHeader": "Browse our list of job opportunities, trainings or workshops.",
+    "buttons": {
+      "jobOpportunities": "Job Opportunities",
+      "trainings": "Trainings / Workshops"
+    }
+  },
+  "contactUs": {
+    "contactUsForm": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Please enter your name (optional)"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Please enter your email",
+        "error": {
+          "required": "Your email address is required"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Please enter your message",
+        "error": {
+          "required": "Your message is required",
+          "minLeght": "Your message is too short. Please write us more",
+          "maxLength": "Your message is too long. Please shorten your message"
+        }
+      },
+      "submitBtn": "Send"
+    }
   }
 }

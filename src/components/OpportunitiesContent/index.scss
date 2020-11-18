@@ -1,0 +1,28 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+
+.jobsTrainingContent {
+  .searchBar {
+    margin: 3rem 0;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .greenBorder > * {
+    border: solid 0.15rem $secondaryColor;
+
+    .title {
+      color: $secondaryColor;
+    }
+
+    .borderLine {
+      border-bottom: 0.125rem solid $secondaryColor;
+    }
+  }
+
+  .peachBorder > * {
+    border: solid 0.15rem $warningColor;
+  }
+}
