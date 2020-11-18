@@ -26,7 +26,7 @@ const LANG_SPECS = [
 ];
 
 const MainNavbar = () => {
-  const { currentUser } = React.useContext(AuthContext);
+  const currentUser = React.useContext(AuthContext);
 
   const [t, i18n] = useTranslation();
 
