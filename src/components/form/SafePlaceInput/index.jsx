@@ -8,14 +8,12 @@ import React from "react";
  * @param {string} ref - React ref to use with register() form function or any ref
  * @param {string} label - (optional) if exist, label tag will be added with the name givien
  */
-export default function Input({ name, type, placeholder, ref, label }) {
+export default function SafePlaceInput(props) {
+  const { label, name, type, ref, placeholder } = props;
+
   return (
     <div className="formInput">
-      {label && (
-        <label htmlFor={name}>
-          {label}
-        </label>
-      )}
+      {label && <label htmlFor={name}>{label}</label>}
       <input
         type={type}
         placeholder={placeholder}
