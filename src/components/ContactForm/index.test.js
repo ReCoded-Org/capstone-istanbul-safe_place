@@ -63,7 +63,7 @@ describe("ContactForm", () => {
     });
 
     await fireEvent.submit(screen.getByRole("button"));
-    expect(await screen.queryAllByRole("alert")).toHaveLength(0);
+    expect(await screen.queryByRole("alert")).toBeNull();
   });
 
   // it("should empty input fields after submission", async () => {
