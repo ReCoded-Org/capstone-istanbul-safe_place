@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="profileContainer container-md"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="accordion"
+    >
+      <div
+        className="profilePortrait row"
+      >
+        <h2>
+          Profile
+        </h2>
+        <div
+          className="userPortrait"
+        >
+          <img
+            alt="User portrait"
+            src="defaultProfileImage.png"
+          />
+        </div>
+      </div>
+      <div
+        className="section row"
+      >
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow down"
+          />
+          User details
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse show"
+          >
+            <div>
+              UserDetail
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="section row"
+      >
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow right"
+          />
+          Email address
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <div>
+              UserEmail
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="section row"
+      >
+        <button
+          className="sectionTitle"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="arrow right"
+          />
+          Change password
+        </button>
+        <div
+          className="sectionContent"
+        >
+          <div
+            aria-expanded={null}
+            className="collapse"
+          >
+            <div>
+              UserPassword
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="submitBtn row"
+      >
+        <button
+          type="submit"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
