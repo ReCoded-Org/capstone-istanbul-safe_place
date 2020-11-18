@@ -40,11 +40,11 @@ export default function SingleBlog(props) {
         </Col>
         <Col xs={12} md={8}>
           <NavLink to={`/blog/${props.id}`}>
-            <img className="blogImg" alt="blog img" src={props.jetpack_featured_media_url}/>
+            <img className="blogImg" alt="blog img" src={blogPost.jetpack_featured_media_url}/>
           </NavLink>
 
-          {/* <title className="singleBlogTitle">Women and health</title> */}
-          {/* <h3 className="author">By SafePlace October 10, 2020</h3> */}
+          {/* <title className="singleBlogTitle">Women and health</title>
+          <h3 className="author">By SafePlace October 10, 2020</h3> */}
           <h4
             className="article"
             dangerouslySetInnerHTML={{
