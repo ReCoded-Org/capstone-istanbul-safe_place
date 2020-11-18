@@ -2,7 +2,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-
 import ContactForm from "./index";
 
 describe("ContactForm", () => {
