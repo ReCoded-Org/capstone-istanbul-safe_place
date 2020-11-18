@@ -14,11 +14,11 @@ import languageIcon from "../../images/icons/language.svg";
 const LANG_SPECS = [
   {
     code: "ar",
-    name: "AR",
+    name: "العربية",
   },
   {
     code: "en",
-    name: "EN",
+    name: "English",
   },
 ];
 
