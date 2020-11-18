@@ -17,14 +17,11 @@
   }
 }
 
-.contactFormModal {
-  font-family: $mainFontFamily;
-}
-
 .contactFormModalBody {
   padding: 3rem;
   p {
     text-align: center;
     color: $darkColor;
+    font-family: $mainFontFamily;
   }
 }
