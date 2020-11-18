@@ -47,7 +47,7 @@ export default function SignUp() {
           provider = new firebase.auth.TwitterAuthProvider();
           break;
         default:
-          return null;
+          throw new Error("provider not specified!");
       }
 
       firebase
@@ -57,7 +57,7 @@ export default function SignUp() {
           history.push("/");
         })
         .catch(function (error) {
-          // Handle Errors here.
+          // Handle errors here.
           signUpFailed(error);
         });
     },

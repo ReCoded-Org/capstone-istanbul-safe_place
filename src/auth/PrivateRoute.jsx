@@ -3,8 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import { AuthContext } from "./Authentication";
 
 /**
- * Use this higher-order component with the component that
- * require the user to be authentecated. It's used with instead
+ * Use this custome route with the component that
+ * require the user to be authentecated. It's used instead
  * of <Route />
  *
  */
