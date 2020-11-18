@@ -1,0 +1,6 @@
+@import "../../../style/variables";
+@import "../../../style/forms";
+
+.formInput {
+  @include inputContainer;
+}
