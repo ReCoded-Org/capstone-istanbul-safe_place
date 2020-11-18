@@ -24,6 +24,7 @@ export default function JobsTrainingHome() {
       <Container>
         <Row>
           <Col md={3}>
+            {/* OpportunitiesContent component have a search while this section in home page doesn't have a search. setFilteredCards is needed for search, so it's passed as a variable that contains setCardsList instead */}
             <JobsTrainingButtons
               setCardsList={setCardsList}
               setFilteredCards={setCardsList}
