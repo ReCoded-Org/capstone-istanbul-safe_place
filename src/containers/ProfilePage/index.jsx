@@ -1,25 +1,30 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Accordion } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import UserDetail from "../../components/UserDetail";
-import UserEmail from "../../components/UserEmail";
-import UserPassword from "../../components/UserPassword";
+import UserDetailForm from "../../components/profile/UserDetailForm";
+import UserEmailForm from "../../components/profile/UserEmailForm";
+import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
+import ProfileSection from "./ProfileSection";
 import "./index.scss";
 
-function getArrowClass(selectedElm, currentElm) {
-  return selectedElm === currentElm ? "arrow down" : "arrow right";
-}
-
-function checkCollapseClass(selectedElm, currentElm) {
-  if (selectedElm === currentElm) return "";
-
-  return `collapsed`;
-}
-
 export default function ProfilePage({ submit }) {
-  const [selectedElement, setSelectedElement] = React.useState("userDetail");
   const { register, handleSubmit, errors } = useForm();
+
+  const sections = [
+    {
+      label: "User details",
+      children: <UserDetailForm register={register} errors={errors} />,
+    },
+    {
+      label: "Email address",
+      children: <UserEmailForm register={register} errors={errors} />,
+    },
+    {
+      label: "Change password",
+      children: <UserPasswordForm register={register} errors={errors} />,
+    },
+  ];
 
   const onSave = (data) => {
     // TODO: save data in the database
@@ -29,69 +34,27 @@ export default function ProfilePage({ submit }) {
   return (
     <Container fluid="md" className="profileContainer">
       <form onSubmit={handleSubmit(onSave)}>
-        <Row className="profilePortrait">
-          <h2>Profile</h2>
-          <div className="userPortrait">
-            <img src={defaultProfileImage} alt="User portrait" />
-          </div>
-        </Row>
-        <Row className="userDetail">
-          <button
-            className="sectionTitle"
-            onClick={() => setSelectedElement("userDetail")}
-            type="button"
-          >
-            <i className={getArrowClass(selectedElement, "userDetail")} />
-            User Details
-          </button>
-          <div
-            className={`
-            sectionContent 
-            ${checkCollapseClass(selectedElement, "userDetail")}
-          `}
-          >
-            <UserDetail register={register} validErrors={errors} />
-          </div>
-        </Row>
-        <Row className="userEmail">
-          <button
-            className="sectionTitle"
-            type="button"
-            onClick={() => setSelectedElement("userEmail")}
-          >
-            <i className={getArrowClass(selectedElement, "userEmail")} />
-            Email Address
-          </button>
-          <div
-            className={`
-            sectionContent 
-            ${checkCollapseClass(selectedElement, "userEmail")}
-          `}
-          >
-            <UserEmail register={register} validErrors={errors} />
-          </div>
-        </Row>
-        <Row className="userPassword">
-          <button
-            className="sectionTitle"
-            type="button"
-            onClick={() => setSelectedElement("userPassword")}
-          >
-            <i className={getArrowClass(selectedElement, "userPassword")} />
-            Change Password
-          </button>
-          <div
-            className={`
-            sectionContent 
-            ${checkCollapseClass(selectedElement, "userPassword")}
-          `}
-          >
-            <UserPassword register={register} validErrors={errors} />
-          </div>
-        </Row>
-        <Row className="submitBtn">
-          <button type="submit">Save Changes</button>
-        </Row>
+        <Accordion defaultActiveKey="0">
+          <Row className="profilePortrait">
+            <h2>Profile</h2>
+            <div className="userPortrait">
+              <img src={defaultProfileImage} alt="User portrait" />
+            </div>
+          </Row>
+          {sections.map((section, index) => (
+            <ProfileSection
+              key={section.label}
+              eventKey={index.toString()}
+              label={section.label}
+            >
+              {section.children}
+            </ProfileSection>
+          ))}
+
+          <Row className="submitBtn">
+            <button type="submit">Save changes</button>
+          </Row>
+        </Accordion>
       </form>
     </Container>
   );
