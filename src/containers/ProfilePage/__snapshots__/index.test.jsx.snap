@@ -71,8 +71,78 @@ exports[`renders correctly 1`] = `
             aria-expanded={null}
             className="collapse"
           >
-            <div>
-              UserEmail
+            <div
+              className="userEmailSection col-12"
+            >
+              <div
+                className="emailBlock container-fluid"
+              >
+                <div
+                  className="emailAddress"
+                >
+                  <p>
+                    <strong>
+                      jBailony@outlook.com
+                    </strong>
+                  </p>
+                </div>
+                <div
+                  className="emailControl"
+                >
+                  <button
+                    data-placement="bottom"
+                    data-toggle="tooltip"
+                    onClick={[Function]}
+                    title="Remove"
+                    type="button"
+                  >
+                    ✕
+                  </button>
+                  <button
+                    data-placement="bottom"
+                    data-toggle="tooltip"
+                    disabled={true}
+                    onClick={[Function]}
+                    title="Make primary"
+                    type="button"
+                  >
+                    ✓
+                  </button>
+                </div>
+              </div>
+              <div
+                className="emailBlock container-fluid"
+              >
+                <div
+                  className="emailAddress"
+                >
+                  <form>
+                    <div
+                      className="formInput"
+                    >
+                      <input
+                        aria-label="email"
+                        name="email"
+                        placeholder="Add an email address"
+                        type="email"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div
+                  className="emailControl"
+                >
+                  <button
+                    data-placement="bottom"
+                    data-toggle="tooltip"
+                    onClick={[Function]}
+                    title="Add a new email"
+                    type="button"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
