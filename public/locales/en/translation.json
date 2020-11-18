@@ -288,6 +288,9 @@
         }
       },
       "submitBtn": "Send"
+    },
+    "contactUsModal": {
+      "message": "Thank you for leaving us message!"
     }
   }
 }
