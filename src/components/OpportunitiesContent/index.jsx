@@ -8,15 +8,17 @@ import JobsTrainingButtons from "../JobsTrainingButtons";
 
 const JobsTrainingContent = () => {
   const { t } = useTranslation();
-  const [cardsArr, setCardsArr] = useState([
+  const [cardsList, setCardsList] = useState([
     ...t(`home.jobOpportunities`, { returnObjects: true }),
   ]);
 
+  const [filteredCards, setFilteredCards] = useState(cardsList);
+
   const handleSearch = (e, keyword) => {
     e.preventDefault();
-    setCardsArr(() => {
-      const searchedCards = [...cardsArr];
-      return searchedCards.filter((card) =>
+    setFilteredCards(cardsList);
+    setFilteredCards((previousCards) => {
+      return previousCards.filter((card) =>
         card.title.toLowerCase().includes(keyword.toLowerCase())
       );
     });
@@ -29,11 +31,14 @@ const JobsTrainingContent = () => {
       </Row>
       <Row>
         <Col md={3}>
-          <JobsTrainingButtons setCardsArr={setCardsArr} />
+          <JobsTrainingButtons
+            setCardsList={setCardsList}
+            setFilteredCards={setFilteredCards}
+          />
         </Col>
         <Col>
           <Row className="cards">
-            {cardsArr.map((opportunity, index) => (
+            {filteredCards.map((opportunity, index) => (
               <Col
                 sm={12}
                 md={6}

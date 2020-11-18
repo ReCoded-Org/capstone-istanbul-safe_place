@@ -13,7 +13,7 @@ const BUTTON_SPECS = [
   },
 ];
 
-const JobsTrainingButtons = ({ setCardsArr }) => {
+const JobsTrainingButtons = ({ setCardsList, setFilteredCards }) => {
   const { t } = useTranslation();
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 
@@ -23,7 +23,8 @@ const JobsTrainingButtons = ({ setCardsArr }) => {
     ];
 
     const getOpportunityData = () => {
-      setCardsArr(opportunityData);
+      setCardsList(opportunityData);
+      setFilteredCards(opportunityData);
       setSelectedButtonIndex(index);
     };
 
