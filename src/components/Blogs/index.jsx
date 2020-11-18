@@ -12,6 +12,7 @@ export default function Blogs() {
     const data = await fetch(BLOG_API_URL);
     const fetchedBlogPosts = await data.json();
     setBlogPosts(fetchedBlogPosts);
+    console.log(fetchedBlogPosts);
   };
   useEffect(() => {
     fetchBlogPosts();
