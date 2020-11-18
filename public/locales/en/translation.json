@@ -288,6 +288,8 @@
         }
       },
       "submitBtn": "Send"
-    }
+    },
+    "header": "Contact Us",
+    "subHeader": "If you have any question, please don't hesitate to talk to us"
   }
 }
