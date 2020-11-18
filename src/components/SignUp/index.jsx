@@ -1,21 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import SignUpForm from "../SignUpForm";
 import womenSupportEachOther from "../../images/womenSupportEachOther.png";
 import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 import firebase from "../../firebaseConfig";
-import { AuthContext } from "../../auth/Authentication";
 import "./index.scss";
 
 export default function SignUp() {
   const history = useHistory();
-
-  const signUpSucceed = () => {
-    history.push("/");
-  };
 
   const signUpFailed = (error) => {
     alert(error);
@@ -26,7 +21,7 @@ export default function SignUp() {
 
       try {
         await firebase.auth().createUserWithEmailAndPassword(email, password);
-        signUpSucceed();
+        history.push("/");
       } catch (error) {
         if (error.code === "auth/email-already-in-use") {
           return "auth/email-already-in-use";
@@ -38,29 +33,33 @@ export default function SignUp() {
     [history]
   );
 
-  const handleSignUpWithProvider = (providerName) => {
-    let provider;
-    switch (providerName) {
-      case "google":
-        provider = new firebase.auth.GoogleAuthProvider();
-        break;
-      case "facebook":
-        provider = new firebase.auth.FacebookAuthProvider();
-        break;
-      default:
-    }
+  const handleSignUpWithProvider = React.useCallback(
+    async (providerName) => {
+      let provider;
+      switch (providerName) {
+        case "google":
+          provider = new firebase.auth.GoogleAuthProvider();
+          break;
+        case "facebook":
+          provider = new firebase.auth.FacebookAuthProvider();
+          break;
+        default:
+          return null;
+      }
 
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then(function (result) {
-        signUpSucceed(result);
-      })
-      .catch(function (error) {
-        // Handle Errors here.
-        signUpFailed(error);
-      });
-  };
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(function (result) {
+          history.push("/");
+        })
+        .catch(function (error) {
+          // Handle Errors here.
+          signUpFailed(error);
+        });
+    },
+    [history]
+  );
 
   return (
     <Container fluid="md" className="signUpSection">
