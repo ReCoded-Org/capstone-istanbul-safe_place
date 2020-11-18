@@ -5,7 +5,7 @@ import EmailAdd from "./EmailAdd";
 import "./index.scss";
 
 // this object should come from the component parent
-const userEmails = [
+const USER_EMAILS = [
   {
     id: 1,
     email: "jBailony@outlook.com",
@@ -15,7 +15,7 @@ const userEmails = [
 ];
 
 export default function UserEmail() {
-  const [emails, setEmails] = React.useState(userEmails);
+  const [emails, setEmails] = React.useState(USER_EMAILS);
 
   const removeEmail = (emailId) => {
     if (emails.length === 1) {
