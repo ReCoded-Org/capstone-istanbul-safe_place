@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import SearchBar from "../SearchBar";
 import "./index.scss";
-import SearchBar from "../../components/SearchBar";
 
 const POSTS_PER_PAGE = 9;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;

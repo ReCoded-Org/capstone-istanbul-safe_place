@@ -16,6 +16,7 @@ import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
 import ChatBotMessages from "./components/ChatBotMessages";
+import ContactUsPage from "./containers/ContactUsPage";
 import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
 import BlogPage from "./containers/BlogPage";
@@ -54,6 +55,9 @@ const App = () => (
           </Route>
           <Route exact path="/blog">
             <BlogPage />
+          </Route>
+          <Route exact path="/contact">
+            <ContactUsPage />
           </Route>
         </Switch>
         <Footer />

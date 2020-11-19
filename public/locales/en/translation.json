@@ -2,12 +2,17 @@
   "navbar": {
     "about": "About",
     "blog": "Blog",
-    "opportunities":"Opportunities",
-    "contact":"Contact",
-    "language":"Language",
+    "opportunities": "Opportunities",
+    "contact": "Contact",
+    "language": "Language",
     "buttons": {
       "signIn": "Sign In",
       "signUp": "Sign Up"
+    },
+    "userSettings": {
+      "userIcon": "User icon",
+      "profile": "Your profile",
+      "signOut": "Sign out"
     }
   },
   "home": {
@@ -258,7 +263,8 @@
   },
   "blogPage": {
     "title": "Our Blog",
-    "subtitle": "Information about violence, women and health. Read different topics that contribute positively to the mental health of women."},
+    "subtitle": "Information about violence, women and health. Read different topics that contribute positively to the mental health of women."
+  },
   "chatBotMessages": {
     "headerTitle": "Find help",
     "goToSeekHelpPageText": "Redirecting to search help page",
@@ -302,6 +308,10 @@
         }
       },
       "submitBtn": "Send"
+    },
+    "contactUsPage": {
+      "header": "Contact Us",
+      "subHeader": "If you have any questions, please don't hesitate to talk to us"
     },
     "contactUsModal": {
       "message": "Thank you for leaving us message!"
