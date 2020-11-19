@@ -53,6 +53,9 @@ const App = () => (
           <Route exact path="/about">
             <AboutUsPage />
           </Route>
+          <Route exact path="/blog">
+            <BlogPage />
+          </Route>
           <Route exact path="/contact">
             <ContactUsPage />
           </Route>

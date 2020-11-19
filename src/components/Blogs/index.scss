@@ -1,10 +1,6 @@
 @import "../../style/variables";
 
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
   font-family: $mainFontFamily;
 }
 
