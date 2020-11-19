@@ -6,14 +6,12 @@ export default function SignInUpButtons() {
 
   return (
     <div>
-      <div>
-        <button type="button" className="signInBtn">
-          <a href="/signin">{t("navbar.buttons.signIn")}</a>
-        </button>
-        <button type="button" className="signUpBtn">
-          <a href="/signup">{t("navbar.buttons.signUp")}</a>
-        </button>
-      </div>
+      <button type="button" className="signInBtn">
+        <a href="/signin">{t("navbar.buttons.signIn")}</a>
+      </button>
+      <button type="button" className="signUpBtn">
+        <a href="/signup">{t("navbar.buttons.signUp")}</a>
+      </button>
     </div>
   );
 }
