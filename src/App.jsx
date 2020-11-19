@@ -16,48 +16,6 @@ import ViolenceTestPage from "./containers/ViolenceTestPage";
 import JobsTrainingPage from "./containers/JobsTrainingPage";
 import AboutUsPage from "./containers/AboutUsPage";
 import ChatBotMessages from "./components/ChatBotMessages";
-<<<<<<< HEAD
-import SingleBlog from "./components/SingleBlog"
-
-const App = () => (
-  <Router>
-    <div>
-      <HelpNavbar />
-      <MainNavbar />
-      <ChatBotMessages />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/signin">
-          <SignIn />
-        </Route>
-        <Route exact path="/signup">
-          <SignUp />
-        </Route>
-        <Route exact path="/seekhelp">
-          <SearchForHelpPage />
-        </Route>
-        <Route exact path="/test">
-          <ViolenceTestPage />
-        </Route>
-        <Route exact path="/profile">
-          <ProfilePage />
-        </Route>
-        <Route exact path="/opportunities">
-          <JobsTrainingPage />
-        </Route>
-        <Route exact path="/about">
-          <AboutUsPage />
-        </Route>
-        <Route exact path="/blog/:id" 
-        render={(props) => <SingleBlog {...props} />}>
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
-  </Router>
-=======
 import ContactUsPage from "./containers/ContactUsPage";
 import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
@@ -97,12 +55,14 @@ const App = () => (
           <Route exact path="/contact">
             <ContactUsPage />
           </Route>
+          <Route exact path="/blog/:id" 
+        render={(props) => <SingleBlog {...props} />}>
+        </Route>
         </Switch>
         <Footer />
       </div>
     </Router>
   </AuthProvider>
->>>>>>> dev
 );
 
 export default App;
