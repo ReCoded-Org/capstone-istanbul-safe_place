@@ -8,6 +8,11 @@
     "buttons": {
       "signIn": "Sign In",
       "signUp": "Sign Up"
+    },
+    "userSettings": {
+      "userIcon": "User icon",
+      "profile": "Your profile",
+      "signOut": "Sign out"
     }
   },
   "home": {
