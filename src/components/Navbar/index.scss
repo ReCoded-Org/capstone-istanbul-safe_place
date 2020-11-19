@@ -9,8 +9,8 @@
 
   .navbar-nav {
     margin-left: auto;
-    align-items: baseline;
-    align-content: baseline;
+    align-items: center;
+    align-content: center;
   }
 
   .nav-link {
@@ -24,6 +24,11 @@
 
   p {
     margin: 0.1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 
   .btn {
@@ -86,16 +91,11 @@
       box-shadow: 0 0 0 0.2rem $primaryColor;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       color: $primaryColor;
       background-color: $lightColor;
       border-color: $lightColor;
-    }
-
-    &:active {
-      background-color: $primaryColor;
-      border-color: $lightColor;
-      box-shadow: 0 0 0 0.2rem $primaryColor;
     }
   }
 
