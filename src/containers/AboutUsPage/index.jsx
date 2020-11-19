@@ -9,8 +9,10 @@ const AboutPage = () => {
 
   return (
     <Container className="aboutUsPage">
-      <Row>
+      <Row className="justify-content-md-center">
         <h2>{t("aboutUsPage.header")}</h2>
+      </Row>
+      <Row>
         <p>{t("aboutUsPage.bodyText")}</p>
       </Row>
       <OurTeamCards />
