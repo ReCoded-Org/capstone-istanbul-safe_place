@@ -36,7 +36,7 @@ export default function ProfilePage() {
   const { register, handleSubmit, errors } = useForm({
     mode: "onTouched",
     defaultValues: {
-      email: currentUser.email,
+      email: currentUser?.email,
     },
     resolver: joiResolver(profileFormSchema),
   });
