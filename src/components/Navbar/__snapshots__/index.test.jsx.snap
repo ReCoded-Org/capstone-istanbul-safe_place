@@ -43,7 +43,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          About
+          navbar.about
         </a>
         <a
           className="nav-link"
@@ -52,7 +52,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Blog
+          navbar.blog
         </a>
         <a
           className="nav-link"
@@ -61,7 +61,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Opportunities
+          navbar.opportunities
         </a>
         <a
           className="nav-link"
@@ -70,22 +70,49 @@ exports[`renders correctly and matches the snapshot 1`] = `
           onClick={[Function]}
           onKeyDown={[Function]}
         >
-          Contact
+          navbar.contact
         </a>
-        <button
-          className="signInBtn"
-          to="/signin"
-          type="button"
+        <div
+          className="dropdown dropdown"
+          onKeyDown={[Function]}
         >
-          Sign In
-        </button>
-        <button
-          className="signUpBtn"
-          to="/signup"
-          type="button"
-        >
-          Sign Up
-        </button>
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-none"
+            disabled={false}
+            id="dropdown-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <img
+              alt="Language icon"
+              src="language.svg"
+            />
+          </button>
+        </div>
+        <div>
+          <button
+            className="signInBtn"
+            type="button"
+          >
+            <a
+              href="/signin"
+            >
+              navbar.buttons.signIn
+            </a>
+          </button>
+          <button
+            className="signUpBtn"
+            type="button"
+          >
+            <a
+              href="/signup"
+            >
+              navbar.buttons.signUp
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   </div>

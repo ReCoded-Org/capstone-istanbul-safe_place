@@ -1,4 +1,20 @@
 {
+  "navbar": {
+    "about": "About",
+    "blog": "Blog",
+    "opportunities": "Opportunities",
+    "contact": "Contact",
+    "language": "Language",
+    "buttons": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up"
+    },
+    "userSettings": {
+      "userIcon": "User icon",
+      "profile": "Your profile",
+      "signOut": "Sign out"
+    }
+  },
   "home": {
     "seekHelpSection": [
       {
@@ -263,6 +279,59 @@
     "buttons": {
       "jobOpportunities": "Job Opportunities",
       "trainings": "Trainings / Workshops"
+    }
+  },
+  "contactUs": {
+    "contactUsForm": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Please enter your name (optional)"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Please enter your email",
+        "error": {
+          "required": "Your email address is required"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Please enter your message",
+        "error": {
+          "required": "Your message is required",
+          "minLeght": "Your message is too short. Please write us more",
+          "maxLength": "Your message is too long. Please shorten your message"
+        }
+      },
+      "submitBtn": "Send"
+    },
+    "contactUsPage": {
+      "header": "Contact Us",
+      "subHeader": "If you have any questions, please don't hesitate to talk to us"
+    },
+    "contactUsModal": {
+      "message": "Thank you for leaving us message!"
+    }
+  },
+  "signIn": {
+    "header": "Welcome Back!",
+    "SignInWith": "Sign in with",
+    "newHere": "New here?",
+    "createAccount": "Create an account",
+    "form": {
+      "yourEmail": "Your email",
+      "yourPassword": "Your password",
+      "rememberMe": "Remember me next time",
+      "signIn": "Sign in"
+    },
+    "validationMessage": {
+      "incorrectPassword": "The password that you've entered is incorrect",
+      "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
+      "emptyEmail": "Please provide your email",
+      "emailNotValid": "Please provide a valid email",
+      "emptyPassword": "Please provide a password",
+      "passwordMin": "Password length must be at least 8 characters long",
+      "passwordMax": "Password length must be less than or equal to 64 characters long"
     }
   }
 }
