@@ -8,30 +8,33 @@
   width: 100%;
 }
 
-.emailBlock {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+button {
+  @include primaryBtn;
+  width: 1.8rem;
+  min-height: 1.8rem;
+  margin-left: 1rem;
+  align-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+}
 
-  button {
-    @include primaryBtn;
-    width: 1.8rem;
-    min-height: 1.8rem;
-    margin-left: 1rem;
-    align-content: center;
-    font-weight: 900;
-    font-size: 1rem;
+input[type="email"] {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  border-radius: $borderRadius;
+  box-sizing: content-box;
+  padding: 0 8px;
+  border-color: #d1dbe3;
+  height: 2.6rem;
+  width: fit-content;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color: #000000, $alpha: 0.1);
   }
 
-  input[type="email"] {
-    @include inputElement($bgColor: #fff);
-    display: inline-block;
-    border-color: #d1dbe3;
-    height: 2.6rem;
-  }
-
-  input.inputError {
-    @include inputErrorBorder;
+  &:focus {
+    padding: 0 8px;
   }
 }
 

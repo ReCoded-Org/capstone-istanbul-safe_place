@@ -1,64 +1,19 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import EmailControl from "./EmailControl";
-import EmailAdd from "./EmailAdd";
+import Input from '../../form/SafePlaceInput'
 import "./index.scss";
 
-// this object should come from the component parent
-const USER_EMAILS = [
-  {
-    id: 1,
-    email: "jBailony@outlook.com",
-    isPrimary: true,
-    isConfirmed: true,
-  },
-];
-
-export default function UserEmail() {
-  const [emails, setEmails] = React.useState(USER_EMAILS);
-
-  const removeEmail = (emailId) => {
-    if (emails.length === 1) {
-      return;
-    }
-
-    setEmails(emails.filter((email) => email.id !== emailId));
-  };
-
-  const makeEmailPrimary = (emailId) => {
-    setEmails(
-      emails.map((email) => {
-        if (email.id === emailId) {
-          return { ...email, isPrimary: true };
-        }
-
-        return { ...email, isPrimary: false };
-      })
-    );
-  };
-
-  const addNewEmail = (email) => {
-    // should be sent to the server
-    const newEmail = {
-      id: emails[emails.length - 1].id + 1,
-      email,
-      isPrimary: false,
-      isConfirmed: false,
-    };
-
-    setEmails([...emails, { ...newEmail }]);
-  };
+export default function UserEmailForm({ currentUser, register, errors }) {
 
   return (
     <Col xs={12} className="userEmailSection">
-      {emails.map((email) => (
-        <EmailControl
-          key={email.id}
-          userEmail={email}
-          actions={{ removeEmail, makeEmailPrimary }}
-        />
-      ))}
-      <EmailAdd addNewEmail={addNewEmail} />
+      <Input
+        type="email"
+        placeholder={currentUser.email}
+        name="email"
+        ref={register()}
+        errors={errors}
+      />
     </Col>
   );
 }
