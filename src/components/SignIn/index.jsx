@@ -17,7 +17,6 @@ export default function SignIn() {
   const history = useHistory();
 
   const signInFailed = (error) => {
-    console.log(error);
     alert(error);
   };
 
