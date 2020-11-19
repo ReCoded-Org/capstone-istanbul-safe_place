@@ -20,8 +20,8 @@ export default function SignInForm({ submit }) {
       .required()
       .email({ tlds: { allow: ["com", "net", "edu"] } })
       .messages({
-        "string.empty": `${t("signIn.validationMessage.emptyEmail")}`,
-        "string.email": `${t("signIn.validationMessage.emailNotValid")}`,
+        "string.empty": t("signIn.validationMessage.emptyEmail"),
+        "string.email": t("signIn.validationMessage.emailNotValid"),
       }),
     password: Joi.string()
       .required()
@@ -29,9 +29,9 @@ export default function SignInForm({ submit }) {
       .max(64)
       .strict()
       .messages({
-        "string.empty": `${t("signIn.validationMessage.emptyPassword")}`,
-        "string.min": `${t("signIn.validationMessage.passwordMin")}`,
-        "string.max": `${t("signIn.validationMessage.passwordMax")}`,
+        "string.empty": t("signIn.validationMessage.emptyPassword"),
+        "string.min": t("signIn.validationMessage.passwordMin"),
+        "string.max": t("signIn.validationMessage.passwordMax"),
       }),
   });
 
@@ -45,13 +45,13 @@ export default function SignInForm({ submit }) {
       case "auth/wrong-password":
         setError("password", {
           type: PASSWORD_INCORRECT_ERROR,
-          message: `${t("signIn.validationMessage.incorrectPassword")}`,
+          message: t("signIn.validationMessage.incorrectPassword"),
         });
         break;
       case "auth/user-not-found":
         setError("email", {
           type: EMAIL_NOT_FOUND_ERROR,
-          message: `${t("signIn.validationMessage.emailNotFound")}`,
+          message: t("signIn.validationMessage.emailNotFound"),
         });
         break;
       case "succeed":
