@@ -1,0 +1,16 @@
+@import "../../style/variables";
+@import "../../style/buttons";
+
+.article{
+    color: $darkColor;
+    text-align: left;
+}
+.blogImg{
+    width: 45.625rem;
+    height: 21.875rem;
+}
+.socialMediaIcons {
+width: 10rem;
+background-color: $darkColor;
+
+}
