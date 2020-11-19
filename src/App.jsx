@@ -19,6 +19,7 @@ import ChatBotMessages from "./components/ChatBotMessages";
 import ContactUsPage from "./containers/ContactUsPage";
 import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
+import SingleBlog from "./components/SingleBlog"
 
 const App = () => (
   <AuthProvider>
