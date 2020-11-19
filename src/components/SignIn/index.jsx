@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SignInForm from "../SignInForm";
 import womenGroupHuggingTogether from "../../images/womenGroupHuggingTogether.png";
 import googleIcon from "../../images/icons/googleIcon.svg";
@@ -12,7 +13,9 @@ import firebase from "../../firebaseConfig";
 import "./index.scss";
 
 export default function SignIn() {
+  const { t } = useTranslation();
   const history = useHistory();
+
   const signInFailed = (error) => {
     console.log(error);
     alert(error);
@@ -67,8 +70,8 @@ export default function SignIn() {
           />
         </Col>
         <Col className="signInForm" md={6} xs={12}>
-          <h2>Welcome Back!</h2>
-          <h4>Sign in with</h4>
+          <h2>{t("signIn.header")}</h2>
+          <h4>{t("signIn.SignInWith")}</h4>
           <ul className="signInIcons">
             <li className="signInIcon">
               <a href="#/" onClick={() => handleSignUpWithProvider("twitter")}>
@@ -91,8 +94,9 @@ export default function SignIn() {
           <SignInForm submit={handleSignIn} />
 
           <p>
-            New here?
-            <a href="/sign-up"> Create an account</a>
+            {t("signIn.newHere")}
+            {" "}
+            <a href="/sign-up">{t("signIn.createAccount")}</a>
           </p>
         </Col>
       </Row>

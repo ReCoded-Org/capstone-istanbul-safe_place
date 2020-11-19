@@ -2,24 +2,32 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
+import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
 import { getErrorClass } from "../../utils/formErrorHelpers";
+
+
 import "./index.scss";
 
-const schema = Joi.object({
-  email: Joi.string()
-    .required()
-    .email({ tlds: { allow: ["com", "net", "edu"] } })
-    .messages({
-      "string.empty": `Please provide your email`,
-      "string.email": `Please provide a valid email`,
-    }),
-  password: Joi.string().required().min(8).max(64).strict().messages({
-    "string.empty": `Please provide a password`,
-  }),
-});
 
 export default function SignInForm({ submit }) {
+  const { t } = useTranslation();
+
+  const schema = Joi.object({
+    email: Joi.string()
+      .required()
+      .email({ tlds: {  } })
+      .messages({
+        "string.empty": `${t("signIn.validationMessage.emptyEmail")}`,
+        "string.email": `${t("signIn.validationMessage.emailNotValid")}`,
+      }),
+    password: Joi.string().required().min(8).max(64).strict().messages({
+      "string.empty": `${t("signIn.validationMessage.emptyPassword")}`,
+      "string.min":`${t("signIn.validationMessage.passwordMin")}`,
+      "string.max":`${t("signIn.validationMessage.passwordMax")}`
+    }),
+  });
+
   const { register, handleSubmit, errors, reset, setError } = useForm({
     resolver: joiResolver(schema),
   });
@@ -30,14 +38,13 @@ export default function SignInForm({ submit }) {
       case "auth/wrong-password":
         setError("password", {
           type: "Incorrect password",
-          message: "The password that you've entered is incorrect.",
+          message: `${t("signIn.validationMessage.incorrectPassword")}`,
         });
         break;
       case "auth/user-not-found":
         setError("email", {
-          type: "Incorrect password",
-          message:
-            "The email address that you've entered doesn't match any account. Sign up for an account.",
+          type: "Email not found",
+          message: `${t("signIn.validationMessage.emailNotFound")}`,
         });
         break;
       case "succeed":
@@ -55,7 +62,7 @@ export default function SignInForm({ submit }) {
           <input
             className={getErrorClass(errors.email)}
             type="email"
-            placeholder="Your Email"
+            placeholder={t("signIn.form.yourEmail")}
             name="email"
             aria-label="email"
             ref={register()}
@@ -67,7 +74,7 @@ export default function SignInForm({ submit }) {
           <input
             className={getErrorClass(errors.password)}
             type="password"
-            placeholder="Password"
+            placeholder={t("signIn.form.yourPassword")}
             name="password"
             aria-label="password"
             ref={register()}
@@ -83,12 +90,12 @@ export default function SignInForm({ submit }) {
               name="remembered"
               value="toBeRemembered"
             />
-            Remember me next time
+            {t("signIn.form.rememberMe")}
           </label>
         </div>
 
         <button type="submit" className="submitBtn">
-          Sign in
+          {t("signIn.form.signIn")}
         </button>
       </form>
     </div>
