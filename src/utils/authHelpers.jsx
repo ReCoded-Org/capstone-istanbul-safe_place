@@ -22,10 +22,3 @@ export function setFirebaseProvider(providerName) {
 
   return providerSet;
 }
-
-export default {
-  setFirebaseProvider,
-  EMAIL_NOT_FOUND_ERROR,
-  EMAIL_ALREADY_TAKEN_ERROR,
-  PASSWORD_INCORRECT_ERROR,
-};
