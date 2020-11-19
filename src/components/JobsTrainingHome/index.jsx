@@ -35,7 +35,7 @@ export default function JobsTrainingHome() {
           </Col>
         </Row>
         <Link to="/opportunities">
-          <h6>
+          <h6 className="opportunitiesButton">
             All opportunities <span>&#8594;</span>
           </h6>
         </Link>
