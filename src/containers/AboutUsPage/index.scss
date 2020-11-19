@@ -5,13 +5,15 @@
     color: $primaryColor;
     font-family: $mainFontFamily;
     margin-top: 4rem;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   p {
     color: $primaryColor;
     font-family: $mainFontFamily;
-    margin-top: 2rem;
+    margin: 2rem 0 0 2rem;
     font-size: 1.125rem;
+    max-width: 95%;
   }
 }
