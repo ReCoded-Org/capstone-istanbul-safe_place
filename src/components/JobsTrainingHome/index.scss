@@ -10,8 +10,13 @@
   font-family: $mainFontFamily;
 
   h6 {
-    margin-top: 1.5rem;
+    color: $primaryColor;
+    margin-bottom: 3rem;
+  }
+
+  .opportunitiesButton {
     text-align: right;
     color: $primaryColor;
+    margin: 3rem 0;
   }
 }
