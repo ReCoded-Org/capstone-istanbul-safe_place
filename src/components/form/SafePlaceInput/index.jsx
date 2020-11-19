@@ -1,7 +1,7 @@
 import React from "react";
 import { getErrorClass } from "../../../utils/formHelpers";
 import InputErrorMessage from "../../InputErrorMessage";
-import './index.scss';
+import "./index.scss";
 
 /**
  * custom version of the input tag

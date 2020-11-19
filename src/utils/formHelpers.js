@@ -13,4 +13,4 @@ export const formSchemaObject = {
   }),
   stringRequired: Joi.string().required(),
   anyOptional: Joi.any().optional(),
-}
+};

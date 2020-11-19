@@ -1,10 +1,9 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import Input from '../../form/SafePlaceInput'
+import Input from "../../form/SafePlaceInput";
 import "./index.scss";
 
 export default function UserEmailForm({ currentUser, register, errors }) {
-
   return (
     <Col xs={12} className="userEmailSection">
       <Input

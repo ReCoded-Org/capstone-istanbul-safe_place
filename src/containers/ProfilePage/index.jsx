@@ -9,7 +9,7 @@ import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import { AuthContext } from "../../auth/Authentication";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import ProfileSection from "./ProfileSection";
-import { formSchemaObject } from '../../utils/formHelpers';
+import { formSchemaObject } from "../../utils/formHelpers";
 import "./index.scss";
 
 const profileFormSchema = Joi.object({
@@ -27,7 +27,7 @@ const profileFormSchema = Joi.object({
   email: formSchemaObject.email,
 });
 
-const EMAIL_UPDATED = 'Email updated successfully!';
+const EMAIL_UPDATED = "Email updated successfully!";
 
 export default function ProfilePage() {
   const [updateStatus, setUpdateStatus] = React.useState(null);
@@ -36,7 +36,7 @@ export default function ProfilePage() {
   const { register, handleSubmit, errors } = useForm({
     mode: "onTouched",
     defaultValues: {
-      "email": currentUser.email
+      email: currentUser.email,
     },
     resolver: joiResolver(profileFormSchema),
   });
@@ -44,26 +44,47 @@ export default function ProfilePage() {
   const sections = [
     {
       label: "User details",
-      children: <UserDetailForm register={register} errors={errors} currentUser={currentUser} />,
+      children: (
+        <UserDetailForm
+          register={register}
+          errors={errors}
+          currentUser={currentUser}
+        />
+      ),
     },
     {
       label: "Email address",
-      children: <UserEmailForm register={register} errors={errors} currentUser={currentUser} />,
+      children: (
+        <UserEmailForm
+          register={register}
+          errors={errors}
+          currentUser={currentUser}
+        />
+      ),
     },
     {
       label: "Change password",
-      children: <UserPasswordForm register={register} errors={errors} currentUser={currentUser} />,
+      children: (
+        <UserPasswordForm
+          register={register}
+          errors={errors}
+          currentUser={currentUser}
+        />
+      ),
     },
   ];
 
   const onSave = (data) => {
     // check if email changed and update it
     if (data.email !== currentUser.email) {
-      currentUser.updateEmail(data.email).then(function () {
-        setUpdateStatus(EMAIL_UPDATED);
-      }).catch(function (error) {
-        setUpdateStatus(error.message);
-      });
+      currentUser
+        .updateEmail(data.email)
+        .then(function () {
+          setUpdateStatus(EMAIL_UPDATED);
+        })
+        .catch(function (error) {
+          setUpdateStatus(error.message);
+        });
     }
   };
 
@@ -91,9 +112,7 @@ export default function ProfilePage() {
             <button type="submit">Save changes</button>
           </Row>
           <Row className="updateStatus">
-            <p>
-              {updateStatus}
-            </p>
+            <p>{updateStatus}</p>
           </Row>
         </Accordion>
       </form>
