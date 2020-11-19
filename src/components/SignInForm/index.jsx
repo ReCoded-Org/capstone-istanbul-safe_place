@@ -20,13 +20,32 @@ const schema = Joi.object({
 });
 
 export default function SignInForm({ submit }) {
-  const { register, handleSubmit, errors, reset } = useForm({
+  const { register, handleSubmit, errors, reset, setError } = useForm({
     resolver: joiResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    submit(data);
-    reset();
+  const onSubmit = async (data) => {
+    const status = await submit(data);
+    switch (status) {
+      case "auth/wrong-password":
+        setError("password", {
+          type: "Incorrect password",
+          message: "The password that you've entered is incorrect.",
+        });
+        break;
+      case "auth/user-not-found":
+        setError("email", {
+          type: "Incorrect password",
+          message:
+            "The email address that you've entered doesn't match any account. Sign up for an account.",
+        });
+        break;
+      case "succeed":
+        reset();
+        break;
+      default:
+        reset();
+    }
   };
 
   return (

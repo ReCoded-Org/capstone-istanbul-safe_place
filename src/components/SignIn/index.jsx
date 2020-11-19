@@ -13,10 +13,31 @@ import "./index.scss";
 
 export default function SignIn() {
   const history = useHistory();
-
-  const signUpFailed = (error) => {
+  const signInFailed = (error) => {
+    console.log(error);
     alert(error);
   };
+
+  const handleSignIn = React.useCallback(
+    async (data) => {
+      const { email, password } = data;
+
+      try {
+        await firebase.auth().signInWithEmailAndPassword(email, password);
+        history.push("/");
+      } catch (error) {
+        if (
+          error.code === "auth/wrong-password" ||
+          error.code === "auth/user-not-found"
+        ) {
+          return error.code;
+        }
+        signInFailed(error);
+      }
+      return "succeed";
+    },
+    [history]
+  );
 
   const handleSignUpWithProvider = React.useCallback(
     async (providerName) => {
@@ -30,7 +51,7 @@ export default function SignIn() {
         })
         .catch(function (error) {
           // Handle errors here.
-          signUpFailed(error);
+          signInFailed(error);
         });
     },
     [history]
@@ -67,11 +88,7 @@ export default function SignIn() {
           </ul>
           <hr className="divider" />
 
-          <SignInForm
-            submit={() => {
-              /* TODO: implement the signing in functionality */
-            }}
-          />
+          <SignInForm submit={handleSignIn} />
 
           <p>
             New here?
