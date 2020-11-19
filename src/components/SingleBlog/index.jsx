@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
-import { Container, Col } from "react-bootstrap";
-import facebookIcon from "../../images/icons/facebookIcon.svg";
-import twitterIcon from "../../images/icons/twitterIcon.svg";
-import linkedInIcon from "../../images/icons/linkedInIcon.svg";
-import instagramIcon from "../../images/icons/instagramIcon.svg";
+import { Container, Col, Row } from "react-bootstrap";
 import { NavLink, useParams } from "react-router-dom";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.svg";
+import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
+import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
+import { ReactComponent as InstagramIcon } from "../../images/icons/instagramIcon.svg";
 
 export default function SingleBlog(props) {
-  let params = useParams();
-  console.log(props);
+  const params = useParams();
+  // console.log(props);
   const [blogPost, setBlogPosts] = useState();
   const allBlogPosts = async () => {
     const data = await fetch(
@@ -19,7 +18,7 @@ export default function SingleBlog(props) {
     const posts = await data.json();
     setBlogPosts(posts);
   };
-  console.log(blogPost);
+  // console.log(blogPost);
   useEffect(() => {
     allBlogPosts();
   }, []);
@@ -27,59 +26,59 @@ export default function SingleBlog(props) {
   if (!blogPost) {
     return <h1>loading</h1>;
   } else {
-    console.log(blogPost.title.rendered);
+    // console.log(blogPost.title.rendered);
     return (
       <Container>
-        <Col>
-          <Link to="./">
-            <h6 className="backToBlogBtn">
-              <span>&#8592;</span>Back to blog
-            </h6>
-          </Link>
-          {/* <h6>Related articles</h6> */}
-        </Col>
-        <Col xs={12} md={8}>
-          <NavLink to={`/blog/${props.id}`}>
-            {/* <img className="blogImg" alt="blog img" src={blogPost.jetpack_featured_media_url} /> */}
-          </NavLink>
+        <Row className="blogContent">
+          <Col xs={12} md={8}>
+            <a href="./">
+              <h5 className="backToBlogBtn">
+                <span>&#8592;</span>Back to blog
+              </h5>
+            </a>
 
-          {/* <title className="singleBlogTitle">Women and health</title>
+            <NavLink to={`/blog/${props.id}`}>
+              {/* <img className="blogImg" alt="blog img" src={blogPost.jetpack_featured_media_url} /> */}
+            </NavLink>
+
+            {/* <title className="singleBlogTitle">Women and health</title>
           <h3 className="author">By SafePlace October 10, 2020</h3> */}
-          <h4
-            className="article"
-            dangerouslySetInnerHTML={{
-              __html: blogPost.content.rendered,
-            }}
-          ></h4>
-          <p>Share on social media</p>
-        <div className="socialMediaIcons">
-          <img className="facebookIcon" src={facebookIcon} alt="facebook"/>
-          <img className="instagramIdon" src={twitterIcon} alt="instagram"/>
-          <img className="linkedinIcon" src={linkedInIcon} alt="linkedin"/>
-          <img className="twitterIcon" src={instagramIcon} alt="twitter"/>
-        </div>
-        </Col>
-        <Col className="relatedPosts">
-          <h3>Related articles</h3>
-          {/* <div>{blogPost._jetpack_related_posts.map((relatedPosts) => {
+            <div
+              className="article"
+              dangerouslySetInnerHTML={{
+                __html: blogPost.content.rendered,
+              }}
+            ></div>
+            <h4>Share on social media:</h4>
+            <div className="socialMediaIcons">
+              <FacebookIcon />
+              <TwitterIcon />
+              <LinkedInIcon />
+              <InstagramIcon />
+            </div>
+          </Col>
+          <Col md={4} className="relatedPosts">
+            {/* <h3>Related articles:</h3>
+            <div>{blogPost._jetpack_related_posts.map((relatedPosts) => {
             return (
-            <div>{relatedPosts.title}</div>
+            <h6>{relatedPosts.title}</h5>
             )
           })}</div> */}
-          {/* <h3>Related Posts</h3>
-        <div className="firstRelatedPost">
-          <h4 className="relatedPosttitle">post 1</h4>
-          <img className="relatedPostImg" alt="blog img"/>
-        </div>
-        <div className="secondRelatedPost">
-          <h4 className="relatedPosttitle">post 2</h4>
-          <img className="relatedPostImg" alt="blog img"/>
-        </div>
-        <div className="thirdRelatedPost">
-          <h4 className="relatedPosttitle">post 3</h4>
-          <img className="relatedPostImg" alt="blog img"/>
-        </div> */}
-        </Col>
+            <h5>Related articles:</h5>
+            <div className="firstRelatedPost">
+              <h6 className="relatedPosttitle">post 1</h6>
+              <img className="relatedPostImg" alt="blog img" />
+            </div>
+            <div className="secondRelatedPost">
+              <h6 className="relatedPosttitle">post 2</h6>
+              <img className="relatedPostImg" alt="blog img" />
+            </div>
+            <div className="thirdRelatedPost">
+              <h6 className="relatedPosttitle">post 3</h6>
+              <img className="relatedPostImg" alt="blog img" />
+            </div>
+          </Col>
+        </Row>
       </Container>
     );
   }
