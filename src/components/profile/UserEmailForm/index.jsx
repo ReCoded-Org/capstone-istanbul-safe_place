@@ -8,7 +8,7 @@ export default function UserEmailForm({ currentUser, register, errors }) {
     <Col xs={12} className="userEmailSection">
       <Input
         type="email"
-        placeholder={currentUser.email}
+        placeholder={currentUser?.email}
         name="email"
         ref={register()}
         errors={errors}

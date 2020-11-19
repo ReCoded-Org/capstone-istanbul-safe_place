@@ -60,6 +60,7 @@ exports[`renders correctly 1`] = `
                     Your first Name
                   </label>
                   <input
+                    className=""
                     id="firstName"
                     name="firstName"
                     placeholder="Your first name"
@@ -75,6 +76,7 @@ exports[`renders correctly 1`] = `
                     Last Name
                   </label>
                   <input
+                    className=""
                     id="lastName"
                     name="lastName"
                     placeholder="Your last name"
@@ -94,6 +96,7 @@ exports[`renders correctly 1`] = `
                     Your nationality
                   </label>
                   <input
+                    className=""
                     id="nationality"
                     name="nationality"
                     placeholder="Your nationality"
@@ -109,6 +112,7 @@ exports[`renders correctly 1`] = `
                     Phone number
                   </label>
                   <input
+                    className=""
                     id="phoneNumber"
                     name="phoneNumber"
                     placeholder="+90 552 477 25 15"
@@ -152,6 +156,7 @@ exports[`renders correctly 1`] = `
                     Birthdate
                   </label>
                   <input
+                    className=""
                     id="birthdate"
                     name="birthdate"
                     type="date"
@@ -167,6 +172,7 @@ exports[`renders correctly 1`] = `
                   Address
                 </label>
                 <input
+                  className=""
                   id="address"
                   name="address"
                   placeholder="1234 UTK  str.  Dumplinar Mah."
@@ -185,6 +191,7 @@ exports[`renders correctly 1`] = `
                     City
                   </label>
                   <input
+                    className=""
                     id="city"
                     name="city"
                     placeholder="Istanbul"
@@ -200,6 +207,7 @@ exports[`renders correctly 1`] = `
                     State
                   </label>
                   <input
+                    className=""
                     id="state"
                     name="state"
                     placeholder="Fatih"
@@ -219,6 +227,7 @@ exports[`renders correctly 1`] = `
                     ZIP Code
                   </label>
                   <input
+                    className=""
                     id="zipCode"
                     name="zipCode"
                     placeholder="12345"
@@ -1238,74 +1247,14 @@ exports[`renders correctly 1`] = `
               className="userEmailSection col-12"
             >
               <div
-                className="emailBlock container-fluid"
+                className="formInput"
               >
-                <div
-                  className="emailAddress"
-                >
-                  <p>
-                    <strong>
-                      jBailony@outlook.com
-                    </strong>
-                  </p>
-                </div>
-                <div
-                  className="emailControl"
-                >
-                  <button
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    onClick={[Function]}
-                    title="Remove"
-                    type="button"
-                  >
-                    ✕
-                  </button>
-                  <button
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    disabled={true}
-                    onClick={[Function]}
-                    title="Make primary"
-                    type="button"
-                  >
-                    ✓
-                  </button>
-                </div>
-              </div>
-              <div
-                className="emailBlock container-fluid"
-              >
-                <div
-                  className="emailAddress"
-                >
-                  <form>
-                    <div
-                      className="formInput"
-                    >
-                      <input
-                        aria-label="email"
-                        className=""
-                        name="email"
-                        placeholder="Add an email address"
-                        type="email"
-                      />
-                    </div>
-                  </form>
-                </div>
-                <div
-                  className="emailControl"
-                >
-                  <button
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    onClick={[Function]}
-                    title="Add a new email"
-                    type="button"
-                  >
-                    +
-                  </button>
-                </div>
+                <input
+                  className=""
+                  id="email"
+                  name="email"
+                  type="email"
+                />
               </div>
             </div>
           </div>
@@ -1345,6 +1294,11 @@ exports[`renders correctly 1`] = `
         >
           Save changes
         </button>
+      </div>
+      <div
+        className="updateStatus row"
+      >
+        <p />
       </div>
     </div>
   </form>
