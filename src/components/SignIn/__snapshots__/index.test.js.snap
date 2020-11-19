@@ -19,10 +19,10 @@ exports[`renders correctly 1`] = `
       className="signInForm col-md-6 col-12"
     >
       <h2>
-        Welcome Back!
+        signIn.header
       </h2>
       <h4>
-        Sign in with
+        signIn.SignInWith
       </h4>
       <ul
         className="signInIcons"
@@ -32,6 +32,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             href="#/"
+            onClick={[Function]}
           >
             <img
               alt="Twitter icon"
@@ -44,6 +45,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             href="#/"
+            onClick={[Function]}
           >
             <img
               alt="Facebook icon"
@@ -56,6 +58,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             href="#/"
+            onClick={[Function]}
           >
             <img
               alt="Google icon"
@@ -80,7 +83,7 @@ exports[`renders correctly 1`] = `
               aria-label="email"
               className=""
               name="email"
-              placeholder="Your Email"
+              placeholder="signIn.form.yourEmail"
               type="email"
             />
           </div>
@@ -91,7 +94,7 @@ exports[`renders correctly 1`] = `
               aria-label="password"
               className=""
               name="password"
-              placeholder="Password"
+              placeholder="signIn.form.yourPassword"
               type="password"
             />
           </div>
@@ -107,23 +110,24 @@ exports[`renders correctly 1`] = `
                 type="checkbox"
                 value="toBeRemembered"
               />
-              Remember me next time
+              signIn.form.rememberMe
             </label>
           </div>
           <button
             className="submitBtn"
             type="submit"
           >
-            Sign in
+            signIn.form.signIn
           </button>
         </form>
       </div>
       <p>
-        New here?
+        signIn.newHere
+         
         <a
           href="/sign-up"
         >
-           Create an account
+          signIn.createAccount
         </a>
       </p>
     </div>
