@@ -22,15 +22,12 @@ global.fetch = jest.fn(() =>
 );
 
 describe("Blogs", () => {
-  it("renders correctly and matches the snapshot", () => {
-    const tree = renderer.create(<Blogs />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it("fetches and renders mock data correctly", async () => {
+  it("renders correctly and matches the snapshot", async () => {
     await act(async () => render(<Blogs />));
+    const tree = renderer.create(<Blogs />).toJSON();
     expect(
       screen.getByText("You can find safe place for yourself here")
     ).toBeInTheDocument();
+    expect(tree).toMatchSnapshot();
   });
 });
