@@ -19,7 +19,7 @@ import ChatBotMessages from "./components/ChatBotMessages";
 import ContactUsPage from "./containers/ContactUsPage";
 import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
-import SingleBlog from "./components/SingleBlog"
+import SingleBlog from "./components/SingleBlog";
 
 const App = () => (
   <AuthProvider>
@@ -56,9 +56,11 @@ const App = () => (
           <Route exact path="/contact">
             <ContactUsPage />
           </Route>
-          <Route exact path="/blog/:id" 
-        render={(props) => <SingleBlog {...props} />}>
-        </Route>
+          <Route
+            exact
+            path="/blog/:id"
+            render={(props) => <SingleBlog {...props} />}
+          ></Route>
         </Switch>
         <Footer />
       </div>
