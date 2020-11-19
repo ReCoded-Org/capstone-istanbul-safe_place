@@ -6,9 +6,7 @@ import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
 import { getErrorClass } from "../../utils/formErrorHelpers";
 
-
 import "./index.scss";
-
 
 export default function SignInForm({ submit }) {
   const { t } = useTranslation();
@@ -16,16 +14,21 @@ export default function SignInForm({ submit }) {
   const schema = Joi.object({
     email: Joi.string()
       .required()
-      .email({ tlds: {  } })
+      .email({ tlds: {} })
       .messages({
         "string.empty": `${t("signIn.validationMessage.emptyEmail")}`,
         "string.email": `${t("signIn.validationMessage.emailNotValid")}`,
       }),
-    password: Joi.string().required().min(8).max(64).strict().messages({
-      "string.empty": `${t("signIn.validationMessage.emptyPassword")}`,
-      "string.min":`${t("signIn.validationMessage.passwordMin")}`,
-      "string.max":`${t("signIn.validationMessage.passwordMax")}`
-    }),
+    password: Joi.string()
+      .required()
+      .min(8)
+      .max(64)
+      .strict()
+      .messages({
+        "string.empty": `${t("signIn.validationMessage.emptyPassword")}`,
+        "string.min": `${t("signIn.validationMessage.passwordMin")}`,
+        "string.max": `${t("signIn.validationMessage.passwordMax")}`,
+      }),
   });
 
   const { register, handleSubmit, errors, reset, setError } = useForm({
