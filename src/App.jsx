@@ -18,7 +18,7 @@ import AboutUsPage from "./containers/AboutUsPage";
 import ChatBotMessages from "./components/ChatBotMessages";
 import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
-import BlogPage from "./containers/BlogPage"
+import BlogPage from "./containers/BlogPage";
 
 const App = () => (
   <AuthProvider>
@@ -53,7 +53,7 @@ const App = () => (
             <AboutUsPage />
           </Route>
           <Route exact path="/blog">
-          <BlogPage />
+            <BlogPage />
           </Route>
         </Switch>
         <Footer />
