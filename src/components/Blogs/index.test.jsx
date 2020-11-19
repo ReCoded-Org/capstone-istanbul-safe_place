@@ -28,19 +28,21 @@ import Blogs from "./index";
 
 describe("Fetch", () => {
   beforeAll(() => {
-    global.fetch = jest.fn().mockImplementation(
+    global.fetch.mockImplementation(
       () =>
         new Promise((resolve) => {
           resolve({
             json: () =>
               new Promise((resolve) =>
-                resolve({
-                  title: {
-                    rendered: "Women standing together",
+                resolve([
+                  {
+                    title: {
+                      rendered: "Women standing together",
+                    },
+                    jetpack_featured_media_url:
+                      "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
                   },
-                  jetpack_featured_media_url:
-                    "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
-                })
+                ])
               ),
           });
         })
@@ -54,12 +56,6 @@ describe("Fetch", () => {
     );
   });
   console.log(global.fetch);
-  describe("Blogs", () => {
-    it("renders correctly and matches the snapshot", () => {
-      const tree = renderer.create(<Blogs />).toJSON();
-      expect(tree).toMatchSnapshot();
-    });
-  });
 
   afterAll(() => {
     global.fetch.mockClear();
