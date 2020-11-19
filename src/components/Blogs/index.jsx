@@ -13,7 +13,6 @@ export default function Blogs() {
     const data = await fetch(BLOG_API_URL);
     const fetchedBlogPosts = await data.json();
     setBlogPosts(fetchedBlogPosts);
-    console.log(fetchedBlogPosts);
   };
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export default function Blogs() {
       <SearchBar handleSearch={handleSearch} />
       {blogPosts.map((blogPost) => {
         return (
-          <div className="blogsSection">
+          <div className="blogsSection" key={blogPost.id}>
             <div className="shadowEffect"></div>
             <h3
               className="blogPostTitle"
