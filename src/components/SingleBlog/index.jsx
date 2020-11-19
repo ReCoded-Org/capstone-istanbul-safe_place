@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 import { Container, Col, Row } from "react-bootstrap";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
@@ -19,7 +19,7 @@ export default function SingleBlog(props) {
   };
   useEffect(() => {
     allBlogPosts();
-  }, []);
+  });
 
   if (!blogPost) {
     return <h1>loading</h1>;
