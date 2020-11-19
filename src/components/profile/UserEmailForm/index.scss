@@ -18,6 +18,7 @@
   }
 
   input[type="email"] {
+    @include inputElement($bgColor: #fff);
     background-color: inherit;
     border: none;
     color: inherit;

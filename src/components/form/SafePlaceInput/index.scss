@@ -5,9 +5,7 @@
 .formInput {
   @include inputContainer;
 }
-input {
-  @include inputElement($bgColor: #fff);
-}
+
 input.inputError {
   @include inputErrorBorder;
 }
