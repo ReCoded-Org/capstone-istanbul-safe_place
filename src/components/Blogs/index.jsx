@@ -8,17 +8,19 @@ const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace1025
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
+
   const fetchBlogPosts = async () => {
     const data = await fetch(BLOG_API_URL);
     const fetchedBlogPosts = await data.json();
     setBlogPosts(fetchedBlogPosts);
     console.log(fetchedBlogPosts);
   };
+
   useEffect(() => {
     fetchBlogPosts();
   }, []);
 
-  // search function
+  // Search function
   const handleSearch = (e, keyword) => {
     e.preventDefault();
     const filterPost = blogPosts.filter((blog) => {

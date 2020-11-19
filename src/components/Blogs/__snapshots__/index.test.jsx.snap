@@ -29,5 +29,3 @@ exports[`Blogs renders correctly and matches the snapshot 1`] = `
   </div>
 </div>
 `;
-
-exports[`Blogs renders title: Women standing together 1`] = `undefined`;
