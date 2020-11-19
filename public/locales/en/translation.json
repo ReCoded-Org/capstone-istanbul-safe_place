@@ -1,4 +1,8 @@
 {
+  "helpNavbar": {
+    "title": "Immediate helpline:",
+    "phoneNum": "+1-340-5558-235"
+  },
   "navbar": {
     "about": "About",
     "blog": "Blog",
