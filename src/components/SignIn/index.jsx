@@ -7,7 +7,7 @@ import womenGroupHuggingTogether from "../../images/womenGroupHuggingTogether.pn
 import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
-import { setFirebaseProvider } from "../../utils/setFirebaseProvider";
+import { setFirebaseProvider } from "../../utils/authHelpers";
 import firebase from "../../firebaseConfig";
 
 import "./index.scss";

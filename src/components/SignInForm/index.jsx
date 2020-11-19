@@ -5,6 +5,10 @@ import { joiResolver } from "@hookform/resolvers/joi";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
 import { getErrorClass } from "../../utils/formErrorHelpers";
+import {
+  EMAIL_NOT_FOUND_ERROR,
+  PASSWORD_INCORRECT_ERROR,
+} from "../../utils/authHelpers";
 
 import "./index.scss";
 
@@ -40,13 +44,13 @@ export default function SignInForm({ submit }) {
     switch (status) {
       case "auth/wrong-password":
         setError("password", {
-          type: "Incorrect password",
+          type: PASSWORD_INCORRECT_ERROR,
           message: `${t("signIn.validationMessage.incorrectPassword")}`,
         });
         break;
       case "auth/user-not-found":
         setError("email", {
-          type: "Email not found",
+          type: EMAIL_NOT_FOUND_ERROR,
           message: `${t("signIn.validationMessage.emailNotFound")}`,
         });
         break;

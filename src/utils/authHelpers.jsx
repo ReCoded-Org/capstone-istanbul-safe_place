@@ -1,5 +1,9 @@
 import firebase from "../firebaseConfig";
 
+export const EMAIL_NOT_FOUND_ERROR = "auth.emailNotFound";
+export const EMAIL_ALREADY_TAKEN_ERROR = "auth.emialAlreadyTaken";
+export const PASSWORD_INCORRECT_ERROR = "auth.incorrectPassword";
+
 export function setFirebaseProvider(providerName) {
   let providerSet;
   switch (providerName) {
@@ -19,4 +23,9 @@ export function setFirebaseProvider(providerName) {
   return providerSet;
 }
 
-export default { setFirebaseProvider };
+export default {
+  setFirebaseProvider,
+  EMAIL_NOT_FOUND_ERROR,
+  EMAIL_ALREADY_TAKEN_ERROR,
+  PASSWORD_INCORRECT_ERROR,
+};

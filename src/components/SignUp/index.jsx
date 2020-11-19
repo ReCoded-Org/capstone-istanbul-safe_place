@@ -7,7 +7,7 @@ import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 import firebase from "../../firebaseConfig";
-import { setFirebaseProvider } from "../../utils/setFirebaseProvider";
+import { setFirebaseProvider } from "../../utils/authHelpers";
 import "./index.scss";
 
 export default function SignUp() {
