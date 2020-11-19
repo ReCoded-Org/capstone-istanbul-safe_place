@@ -1,6 +1,19 @@
 @import "../../../style/variables";
 @import "../../../style/forms";
+@import "../../../style/bootstrapImports";
 
 .formInput {
   @include inputContainer;
+}
+input {
+  @include inputElement($bgColor: #fff);
+}
+input.inputError {
+  @include inputErrorBorder;
+}
+
+@include media-breakpoint-down(sm) {
+  .formInput {
+    width: 100%;
+  }
 }
