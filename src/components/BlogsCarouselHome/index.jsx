@@ -52,7 +52,7 @@ export default function BlogsCarouselHome() {
     <Container className="homeCarousel">
       <Row>
         <Col>
-          <h1 className="title">Our Blogs</h1>
+          <h2 className="title">Our Blogs</h2>
           <h6>
             Information about violence, women and health.
             <br />
