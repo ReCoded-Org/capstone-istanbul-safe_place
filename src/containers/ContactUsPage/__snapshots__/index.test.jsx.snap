@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="contactUsPage container"
+>
+  <h2>
+    contactUs.contactUsPage.header
+  </h2>
+  <h6>
+    contactUs.contactUsPage.subHeader
+  </h6>
+  <div
+    className="row row-cols-md-12"
+  >
+    <section
+      className="contactSection"
+    >
+      <div
+        className="contactContainer container-md"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="contactInfo col-md-6 col-12"
+          >
+            <h2>
+              Leave us a message
+            </h2>
+            <p>
+              Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium nos causae confidere, sed animo etiam erga nos causae confidere, sed uti oratione perpetua malo quam ostendis sed quia dolor repellendus temporibus autem.
+            </p>
+            <div
+              className="contactMethods row"
+            >
+              <div
+                className="col"
+              >
+                <img
+                  alt="Location icon"
+                  className="contactIcon"
+                  src="locationIcon.svg"
+                />
+                <p>
+                  9094 Bay Meadows Street Conyers, GA 30012
+                </p>
+              </div>
+              <div
+                className="col"
+              >
+                <img
+                  alt="Phone icon"
+                  className="contactIcon"
+                  src="phoneIcon.svg"
+                />
+                <p>
+                  +229-955-5388-336
+                </p>
+              </div>
+              <div
+                className="col"
+              >
+                <img
+                  alt="Contact icon"
+                  className="contactIcon"
+                  src="mailIcon.svg"
+                />
+                <p>
+                  support@mail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="contactForm col-md-6 col-12"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="fullName"
+                >
+                  contactUs.contactUsForm.name.label
+                  <input
+                    aria-label="Full Name"
+                    className=""
+                    id="fullName"
+                    name="fullName"
+                    placeholder="contactUs.contactUsForm.name.placeholder"
+                    type="text"
+                  />
+                </label>
+              </div>
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="email"
+                >
+                  contactUs.contactUsForm.email.label
+                  <input
+                    aria-label="Email address"
+                    className=""
+                    id="email"
+                    name="email"
+                    placeholder="contactUs.contactUsForm.email.placeholder"
+                    type="email"
+                  />
+                </label>
+              </div>
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="messageContent"
+                >
+                  contactUs.contactUsForm.message.label
+                  <textarea
+                    aria-label="message"
+                    className=""
+                    id="messageContent"
+                    name="messageContent"
+                    placeholder="contactUs.contactUsForm.message.placeholder"
+                  />
+                </label>
+              </div>
+              <button
+                className="submitBtn"
+                type="submit"
+              >
+                contactUs.contactUsForm.submitBtn
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
