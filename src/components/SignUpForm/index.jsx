@@ -4,6 +4,7 @@ import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
 import { getErrorClass } from "../../utils/formErrorHelpers";
+import { EMAIL_ALREADY_TAKEN_ERROR } from "../../utils/authHelpers";
 import "./index.scss";
 
 const schema = Joi.object({
@@ -42,7 +43,7 @@ export default function SignUpForm({ submit }) {
     switch (status) {
       case "auth/email-already-in-use":
         setError("email", {
-          type: "already taken",
+          type: EMAIL_ALREADY_TAKEN_ERROR,
           message:
             "Email is already taken! Please enter another one or sign in.",
         });
