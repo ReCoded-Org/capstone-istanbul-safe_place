@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
       <a
         href="tel:+1-340-5558-235"
       >
-        helpNavbar.phoneNum
+        +1-340-5558-235
       </a>
     </div>
   </div>
