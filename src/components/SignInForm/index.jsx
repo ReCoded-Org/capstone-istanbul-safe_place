@@ -14,7 +14,7 @@ export default function SignInForm({ submit }) {
   const schema = Joi.object({
     email: Joi.string()
       .required()
-      .email({ tlds: {} })
+      .email({ tlds: {allow: ["com", "net", "edu"] } })
       .messages({
         "string.empty": `${t("signIn.validationMessage.emptyEmail")}`,
         "string.email": `${t("signIn.validationMessage.emailNotValid")}`,
