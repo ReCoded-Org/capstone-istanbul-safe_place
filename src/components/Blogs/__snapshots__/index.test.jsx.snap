@@ -5,34 +5,27 @@ exports[`Blogs renders correctly and matches the snapshot 1`] = `
   className="container"
 >
   <div
-    className="row"
+    className="container"
   >
     <div
-      className="container"
+      className="row"
     >
       <div
-        className="row"
+        className="col"
       >
-        <div
-          className="col"
-        >
-          <input
-            className="mr-sm-2 searchBarInput"
-            onChange={[Function]}
-            placeholder="Search"
-          />
-          <img
-            alt="Search Icon"
-            className="searchIcon"
-            onClick={[Function]}
-            src="searchIcon.svg"
-          />
-        </div>
+        <input
+          className="mr-sm-2 searchBarInput"
+          onChange={[Function]}
+          placeholder="Search"
+        />
+        <img
+          alt="Search Icon"
+          className="searchIcon"
+          onClick={[Function]}
+          src="searchIcon.svg"
+        />
       </div>
     </div>
   </div>
-  <div
-    className="row"
-  />
 </div>
 `;
