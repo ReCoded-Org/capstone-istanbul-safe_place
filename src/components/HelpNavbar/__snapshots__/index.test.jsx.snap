@@ -11,15 +11,17 @@ exports[`renders correctly 1`] = `
       className="col"
     >
       <p>
-        Immediate helpline:
+        helpNavbar.title
       </p>
       <img
         alt="Phone icon"
         src="phone.svg"
       />
-      <p>
+      <a
+        href="tel:+1-340-5558-235"
+      >
         +1-340-5558-235
-      </p>
+      </a>
     </div>
   </div>
 </nav>
