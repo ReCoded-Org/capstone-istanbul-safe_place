@@ -1,7 +1,9 @@
 import Joi from "joi";
 
 export function getErrorClass(error) {
-  if (!error) return "";
+  if (!error) {
+    return null;
+  }
 
   return "inputError";
 }
