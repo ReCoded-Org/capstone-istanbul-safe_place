@@ -116,7 +116,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <h6
         className="opportunitiesButton"
       >
-        All opportunities 
+        home.buttons.opportunitiesBtn
+         
         <span>
           →
         </span>
