@@ -1,0 +1,41 @@
+@import "../../style/variables";
+
+// Bootstrap class
+.container {
+  font-family: $mainFontFamily;
+
+  .row {
+    margin-top: 1rem;
+  }
+
+  .blogPostImg {
+    width: 23rem;
+    height: 23rem;
+    padding: 4%;
+    border-radius: 11%;
+    object-fit: cover;
+  }
+
+  .blogPostTitle {
+    text-align: center;
+    position: absolute;
+    width: 19.3125rem;
+    font-size: 1.125rem;
+    z-index: 2;
+    margin-top: 18rem;
+    padding: 0 0 1rem 1.7rem;
+  }
+
+  .shadowEffect {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 254, 252, 0.8015581232492998) 0%,
+      rgba(255, 254, 252, 0) 42%
+    );
+    width: 23rem;
+    height: 23rem;
+    border-radius: 1.5rem;
+    z-index: 1;
+    position: absolute;
+  }
+}
