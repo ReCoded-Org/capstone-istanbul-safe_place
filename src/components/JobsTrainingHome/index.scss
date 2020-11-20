@@ -14,6 +14,13 @@
     margin-bottom: 3rem;
   }
 
+  a {
+    color: $primaryColor;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
   .opportunitiesButton {
     text-align: right;
     color: $primaryColor;
