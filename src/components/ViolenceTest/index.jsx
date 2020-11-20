@@ -1,12 +1,15 @@
 import React from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import trappedWomen from "../../images/trappedWomen.png";
 import dontSpeak from "../../images/dontSpeak.png";
 import womenStopViolence from "../../images/womenStopViolence.png";
 import "./index.scss";
 
 const ViolenceTest = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="violenceIntro">
       <Container>
@@ -28,23 +31,12 @@ const ViolenceTest = () => {
             </Row>
             <Row>
               <Col>
-                <h3>What is violence against women?</h3>
-                <p>
-                  According to the first article of the Declaration on the
-                  Prevention of Violence Against Women, adopted by the United
-                  Nations General Assembly in 1993; It is the threat or coercion
-                  of any kind of gender-based violence or act that results in or
-                  is likely to result in physical, sexual and emotional harm to
-                  women in the public and private spheres, and arbitrarily
-                  restricting freedom.
-                </p>
+                <h3>{t("home.genderViolenceIntro.header")}</h3>
+                <p>{t("home.genderViolenceIntro.intro")}</p>
                 <div className="violenceTest">
-                  <h5>
-                    Are you in an abusive relationship?
-                    <span>Take our test</span>
-                  </h5>
+                  <h6>{t("home.genderViolenceIntro.subHeader")}</h6>
                   <Link to="/test">
-                    <Button> Find out now</Button>
+                    <Button>{t("home.genderViolenceIntro.button")}</Button>
                   </Link>
                 </div>
               </Col>

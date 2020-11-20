@@ -48,20 +48,17 @@ exports[`renders correctly and matches the snapshot 1`] = `
             className="col"
           >
             <h3>
-              What is violence against women?
+              home.genderViolenceIntro.header
             </h3>
             <p>
-              According to the first article of the Declaration on the Prevention of Violence Against Women, adopted by the United Nations General Assembly in 1993; It is the threat or coercion of any kind of gender-based violence or act that results in or is likely to result in physical, sexual and emotional harm to women in the public and private spheres, and arbitrarily restricting freedom.
+              home.genderViolenceIntro.intro
             </p>
             <div
               className="violenceTest"
             >
-              <h5>
-                Are you in an abusive relationship?
-                <span>
-                  Take our test
-                </span>
-              </h5>
+              <h6>
+                home.genderViolenceIntro.subHeader
+              </h6>
               <a
                 href="/test"
                 onClick={[Function]}
@@ -71,7 +68,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
                   disabled={false}
                   type="button"
                 >
-                   Find out now
+                  home.genderViolenceIntro.button
                 </button>
               </a>
             </div>
