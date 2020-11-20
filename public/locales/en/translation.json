@@ -151,7 +151,10 @@
         "phoneNumber": "+906467291373",
         "postingDate": "27/10/2020"
       }
-    ]
+    ],
+    "buttons": {
+      "opportunitiesBtn": "All opportunities"
+    }
   },
   "searchHelpPage": {
     "header": "Search for help",
