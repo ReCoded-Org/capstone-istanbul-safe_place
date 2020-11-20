@@ -19,6 +19,12 @@
     }
   },
   "home": {
+    "genderViolenceIntro": {
+      "header": "What is violence against women?",
+      "intro": "According to the first article of the Declaration on the Prevention of Violence Against Women, adopted by the United Nations General Assembly in 1993; It is the threat or coercion of any kind of gender-based violence or act that results in or is likely to result in physical, sexual and emotional harm to women in the public and private spheres, and arbitrarily restricting freedom.",
+      "subHeader": "Are you in an abusive relationship? Take our test",
+      "button": "Find out now"
+    },
     "seekHelpSection": [
       {
         "title": "Doctor",
