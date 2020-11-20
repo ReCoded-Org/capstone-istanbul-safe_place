@@ -27,21 +27,25 @@ exports[`Blogs Renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="blogsSection"
+      class="justify-content-md-center row"
     >
       <div
-        class="shadowEffect"
-      />
-      <h3
-        class="blogPostTitle"
+        class="blogsSection"
       >
-        You can find safe place for yourself here
-      </h3>
-      <img
-        alt="Blog post cover"
-        class="blogPostImg"
-        src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
-      />
+        <div
+          class="shadowEffect"
+        />
+        <h3
+          class="blogPostTitle"
+        >
+          You can find safe place for yourself here
+        </h3>
+        <img
+          alt="Blog post cover"
+          class="blogPostImg"
+          src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
+        />
+      </div>
     </div>
   </div>
 </div>
