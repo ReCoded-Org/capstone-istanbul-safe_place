@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 import { Container, Col, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/icons/instagramIcon.svg";
+
+const RELATED_POSTS_TO_SHOW = 3;
 
 export default function SingleBlog(props) {
   const params = useParams();
@@ -19,7 +21,7 @@ export default function SingleBlog(props) {
   };
   useEffect(() => {
     allBlogPosts();
-  });
+  }, []);
 
   if (!blogPost) {
     return <h1>loading</h1>;
@@ -27,7 +29,7 @@ export default function SingleBlog(props) {
     return (
       <Container>
         <Row className="blogContent">
-          <Col xs={12} md={12}>
+          <Col xs={12} md={8}>
             <a href="./">
               <h5 className="backToBlogBtn">
                 <span>&#8592;</span>Back to blog
@@ -45,6 +47,29 @@ export default function SingleBlog(props) {
               <TwitterIcon />
               <LinkedInIcon />
               <InstagramIcon />
+            </div>
+          </Col>
+          <Col md={4} className="relatedPosts">
+            <h5>Related articles:</h5>
+            <div className="firstRelatedPost">
+              <h6 className="relatedPosttitle">
+                {blogPost["jetpack-related-posts"]
+                  .map((relatedPosts) => {
+                    return (
+                      <div>
+                        <img
+                          className="relatedPostImg"
+                          alt="blog img"
+                          src={relatedPosts.img.src}
+                        />
+                        <h6 className="relatedPosttitle">
+                          {relatedPosts.title}
+                        </h6>
+                      </div>
+                    );
+                  })
+                  .slice(0, RELATED_POSTS_TO_SHOW)}
+              </h6>
             </div>
           </Col>
         </Row>
