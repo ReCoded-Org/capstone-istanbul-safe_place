@@ -66,12 +66,7 @@ export default function ProfilePage() {
     },
     {
       label: "Change password",
-      children: (
-        <UserPasswordForm
-          register={register}
-          errors={errors}
-        />
-      ),
+      children: <UserPasswordForm register={register} errors={errors} />,
     },
   ];
 
@@ -85,7 +80,7 @@ export default function ProfilePage() {
 
       // check if new password has been set
       if (data.newPassword) {
-        await currentUser.updatePassword(data.newPassword)
+        await currentUser.updatePassword(data.newPassword);
         setUpdateStatus(UPDATED_SUCCESSFUL);
         reset("newPassword");
       }

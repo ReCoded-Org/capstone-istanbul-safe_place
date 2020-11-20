@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap";
 import Input from "../../form/SafePlaceInput";
 import "./index.scss";
 
-export default function UserPasswordForm({register, errors }) {
+export default function UserPasswordForm({ register, errors }) {
   return (
     <Col xs={12} className="userPasswordSection">
       <Input
@@ -19,7 +19,7 @@ export default function UserPasswordForm({register, errors }) {
         type="password"
         label="Confirm password"
         placeholder="Confirm new password"
-        name="confirmPassword"
+        name="confirmNewPassword"
         ref={register()}
         errors={errors}
       />
