@@ -23,13 +23,11 @@ export const validationSchemaObject = {
     .messages({
       "any.only": "Those passwords didn't match",
     }),
-  newPassword: Joi.string().required().min(8).max(64).strict().messages({
+  newPassword: Joi.string().allow('').min(8).max(64).messages({
     "string.empty": `Please provide a new password`,
   }),
   confirmNewPassword: Joi.string()
     .valid(Joi.ref("newPassword"))
-    .required()
-    .strict()
     .messages({
       "any.only": "Those passwords didn't match",
     }),
