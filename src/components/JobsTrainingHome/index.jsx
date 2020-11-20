@@ -36,7 +36,7 @@ export default function JobsTrainingHome() {
         </Row>
         <Link to="/opportunities">
           <h6 className="opportunitiesButton">
-            All opportunities <span>&#8594;</span>
+            {t("home.buttons.opportunitiesBtn")} <span>&#8594;</span>
           </h6>
         </Link>
       </Container>
