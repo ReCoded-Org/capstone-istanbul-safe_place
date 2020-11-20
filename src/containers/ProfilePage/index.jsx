@@ -25,15 +25,17 @@ const profileFormSchema = Joi.object({
   state: validationSchemaObject.anyOptional,
   zipCode: validationSchemaObject.anyOptional,
   email: validationSchemaObject.email,
+  newPassword: validationSchemaObject.newPassword,
+  confirmNewPassword: validationSchemaObject.confirmNewPassword,
 });
 
-const EMAIL_UPDATED = "Email updated successfully!";
+const UPDATED_SUCCESSFUL = "Your profile has been updated successfully!";
 
 export default function ProfilePage() {
   const [updateStatus, setUpdateStatus] = React.useState(null);
   const currentUser = React.useContext(AuthContext);
 
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit, errors, reset, clearErrors } = useForm({
     mode: "onTouched",
     defaultValues: {
       email: currentUser?.email,
@@ -68,23 +70,27 @@ export default function ProfilePage() {
         <UserPasswordForm
           register={register}
           errors={errors}
-          currentUser={currentUser}
         />
       ),
     },
   ];
 
-  const onSave = (data) => {
-    // check if email changed and update it
-    if (data.email !== currentUser.email) {
-      currentUser
-        .updateEmail(data.email)
-        .then(function () {
-          setUpdateStatus(EMAIL_UPDATED);
-        })
-        .catch(function (error) {
-          setUpdateStatus(error.message);
-        });
+  const onSave = async (data) => {
+    try {
+      // check if email changed and update it
+      if (data.email !== currentUser.email) {
+        await currentUser.updateEmail(data.email);
+        setUpdateStatus(UPDATED_SUCCESSFUL);
+      }
+
+      // check if new password has been set
+      if (data.newPassword) {
+        await currentUser.updatePassword(data.newPassword)
+        setUpdateStatus(UPDATED_SUCCESSFUL);
+        reset("newPassword");
+      }
+    } catch (error) {
+      setUpdateStatus(error.message);
     }
   };
 
