@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 import { Container, Col, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
@@ -57,11 +57,13 @@ export default function SingleBlog(props) {
                   .map((relatedPosts) => {
                     return (
                       <div>
-                        <img
-                          className="relatedPostImg"
-                          alt="blog img"
-                          src={relatedPosts.img.src}
-                        />
+                        <Link to={`/blog/${relatedPosts.id}`}>
+                          <img
+                            className="relatedPostImg"
+                            alt="blog img"
+                            src={relatedPosts.img.src}
+                          />
+                        </Link>
                         <h6 className="relatedPosttitle">
                           {relatedPosts.title}
                         </h6>
