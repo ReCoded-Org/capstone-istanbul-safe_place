@@ -36,7 +36,8 @@ export default function SingleBlog(props) {
           <Col xs={12} md={8}>
             <a href="./">
               <h5 className="backToBlogBtn">
-                <span>&#8592;</span>{t('singleBlog.backToBlogBtn')}
+                <span>&#8592;</span>
+                {t("singleBlog.backToBlogBtn")}
               </h5>
             </a>
             <div
@@ -45,7 +46,7 @@ export default function SingleBlog(props) {
                 __html: blogPost.content.rendered,
               }}
             ></div>
-            <h4>{t('singleBlog.socialMediaIconsTitle')}</h4>
+            <h4>{t("singleBlog.socialMediaIconsTitle")}</h4>
             <div className="socialMediaIcons">
               <FacebookIcon />
               <TwitterIcon />
@@ -54,7 +55,7 @@ export default function SingleBlog(props) {
             </div>
           </Col>
           <Col md={4} className="relatedPostsContainer">
-            <h5>{t('singleBlog.relatedPostsContainerTitle')}</h5>
+            <h5>{t("singleBlog.relatedPostsContainerTitle")}</h5>
             <div className="relatedPosts">
               {blogPost["jetpack-related-posts"]
                 .map((relatedPost) => {
