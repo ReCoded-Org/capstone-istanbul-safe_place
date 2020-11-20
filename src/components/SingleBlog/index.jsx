@@ -12,6 +12,7 @@ const RELATED_POSTS_TO_SHOW = 4;
 export default function SingleBlog(props) {
   const params = useParams();
   const [blogPost, setBlogPosts] = useState();
+  
   const allBlogPosts = async () => {
     const data = await fetch(
       `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
@@ -19,6 +20,7 @@ export default function SingleBlog(props) {
     const posts = await data.json();
     setBlogPosts(posts);
   };
+
   useEffect(() => {
     allBlogPosts();
   });
