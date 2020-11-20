@@ -7,7 +7,7 @@ import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.sv
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/icons/instagramIcon.svg";
 
-const RELATED_POSTS_TO_SHOW = 3;
+const RELATED_POSTS_TO_SHOW = 4;
 
 export default function SingleBlog(props) {
   const params = useParams();
