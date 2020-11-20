@@ -8,8 +8,8 @@ export default function BlogPage() {
 
   return (
     <div className="blogsMainContainer">
-      <h2 className="ourBlogTitle">{t("blogPage.title")}</h2>
-      <p className="ourBlogSubtitle">{t("blogPage.subtitle")}</p>
+      <h2>{t("blogPage.title")}</h2>
+      <h6>{t("blogPage.subtitle")}</h6>
       <Blogs />
     </div>
   );

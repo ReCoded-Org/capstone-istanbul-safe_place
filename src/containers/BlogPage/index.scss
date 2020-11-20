@@ -1,15 +1,19 @@
 @import "../../style/variables";
 
 .blogsMainContainer {
-  text-align: center;
-  font-family: $mainFontFamily;
-
-  .ourBlogTitle {
-    font-size: 1.75rem;
+  h2 {
     color: $primaryColor;
+    font-family: $mainFontFamily;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
-  .ourBlogSubtitle {
-    padding: 0 30%;
+  h6 {
+    color: $darkColor;
+    text-align: center;
+    font-family: $mainFontFamily;
+    margin-bottom: 4rem;
   }
 }
