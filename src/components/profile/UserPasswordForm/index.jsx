@@ -8,18 +8,9 @@ export default function UserPasswordForm({register, errors }) {
     <Col xs={12} className="userPasswordSection">
       <Input
         type="password"
-        label="Current password"
-        placeholder="Enter your current password"
-        name="currentPasswrod"
-        ref={register()}
-        errors={errors}
-      />
-
-      <Input
-        type="password"
         label="New password"
         placeholder="Enter new password"
-        name="newPasswrod"
+        name="newPassword"
         ref={register()}
         errors={errors}
       />
@@ -28,11 +19,10 @@ export default function UserPasswordForm({register, errors }) {
         type="password"
         label="Confirm password"
         placeholder="Confirm new password"
-        name="confirmPasswrod"
+        name="confirmPassword"
         ref={register()}
         errors={errors}
       />
     </Col>
-
   );
 }
