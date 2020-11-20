@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blogs Renders without crashing 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <input
+            class="mr-sm-2 searchBarInput"
+            placeholder="Search"
+          />
+          <img
+            alt="Search Icon"
+            class="searchIcon"
+            src="searchIcon.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="justify-content-md-center row"
+    >
+      <div
+        class="blogsSection"
+      >
+        <div
+          class="shadowEffect"
+        />
+        <h3
+          class="blogPostTitle"
+        >
+          You can find safe place for yourself here
+        </h3>
+        <img
+          alt="Blog post cover"
+          class="blogPostImg"
+          src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
