@@ -2,8 +2,7 @@
 @import "../../style/buttons";
 
 .searchHelpPage {
-  margin: 1rem 0;
-
+  margin-bottom: 2rem;
   .mapStyle {
     height: 70vh;
   }
@@ -44,10 +43,6 @@
       background-color: $warningColor;
       cursor: pointer;
     }
-  }
-
-  .container {
-    margin-bottom: 2rem;
   }
 
   // Bootstrap class
