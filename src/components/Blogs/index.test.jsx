@@ -1,7 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import ReactDOM from "react-dom";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render } from "react-dom";
 import Blogs from "./index";
 import { act } from "react-dom/test-utils";
 
@@ -37,7 +35,7 @@ describe("Blogs", () => {
     );
 
     await act(async () => {
-      ReactDOM.render(<Blogs />, container);
+      render(<Blogs />, container);
     });
 
     expect(container).toMatchSnapshot();
