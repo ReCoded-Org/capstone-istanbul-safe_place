@@ -81,6 +81,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               aria-label="email"
+              className=""
               name="email"
               placeholder="signIn.form.yourEmail"
               type="email"
@@ -91,6 +92,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               aria-label="password"
+              className=""
               name="password"
               placeholder="signIn.form.yourPassword"
               type="password"
