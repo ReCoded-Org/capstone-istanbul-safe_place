@@ -11,15 +11,15 @@ exports[`renders correctly and matches the snapshot 1`] = `
       className="main-text col-md-6 col-12 order-md-first order-last"
     >
       <h1>
-        You are not alone
+        home.genderViolenceMain.headerPartOne
         <br />
-        Safe Place is
+        home.genderViolenceMain.headerPartTwo
         <span>
-           HERE
+          home.genderViolenceMain.span
         </span>
       </h1>
       <p>
-        Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.
+        home.genderViolenceMain.subHeader
       </p>
       <a
         href="/seekhelp"
@@ -28,7 +28,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
         <button
           type="button"
         >
-          Find Help
+          home.genderViolenceMain.button
         </button>
       </a>
     </div>
