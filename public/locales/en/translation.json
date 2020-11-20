@@ -337,5 +337,10 @@
       "passwordMin": "Password length must be at least 8 characters long",
       "passwordMax": "Password length must be less than or equal to 64 characters long"
     }
+  },
+  "singleBlog": {
+    "backToBlogBtn": "Back to blog",
+    "socialMediaIconsTitle": "Share on social media:",
+    "relatedPostsContainerTitle": "Related articles:"
   }
 }

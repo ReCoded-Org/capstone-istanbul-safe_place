@@ -6,19 +6,21 @@ import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.
 import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/icons/instagramIcon.svg";
+import { useTranslation } from "react-i18next";
 
 const RELATED_POSTS_TO_SHOW = 4;
 
 export default function SingleBlog(props) {
+  const { t } = useTranslation();
   const params = useParams();
-  const [blogPost, setBlogPosts] = useState();
+  const [blogPost, setBlogPost] = useState();
 
   const allBlogPosts = async () => {
     const data = await fetch(
       `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
     );
     const posts = await data.json();
-    setBlogPosts(posts);
+    setBlogPost(posts);
   };
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function SingleBlog(props) {
           <Col xs={12} md={8}>
             <a href="./">
               <h5 className="backToBlogBtn">
-                <span>&#8592;</span>Back to blog
+                <span>&#8592;</span>{t('singleBlog.backToBlogBtn')}
               </h5>
             </a>
             <div
@@ -43,7 +45,7 @@ export default function SingleBlog(props) {
                 __html: blogPost.content.rendered,
               }}
             ></div>
-            <h4>Share on social media:</h4>
+            <h4>{t('singleBlog.socialMediaIconsTitle')}</h4>
             <div className="socialMediaIcons">
               <FacebookIcon />
               <TwitterIcon />
@@ -52,7 +54,7 @@ export default function SingleBlog(props) {
             </div>
           </Col>
           <Col md={4} className="relatedPostsContainer">
-            <h5>Related articles:</h5>
+            <h5>{t('singleBlog.relatedPostsContainerTitle')}</h5>
             <div className="relatedPosts">
               {blogPost["jetpack-related-posts"]
                 .map((relatedPost) => {
