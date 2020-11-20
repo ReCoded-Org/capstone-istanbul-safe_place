@@ -20,8 +20,8 @@
   },
   "home": {
     "genderViolenceMain": {
-      "headerPartOne": "موجود هنا Safe Place",
-      "headerPartTwo": "!أنت لست لوحدك",
+      "headerPartOne": "!أنت لست لوحدك",
+      "headerPartTwo": "{{here}} موجود Safe Place",
       "subHeader": "نؤمن لكم الحصول على المساعدة الفورية والدعم لضحايا العنف، كما نقدم لكم مراكز حماية، مساعدة نفسية وطبية وقانونية",
       "button": "مساعدة فورية"
     },
