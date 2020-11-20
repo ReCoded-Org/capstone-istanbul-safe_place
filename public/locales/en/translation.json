@@ -1,4 +1,7 @@
 {
+  "helpNavbar": {
+    "title": "Immediate helpline:"
+  },
   "navbar": {
     "about": "About",
     "blog": "Blog",
@@ -56,8 +59,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 0
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Web developer",
@@ -65,8 +67,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 1
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Translator",
@@ -74,8 +75,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 2
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Architect",
@@ -83,8 +83,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 3
+        "postingDate": "27/10/2020"
       },
       {
         "title": "HR manager",
@@ -92,8 +91,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 4
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Teacher",
@@ -101,8 +99,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 5
+        "postingDate": "27/10/2020"
       }
     ],
     "trainings": [
@@ -112,8 +109,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 0
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Cooking class",
@@ -121,8 +117,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 1
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Child psychology course",
@@ -130,8 +125,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 2
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Graphic design for beginners",
@@ -139,8 +133,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 3
+        "postingDate": "27/10/2020"
       },
       {
         "title": "UI/UX training course",
@@ -148,8 +141,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 4
+        "postingDate": "27/10/2020"
       },
       {
         "title": "Montessori methods course",
@@ -157,8 +149,7 @@
         "description": "Certe, inquam pertinax non quo quaerimus, non fuisse torquem detraxit hosti et quidem exercitus quid ex eo ortum, tam crudelis fuisse, nihil molestiae consequatur, vel illum, qui officia deserunt mollitia animi, id omnia referri oporteat.",
         "address": "Istanbul, Turkey",
         "phoneNumber": "+906467291373",
-        "postingDate": "27/10/2020",
-        "id": 5
+        "postingDate": "27/10/2020"
       }
     ]
   },
@@ -315,6 +306,27 @@
     },
     "contactUsModal": {
       "message": "Thank you for leaving us message!"
+    }
+  },
+  "signIn": {
+    "header": "Welcome Back!",
+    "SignInWith": "Sign in with",
+    "newHere": "New here?",
+    "createAccount": "Create an account",
+    "form": {
+      "yourEmail": "Your email",
+      "yourPassword": "Your password",
+      "rememberMe": "Remember me next time",
+      "signIn": "Sign in"
+    },
+    "validationMessage": {
+      "incorrectPassword": "The password that you've entered is incorrect",
+      "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
+      "emptyEmail": "Please provide your email",
+      "emailNotValid": "Please provide a valid email",
+      "emptyPassword": "Please provide a password",
+      "passwordMin": "Password length must be at least 8 characters long",
+      "passwordMax": "Password length must be less than or equal to 64 characters long"
     }
   }
 }

@@ -16,11 +16,20 @@
 
   img {
     width: 1.2rem;
-    margin-left: 0.6rem;
+    margin: 0 0.6rem;
   }
 
   p {
-    margin: 0.1rem;
+    margin: 0.1rem 0;
+  }
+
+  a {
+    color: $lightColor;
+    text-decoration: underline;
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 }
 

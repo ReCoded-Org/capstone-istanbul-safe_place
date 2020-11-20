@@ -7,6 +7,7 @@ import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 import firebase from "../../firebaseConfig";
+import { setFirebaseProvider } from "../../utils/authHelpers";
 import "./index.scss";
 
 export default function SignUp() {
@@ -15,6 +16,7 @@ export default function SignUp() {
   const signUpFailed = (error) => {
     alert(error);
   };
+
   const handleSignUp = React.useCallback(
     async (data) => {
       const { email, password } = data;
@@ -35,20 +37,7 @@ export default function SignUp() {
 
   const handleSignUpWithProvider = React.useCallback(
     async (providerName) => {
-      let provider;
-      switch (providerName) {
-        case "google":
-          provider = new firebase.auth.GoogleAuthProvider();
-          break;
-        case "facebook":
-          provider = new firebase.auth.FacebookAuthProvider();
-          break;
-        case "twitter":
-          provider = new firebase.auth.TwitterAuthProvider();
-          break;
-        default:
-          throw new Error("provider not specified!");
-      }
+      const provider = setFirebaseProvider(providerName);
 
       firebase
         .auth()
