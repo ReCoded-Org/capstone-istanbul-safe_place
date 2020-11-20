@@ -8,7 +8,7 @@ export function getErrorClass(error) {
   return "inputError";
 }
 
-export const formSchemaObject = {
+export const validationSchemaObject = {
   email: Joi.string().required().email({ tlds: {} }).messages({
     "string.empty": `Please provide your email`,
     "string.email": `Please provide a valid email`,

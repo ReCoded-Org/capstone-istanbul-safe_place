@@ -9,22 +9,22 @@ import UserPasswordForm from "../../components/profile/UserPasswordForm";
 import { AuthContext } from "../../auth/Authentication";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import ProfileSection from "./ProfileSection";
-import { formSchemaObject } from "../../utils/formHelpers";
+import { validationSchemaObject } from "../../utils/formHelpers";
 import "./index.scss";
 
 const profileFormSchema = Joi.object({
-  address: formSchemaObject.anyOptional,
-  birthdate: formSchemaObject.anyOptional,
-  city: formSchemaObject.anyOptional,
-  countryCode: formSchemaObject.anyOptional,
-  firstName: formSchemaObject.anyOptional,
-  lastName: formSchemaObject.anyOptional,
-  nationality: formSchemaObject.anyOptional,
-  phoneNumber: formSchemaObject.anyOptional,
-  sex: formSchemaObject.anyOptional,
-  state: formSchemaObject.anyOptional,
-  zipCode: formSchemaObject.anyOptional,
-  email: formSchemaObject.email,
+  address: validationSchemaObject.anyOptional,
+  birthdate: validationSchemaObject.anyOptional,
+  city: validationSchemaObject.anyOptional,
+  countryCode: validationSchemaObject.anyOptional,
+  firstName: validationSchemaObject.anyOptional,
+  lastName: validationSchemaObject.anyOptional,
+  nationality: validationSchemaObject.anyOptional,
+  phoneNumber: validationSchemaObject.anyOptional,
+  sex: validationSchemaObject.anyOptional,
+  state: validationSchemaObject.anyOptional,
+  zipCode: validationSchemaObject.anyOptional,
+  email: validationSchemaObject.email,
 });
 
 const EMAIL_UPDATED = "Email updated successfully!";
