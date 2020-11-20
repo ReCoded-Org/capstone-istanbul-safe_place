@@ -6,7 +6,7 @@ import "./index.scss";
 const POSTS_PER_PAGE = 9;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
 
-export default function Blogs() {
+export default function Blogs({ id }) {
   const [blogPosts, setBlogPosts] = useState([]);
 
   const fetchBlogPosts = async () => {

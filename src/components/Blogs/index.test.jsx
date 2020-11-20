@@ -1,33 +1,45 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
+import ReactDOM from "react-dom";
+import { render, screen, waitFor } from "@testing-library/react";
 import Blogs from "./index";
-import TestRenderer from "react-test-renderer";
-const { act } = TestRenderer;
+import { act } from "react-dom/test-utils";
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () =>
-      Promise.resolve([
-        {
-          title: {
-            rendered: "You can find safe place for yourself here",
-          },
-          jetpack_featured_media_url:
-            "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
-          id: 78,
-        },
-      ]),
-  })
-);
+let container;
+
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  document.body.removeChild(container);
+  container = null;
+});
 
 describe("Blogs", () => {
-  it("renders correctly and matches the snapshot", async () => {
-    await act(async () => render(<Blogs />));
-    const tree = renderer.create(<Blogs />).toJSON();
-    expect(
-      screen.getByText("You can find safe place for yourself here")
-    ).toBeInTheDocument();
-    expect(tree).toMatchSnapshot();
+  it("Renders without crashing", async () => {
+    const mockData = [
+      {
+        title: {
+          rendered: "You can find safe place for yourself here",
+        },
+        jetpack_featured_media_url:
+          "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
+        id: 78,
+      },
+    ];
+
+    jest.spyOn(global, "fetch").mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockData),
+      })
+    );
+
+    await act(async () => {
+      ReactDOM.render(<Blogs />, container);
+    });
+
+    expect(container).toMatchSnapshot();
   });
 });
