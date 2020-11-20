@@ -1,11 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const JobsTrainingHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="jobsTrainingHeader">
-      <h2>Job / Training Opportunities</h2>
-      <h6>Browse our list of job opportunities, trainings or workshops.</h6>
+      <h2>{t("jobsTrainingPage.header")}</h2>
+      <h6>{t("jobsTrainingPage.subHeader")}</h6>
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function JobsTrainingHome() {
   const NUM_CARDS_TO_SHOW = 2;
   const shownOpportunitiesCards = cardsList.slice(0, NUM_CARDS_TO_SHOW);
   const cards = shownOpportunitiesCards.map((opportunity) => (
-    <OpportunitiesCard {...opportunity} key={opportunity.id} />
+    <OpportunitiesCard {...opportunity} key={opportunity.title} />
   ));
 
   return (
@@ -36,7 +36,7 @@ export default function JobsTrainingHome() {
         </Row>
         <Link to="/opportunities">
           <h6 className="opportunitiesButton">
-            All opportunities <span>&#8594;</span>
+            {t("home.buttons.opportunitiesBtn")} <span>&#8594;</span>
           </h6>
         </Link>
       </Container>

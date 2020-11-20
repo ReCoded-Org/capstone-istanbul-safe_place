@@ -8,10 +8,10 @@ exports[`renders correctly and matches the snapshot 1`] = `
     className="jobsTrainingHeader"
   >
     <h2>
-      Job / Training Opportunities
+      jobsTrainingPage.header
     </h2>
     <h6>
-      Browse our list of job opportunities, trainings or workshops.
+      jobsTrainingPage.subHeader
     </h6>
   </div>
   <div
@@ -116,7 +116,8 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <h6
         className="opportunitiesButton"
       >
-        All opportunities 
+        home.buttons.opportunitiesBtn
+         
         <span>
           →
         </span>
