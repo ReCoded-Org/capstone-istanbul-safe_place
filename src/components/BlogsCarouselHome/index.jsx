@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import smilingWomanImg from "./images/smilingWomanImg.jpg";
 import womanAndManHoldingHandsImg from "./images/womanAndManHoldingHandsImg.jpg";
 import womanTalkingToTherapistImg from "./images/womanTalkingToTherapistImg.jpg";
@@ -65,9 +66,11 @@ export default function BlogsCarouselHome() {
               </div>
             ))}
           </Slider>
-          <h6 className="allBlogsBtn">
-            {t("home.buttons.blogBtn")} <span>&#8594;</span>
-          </h6>
+          <Link to="/blog">
+            <h6 className="allBlogsBtn">
+              {t("home.buttons.blogBtn")} <span>&#8594;</span>
+            </h6>
+          </Link>
         </Col>
       </Row>
     </Container>
