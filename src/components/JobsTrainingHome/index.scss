@@ -15,10 +15,7 @@
   }
 
   a {
-    color: $primaryColor;
-    &:hover {
-      color: $primaryColor;
-    }
+    @include normalLink;
   }
 
   .opportunitiesButton {
