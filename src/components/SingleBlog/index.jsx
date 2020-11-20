@@ -15,7 +15,7 @@ export default function SingleBlog(props) {
   const params = useParams();
   const [blogPost, setBlogPost] = useState();
 
-  const allBlogPosts = async () => {
+  const fetchSingleBlogPost  = async () => {
     const data = await fetch(
       `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
     );
@@ -24,7 +24,7 @@ export default function SingleBlog(props) {
   };
 
   useEffect(() => {
-    allBlogPosts();
+    fetchSingleBlogPost ();
   });
 
   if (!blogPost) {
