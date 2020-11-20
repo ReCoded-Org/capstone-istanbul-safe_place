@@ -13,6 +13,26 @@ export const validationSchemaObject = {
     "string.empty": `Please provide your email`,
     "string.email": `Please provide a valid email`,
   }),
+  password: Joi.string().required().min(8).max(64).strict().messages({
+    "string.empty": `Please provide a password`,
+  }),
+  confirmPassword: Joi.string()
+    .valid(Joi.ref("password"))
+    .required()
+    .strict()
+    .messages({
+      "any.only": "Those passwords didn't match",
+    }),
+  newPassword: Joi.string().required().min(8).max(64).strict().messages({
+    "string.empty": `Please provide a new password`,
+  }),
+  confirmNewPassword: Joi.string()
+    .valid(Joi.ref("newPassword"))
+    .required()
+    .strict()
+    .messages({
+      "any.only": "Those passwords didn't match",
+    }),
   stringRequired: Joi.string().required(),
   anyOptional: Joi.any().optional(),
 };
