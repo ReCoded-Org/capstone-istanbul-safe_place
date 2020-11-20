@@ -20,7 +20,7 @@ export default function SingleBlog(props) {
     const posts = await data.json();
     setBlogPosts(posts);
   };
-
+  
   useEffect(() => {
     allBlogPosts();
   });
