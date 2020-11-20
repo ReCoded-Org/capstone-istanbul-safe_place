@@ -20,7 +20,7 @@ const SafePlaceInput = React.forwardRef((props, ref) => {
       <input
         name={name}
         id={name}
-        className={getErrorClass(errors?.[name])}
+        className={getErrorClass(errors?.[name]) || ""}
         ref={ref}
         {...rest}
       />
