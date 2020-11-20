@@ -66,7 +66,7 @@ export default function BlogsCarouselHome() {
             ))}
           </Slider>
           <h6 className="allBlogsBtn">
-            All blog posts <span>&#8594;</span>
+            {t("home.buttons.blogBtn")} <span>&#8594;</span>
           </h6>
         </Col>
       </Row>
