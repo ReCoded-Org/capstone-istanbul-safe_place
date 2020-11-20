@@ -62,7 +62,7 @@ export default function SignUpForm({ submit }) {
         <div className="formInputGroup">
           <div className="formInput">
             <input
-              className={getErrorClass(errors.firstName)}
+              className={getErrorClass(errors.firstName) || ""}
               type="text"
               placeholder="First name"
               name="firstName"
@@ -74,7 +74,7 @@ export default function SignUpForm({ submit }) {
 
           <div className="formInput">
             <input
-              className={getErrorClass(errors.lastName)}
+              className={getErrorClass(errors.lastName) || ""}
               type="text"
               placeholder="Last name"
               name="lastName"
@@ -87,7 +87,7 @@ export default function SignUpForm({ submit }) {
 
         <div className="formInput">
           <input
-            className={getErrorClass(errors.email)}
+            className={getErrorClass(errors.email) || ""}
             type="email"
             placeholder="Your email"
             name="email"
@@ -100,7 +100,7 @@ export default function SignUpForm({ submit }) {
         <div className="formInputGroup">
           <div className="formInput">
             <input
-              className={getErrorClass(errors.password)}
+              className={getErrorClass(errors.password) || ""}
               type="password"
               placeholder="Password"
               name="password"
@@ -112,7 +112,7 @@ export default function SignUpForm({ submit }) {
 
           <div className="formInput">
             <input
-              className={getErrorClass(errors.confirmPassword)}
+              className={getErrorClass(errors.confirmPassword) || ""}
               type="password"
               placeholder="Repeat password"
               name="confirmPassword"
@@ -126,7 +126,7 @@ export default function SignUpForm({ submit }) {
         <div className="formInput">
           <label htmlFor="acceptTerms">
             <input
-              className={getErrorClass(errors.acceptTerms)}
+              className={getErrorClass(errors.acceptTerms) || ""}
               type="checkbox"
               id="acceptTerms"
               name="acceptTerms"
