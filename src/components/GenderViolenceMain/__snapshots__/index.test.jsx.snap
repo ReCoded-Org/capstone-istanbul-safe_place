@@ -10,18 +10,14 @@ exports[`renders correctly and matches the snapshot 1`] = `
     <div
       className="main-text col-md-6 col-12 order-md-first order-last"
     >
-      <h1>
-         
-        home.genderViolenceMain.headerPartOne
-         
-      </h1>
-      <h1
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "home.genderViolenceMain.headerPartTwo",
-          }
-        }
-      />
+      <div>
+        <h1>
+          home.genderViolenceMain.headerPartOne
+          <span>
+            home.genderViolenceMain.headerPartTwo
+          </span>
+        </h1>
+      </div>
       <p>
         home.genderViolenceMain.subHeader
       </p>

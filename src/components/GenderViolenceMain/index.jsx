@@ -16,15 +16,12 @@ const GenderViolenceMain = () => {
           md={{ span: 6, order: "first" }}
           xs={{ span: 12, order: "last" }}
         >
-          <h1> {t("home.genderViolenceMain.headerPartOne")} </h1>
-          <h1
-            dangerouslySetInnerHTML={{
-              __html: t("home.genderViolenceMain.headerPartTwo", {
-                here: "<span> HERE </span>",
-              }),
-            }}
-          ></h1>
-
+          <div>
+            <h1>
+              {t("home.genderViolenceMain.headerPartOne")}
+              <span>{t("home.genderViolenceMain.headerPartTwo")}</span>
+            </h1>
+          </div>
           <p>{t("home.genderViolenceMain.subHeader")}</p>
           <Link to="/seekhelp">
             <button type="button">{t("home.genderViolenceMain.button")}</button>
