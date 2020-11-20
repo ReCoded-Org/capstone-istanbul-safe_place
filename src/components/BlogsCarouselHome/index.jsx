@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from "react-bootstrap";
 import SliderArrow from "../SliderArrow";
+import { Link } from "react-router-dom";
 
 const SLIDE_DATA = [
   {
@@ -68,9 +69,11 @@ export default function BlogsCarouselHome() {
               </div>
             ))}
           </Slider>
-          <h6 className="allBlogsBtn">
-            All blog posts <span>&#8594;</span>
-          </h6>
+          <Link to="/blog">
+            <h6 className="allBlogsBtn">
+              All blog posts <span>&#8594;</span>
+            </h6>
+          </Link>
         </Col>
       </Row>
     </Container>
