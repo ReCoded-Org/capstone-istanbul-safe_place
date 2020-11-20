@@ -2,7 +2,7 @@ import Joi from "joi";
 
 export function getErrorClass(error) {
   if (!error) {
-    return "";
+    return undefined;
   }
 
   return "inputError";
