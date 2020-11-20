@@ -49,29 +49,25 @@ export default function SingleBlog(props) {
               <InstagramIcon />
             </div>
           </Col>
-          <Col md={4} className="relatedPosts">
+          <Col md={4} className="relatedPostsContainer">
             <h5>Related articles:</h5>
-            <div className="firstRelatedPost">
-              <h6 className="relatedPosttitle">
-                {blogPost["jetpack-related-posts"]
-                  .map((relatedPosts) => {
-                    return (
-                      <div>
-                        <Link to={`/blog/${relatedPosts.id}`}>
-                          <img
-                            className="relatedPostImg"
-                            alt="blog img"
-                            src={relatedPosts.img.src}
-                          />
-                        </Link>
-                        <h6 className="relatedPosttitle">
-                          {relatedPosts.title}
-                        </h6>
-                      </div>
-                    );
-                  })
-                  .slice(0, RELATED_POSTS_TO_SHOW)}
-              </h6>
+            <div className="relatedPosts">
+              {blogPost["jetpack-related-posts"]
+                .map((relatedPost) => {
+                  return (
+                    <div>
+                      <Link to={`/blog/${relatedPost.id}`}>
+                        <img
+                          className="relatedPostImg"
+                          alt="blog img"
+                          src={relatedPost.img.src}
+                        />
+                      </Link>
+                      <h6 className="relatedPostTitle">{relatedPost.title}</h6>
+                    </div>
+                  );
+                })
+                .slice(0, RELATED_POSTS_TO_SHOW)}
             </div>
           </Col>
         </Row>
