@@ -21,7 +21,7 @@ const GenderViolenceMain = () => {
             <h1
               dangerouslySetInnerHTML={{
                 __html: t("home.genderViolenceMain.headerPartTwo", {
-                  here: "<span>HERE</span>",
+                  here: `<span>${t("home.genderViolenceMain.here")}</span>`,
                 }),
               }}
             ></h1>

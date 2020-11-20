@@ -22,6 +22,7 @@
     "genderViolenceMain": {
       "headerPartOne": "You are not alone",
       "headerPartTwo": "Safe Place is {{here}}",
+      "here": "HERE",
       "subHeader": "Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.",
       "button": "Find Help"
     },
