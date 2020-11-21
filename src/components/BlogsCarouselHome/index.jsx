@@ -15,31 +15,27 @@ import SliderArrow from "../SliderArrow";
 const SLIDE_DATA = [
   {
     id: 1,
-    title: "Dolorem officiis temporibus.",
-    label: "Healthy Me, Healthy We: Preventing Dating Violence.",
+    label: "Healthy Me, Healthy We: Preventing Dating Violence",
     img: `${smilingWomanImg}`,
   },
   {
     id: 2,
-    title: "Officia non provident dolor esse et neque.",
-    label: "Don’t Confuse Abuse With Love.",
+    label: "Don’t Confuse Abuse With Love",
     img: `${womanAndManHoldingHandsImg}`,
   },
   {
     id: 3,
-    title: "Ut recusandae vel vitae molestiae id soluta.",
-    label: "Talking to Your Kids About Sexual Assault.",
+    label: "Talking to Your Kids About Sexual Assault",
     img: `${womanTalkingToTherapistImg}`,
   },
   {
     id: 4,
-    title: "Qui vel consequatur recusandae illo repellendus.",
     label: "International Womens Day",
     img: `${multinationalWomenImg}`,
   },
 ];
 
-export default function BlogsCarouselHome() {
+const BlogsCarouselHome = () => {
   const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
@@ -49,6 +45,31 @@ export default function BlogsCarouselHome() {
     arrows: true,
     nextArrow: <SliderArrow leftOrRight={"right"} />,
     prevArrow: <SliderArrow leftOrRight={"left"} />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -59,10 +80,9 @@ export default function BlogsCarouselHome() {
           <h6>{t("blogPage.subtitle")}</h6>
           <Slider className="slider" {...settings}>
             {SLIDE_DATA.map((slide) => (
-              <div className="slide" key={slide.id}>
-                <label className="blogLabel">{slide.label}</label>
-                <div className="shadowEffect"></div>
-                <img className="blogImage" src={slide.img} alt="blogsImgs" />
+              <div className="blog" key={slide.id}>
+                <img src={slide.img} alt={slide.label} />
+                <h5>{slide.label}</h5>
               </div>
             ))}
           </Slider>
@@ -75,4 +95,6 @@ export default function BlogsCarouselHome() {
       </Row>
     </Container>
   );
-}
+};
+
+export default BlogsCarouselHome;

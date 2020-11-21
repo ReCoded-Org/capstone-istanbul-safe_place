@@ -6,45 +6,53 @@ exports[`Blogs Renders without crashing 1`] = `
     class="container"
   >
     <div
-      class="container"
+      class="searchBar row"
     >
       <div
-        class="row"
+        class="container"
       >
         <div
-          class="col"
+          class="row"
         >
-          <input
-            class="mr-sm-2 searchBarInput"
-            placeholder="Search"
-          />
-          <img
-            alt="Search Icon"
-            class="searchIcon"
-            src="searchIcon.svg"
-          />
+          <div
+            class="col"
+          >
+            <input
+              class="mr-sm-2 searchBarInput"
+              placeholder="Search"
+            />
+            <img
+              alt="Search Icon"
+              class="searchIcon"
+              src="searchIcon.svg"
+            />
+          </div>
         </div>
       </div>
     </div>
     <div
-      class="justify-content-md-center row"
+      class="justify-content-center row"
     >
       <div
-        class="blogsSection"
+        class="col-md-4"
       >
         <div
-          class="shadowEffect"
-        />
-        <h3
-          class="blogPostTitle"
+          class="blogPost card"
         >
-          You can find safe place for yourself here
-        </h3>
-        <img
-          alt="Blog post cover"
-          class="blogPostImg"
-          src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
-        />
+          <img
+            class="card-img-top"
+            src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
+          />
+          <div
+            class="card-body"
+          >
+            <div
+              class="blogPostTitle card-title h5"
+            >
+              You can find safe place for yourself here
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
