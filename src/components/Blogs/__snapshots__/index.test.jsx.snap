@@ -6,28 +6,32 @@ exports[`Blogs Renders without crashing 1`] = `
     class="container"
   >
     <div
-      class="container"
+      class="searchBar row"
     >
       <div
-        class="row"
+        class="container"
       >
         <div
-          class="col"
+          class="row"
         >
-          <input
-            class="mr-sm-2 searchBarInput"
-            placeholder="Search"
-          />
-          <img
-            alt="Search Icon"
-            class="searchIcon"
-            src="searchIcon.svg"
-          />
+          <div
+            class="col"
+          >
+            <input
+              class="mr-sm-2 searchBarInput"
+              placeholder="Search"
+            />
+            <img
+              alt="Search Icon"
+              class="searchIcon"
+              src="searchIcon.svg"
+            />
+          </div>
         </div>
       </div>
     </div>
     <div
-      class="justify-content-md-center row"
+      class="justify-content-center row"
     >
       <div
         class="blogsSection"
