@@ -1,33 +1,31 @@
 /* eslint-disable max-len */
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import locationIcon from "../../images/icons/locationIcon.svg";
 import phoneIcon from "../../images/icons/phoneIcon.svg";
 import mailIcon from "../../images/icons/mailIcon.svg";
 import "./index.scss";
 
 export default function ContactInfo() {
+  const { t } = useTranslation();
+
   return (
     <Col className="contactInfo" md={6} xs={12}>
-      <h2>Leave us a message</h2>
-      <p>
-        Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium
-        nos causae confidere, sed animo etiam erga nos causae confidere, sed uti
-        oratione perpetua malo quam ostendis sed quia dolor repellendus
-        temporibus autem.
-      </p>
+      <h2>{t("contactUs.contactUsInfo.header")}</h2>
+      <p>{t("contactUs.contactUsInfo.description")}</p>
       <Row className="contactMethods">
         <Col>
           <img className="contactIcon" src={locationIcon} alt="Location icon" />
-          <p>9094 Bay Meadows Street Conyers, GA 30012</p>
+          <p>{t("contactUs.contactUsInfo.location")}</p>
         </Col>
         <Col>
           <img className="contactIcon" src={phoneIcon} alt="Phone icon" />
-          <p>+229-955-5388-336</p>
+          <p>{t("contactUs.contactUsInfo.phone")}</p>
         </Col>
         <Col>
           <img className="contactIcon" src={mailIcon} alt="Contact icon" />
-          <p>support@mail.com</p>
+          <p>{t("contactUs.contactUsInfo.email")}</p>
         </Col>
       </Row>
     </Col>
