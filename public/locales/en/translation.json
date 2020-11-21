@@ -349,6 +349,7 @@
   "singleBlog": {
     "backToBlogBtn": "Back to blog",
     "socialMediaIconsTitle": "Share on social media:",
-    "relatedPostsContainerTitle": "Related articles:"
+    "relatedPostsContainerTitle": "Related articles:",
+    "loadingMessage": "Loading..."
   }
 }

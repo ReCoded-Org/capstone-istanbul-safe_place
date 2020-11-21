@@ -15,7 +15,7 @@ export default function SingleBlog(props) {
   const params = useParams();
   const [blogPost, setBlogPost] = useState();
 
-  const fetchSingleBlogPost  = async () => {
+  const fetchSingleBlogPost = async () => {
     const data = await fetch(
       `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
     );
@@ -24,59 +24,58 @@ export default function SingleBlog(props) {
   };
 
   useEffect(() => {
-    fetchSingleBlogPost ();
+    fetchSingleBlogPost();
   });
 
   if (!blogPost) {
-    return <h1>loading</h1>;
-  } else {
-    return (
-      <Container>
-        <Row className="blogContent">
-          <Col xs={12} md={8}>
-            <a href="./">
-              <h5 className="backToBlogBtn">
-                <span>&#8592;</span>
-                {t("singleBlog.backToBlogBtn")}
-              </h5>
-            </a>
-            <div
-              className="article"
-              dangerouslySetInnerHTML={{
-                __html: blogPost.content.rendered,
-              }}
-            ></div>
-            <h4>{t("singleBlog.socialMediaIconsTitle")}</h4>
-            <div className="socialMediaIcons">
-              <FacebookIcon />
-              <TwitterIcon />
-              <LinkedInIcon />
-              <InstagramIcon />
-            </div>
-          </Col>
-          <Col md={4} className="relatedPostsContainer">
-            <h5>{t("singleBlog.relatedPostsContainerTitle")}</h5>
-            <div className="relatedPosts">
-              {blogPost["jetpack-related-posts"]
-                .map((relatedPost) => {
-                  return (
-                    <div>
-                      <Link to={`/blog/${relatedPost.id}`}>
-                        <img
-                          className="relatedPostImg"
-                          alt="blog img"
-                          src={relatedPost.img.src}
-                        />
-                      </Link>
-                      <h6 className="relatedPostTitle">{relatedPost.title}</h6>
-                    </div>
-                  );
-                })
-                .slice(0, RELATED_POSTS_TO_SHOW)}
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    );
+    return <h2>{t("singleBlog.loadingMessage")}</h2>
   }
+  return (
+    <Container>
+      <Row className="blogContent">
+        <Col xs={12} md={8}>
+          <a href="./">
+            <h5 className="backToBlogBtn">
+              <span>&#8592;</span>
+              {t("singleBlog.backToBlogBtn")}
+            </h5>
+          </a>
+          <div
+            className="article"
+            dangerouslySetInnerHTML={{
+              __html: blogPost.content.rendered,
+            }}
+          ></div>
+          <h4>{t("singleBlog.socialMediaIconsTitle")}</h4>
+          <div className="socialMediaIcons">
+            <FacebookIcon />
+            <TwitterIcon />
+            <LinkedInIcon />
+            <InstagramIcon />
+          </div>
+        </Col>
+        <Col md={4} className="relatedPostsContainer">
+          <h5>{t("singleBlog.relatedPostsContainerTitle")}</h5>
+          <div className="relatedPosts">
+            {blogPost["jetpack-related-posts"]
+              .map((relatedPost) => {
+                return (
+                  <div>
+                    <Link to={`/blog/${relatedPost.id}`}>
+                      <img
+                        className="relatedPostImg"
+                        alt="blog img"
+                        src={relatedPost.img.src}
+                      />
+                    </Link>
+                    <h6 className="relatedPostTitle">{relatedPost.title}</h6>
+                  </div>
+                );
+              })
+              .slice(0, RELATED_POSTS_TO_SHOW)}
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
