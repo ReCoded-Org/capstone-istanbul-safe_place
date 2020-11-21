@@ -43,7 +43,7 @@ const JobsTrainingButtons = ({ setCardsList, setFilteredCards }) => {
     );
   });
 
-  return <div>{opportunityListBtns}</div>;
+  return <div className="opportunityBtns">{opportunityListBtns}</div>;
 };
 
 export default JobsTrainingButtons;
