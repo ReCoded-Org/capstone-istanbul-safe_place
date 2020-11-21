@@ -8,7 +8,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
     aboutUsPage.subHeader
   </h4>
   <div
-    className="justify-content-md-center row"
+    className="justify-content-center row"
   >
     <div
       className="singleMemberInfo"
