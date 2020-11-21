@@ -2,7 +2,7 @@
 
 exports[`ContactForm renders correctly and matches the snapshot 1`] = `
 <div
-  className="contactForm col-md-6 col-12"
+  className="contactForm container-fluid"
 >
   <form
     onSubmit={[Function]}

@@ -13,7 +13,7 @@ export default function UserDetail({ register }) {
           placeholder="Your first name"
           name="firstName"
           ref={register()}
-          label="Your first Name"
+          label="First name"
         />
 
         <Input
@@ -21,7 +21,7 @@ export default function UserDetail({ register }) {
           placeholder="Your last name"
           name="lastName"
           ref={register()}
-          label="Last Name"
+          label="Last name"
         />
       </div>
 
@@ -30,7 +30,7 @@ export default function UserDetail({ register }) {
           type="text"
           placeholder="Your nationality"
           name="nationality"
-          label="Your nationality"
+          label="Nationality"
           ref={register()}
         />
 

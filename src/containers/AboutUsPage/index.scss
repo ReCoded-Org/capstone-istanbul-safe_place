@@ -7,13 +7,14 @@
     margin-top: 4rem;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
   }
 
   p {
     color: $primaryColor;
     font-family: $mainFontFamily;
-    margin: 2rem 0 0 2rem;
     font-size: 1.125rem;
-    max-width: 95%;
+    text-align: justify;
+    margin-top: 2rem;
   }
 }
