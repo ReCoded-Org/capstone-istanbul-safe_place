@@ -30,7 +30,7 @@ const profileFormSchema = Joi.object({
 });
 
 // split the full name into first and last name
-const splitFullName = (fullName) => {
+const splitFullName = (fullName = "") => {
   const fullNameArr = fullName.split(" ");
   const lastName = fullNameArr.pop();
   const firstName = fullNameArr.join(" ");
@@ -48,9 +48,9 @@ export default function ProfilePage() {
   const { register, handleSubmit, errors, setValue } = useForm({
     mode: "onTouched",
     defaultValues: {
-      firstName: splitFullName(currentUser.displayName)[0],
-      lastName: splitFullName(currentUser.displayName)[1],
-      phoneNumber: currentUser.phoneNumber,
+      firstName: splitFullName(currentUser?.displayName)[0],
+      lastName: splitFullName(currentUser?.displayName)[1],
+      phoneNumber: currentUser?.phoneNumber,
       email: currentUser?.email,
     },
     resolver: joiResolver(profileFormSchema),
@@ -157,7 +157,7 @@ export default function ProfilePage() {
             <h2>Profile</h2>
             <div className="userPortrait">
               <img
-                src={currentUser.photoURL || defaultProfileImage}
+                src={currentUser?.photoURL || defaultProfileImage}
                 alt="User portrait"
               />
             </div>

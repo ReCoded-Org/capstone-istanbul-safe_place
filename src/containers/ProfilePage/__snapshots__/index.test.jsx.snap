@@ -8,6 +8,29 @@ exports[`renders correctly 1`] = `
     onSubmit={[Function]}
   >
     <div
+      className="container-fluid"
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#fe8f7c",
+          "display": "flex",
+          "height": "100vh",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <div
+        className="spinner-border spinner-border-md"
+        role="status"
+      >
+        <span
+          className="sr-only"
+        >
+          Loading...
+        </span>
+      </div>
+    </div>
+    <div
       className="accordion"
     >
       <div
