@@ -2,7 +2,7 @@
 
 exports[`ContactInfo renders correctly and matches the snapshot 1`] = `
 <div
-  className="contactInfo col-md-6 col-12"
+  className="contactInfo col"
 >
   <h2>
     contactUs.contactUsInfo.header

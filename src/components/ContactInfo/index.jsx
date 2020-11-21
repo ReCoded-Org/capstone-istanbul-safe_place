@@ -11,9 +11,14 @@ export default function ContactInfo() {
   const { t } = useTranslation();
 
   return (
-    <Col className="contactInfo" md={6} xs={12}>
-      <h2>{t("contactUs.contactUsInfo.header")}</h2>
-      <p>{t("contactUs.contactUsInfo.description")}</p>
+    <Col className="contactInfo">
+      <h2>Leave us a message</h2>
+      <p>
+        Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium
+        nos causae confidere, sed animo etiam erga nos causae confidere, sed uti
+        oratione perpetua malo quam ostendis sed quia dolor repellendus
+        temporibus autem.
+      </p>
       <Row className="contactMethods">
         <Col>
           <img className="contactIcon" src={locationIcon} alt="Location icon" />

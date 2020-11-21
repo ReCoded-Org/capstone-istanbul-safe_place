@@ -10,20 +10,20 @@ exports[`renders correctly and matches the snapshot 1`] = `
   <h6>
     contactUs.contactUsPage.subHeader
   </h6>
-  <div
-    className="row row-cols-md-12"
+  <section
+    className="contactSection"
   >
-    <section
-      className="contactSection"
+    <div
+      className="contactContainer container"
     >
       <div
-        className="contactContainer container-md"
+        className="row"
       >
         <div
-          className="row"
+          className="col-md-6 col-sm-12"
         >
           <div
-            className="contactInfo col-md-6 col-12"
+            className="contactInfo col"
           >
             <h2>
               contactUs.contactUsInfo.header
@@ -72,8 +72,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="col"
+        >
           <div
-            className="contactForm col-md-6 col-12"
+            className="contactForm container-fluid"
           >
             <form
               onSubmit={[Function]}
@@ -135,7 +139,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 `;
