@@ -19,6 +19,13 @@
     }
   },
   "home": {
+    "genderViolenceMain": {
+      "notAloneStatement": "You are not alone",
+      "safePlaceStatement": "Safe Place is {{here}}",
+      "here": "HERE",
+      "subHeader": "Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.",
+      "button": "Find Help"
+    },
     "genderViolenceIntro": {
       "header": "What is violence against women?",
       "intro": "According to the first article of the Declaration on the Prevention of Violence Against Women, adopted by the United Nations General Assembly in 1993; It is the threat or coercion of any kind of gender-based violence or act that results in or is likely to result in physical, sexual and emotional harm to women in the public and private spheres, and arbitrarily restricting freedom.",
@@ -159,7 +166,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "All opportunities"
+      "opportunitiesBtn": "All opportunities",
+      "blogBtn": "All blog posts"
     }
   },
   "searchHelpPage": {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Modal } from "react-bootstrap";
+import { Container, Row, Modal, Col } from "react-bootstrap";
 import ContactInfo from "../ContactInfo";
 import ContactForm from "../ContactForm";
 import { useTranslation } from "react-i18next";
@@ -14,20 +14,24 @@ export default function LeaveMessage() {
 
   return (
     <section className="contactSection">
-      <Container fluid="md" className="contactContainer">
+      <Container className="contactContainer">
         <Row>
-          <ContactInfo />
-          <ContactForm handleShow={handleShow} />
-          <Modal show={isShown} onHide={handleClose}>
-            <Modal.Body>
-              <button type="button" className="close" onClick={handleClose}>
-                <span aria-hidden="true">×</span>
-              </button>
-              <div className="contactFormModalBody">
-                <p>{t("contactUs.contactUsModal.message")}</p>
-              </div>
-            </Modal.Body>
-          </Modal>
+          <Col md={6} sm={12}>
+            <ContactInfo />
+          </Col>
+          <Col>
+            <ContactForm handleShow={handleShow} />
+            <Modal show={isShown} onHide={handleClose}>
+              <Modal.Body>
+                <button type="button" className="close" onClick={handleClose}>
+                  <span aria-hidden="true">×</span>
+                </button>
+                <div className="contactFormModalBody">
+                  <p>{t("contactUs.contactUsModal.message")}</p>
+                </div>
+              </Modal.Body>
+            </Modal>
+          </Col>
         </Row>
       </Container>
     </section>

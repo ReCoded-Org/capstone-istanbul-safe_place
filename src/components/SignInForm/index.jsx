@@ -4,7 +4,7 @@ import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
-import { getErrorClass } from "../../utils/formErrorHelpers";
+import { getErrorClass } from "../../utils/formHelpers";
 import {
   EMAIL_NOT_FOUND_ERROR,
   PASSWORD_INCORRECT_ERROR,

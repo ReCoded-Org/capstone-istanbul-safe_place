@@ -13,6 +13,10 @@
     flex-wrap: wrap;
   }
 
+  .row {
+    margin-top: 0 !important;
+  }
+
   h3 {
     color: $primaryColor;
     padding-top: 0.8rem;
@@ -22,6 +26,10 @@
   h6 {
     color: $lightColor;
     text-align: justify;
+  }
+
+  h6 {
+    font-size: 1.1rem;
   }
 
   button {

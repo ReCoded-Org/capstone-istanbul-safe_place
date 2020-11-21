@@ -7,14 +7,9 @@
     .contactForm {
       background-color: $warningColor;
       padding: 3rem;
-      margin: 1rem 0 2rem 2rem;
-      max-width: 45%;
     }
 
     .contactInfo {
-      max-width: 45%;
-      margin: 0 1rem 2rem 2rem;
-
       h2 {
         text-align: left;
         margin-top: 1rem;
@@ -37,6 +32,5 @@
     color: $darkColor;
     text-align: center;
     font-family: $mainFontFamily;
-    margin-bottom: 4rem;
   }
 }
