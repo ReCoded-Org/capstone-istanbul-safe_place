@@ -10,6 +10,8 @@ import { AuthContext } from "../../auth/Authentication";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import ProfileSection from "./ProfileSection";
 import { validationSchemaObject } from "../../utils/formHelpers";
+import LoadingSpinner from '../../components/LoadingSpinner';
+import firebase from '../../firebaseConfig';
 import "./index.scss";
 
 const profileFormSchema = Joi.object({
@@ -27,20 +29,63 @@ const profileFormSchema = Joi.object({
   email: validationSchemaObject.email,
 });
 
-const EMAIL_UPDATED = "Email updated successfully!";
+// split the full name into first and last name
+const splitFullName = (fullName) => {
+  const fullNameArr = fullName.split(' ');
+  const lastName = fullNameArr.pop();
+  const firstName = fullNameArr.join(" ");
+
+  return [firstName, lastName];
+}
+
+const UPDATED_SUCCESSFUL = "Profile updated successfully!";
 
 export default function ProfilePage() {
   const [updateStatus, setUpdateStatus] = React.useState(null);
+  const [isdataReady, setIsdataReady] = React.useState(false);
   const currentUser = React.useContext(AuthContext);
 
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit, errors, setValue } = useForm({
     mode: "onTouched",
     defaultValues: {
+      firstName: splitFullName(currentUser.displayName)[0],
+      lastName: splitFullName(currentUser.displayName)[1],
+      phoneNumber: currentUser.phoneNumber,
       email: currentUser?.email,
     },
     resolver: joiResolver(profileFormSchema),
   });
 
+  React.useEffect(() => {
+    // fetch user data and display it
+    firebase.firestore().collection("users").doc(currentUser.uid).get().then(doc => {
+      if (doc.exists) {
+        // update user data 
+        Object.entries(doc.data()).map(([key, value]) => setValue(key, value));
+        setIsdataReady(true);
+      }
+    }).catch(error => {
+      alert("Error getting document:", error);
+    });;
+  }, [currentUser]);
+
+  const writeUserData = async (userId, data) => {
+    firebase.firestore().collection("users").doc(userId).set({
+      address: data.address,
+      birthdate: data.birthdate,
+      city: data.city,
+      countryCode: data.countryCode,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      nationality: data.nationality,
+      phoneNumber: data.phoneNumber,
+      sex: data.sex,
+      state: data.state,
+      zipCode: data.zipCode,
+    });
+  }
+
+  // sectoins to be rendered
   const sections = [
     {
       label: "User details",
@@ -73,29 +118,38 @@ export default function ProfilePage() {
       ),
     },
   ];
+  
+  const onSave = async (data) => {
+    try {
+      // update default user info
+      await currentUser.updateProfile({
+        displayName: `${data.firstName} ${data.lastName}`,
+        phoneNumber: data.phoneNumber
+      });
 
-  const onSave = (data) => {
-    // check if email changed and update it
-    if (data.email !== currentUser.email) {
-      currentUser
-        .updateEmail(data.email)
-        .then(function () {
-          setUpdateStatus(EMAIL_UPDATED);
-        })
-        .catch(function (error) {
-          setUpdateStatus(error.message);
-        });
+      await writeUserData(currentUser.uid, data);
+
+      // check if email changed and update it
+      if (data.email !== currentUser.email) {
+        await currentUser.updateEmail(data.email);
+      }
+
+      setUpdateStatus(UPDATED_SUCCESSFUL);
+    } catch (error) {
+      setUpdateStatus(error.message)
     }
+
   };
 
   return (
     <Container fluid="md" className="profileContainer">
       <form onSubmit={handleSubmit(onSave)}>
+        {!isdataReady && <LoadingSpinner />}
         <Accordion defaultActiveKey="0">
           <Row className="profilePortrait">
             <h2>Profile</h2>
             <div className="userPortrait">
-              <img src={defaultProfileImage} alt="User portrait" />
+              <img src={currentUser.photoURL || defaultProfileImage} alt="User portrait" />
             </div>
           </Row>
           {sections.map((section, index) => (
