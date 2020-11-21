@@ -1,6 +1,10 @@
 @import "../../style/variables";
 @import "../../style/buttons";
 
+.opportunityBtns {
+  margin-top: 2.4rem;
+}
+
 .opportunityListBtn {
   @include primaryBtn;
   width: 12.75rem;
