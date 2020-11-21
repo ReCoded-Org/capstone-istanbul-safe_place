@@ -6,7 +6,6 @@
   width: 100%;
   text-align: center;
   font-family: $mainFontFamily;
-
   .blogImage {
     width: 20rem;
     height: 12rem;
@@ -63,7 +62,9 @@
     padding: 0 1rem;
   }
 
-  .slick-slide {
-    padding: 0.6rem !important;
+  .slick-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
