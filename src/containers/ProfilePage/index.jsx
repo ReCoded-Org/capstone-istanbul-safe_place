@@ -66,7 +66,13 @@ export default function ProfilePage() {
     },
     {
       label: "Change password",
-      children: <UserPasswordForm register={register} errors={errors} />,
+      children: (
+        <UserPasswordForm
+          register={register}
+          errors={errors}
+          currentUser={currentUser}
+        />
+      ),
     },
   ];
 
