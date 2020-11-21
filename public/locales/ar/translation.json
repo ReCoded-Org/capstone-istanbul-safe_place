@@ -166,7 +166,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "جميع الفرص"
+      "opportunitiesBtn": "جميع الفرص",
+      "blogBtn": "جميع المدونات"
     }
   },
   "searchHelpPage": {
@@ -267,6 +268,10 @@
         "portraitImg": "ammarImg"
       }
     ]
+  },
+  "blogPage": {
+    "title": "المدونة",
+    "subtitle": "تضم المدونة معلومات عن العنف والمرأة والصحة، تساهم هذه المواضيع المختلفة في تحسين الصحة النفسية للمرأة"
   },
   "chatBotMessages": {
     "headerTitle": "احصل على المساعدة",
