@@ -15,20 +15,19 @@ export default function SingleBlog(props) {
   const params = useParams();
   const [blogPost, setBlogPost] = useState();
 
-  const fetchSingleBlogPost = async () => {
-    const data = await fetch(
-      `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
-    );
-    const post = await data.json();
-    setBlogPost(post);
-  };
-
   useEffect(() => {
+    const fetchSingleBlogPost = async () => {
+      const data = await fetch(
+        `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
+      );
+      const post = await data.json();
+      setBlogPost(post);
+    };
     fetchSingleBlogPost();
-  });
+  }, [params]);
 
   if (!blogPost) {
-    return <h2>{t("singleBlog.loadingMessage")}</h2>
+    return <h2>{t("singleBlog.loadingMessage")}</h2>;
   }
   return (
     <Container>
@@ -64,7 +63,7 @@ export default function SingleBlog(props) {
                     <Link to={`/blog/${relatedPost.id}`}>
                       <img
                         className="relatedPostImg"
-                        alt="blog img"
+                        alt="Blog related post"
                         src={relatedPost.img.src}
                       />
                     </Link>
