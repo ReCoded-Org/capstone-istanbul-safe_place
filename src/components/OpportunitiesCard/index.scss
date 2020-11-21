@@ -47,12 +47,13 @@
   .borderLine {
     padding: 7%;
     border-bottom: 0.125rem solid $warningColor;
-    margin-bottom:.4rem;
+    margin-bottom: 0.4rem;
   }
 }
 
 @include media-breakpoint-down(sm) {
   .opportunities {
-   width: 75%!important;
-   margin: 1.25rem 5rem;
-}}
+    width: 75% !important;
+    margin: 1.25rem 5rem;
+  }
+}
