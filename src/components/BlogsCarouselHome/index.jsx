@@ -84,10 +84,9 @@ const BlogsCarouselHome = () => {
           <h6>{t("blogPage.subtitle")}</h6>
           <Slider className="slider" {...settings}>
             {SLIDE_DATA.map((slide) => (
-              <div className="slide" key={slide.id}>
-                <label className="blogLabel">{slide.label}</label>
-                <div className="shadowEffect"></div>
-                <img className="blogImage" src={slide.img} alt="blogsImgs" />
+              <div className="blog" key={slide.id}>
+                <img src={slide.img} alt={slide.label} />
+                <h5>{slide.label}</h5>
               </div>
             ))}
           </Slider>

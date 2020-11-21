@@ -4,28 +4,9 @@
 @import "../../style/bootstrapImports";
 
 .homeCarousel {
-  width: 100%;
   text-align: center;
   font-family: $mainFontFamily;
 
-  .blogImage {
-    width: 20rem;
-    height: 12rem;
-    border-radius: 1.5rem;
-  }
-
-  .shadowEffect {
-    background: linear-gradient(
-      0deg,
-      rgba(255, 254, 252, 0.8015581232492998) 0%,
-      rgba(255, 254, 252, 0) 42%
-    );
-    width: 20rem;
-    height: 12rem;
-    border-radius: 1.5rem;
-    z-index: 1;
-    position: absolute;
-  }
 
   .title {
     color: $primaryColor;
@@ -36,9 +17,37 @@
   h6 {
     color: $darkColor;
     text-align: center;
-    font-size: 16px;
     font-family: $mainFontFamily;
     margin-bottom: 3rem;
+  }
+
+  .slick-slider {
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    padding-bottom: 4rem;
+  }
+
+  .blog {
+    display: flex;
+    align-items: center;
+    width: 90% !important;
+
+    img {
+      border-radius: 1.5rem;
+      width: 100%;
+      height: 12rem;
+      margin-bottom: 1rem;
+      position: relative;
+      object-fit: cover;
+      object-position: 0 25%;
+    }
+
+    h5 {
+      width: 100%;
+      color: $primaryColor;
+    }
   }
 
   a {
@@ -49,43 +58,5 @@
     text-align: right;
     color: $primaryColor;
     margin: 3rem 0 5rem 0;
-  }
-
-  .slide {
-    .blogLabel {
-      z-index: 2;
-      width: 20rem;
-      margin: 9rem 9rem 0 0;
-      position: absolute;
-      padding: 0 1rem;
-    }
-  }
-
-  .slick-slide {
-    padding: 0 0.5rem;
-  }
-
-  .slick-slider {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  @include media-breakpoint-down(sm) {
-    .slick-slide {
-      padding-left: 10rem;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    .slick-slide {
-      padding-left: 8rem;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    .slick-slide {
-      padding-left: 1.5rem;
-    }
   }
 }
