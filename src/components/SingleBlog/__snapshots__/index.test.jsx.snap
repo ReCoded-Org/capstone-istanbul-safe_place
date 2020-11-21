@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-exports[`renders correctly and matches the snapshot 1`] = `
-<h2>
-  singleBlog.loadingMessage
-</h2>
-=======
 exports[`Single blog Renders without crashing 1`] = `
 <div>
   <div
@@ -68,7 +62,7 @@ exports[`Single blog Renders without crashing 1`] = `
               href="/blog/61"
             >
               <img
-                alt="blog img"
+                alt="Blog related post"
                 class="relatedPostImg"
                 src="https://safeplace102505649.files.wordpress.com/2020/11/smilinggirl.jpg?w=350&h=200&crop=1"
               />
@@ -84,5 +78,10 @@ exports[`Single blog Renders without crashing 1`] = `
     </div>
   </div>
 </div>
->>>>>>> f1649ea390e710027aaf4c1ebd5ef0c5bd9800c4
+`;
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<h2>
+  singleBlog.loadingMessage
+</h2>
 `;
