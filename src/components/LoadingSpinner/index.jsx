@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Container, Spinner } from "react-bootstrap";
 
 const spinnerStyle = {
@@ -16,5 +16,5 @@ export default function LoadingSpinner() {
         <span className="sr-only">Loading...</span>
       </Spinner>
     </Container>
-  )
+  );
 }

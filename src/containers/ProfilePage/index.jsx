@@ -10,8 +10,8 @@ import { AuthContext } from "../../auth/Authentication";
 import defaultProfileImage from "../../images/defaultProfileImage.png";
 import ProfileSection from "./ProfileSection";
 import { validationSchemaObject } from "../../utils/formHelpers";
-import LoadingSpinner from '../../components/LoadingSpinner';
-import firebase from '../../firebaseConfig';
+import LoadingSpinner from "../../components/LoadingSpinner";
+import firebase from "../../firebaseConfig";
 import "./index.scss";
 
 const profileFormSchema = Joi.object({
@@ -31,12 +31,12 @@ const profileFormSchema = Joi.object({
 
 // split the full name into first and last name
 const splitFullName = (fullName) => {
-  const fullNameArr = fullName.split(' ');
+  const fullNameArr = fullName.split(" ");
   const lastName = fullNameArr.pop();
   const firstName = fullNameArr.join(" ");
 
   return [firstName, lastName];
-}
+};
 
 const UPDATED_SUCCESSFUL = "Profile updated successfully!";
 
@@ -58,15 +58,23 @@ export default function ProfilePage() {
 
   React.useEffect(() => {
     // fetch user data and display it
-    firebase.firestore().collection("users").doc(currentUser.uid).get().then(doc => {
-      if (doc.exists) {
-        // update user data 
-        Object.entries(doc.data()).map(([key, value]) => setValue(key, value));
-        setIsdataReady(true);
-      }
-    }).catch(error => {
-      alert("Error getting document:", error);
-    });;
+    firebase
+      .firestore()
+      .collection("users")
+      .doc(currentUser.uid)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          // update user data
+          Object.entries(doc.data()).map(([key, value]) =>
+            setValue(key, value)
+          );
+          setIsdataReady(true);
+        }
+      })
+      .catch((error) => {
+        alert("Error getting document:", error);
+      });
   }, [currentUser]);
 
   const writeUserData = async (userId, data) => {
@@ -83,7 +91,7 @@ export default function ProfilePage() {
       state: data.state,
       zipCode: data.zipCode,
     });
-  }
+  };
 
   // sectoins to be rendered
   const sections = [
@@ -118,13 +126,13 @@ export default function ProfilePage() {
       ),
     },
   ];
-  
+
   const onSave = async (data) => {
     try {
       // update default user info
       await currentUser.updateProfile({
         displayName: `${data.firstName} ${data.lastName}`,
-        phoneNumber: data.phoneNumber
+        phoneNumber: data.phoneNumber,
       });
 
       await writeUserData(currentUser.uid, data);
@@ -136,9 +144,8 @@ export default function ProfilePage() {
 
       setUpdateStatus(UPDATED_SUCCESSFUL);
     } catch (error) {
-      setUpdateStatus(error.message)
+      setUpdateStatus(error.message);
     }
-
   };
 
   return (
@@ -149,7 +156,10 @@ export default function ProfilePage() {
           <Row className="profilePortrait">
             <h2>Profile</h2>
             <div className="userPortrait">
-              <img src={currentUser.photoURL || defaultProfileImage} alt="User portrait" />
+              <img
+                src={currentUser.photoURL || defaultProfileImage}
+                alt="User portrait"
+              />
             </div>
           </Row>
           {sections.map((section, index) => (
