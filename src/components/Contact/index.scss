@@ -25,3 +25,11 @@
     font-family: $mainFontFamily;
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .contactSection {
+    .contactContainer {
+      padding-top: 0;
+    }
+  }
+}
