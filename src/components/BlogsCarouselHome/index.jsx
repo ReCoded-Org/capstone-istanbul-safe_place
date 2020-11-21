@@ -39,7 +39,7 @@ const SLIDE_DATA = [
   },
 ];
 
-export default function BlogsCarouselHome() {
+const BlogsCarouselHome = () => {
   const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
@@ -59,7 +59,7 @@ export default function BlogsCarouselHome() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -67,7 +67,7 @@ export default function BlogsCarouselHome() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -100,4 +100,6 @@ export default function BlogsCarouselHome() {
       </Row>
     </Container>
   );
-}
+};
+
+export default BlogsCarouselHome;
