@@ -159,7 +159,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "All opportunities"
+      "opportunitiesBtn": "All opportunities",
+      "blogBtn": "All blog posts"
     }
   },
   "searchHelpPage": {
