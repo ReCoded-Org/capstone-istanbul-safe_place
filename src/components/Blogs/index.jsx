@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import SearchBar from "../SearchBar";
 import "./index.scss";
 
@@ -38,20 +38,22 @@ export default function Blogs() {
       <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
           return (
-            <div className="blogsSection" key={blogPost.id}>
-              <div className="shadowEffect"></div>
-              <img
-                className="blogPostImg"
-                alt="Blog post cover"
-                src={blogPost.jetpack_featured_media_url}
-              />
-              <h3
-                className="blogPostTitle"
-                dangerouslySetInnerHTML={{
-                  __html: blogPost.title.rendered,
-                }}
-              ></h3>
-            </div>
+            <Col key={blogPost.id} md={4}>
+              <Card className="blogPost">
+                <Card.Img
+                  variant="top"
+                  src={blogPost.jetpack_featured_media_url}
+                />
+                <Card.Body>
+                  <Card.Title
+                    className="blogPostTitle"
+                    dangerouslySetInnerHTML={{
+                      __html: blogPost.title.rendered,
+                    }}
+                  />
+                </Card.Body>
+              </Card>
+            </Col>
           );
         })}
       </Row>
