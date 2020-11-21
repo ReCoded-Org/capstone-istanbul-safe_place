@@ -79,9 +79,3 @@ exports[`Single blog Renders without crashing 1`] = `
   </div>
 </div>
 `;
-
-exports[`renders correctly and matches the snapshot 1`] = `
-<h2>
-  singleBlog.loadingMessage
-</h2>
-`;
