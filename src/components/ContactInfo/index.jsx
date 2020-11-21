@@ -12,13 +12,8 @@ export default function ContactInfo() {
 
   return (
     <Col className="contactInfo">
-      <h2>Leave us a message</h2>
-      <p>
-        Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium
-        nos causae confidere, sed animo etiam erga nos causae confidere, sed uti
-        oratione perpetua malo quam ostendis sed quia dolor repellendus
-        temporibus autem.
-      </p>
+      <h2>{t("contactUs.contactUsInfo.header")}</h2>
+      <p>{t("contactUs.contactUsInfo.description")}</p>
       <Row className="contactMethods">
         <Col>
           <img className="contactIcon" src={locationIcon} alt="Location icon" />
