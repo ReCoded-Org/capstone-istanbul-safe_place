@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import SearchBar from "../SearchBar";
 import "./index.scss";
+import { Link } from "react-router-dom"
 
 const POSTS_PER_PAGE = 9;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
@@ -38,7 +39,8 @@ export default function Blogs() {
       <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
           return (
-            <Col key={blogPost.id} md={4}>
+            <Col className="blogPostCard" key={blogPost.id} md={4}>
+              <Link to={`/blog/${blogPost.id}`}>
               <Card className="blogPost">
                 <Card.Img
                   variant="top"
@@ -53,6 +55,7 @@ export default function Blogs() {
                   />
                 </Card.Body>
               </Card>
+            </Link>
             </Col>
           );
         })}

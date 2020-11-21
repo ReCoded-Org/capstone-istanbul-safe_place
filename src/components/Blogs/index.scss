@@ -8,6 +8,11 @@
     margin-bottom: 2rem;
   }
 
+  .blogPost:hover {
+    text-decoration: underline;
+    color: $primaryColor;
+  }
+
   .blogPost {
     height: 20rem;
     border-radius: 1rem !important;
