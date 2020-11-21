@@ -32,7 +32,10 @@ export default function Blogs() {
 
   return (
     <Container>
-      <SearchBar handleSearch={handleSearch} />
+      <Row className="searchBar">
+        <SearchBar handleSearch={handleSearch} />
+      </Row>
+
       <Row className="justify-content-md-center">
         {blogPosts.map((blogPost) => {
           return (
