@@ -67,7 +67,7 @@ export default function SignInForm({ submit }) {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <input
-            className={getErrorClass(errors.email) || ""}
+            className={getErrorClass(errors.email)}
             type="email"
             placeholder={t("signIn.form.yourEmail")}
             name="email"
@@ -79,7 +79,7 @@ export default function SignInForm({ submit }) {
 
         <div className="formInput">
           <input
-            className={getErrorClass(errors.password) || ""}
+            className={getErrorClass(errors.password)}
             type="password"
             placeholder={t("signIn.form.yourPassword")}
             name="password"

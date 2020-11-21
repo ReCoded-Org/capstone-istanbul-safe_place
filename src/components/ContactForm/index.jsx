@@ -32,7 +32,7 @@ export default function ContactForm({ handleShow }) {
           <label htmlFor="fullName">
             {t("contactUs.contactUsForm.name.label")}
             <input
-              className={getErrorClass(errors.fullName) || ""}
+              className={getErrorClass(errors.fullName)}
               type="text"
               placeholder={t("contactUs.contactUsForm.name.placeholder")}
               name="fullName"
@@ -47,7 +47,7 @@ export default function ContactForm({ handleShow }) {
           <label htmlFor="email">
             {t("contactUs.contactUsForm.email.label")}
             <input
-              className={getErrorClass(errors.email) || ""}
+              className={getErrorClass(errors.email)}
               type="email"
               placeholder={t("contactUs.contactUsForm.email.placeholder")}
               name="email"
@@ -69,7 +69,7 @@ export default function ContactForm({ handleShow }) {
           <label htmlFor="messageContent">
             {t("contactUs.contactUsForm.message.label")}
             <textarea
-              className={getErrorClass(errors.message) || ""}
+              className={getErrorClass(errors.message)}
               name="messageContent"
               id="messageContent"
               placeholder={t("contactUs.contactUsForm.message.placeholder")}
