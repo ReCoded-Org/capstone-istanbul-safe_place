@@ -1234,8 +1234,18 @@ exports[`renders correctly 1`] = `
             aria-expanded={null}
             className="collapse"
           >
-            <div>
-              UserEmail
+            <div
+              className="userEmailSection col-12"
+            >
+              <div
+                className="formInput"
+              >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1274,6 +1284,11 @@ exports[`renders correctly 1`] = `
         >
           Save changes
         </button>
+      </div>
+      <div
+        className="updateStatus row"
+      >
+        <p />
       </div>
     </div>
   </form>
