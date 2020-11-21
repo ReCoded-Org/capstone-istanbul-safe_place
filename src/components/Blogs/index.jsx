@@ -35,7 +35,6 @@ export default function Blogs() {
       <Row className="searchBar">
         <SearchBar handleSearch={handleSearch} />
       </Row>
-
       <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
           return (
