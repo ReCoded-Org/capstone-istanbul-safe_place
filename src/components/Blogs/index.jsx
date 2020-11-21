@@ -40,17 +40,17 @@ export default function Blogs() {
           return (
             <div className="blogsSection" key={blogPost.id}>
               <div className="shadowEffect"></div>
+              <img
+                className="blogPostImg"
+                alt="Blog post cover"
+                src={blogPost.jetpack_featured_media_url}
+              />
               <h3
                 className="blogPostTitle"
                 dangerouslySetInnerHTML={{
                   __html: blogPost.title.rendered,
                 }}
               ></h3>
-              <img
-                className="blogPostImg"
-                alt="Blog post cover"
-                src={blogPost.jetpack_featured_media_url}
-              />
             </div>
           );
         })}
