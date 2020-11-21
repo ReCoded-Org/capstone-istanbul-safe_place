@@ -36,7 +36,7 @@ export default function Blogs() {
         <SearchBar handleSearch={handleSearch} />
       </Row>
 
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
           return (
             <div className="blogsSection" key={blogPost.id}>
