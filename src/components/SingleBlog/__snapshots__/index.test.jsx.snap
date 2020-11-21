@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single blog Renders without crashing 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="blogContent row"
+    >
+      <div
+        class="col-md-8 col-12"
+      >
+        <a
+          href="./"
+        >
+          <h5
+            class="backToBlogBtn"
+          >
+            <span>
+              ←
+            </span>
+            singleBlog.backToBlogBtn
+          </h5>
+        </a>
+        <div
+          class="article"
+        >
+          You can find safe place for yourself here
+        </div>
+        <h4>
+          singleBlog.socialMediaIconsTitle
+        </h4>
+        <div
+          class="socialMediaIcons"
+        >
+          <svg>
+            facebookIcon.svg
+          </svg>
+          <svg>
+            twitterIcon.svg
+          </svg>
+          <svg>
+            linkedInIcon.svg
+          </svg>
+          <svg>
+            instagramIcon.svg
+          </svg>
+        </div>
+      </div>
+      <div
+        class="relatedPostsContainer col-md-4"
+      >
+        <h5>
+          singleBlog.relatedPostsContainerTitle
+        </h5>
+        <div
+          class="relatedPosts"
+        >
+          <div>
+            <a
+              href="/blog/61"
+            >
+              <img
+                alt="blog img"
+                class="relatedPostImg"
+                src="https://safeplace102505649.files.wordpress.com/2020/11/smilinggirl.jpg?w=350&h=200&crop=1"
+              />
+            </a>
+            <h6
+              class="relatedPostTitle"
+            >
+              Women and health
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
