@@ -1270,8 +1270,39 @@ exports[`renders correctly 1`] = `
             aria-expanded={null}
             className="collapse"
           >
-            <div>
-              UserPassword
+            <div
+              className="userPasswordSection col-12"
+            >
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="newPassword"
+                >
+                  New password
+                </label>
+                <input
+                  id="newPassword"
+                  name="newPassword"
+                  placeholder="Enter new password"
+                  type="password"
+                />
+              </div>
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="confirmNewPassword"
+                >
+                  Confirm password
+                </label>
+                <input
+                  id="confirmNewPassword"
+                  name="confirmNewPassword"
+                  placeholder="Confirm new password"
+                  type="password"
+                />
+              </div>
             </div>
           </div>
         </div>
