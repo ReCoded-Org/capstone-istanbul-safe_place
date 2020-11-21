@@ -29,6 +29,8 @@ export default function SingleBlog(props) {
   if (!blogPost) {
     return <h2>{t("singleBlog.loadingMessage")}</h2>;
   }
+  const relatedPosts = blogPost["jetpack-related-posts"];
+
   return (
     <Container>
       <Row className="blogContent">
@@ -56,7 +58,7 @@ export default function SingleBlog(props) {
         <Col md={4} className="relatedPostsContainer">
           <h5>{t("singleBlog.relatedPostsContainerTitle")}</h5>
           <div className="relatedPosts">
-            {blogPost["jetpack-related-posts"]
+            {relatedPosts
               .map((relatedPost) => {
                 return (
                   <div>
