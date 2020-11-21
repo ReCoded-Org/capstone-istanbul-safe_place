@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/headings";
+@import "../../style/bootstrapImports";
 
 .contactInfo {
   h2 {
@@ -15,5 +16,13 @@
     width: 2rem;
     height: 2rem;
     margin-bottom: 1rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .contactInfo {
+    h2 {
+      text-align: center !important;
+    }
   }
 }

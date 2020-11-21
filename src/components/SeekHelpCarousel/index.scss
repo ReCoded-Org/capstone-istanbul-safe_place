@@ -1,14 +1,14 @@
-.slick-slide {
-  padding: 0 1rem;
-}
-
-.slick-slider {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-}
-
 .carousel {
   z-index: 1;
   bottom: 12rem;
+
+  .slick-slide {
+    padding: 0 1rem;
+  }
+
+  .slick-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }

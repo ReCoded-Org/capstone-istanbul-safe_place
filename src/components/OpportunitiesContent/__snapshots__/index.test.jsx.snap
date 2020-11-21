@@ -37,7 +37,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
     <div
       className="col-md-3"
     >
-      <div>
+      <div
+        className="opportunityBtns"
+      >
         <button
           className="opportunityListBtn"
           disabled={true}
