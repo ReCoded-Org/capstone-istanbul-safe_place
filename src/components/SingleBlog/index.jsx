@@ -29,7 +29,22 @@ export default function SingleBlog(props) {
   if (!blogPost) {
     return <h2>{t("singleBlog.loadingMessage")}</h2>;
   }
-  const relatedPosts = blogPost["jetpack-related-posts"];
+  const relatedPosts = blogPost["jetpack-related-posts"]
+    .map((relatedPost) => {
+      return (
+        <div>
+          <Link to={`/blog/${relatedPost.id}`}>
+            <img
+              className="relatedPostImg"
+              alt="Blog related post"
+              src={relatedPost.img.src}
+            />
+          </Link>
+          <h6 className="relatedPostTitle">{relatedPost.title}</h6>
+        </div>
+      );
+    })
+    .slice(0, RELATED_POSTS_TO_SHOW);
 
   return (
     <Container>
@@ -57,24 +72,7 @@ export default function SingleBlog(props) {
         </Col>
         <Col md={4} className="relatedPostsContainer">
           <h5>{t("singleBlog.relatedPostsContainerTitle")}</h5>
-          <div className="relatedPosts">
-            {relatedPosts
-              .map((relatedPost) => {
-                return (
-                  <div>
-                    <Link to={`/blog/${relatedPost.id}`}>
-                      <img
-                        className="relatedPostImg"
-                        alt="Blog related post"
-                        src={relatedPost.img.src}
-                      />
-                    </Link>
-                    <h6 className="relatedPostTitle">{relatedPost.title}</h6>
-                  </div>
-                );
-              })
-              .slice(0, RELATED_POSTS_TO_SHOW)}
-          </div>
+          <div className="relatedPosts">{relatedPosts}</div>
         </Col>
       </Row>
     </Container>
