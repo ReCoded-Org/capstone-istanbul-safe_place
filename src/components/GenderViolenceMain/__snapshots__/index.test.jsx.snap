@@ -12,12 +12,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
     >
       <div>
         <h1>
-          home.genderViolenceMain.headerPartOne
+          home.genderViolenceMain.notAloneStatement
         </h1>
         <h1
           dangerouslySetInnerHTML={
             Object {
-              "__html": "home.genderViolenceMain.headerPartTwo",
+              "__html": "home.genderViolenceMain.safePlaceStatement",
             }
           }
         />
