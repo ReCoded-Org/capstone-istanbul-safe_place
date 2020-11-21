@@ -1,13 +1,15 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import smilingWomanImg from "./images/smilingWomanImg.jpg";
 import womanAndManHoldingHandsImg from "./images/womanAndManHoldingHandsImg.jpg";
 import womanTalkingToTherapistImg from "./images/womanTalkingToTherapistImg.jpg";
 import multinationalWomenImg from "./images/multinationalWomenImg.jpg";
 import "./index.scss";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Container, Row, Col } from "react-bootstrap";
 import SliderArrow from "../SliderArrow";
 
 const SLIDE_DATA = [
@@ -38,6 +40,7 @@ const SLIDE_DATA = [
 ];
 
 export default function BlogsCarouselHome() {
+  const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -52,13 +55,8 @@ export default function BlogsCarouselHome() {
     <Container className="homeCarousel">
       <Row>
         <Col>
-          <h2 className="title">Our Blogs</h2>
-          <h6>
-            Information about violence, women and health.
-            <br />
-            Read different topics that contribute positively to the mental
-            health of women.
-          </h6>
+          <h2 className="title">{t("blogPage.title")}</h2>
+          <h6>{t("blogPage.subtitle")}</h6>
           <Slider className="slider" {...settings}>
             {SLIDE_DATA.map((slide) => (
               <div className="slide" key={slide.id}>
@@ -68,9 +66,11 @@ export default function BlogsCarouselHome() {
               </div>
             ))}
           </Slider>
-          <h6 className="allBlogsBtn">
-            All blog posts <span>&#8594;</span>
-          </h6>
+          <Link to="/blog">
+            <h6 className="allBlogsBtn">
+              {t("home.buttons.blogBtn")} <span>&#8594;</span>
+            </h6>
+          </Link>
         </Col>
       </Row>
     </Container>
