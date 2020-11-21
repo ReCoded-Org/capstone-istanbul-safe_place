@@ -19,8 +19,8 @@ export default function SingleBlog(props) {
     const data = await fetch(
       `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts/${params.id}`
     );
-    const posts = await data.json();
-    setBlogPost(posts);
+    const post = await data.json();
+    setBlogPost(post);
   };
 
   useEffect(() => {
