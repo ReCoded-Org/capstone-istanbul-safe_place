@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/bootstrapImports";
+@import "../../style/buttons";
 
 .homeCarousel {
   width: 100%;
@@ -37,6 +38,10 @@
     font-size: 16px;
     font-family: $mainFontFamily;
     margin-bottom: 3rem;
+  }
+
+  a {
+    @include normalLink;
   }
 
   .allBlogsBtn {
