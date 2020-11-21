@@ -35,7 +35,7 @@ const SLIDE_DATA = [
   },
 ];
 
-export default function BlogsCarouselHome() {
+const BlogsCarouselHome = () => {
   const { t } = useTranslation();
   const settings = {
     slidesToShow: 3,
@@ -45,6 +45,31 @@ export default function BlogsCarouselHome() {
     arrows: true,
     nextArrow: <SliderArrow leftOrRight={"right"} />,
     prevArrow: <SliderArrow leftOrRight={"left"} />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -55,10 +80,9 @@ export default function BlogsCarouselHome() {
           <h6>{t("blogPage.subtitle")}</h6>
           <Slider className="slider" {...settings}>
             {SLIDE_DATA.map((slide) => (
-              <div className="slide" key={slide.id}>
-                <label className="blogLabel">{slide.label}</label>
-                <div className="shadowEffect"></div>
-                <img className="blogImage" src={slide.img} alt="blogsImgs" />
+              <div className="blog" key={slide.id}>
+                <img src={slide.img} alt={slide.label} />
+                <h5>{slide.label}</h5>
               </div>
             ))}
           </Slider>
@@ -71,4 +95,6 @@ export default function BlogsCarouselHome() {
       </Row>
     </Container>
   );
-}
+};
+
+export default BlogsCarouselHome;
