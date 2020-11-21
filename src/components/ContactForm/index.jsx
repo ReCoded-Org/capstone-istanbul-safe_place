@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
@@ -26,7 +26,7 @@ export default function ContactForm({ handleShow }) {
   };
 
   return (
-    <Col md={6} xs={12} className="contactForm">
+    <Container fluid className="contactForm">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formInput">
           <label htmlFor="fullName">
@@ -97,6 +97,6 @@ export default function ContactForm({ handleShow }) {
           {t("contactUs.contactUsForm.submitBtn")}
         </button>
       </form>
-    </Col>
+    </Container>
   );
 }
