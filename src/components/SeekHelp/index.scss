@@ -4,22 +4,24 @@
   background: $lightColor;
   padding-top: 2rem;
   height: 53rem;
+
   h2 {
     color: $primaryColor;
     text-align: center;
     font-family: $mainFontFamily;
     font-weight: bold;
   }
+
   h6 {
     color: $darkColor;
     text-align: center;
     font-size: 16px;
     font-family: $mainFontFamily;
   }
-}
 
-.seekHelpSection .mapStyle {
-  height: 70vh;
-  width: 100%;
-  margin-top: 3rem;
+  .mapStyle {
+    height: 70%;
+    width: 100%;
+    margin-top: 3rem;
+  }
 }
