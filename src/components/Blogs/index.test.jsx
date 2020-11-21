@@ -16,21 +16,21 @@ afterEach(() => {
 });
 
 describe("Blogs", () => {
-  it("Renders without crashing", async () => {
-    const mockData = [
-      {
-        title: {
-          rendered: "You can find safe place for yourself here",
-        },
-        jetpack_featured_media_url:
-          "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
-        id: 78,
+  const MOCK_DATA = [
+    {
+      title: {
+        rendered: "You can find safe place for yourself here",
       },
-    ];
+      jetpack_featured_media_url:
+        "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
+      id: 78,
+    },
+  ];
 
+  it("Renders without crashing", async () => {
     jest.spyOn(global, "fetch").mockImplementation(() =>
       Promise.resolve({
-        json: () => Promise.resolve(mockData),
+        json: () => Promise.resolve(MOCK_DATA),
       })
     );
 

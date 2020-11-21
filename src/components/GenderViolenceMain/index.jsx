@@ -1,10 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import stopGenderViolenceImg from "../../images/home/stop-gender-violence.svg";
 import "./index.scss";
 
-export default function GenderViolenceMain() {
+const GenderViolenceMain = () => {
+  const { t } = useTranslation();
+
   return (
     <Container fluid="md" className="main-container">
       <Row>
@@ -13,19 +16,19 @@ export default function GenderViolenceMain() {
           md={{ span: 6, order: "first" }}
           xs={{ span: 12, order: "last" }}
         >
-          <h1>
-            You are not alone
-            <br />
-            Safe Place is
-            <span> HERE</span>
-          </h1>
-          <p>
-            Safe Place provides access to immediate help and support for victims
-            of violence. We offer a shelter, psychological help, lawyers and
-            doctors.
-          </p>
+          <div>
+            <h1>{t("home.genderViolenceMain.notAloneStatement")}</h1>
+            <h1
+              dangerouslySetInnerHTML={{
+                __html: t("home.genderViolenceMain.safePlaceStatement", {
+                  here: `<span>${t("home.genderViolenceMain.here")}</span>`,
+                }),
+              }}
+            ></h1>
+          </div>
+          <p>{t("home.genderViolenceMain.subHeader")}</p>
           <Link to="/seekhelp">
-            <button type="button">Find Help</button>
+            <button type="button">{t("home.genderViolenceMain.button")}</button>
           </Link>
         </Col>
         <Col md={{ span: 6, order: "last" }} xs={{ span: 12, order: "first" }}>
@@ -34,4 +37,6 @@ export default function GenderViolenceMain() {
       </Row>
     </Container>
   );
-}
+};
+
+export default GenderViolenceMain;
