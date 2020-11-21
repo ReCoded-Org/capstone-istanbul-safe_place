@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
 import firebase from "../../firebaseConfig";
-import { getErrorClass } from "../../utils/formErrorHelpers";
+import { getErrorClass } from "../../utils/formHelpers";
 import "./index.scss";
 
 export default function ContactForm({ handleShow }) {

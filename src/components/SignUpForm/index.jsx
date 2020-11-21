@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
 import InputErrorMessage from "../InputErrorMessage";
-import { getErrorClass } from "../../utils/formErrorHelpers";
+import { getErrorClass } from "../../utils/formHelpers";
 import { EMAIL_ALREADY_TAKEN_ERROR } from "../../utils/authHelpers";
 import "./index.scss";
 
