@@ -16,7 +16,6 @@ exports[`ContactForm renders correctly and matches the snapshot 1`] = `
         contactUs.contactUsForm.name.label
         <input
           aria-label="Full Name"
-          className=""
           id="fullName"
           name="fullName"
           placeholder="contactUs.contactUsForm.name.placeholder"
@@ -33,7 +32,6 @@ exports[`ContactForm renders correctly and matches the snapshot 1`] = `
         contactUs.contactUsForm.email.label
         <input
           aria-label="Email address"
-          className=""
           id="email"
           name="email"
           placeholder="contactUs.contactUsForm.email.placeholder"
@@ -50,7 +48,6 @@ exports[`ContactForm renders correctly and matches the snapshot 1`] = `
         contactUs.contactUsForm.message.label
         <textarea
           aria-label="message"
-          className=""
           id="messageContent"
           name="messageContent"
           placeholder="contactUs.contactUsForm.message.placeholder"
