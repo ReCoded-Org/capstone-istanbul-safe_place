@@ -17,8 +17,8 @@
   h2 {
     @include mainHeading;
     color: $primaryColor;
-    font-size: 3.4rem;
-    margin-top: 1rem;
+    font-size: 2.7rem;
+    margin: 1rem 0 2rem 0;
   }
 
   .sectionTitle {
@@ -45,6 +45,7 @@
     border: 0.22rem solid;
     border-color: $primaryColor;
     background-color: $primaryColor;
+    margin-bottom: 3rem;
 
     &:hover {
       cursor: pointer;

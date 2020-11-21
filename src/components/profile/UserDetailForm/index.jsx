@@ -13,7 +13,7 @@ export default function UserDetail({ register }) {
           placeholder="Your first name"
           name="firstName"
           ref={register()}
-          label="Your first Name"
+          label="Your first name"
         />
 
         <Input
