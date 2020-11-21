@@ -1273,7 +1273,6 @@ exports[`renders correctly 1`] = `
                 className="formInput"
               >
                 <input
-                  className=""
                   id="email"
                   name="email"
                   type="email"
