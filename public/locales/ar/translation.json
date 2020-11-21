@@ -324,5 +324,11 @@
     "contactUsModal": {
       "message": "شكرا لرسالتك! سنتواصل معك قريبا"
     }
+  },
+  "singleBlog": {
+    "backToBlogBtn": "الرجوع إلى المدونة",
+    "socialMediaIconsTitle": "مشاركة على مواقع التواصل الاجتماعي:",
+    "relatedPostsContainerTitle": "مقالات ذات صلة:",
+    "loadingMessage": "جاري التحميل..."
   }
 }
