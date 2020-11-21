@@ -15,25 +15,21 @@ import SliderArrow from "../SliderArrow";
 const SLIDE_DATA = [
   {
     id: 1,
-    title: "Dolorem officiis temporibus.",
-    label: "Healthy Me, Healthy We: Preventing Dating Violence.",
+    label: "Healthy Me, Healthy We: Preventing Dating Violence",
     img: `${smilingWomanImg}`,
   },
   {
     id: 2,
-    title: "Officia non provident dolor esse et neque.",
-    label: "Don’t Confuse Abuse With Love.",
+    label: "Don’t Confuse Abuse With Love",
     img: `${womanAndManHoldingHandsImg}`,
   },
   {
     id: 3,
-    title: "Ut recusandae vel vitae molestiae id soluta.",
-    label: "Talking to Your Kids About Sexual Assault.",
+    label: "Talking to Your Kids About Sexual Assault",
     img: `${womanTalkingToTherapistImg}`,
   },
   {
     id: 4,
-    title: "Qui vel consequatur recusandae illo repellendus.",
     label: "International Womens Day",
     img: `${multinationalWomenImg}`,
   },
