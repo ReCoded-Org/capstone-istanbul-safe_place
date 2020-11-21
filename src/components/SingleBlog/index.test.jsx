@@ -32,7 +32,6 @@ describe("Single blog", () => {
       },
     ],
   };
-
   it("Renders without crashing", async () => {
     jest.spyOn(global, "fetch").mockImplementation(() =>
       Promise.resolve({
