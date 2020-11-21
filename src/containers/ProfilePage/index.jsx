@@ -95,7 +95,10 @@ export default function ProfilePage() {
           <Row className="profilePortrait">
             <h2>Profile</h2>
             <div className="userPortrait">
-              <img src={currentUser?.photoURL || defaultProfileImage} alt="User portrait" />
+              <img
+                src={currentUser?.photoURL || defaultProfileImage}
+                alt="User portrait"
+              />
             </div>
           </Row>
           {sections.map((section, index) => (
