@@ -17,26 +17,26 @@ afterEach(() => {
 });
 
 describe("Single blog", () => {
-  it("Renders without crashing", async () => {
-    const mockData = {
-      content: {
-        rendered: "You can find safe place for yourself here",
-      },
-      "jetpack-related-posts": [
-        {
-          id: 61,
-          title: "Women and health",
-          img: {
-            src:
-              "https://safeplace102505649.files.wordpress.com/2020/11/smilinggirl.jpg?w=350&h=200&crop=1",
-          },
+  const MOCK_DATA = {
+    content: {
+      rendered: "You can find safe place for yourself here",
+    },
+    "jetpack-related-posts": [
+      {
+        id: 61,
+        title: "Women and health",
+        img: {
+          src:
+            "https://safeplace102505649.files.wordpress.com/2020/11/smilinggirl.jpg?w=350&h=200&crop=1",
         },
-      ],
-    };
+      },
+    ],
+  };
 
+  it("Renders without crashing", async () => {
     jest.spyOn(global, "fetch").mockImplementation(() =>
       Promise.resolve({
-        json: () => Promise.resolve(mockData),
+        json: () => Promise.resolve(MOCK_DATA),
       })
     );
 
