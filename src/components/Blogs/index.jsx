@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import SearchBar from "../SearchBar";
 import BlogCard from "../BlogCard";
 import "./index.scss";
+import i18next from "i18next";
 
 const POSTS_PER_PAGE = 18;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
@@ -16,11 +17,10 @@ export default function Blogs() {
     const fetchBlogPosts = async () => {
       const data = await fetch(BLOG_API_URL);
       const fetchedBlogPosts = await data.json();
-      console.log(fetchedBlogPosts);
       const filteredPosts = await fetchedBlogPosts.filter((post) => {
-        console.log(post.tags)
-        return post.tags.toString() === languageRef;
+        return post.tags.join() === languageRef;
       });
+
       setBlogsForSearch(fetchedBlogPosts);
       setBlogPosts(fetchedBlogPosts);
       setBlogPosts(filteredPosts);
@@ -31,7 +31,6 @@ export default function Blogs() {
 
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
-    console.log(ref);
     if (ref === "en") {
       setLanguageRef("10221");
     } else if (ref === "ar") {
