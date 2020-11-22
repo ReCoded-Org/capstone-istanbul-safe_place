@@ -19,8 +19,6 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="logo" />
           </Col>
           <Col md={3} className="footerInfo">
-            {/* <a href="/privacy">Privacy and Cookies</a>
-            <a href="/terms">Terms and Conditions</a> */}
             <h5>{t("footer.followUs")}</h5>
             <Row>
               <a href="https://www.twitter.com/">
