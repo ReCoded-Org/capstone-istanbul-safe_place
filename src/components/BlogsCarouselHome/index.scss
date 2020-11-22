@@ -55,7 +55,10 @@
 
   .allBlogsBtn {
     justify-content: flex-end;
-    color: $primaryColor;
     margin: 3rem 0 5rem 0;
+
+    h6 {
+      color: $primaryColor;
+    }
   }
 }
