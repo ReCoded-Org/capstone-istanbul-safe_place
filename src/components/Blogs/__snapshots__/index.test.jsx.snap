@@ -36,23 +36,27 @@ exports[`Blogs Renders without crashing 1`] = `
       <div
         class="col-md-4"
       >
-        <div
-          class="blogPost card"
+        <a
+          href="/blog/78"
         >
-          <img
-            class="card-img-top"
-            src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
-          />
           <div
-            class="card-body"
+            class="blogPost card"
           >
+            <img
+              class="card-img-top"
+              src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
+            />
             <div
-              class="blogPostTitle card-title h5"
+              class="card-body"
             >
-              You can find safe place for yourself here
+              <div
+                class="blogPostTitle card-title h5"
+              >
+                You can find safe place for yourself here
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

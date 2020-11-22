@@ -25,6 +25,8 @@ const profileFormSchema = Joi.object({
   state: validationSchemaObject.anyOptional,
   zipCode: validationSchemaObject.anyOptional,
   email: validationSchemaObject.email,
+  newPassword: validationSchemaObject.anyOptional,
+  confirmNewPassword: validationSchemaObject.anyOptional,
 });
 
 const EMAIL_UPDATED = "Email updated successfully!";
@@ -96,7 +98,7 @@ export default function ProfilePage() {
             <h2>Profile</h2>
             <Row className="justify-content-center">
               <img
-                src={defaultProfileImage}
+                src={currentUser?.photoURL || defaultProfileImage}
                 alt="User portrait"
                 className="userPortrait"
               />
