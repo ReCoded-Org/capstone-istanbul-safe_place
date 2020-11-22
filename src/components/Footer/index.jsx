@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import logo from "../../images/logoFooter.png";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import linkedInIcon from "../../images/icons/linkedInIcon.svg";
@@ -8,6 +9,8 @@ import instagramIcon from "../../images/icons/instagramIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="mainFooter">
       <Container>
@@ -15,11 +18,9 @@ const Footer = () => {
           <Col>
             <img src={logo} alt="Logo" className="logo" />
           </Col>
-          <Col className="footerInfo">
-            <a href="/privacy">Privacy and Cookies</a>
-            <a href="/terms">Terms and Conditions</a>
-            <p>Follow us on social media:</p>
-            <div>
+          <Col md={3} className="footerInfo">
+            <h5>{t("footer.followUs")}</h5>
+            <Row>
               <a href="https://www.twitter.com/">
                 <img src={twitterIcon} alt="Twitter icon" />
               </a>
@@ -32,7 +33,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/">
                 <img src={facebookIcon} alt="Facebook icon" />
               </a>
-            </div>
+            </Row>
           </Col>
         </Row>
       </Container>
