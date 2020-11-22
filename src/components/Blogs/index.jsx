@@ -30,7 +30,7 @@ export default function Blogs() {
 
     fetchBlogPosts();
   }, [languageRef]);
-   
+
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
     if (ref === "en") {
