@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and matches the snapshot 1`] = `
+<div
+  className="col-md-4"
+>
+  <a
+    href="/blog/78"
+    onClick={[Function]}
+  >
+    <div
+      className="blogPost card"
+    >
+      <img
+        className="card-img-top"
+        src="https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="blogPostTitle card-title h5"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "You can find safe place for yourself here",
+            }
+          }
+        />
+      </div>
+    </div>
+  </a>
+</div>
+`;

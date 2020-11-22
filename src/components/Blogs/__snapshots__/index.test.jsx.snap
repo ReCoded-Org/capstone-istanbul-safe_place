@@ -3,7 +3,7 @@
 exports[`Blogs Renders without crashing 1`] = `
 <div>
   <div
-    class="container"
+    class="blogsPage container"
   >
     <div
       class="searchBar row"

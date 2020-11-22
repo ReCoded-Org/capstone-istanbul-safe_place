@@ -25,6 +25,10 @@
     flex-direction: row !important;
     align-items: center;
 
+    .arrow {
+      margin-bottom: 3rem;
+    }
+
     .slick-list {
       width: 100%;
       display: flex;
@@ -33,7 +37,6 @@
       .col-md-4 {
         flex: 0 0 100%;
         max-width: 100%;
-        width: 25rem;
       }
     }
 
