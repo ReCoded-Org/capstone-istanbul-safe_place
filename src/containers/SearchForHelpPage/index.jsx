@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SeekHelpMap from "../../components/SeekHelpMap";
 import SeekHelpSingleCard from "../../components/SeekHelpSingleCard";
 import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
@@ -39,6 +39,10 @@ const SearchForHelpPage = () => {
     CITIES_WITH_HELP.find((c) => c.name === "Istanbul") || CITIES_WITH_HELP[0]
   );
   const allSpecialists = t("home.seekHelpSection", { returnObjects: true });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSpecialistFilter = (eventKey) => {
     setSeekHelpCards(() => {
