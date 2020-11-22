@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/bootstrapImports";
 
 .singleCard {
   background-color: $warningColor;
@@ -31,4 +32,16 @@
 .contactDetails {
   display: flex;
   flex-direction: row;
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .carouselHeaderAndImage {
+    img {
+      width:7rem;
+    }
+  }
 }
