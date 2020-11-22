@@ -137,30 +137,39 @@ exports[`renders correctly 1`] = `
           <div
             className="formInput"
           >
-            <label
-              htmlFor="acceptTerms"
+            <div
+              className="termsConditions"
             >
-              <input
-                aria-label="acceptTerms"
-                id="acceptTerms"
-                name="acceptTerms"
-                type="checkbox"
-                value="accepted"
-              />
-              I have read and agree with the 
-              <a
-                href="/terms"
-              >
-                Terms of Service
-              </a>
-               
-              and our 
-              <a
-                href="/privacy"
-              >
-                Privacy Policy
-              </a>
-            </label>
+              <div>
+                <input
+                  aria-label="acceptTerms"
+                  id="acceptTerms"
+                  name="acceptTerms"
+                  type="checkbox"
+                  value="accepted"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="acceptTerms"
+                >
+                  I have read and agree with the
+                   
+                  <a
+                    href="/terms"
+                  >
+                    Terms of Service
+                  </a>
+                   and our
+                   
+                  <a
+                    href="/privacy"
+                  >
+                    Privacy Policy
+                  </a>
+                </label>
+              </div>
+            </div>
           </div>
           <button
             className="submitBtn"

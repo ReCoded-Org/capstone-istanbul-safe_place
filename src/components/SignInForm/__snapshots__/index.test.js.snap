@@ -30,17 +30,25 @@ exports[`SigninForm renders correctly and matches the snapshot 1`] = `
     <div
       className="formInput"
     >
-      <label
-        htmlFor="remembered"
+      <div
+        className="rememberMe"
       >
-        <input
-          id="remembered"
-          name="remembered"
-          type="checkbox"
-          value="toBeRemembered"
-        />
-        signIn.form.rememberMe
-      </label>
+        <div>
+          <input
+            id="remembered"
+            name="remembered"
+            type="checkbox"
+            value="toBeRemembered"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="remembered"
+          >
+            signIn.form.rememberMe
+          </label>
+        </div>
+      </div>
     </div>
     <button
       className="submitBtn"
