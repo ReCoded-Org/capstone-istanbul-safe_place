@@ -1,7 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import SeekHelpMap from "../SeekHelpMap";
+
 import SeekHelpCarousel from "../SeekHelpCarousel";
+import { Container, Row, Col } from "react-bootstrap";
 import "./index.scss";
 
 const SeekHelp = () => {

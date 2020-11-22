@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import SliderArrow from "../SliderArrow";
 import SeekHelpSingleCard from "../SeekHelpSingleCard";
+import { Link } from "react-router-dom";
 import "./index.scss";
 
 const SeekHelpCarousel = () => {
@@ -31,6 +32,11 @@ const SeekHelpCarousel = () => {
           </Slider>
         </Col>
       </Row>
+      <Link to="/seekhelp">
+        <h6 className="searchHelpBtn">
+          {t("home.buttons.searchHelpBtn")} <span>&#8594;</span>
+        </h6>
+      </Link>
     </Container>
   );
 };
