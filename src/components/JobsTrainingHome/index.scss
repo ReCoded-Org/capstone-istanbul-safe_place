@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/buttons";
+@import "../../style/headings";
 
 .jobsTrainingSection {
   padding-top: 0.5rem;
@@ -9,8 +10,7 @@
   font-family: $mainFontFamily;
 
   h6 {
-    color: $primaryColor;
-    margin-bottom: 3rem;
+    @include secondaryHeader;
   }
 
   .jobsTrainingHeader {

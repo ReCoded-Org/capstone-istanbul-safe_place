@@ -1,19 +1,12 @@
 @import "../../style/variables";
+@import "../../style/headings";
 
 .blogsMainContainer {
   h2 {
-    color: $primaryColor;
-    font-family: $mainFontFamily;
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    @include mainHeader;
   }
 
   h6 {
-    color: $darkColor;
-    text-align: center;
-    font-family: $mainFontFamily;
-    margin-bottom: 4rem;
+    @include secondaryHeader;
   }
 }

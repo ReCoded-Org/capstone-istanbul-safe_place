@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/buttons";
+@import "../../style/headings";
 
 .searchHelpPage {
   margin-bottom: 2rem;
@@ -8,19 +9,11 @@
   }
 
   h2 {
-    color: $primaryColor;
-    text-align: center;
-    font-family: $mainFontFamily;
-    font-weight: bold;
-    margin-top: 2rem;
+    @include mainHeader;
   }
 
   h6 {
-    color: $darkColor;
-    text-align: center;
-    font-size: 14px;
-    margin: 2rem 0;
-    font-family: $mainFontFamily;
+    @include secondaryHeader;
   }
 
   .seekHelpCards {

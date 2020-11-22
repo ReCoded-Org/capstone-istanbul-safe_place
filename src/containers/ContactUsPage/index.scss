@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/headings";
 
 .contactUsPage {
   .contactContainer {
@@ -20,17 +21,10 @@
   }
 
   h2 {
-    color: $primaryColor;
-    font-family: $mainFontFamily;
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    @include mainHeader;
   }
 
   h6 {
-    color: $darkColor;
-    text-align: center;
-    font-family: $mainFontFamily;
+    @include secondaryHeader;
   }
 }

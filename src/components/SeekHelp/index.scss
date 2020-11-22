@@ -1,5 +1,6 @@
 @import "../../style/variables";
 @import "../../style/bootstrapImports";
+@import "../../style/headings";
 
 .seekHelpSection {
   background: $lightColor;
@@ -7,19 +8,11 @@
   margin-bottom: 5rem;
 
   h2 {
-    color: $primaryColor;
-    text-align: center;
-    font-family: $mainFontFamily;
-    font-weight: bold;
-    margin-top: 3rem;
-    padding-top: 0.5rem;
+    @include mainHeader;
   }
 
   h6 {
-    color: $darkColor;
-    text-align: center;
-    font-size: 16px;
-    font-family: $mainFontFamily;
+    @include secondaryHeader;
   }
 
   .mapStyle {
