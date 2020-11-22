@@ -21,11 +21,13 @@ import { AuthProvider } from "./auth/Authentication";
 import PrivateRoute from "./auth/PrivateRoute";
 import BlogPage from "./containers/BlogPage";
 import SingleBlog from "./components/SingleBlog";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => (
   <AuthProvider>
     <Router>
       <div>
+        <ScrollToTop />
         <HelpNavbar />
         <MainNavbar />
         <ChatBotMessages />
