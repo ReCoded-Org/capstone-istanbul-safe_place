@@ -48,6 +48,15 @@ exports[`SigninForm renders correctly and matches the snapshot 1`] = `
     >
       signIn.form.signIn
     </button>
+    <p>
+      signIn.newHere
+       
+      <a
+        href="/sign-up"
+      >
+        signIn.createAccount
+      </a>
+    </p>
   </form>
 </div>
 `;

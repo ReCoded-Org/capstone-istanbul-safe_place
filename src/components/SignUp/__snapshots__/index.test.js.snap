@@ -168,16 +168,16 @@ exports[`renders correctly 1`] = `
           >
             Sign in
           </button>
+          <p>
+            Already have an account? 
+            <a
+              href="/signin"
+            >
+              Sign in
+            </a>
+          </p>
         </form>
       </div>
-      <p>
-        Already have an account? 
-        <a
-          href="/signin"
-        >
-          Sign in
-        </a>
-      </p>
     </div>
   </div>
 </div>
