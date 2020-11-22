@@ -13,7 +13,7 @@
   width: 100%;
 
   .contactContainer {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 }
 
@@ -29,7 +29,7 @@
 @include media-breakpoint-down(sm) {
   .contactSection {
     .contactContainer {
-      padding-top: 0;
+      padding-top: 3rem;
     }
   }
 }
