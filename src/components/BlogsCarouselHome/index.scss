@@ -10,7 +10,11 @@
   .title {
     color: $primaryColor;
     font-weight: bold;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    font-family: $mainFontFamily;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 0.5rem;
   }
 
   h6 {
