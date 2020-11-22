@@ -89,7 +89,7 @@ const BlogsCarouselHome = () => {
           <Row className="allBlogsBtn">
             <Link to="/blog">
               <h6>
-                {t("home.buttons.blogBtn")} 
+                {t("home.buttons.blogBtn")}
                 <span>&#8594;</span>
               </h6>
             </Link>

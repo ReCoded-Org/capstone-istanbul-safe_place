@@ -118,13 +118,12 @@ exports[`renders correctly and matches the snapshot 1`] = `
       <div
         className="opportunitiesButton row"
       >
-        <h6
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "home.buttons.opportunitiesBtn",
-            }
-          }
-        />
+        <h6>
+          home.buttons.opportunitiesBtn
+          <span>
+            →
+          </span>
+        </h6>
       </div>
     </a>
   </div>
