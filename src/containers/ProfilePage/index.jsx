@@ -98,7 +98,7 @@ export default function ProfilePage() {
             <h2>Profile</h2>
             <Row className="justify-content-center">
               <img
-                src={defaultProfileImage}
+                src={currentUser?.photoURL || defaultProfileImage}
                 alt="User portrait"
                 className="userPortrait"
               />
