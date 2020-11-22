@@ -3,17 +3,21 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 
-function changeDirection(direction) {
+function setDirection(direction) {
   document.body.setAttribute("dir", direction);
+  document.documentElement.setAttribute("lang", i18n.language);
 
   document.getElementById("root").style.textAlign =
     direction === "rtl" ? "right" : "left";
 }
 
-i18n.on("languageChanged", function (lng) {
+i18n.on("languageChanged", (lng) => {
   localStorage.setItem("lng", lng);
-  if (lng === "ar") changeDirection("rtl");
-  else changeDirection("ltr");
+  if (lng === "ar") {
+    setDirection("rtl");
+  } else {
+    setDirection("ltr");
+  }
 });
 
 i18n
