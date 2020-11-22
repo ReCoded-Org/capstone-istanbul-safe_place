@@ -1,35 +1,10 @@
 @import "../../style/variables";
 
 // Bootstrap class
-.container {
+.blogsPage {
   font-family: $mainFontFamily;
 
   .searchBar {
     margin-bottom: 2rem;
-  }
-
-  .blogPost:hover {
-    text-decoration: underline;
-    color: $primaryColor;
-  }
-
-  .blogPost {
-    height: 20rem;
-    border-radius: 1rem !important;
-    box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-
-    img {
-      border-top-left-radius: calc(1rem - 1px) !important;
-      border-top-right-radius: calc(1rem - 1px) !important;
-      object-fit: cover !important;
-      object-position: 0 25% !important;
-      height: 15rem;
-    }
-
-    .blogPostTitle {
-      text-align: center;
-      color: $primaryColor;
-    }
   }
 }

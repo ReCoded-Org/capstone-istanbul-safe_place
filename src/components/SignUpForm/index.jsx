@@ -124,25 +124,37 @@ export default function SignUpForm({ submit }) {
         </div>
 
         <div className="formInput">
-          <label htmlFor="acceptTerms">
-            <input
-              className={getErrorClass(errors.acceptTerms)}
-              type="checkbox"
-              id="acceptTerms"
-              name="acceptTerms"
-              value="accepted"
-              aria-label="acceptTerms"
-              ref={register()}
-            />
-            I have read and agree with the <a href="/terms">Terms of Service</a>{" "}
-            and our <a href="/privacy">Privacy Policy</a>
-          </label>
+          <div className="termsConditions">
+            <div>
+              <input
+                className={getErrorClass(errors.acceptTerms)}
+                type="checkbox"
+                id="acceptTerms"
+                name="acceptTerms"
+                value="accepted"
+                aria-label="acceptTerms"
+                ref={register()}
+              />
+            </div>
+            <div>
+              <label htmlFor="acceptTerms">
+                I have read and agree with the{" "}
+                <a href="/terms">Terms of Service</a> and our{" "}
+                <a href="/privacy">Privacy Policy</a>
+              </label>
+            </div>
+          </div>
           <InputErrorMessage error={errors.acceptTerms} />
         </div>
 
         <button type="submit" className="submitBtn">
           Sign in
         </button>
+
+        <p>
+          Already have an account?&nbsp;
+          <a href="/signin">Sign in</a>
+        </p>
       </form>
     </div>
   );

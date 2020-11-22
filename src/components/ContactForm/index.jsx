@@ -69,7 +69,7 @@ export default function ContactForm({ handleShow }) {
           <label htmlFor="messageContent">
             {t("contactUs.contactUsForm.message.label")}
             <textarea
-              className={getErrorClass(errors.message)}
+              className={getErrorClass(errors.messageContent)}
               name="messageContent"
               id="messageContent"
               placeholder={t("contactUs.contactUsForm.message.placeholder")}

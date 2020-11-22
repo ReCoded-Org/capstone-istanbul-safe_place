@@ -90,20 +90,29 @@ export default function SignInForm({ submit }) {
         </div>
 
         <div className="formInput">
-          <label htmlFor="remembered">
-            <input
-              type="checkbox"
-              id="remembered"
-              name="remembered"
-              value="toBeRemembered"
-            />
-            {t("signIn.form.rememberMe")}
-          </label>
+          <div className="rememberMe">
+            <div>
+              <input
+                type="checkbox"
+                id="remembered"
+                name="remembered"
+                value="toBeRemembered"
+              />
+            </div>
+            <div>
+              <label htmlFor="remembered">{t("signIn.form.rememberMe")}</label>
+            </div>
+          </div>
         </div>
 
         <button type="submit" className="submitBtn">
           {t("signIn.form.signIn")}
         </button>
+
+        <p>
+          {t("signIn.newHere")}{" "}
+          <a href="/signup">{t("signIn.createAccount")}</a>
+        </p>
       </form>
     </div>
   );

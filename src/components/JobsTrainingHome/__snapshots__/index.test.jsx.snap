@@ -115,15 +115,16 @@ exports[`renders correctly and matches the snapshot 1`] = `
       href="/opportunities"
       onClick={[Function]}
     >
-      <h6
-        className="opportunitiesButton"
+      <div
+        className="opportunitiesButton row"
       >
-        home.buttons.opportunitiesBtn
-         
-        <span>
-          →
-        </span>
-      </h6>
+        <h6>
+          home.buttons.opportunitiesBtn
+          <span>
+             → 
+          </span>
+        </h6>
+      </div>
     </a>
   </div>
 </div>
