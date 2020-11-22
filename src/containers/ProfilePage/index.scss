@@ -2,6 +2,7 @@
 @import "../../style/variables";
 @import "../../style/headings";
 @import "../../style/bootstrapImports";
+@import "../../style/shapes";
 
 .profileContainer {
   border-right: 3px solid $primaryColor;
@@ -55,6 +56,12 @@
       background-size: 50%;
       background-position: center center;
     }
+  }
+
+  hr.divider {
+    @include sectionDividerLine;
+    margin-bottom: 1.54rem;
+    margin-top: 0;
   }
 
   /* arrow styles */
