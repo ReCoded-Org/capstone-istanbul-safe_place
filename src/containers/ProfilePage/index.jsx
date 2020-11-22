@@ -105,13 +105,16 @@ export default function ProfilePage() {
             </Row>
           </Row>
           {sections.map((section, index) => (
-            <ProfileSection
-              key={section.label}
-              eventKey={index.toString()}
-              label={section.label}
-            >
-              {section.children}
-            </ProfileSection>
+            <>
+              <ProfileSection
+                key={section.label}
+                eventKey={index.toString()}
+                label={section.label}
+              >
+                {section.children}
+              </ProfileSection>
+              {index !== sections.length - 1 && <hr className="divider" />}
+            </>
           ))}
 
           <Row className="submitBtn">

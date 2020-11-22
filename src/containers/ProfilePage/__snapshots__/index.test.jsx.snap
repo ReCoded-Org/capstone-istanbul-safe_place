@@ -1215,6 +1215,9 @@ exports[`renders correctly 1`] = `
           </div>
         </div>
       </div>
+      <hr
+        className="divider"
+      />
       <div
         className="section row"
       >
@@ -1251,6 +1254,9 @@ exports[`renders correctly 1`] = `
           </div>
         </div>
       </div>
+      <hr
+        className="divider"
+      />
       <div
         className="section row"
       >
