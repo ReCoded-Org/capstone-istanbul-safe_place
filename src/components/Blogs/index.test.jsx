@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import Blogs from "./index";
 import { act } from "react-dom/test-utils";
+import { BrowserRouter as Router } from "react-router-dom";
 
 let container;
 
@@ -35,7 +36,12 @@ describe("Blogs", () => {
     );
 
     await act(async () => {
-      render(<Blogs />, container);
+      render(
+        <Router>
+          <Blogs />
+        </Router>,
+        container
+      );
     });
 
     expect(container).toMatchSnapshot();
