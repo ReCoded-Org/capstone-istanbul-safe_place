@@ -106,7 +106,7 @@ export default function SignInForm({ submit }) {
         </button>
         <p>
           {t("signIn.newHere")}{" "}
-          <a href="/sign-up">{t("signIn.createAccount")}</a>
+          <a href="/signup">{t("signIn.createAccount")}</a>
         </p>
       </form>
     </div>

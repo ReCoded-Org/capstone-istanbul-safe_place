@@ -52,7 +52,7 @@ exports[`SigninForm renders correctly and matches the snapshot 1`] = `
       signIn.newHere
        
       <a
-        href="/sign-up"
+        href="/signup"
       >
         signIn.createAccount
       </a>
