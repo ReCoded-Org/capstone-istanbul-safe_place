@@ -30,10 +30,7 @@ export default function Blogs() {
 
     fetchBlogPosts();
   }, [languageRef]);
-
-  // "10221" is the tage refernce to English language
-  // "38299" is the tage refernce to Arabic Language
-
+   
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
     if (ref === "en") {
