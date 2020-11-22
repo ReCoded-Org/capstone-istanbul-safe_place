@@ -16,9 +16,9 @@
   }
 
   .searchHelpBtn {
-    text-align: right;
+    justify-content: flex-end;
     color: $primaryColor;
-    margin: 4rem 1.5rem 0 0;
+    margin: 3rem 0;
   }
 
   a {
