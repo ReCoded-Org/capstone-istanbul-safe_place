@@ -82,11 +82,6 @@ export default function SignUp() {
           <hr className="divider" />
 
           <SignUpForm submit={handleSignUp} />
-
-          <p>
-            Already have an account?&nbsp;
-            <a href="/signin">Sign in</a>
-          </p>
         </Col>
       </Row>
     </Container>

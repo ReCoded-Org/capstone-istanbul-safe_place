@@ -99,17 +99,25 @@ exports[`renders correctly 1`] = `
           <div
             className="formInput"
           >
-            <label
-              htmlFor="remembered"
+            <div
+              className="rememberMe"
             >
-              <input
-                id="remembered"
-                name="remembered"
-                type="checkbox"
-                value="toBeRemembered"
-              />
-              signIn.form.rememberMe
-            </label>
+              <div>
+                <input
+                  id="remembered"
+                  name="remembered"
+                  type="checkbox"
+                  value="toBeRemembered"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="remembered"
+                >
+                  signIn.form.rememberMe
+                </label>
+              </div>
+            </div>
           </div>
           <button
             className="submitBtn"
@@ -117,17 +125,17 @@ exports[`renders correctly 1`] = `
           >
             signIn.form.signIn
           </button>
+          <p>
+            signIn.newHere
+             
+            <a
+              href="/signup"
+            >
+              signIn.createAccount
+            </a>
+          </p>
         </form>
       </div>
-      <p>
-        signIn.newHere
-         
-        <a
-          href="/sign-up"
-        >
-          signIn.createAccount
-        </a>
-      </p>
     </div>
   </div>
 </div>
