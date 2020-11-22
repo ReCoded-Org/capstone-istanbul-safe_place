@@ -2,8 +2,7 @@
 @import "../../style/buttons";
 
 .jobsTrainingSection {
-  padding-top: 3.125rem;
-  margin-top: 1.875rem;
+  padding-top: 0.5rem;
   padding-bottom: 3.125rem;
   background-color: $secondaryColor;
   width: 100%;
@@ -12,6 +11,12 @@
   h6 {
     color: $primaryColor;
     margin-bottom: 3rem;
+  }
+
+  .jobsTrainingHeader {
+    h2 {
+      margin-top: 3rem;
+    }
   }
 
   a {
