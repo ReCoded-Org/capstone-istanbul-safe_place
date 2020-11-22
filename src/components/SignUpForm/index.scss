@@ -31,6 +31,11 @@
     }
   }
 
+  .termsConditions {
+    display: flex;
+    flex-direction: row;
+  }
+
   button.submitBtn {
     @include primaryBtn;
     background-color: $primaryColor;
@@ -60,8 +65,8 @@
 
   /* checkbox custom Style */
   input[type="checkbox"] {
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     color: #fff;
     border: solid 0.12rem #d1dbe3;
     border-radius: $borderRadius;
@@ -76,7 +81,7 @@
       content: "";
       display: block;
       top: 2px;
-      left: 7px;
+      left: 6px;
       width: 8px;
       height: 14px;
       border-style: solid;
