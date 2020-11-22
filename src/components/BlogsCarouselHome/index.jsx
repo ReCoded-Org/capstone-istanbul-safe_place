@@ -65,11 +65,18 @@ const BlogsCarouselHome = () => {
           );
         })}
       </Slider>
-      <Link to="/blog">
-        <h6 className="allBlogsBtn">
-          {t("home.buttons.blogBtn")} <span>&#8594;</span>
-        </h6>
-      </Link>
+      <Row className="allBlogsBtn">
+        <Link to="/blog">
+          <h6>
+            {t("home.buttons.blogBtn")}
+            {document.body.dir === "rtl" ? (
+              <span> &#8592; </span>
+            ) : (
+              <span> &#8594; </span>
+            )}
+          </h6>
+        </Link>
+      </Row>
     </Container>
   );
 };
