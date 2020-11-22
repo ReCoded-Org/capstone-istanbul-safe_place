@@ -19,6 +19,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           <input
             className="mr-sm-2 searchBarInput"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder="Search"
           />
           <img
