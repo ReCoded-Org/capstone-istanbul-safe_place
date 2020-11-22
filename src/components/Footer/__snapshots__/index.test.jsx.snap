@@ -20,22 +20,14 @@ exports[`renders correctly and matches the snapshot 1`] = `
         />
       </div>
       <div
-        className="footerInfo col"
+        className="footerInfo col-md-3"
       >
-        <a
-          href="/privacy"
+        <h5>
+          footer.followUs
+        </h5>
+        <div
+          className="row"
         >
-          Privacy and Cookies
-        </a>
-        <a
-          href="/terms"
-        >
-          Terms and Conditions
-        </a>
-        <p>
-          Follow us on social media:
-        </p>
-        <div>
           <a
             href="https://www.twitter.com/"
           >

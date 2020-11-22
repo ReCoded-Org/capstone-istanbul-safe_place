@@ -335,5 +335,8 @@
     "socialMediaIconsTitle": "مشاركة على مواقع التواصل الاجتماعي:",
     "relatedPostsContainerTitle": "مقالات ذات صلة:",
     "loadingMessage": "جاري التحميل..."
+  },
+  "footer": {
+    "followUs": "تابعونا على حسابات السوشل ميديا"
   }
 }
