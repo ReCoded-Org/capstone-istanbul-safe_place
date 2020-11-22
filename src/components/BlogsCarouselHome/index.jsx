@@ -86,11 +86,17 @@ const BlogsCarouselHome = () => {
               </div>
             ))}
           </Slider>
-          <Link to="/blog">
-            <h6 className="allBlogsBtn">
-              {t("home.buttons.blogBtn")} <span>&#8594;</span>
-            </h6>
-          </Link>
+          <Row className="allBlogsBtn">
+            <Link to="/blog">
+              <h6
+                dangerouslySetInnerHTML={{
+                  __html: t("home.buttons.blogBtn", {
+                    arrow: `<span>${t("home.buttons.arrow")}</span>`,
+                  }),
+                }}
+              ></h6>
+            </Link>
+          </Row>
         </Col>
       </Row>
     </Container>

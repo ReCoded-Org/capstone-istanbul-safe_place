@@ -7,8 +7,10 @@
   height: 5rem;
   font-family: $mainFontFamily;
 
+  #responsive-navbar-nav {
+    justify-content: flex-end;
+  }
   .navbar-nav {
-    margin-left: auto;
     align-items: center;
     align-content: center;
   }

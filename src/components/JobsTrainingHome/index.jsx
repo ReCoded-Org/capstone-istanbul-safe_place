@@ -35,9 +35,15 @@ export default function JobsTrainingHome() {
           </Col>
         </Row>
         <Link to="/opportunities">
-          <h6 className="opportunitiesButton">
-            {t("home.buttons.opportunitiesBtn")} <span>&#8594;</span>
-          </h6>
+          <Row className="opportunitiesButton">
+            <h6
+              dangerouslySetInnerHTML={{
+                __html: t("home.buttons.opportunitiesBtn", {
+                  arrow: `<span>${t("home.buttons.arrow")}</span>`,
+                }),
+              }}
+            ></h6>
+          </Row>
         </Link>
       </Container>
     </div>
