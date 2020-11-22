@@ -8,7 +8,7 @@ import "./index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderArrow from "../SliderArrow";
-import i18next from "i18next"
+import i18next from "i18next";
 
 const POSTS_PER_PAGE = 18;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
@@ -17,25 +17,23 @@ const BlogsCarouselHome = () => {
   const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
   const [languageRef, setLanguageRef] = useState("10221");
-  
+
   useEffect(() => {
-  const fetchBlogPosts = async () => {
-    const data = await fetch(BLOG_API_URL);
-    const fetchedBlogPosts = await data.json();
-    const filteredPosts = await fetchedBlogPosts.filter((post) => {
-      console.log(post.tags)
-      return post.tags.toString() === languageRef;
-    });
-    setBlogPosts(fetchedBlogPosts);
-    setBlogPosts(filteredPosts);
-  };
+    const fetchBlogPosts = async () => {
+      const data = await fetch(BLOG_API_URL);
+      const fetchedBlogPosts = await data.json();
+      const filteredPosts = await fetchedBlogPosts.filter((post) => {
+        return post.tags.toString() === languageRef;
+      });
+      setBlogPosts(fetchedBlogPosts);
+      setBlogPosts(filteredPosts);
+    };
 
     fetchBlogPosts();
   }, [languageRef]);
 
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
-    console.log(ref);
     if (ref === "en") {
       setLanguageRef("10221");
     } else if (ref === "ar") {
