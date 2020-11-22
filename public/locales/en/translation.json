@@ -358,5 +358,8 @@
     "socialMediaIconsTitle": "Share on social media:",
     "relatedPostsContainerTitle": "Related articles:",
     "loadingMessage": "Loading..."
+  },
+  "footer": {
+    "followUs": "Follow us on social media"
   }
 }
