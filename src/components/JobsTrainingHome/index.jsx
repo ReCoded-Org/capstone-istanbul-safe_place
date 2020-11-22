@@ -38,7 +38,7 @@ export default function JobsTrainingHome() {
           <Row className="opportunitiesButton">
             <h6>
               {t("home.buttons.opportunitiesBtn")}
-              <span>&#8594;</span>
+              {document.body.dir === "rtl" ? <span> &#8592; </span>: <span> &#8594; </span>}  
             </h6>
           </Row>
         </Link>

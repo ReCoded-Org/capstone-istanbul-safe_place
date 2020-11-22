@@ -121,7 +121,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
         <h6>
           home.buttons.opportunitiesBtn
           <span>
-            →
+             → 
           </span>
         </h6>
       </div>
