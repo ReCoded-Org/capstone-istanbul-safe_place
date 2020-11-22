@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import SearchBar from "../SearchBar";
+import BlogCard from "../BlogCard";
 import "./index.scss";
 
 const POSTS_PER_PAGE = 9;
@@ -37,24 +38,7 @@ export default function Blogs() {
       </Row>
       <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
-          return (
-            <Col key={blogPost.id} md={4}>
-              <Card className="blogPost">
-                <Card.Img
-                  variant="top"
-                  src={blogPost.jetpack_featured_media_url}
-                />
-                <Card.Body>
-                  <Card.Title
-                    className="blogPostTitle"
-                    dangerouslySetInnerHTML={{
-                      __html: blogPost.title.rendered,
-                    }}
-                  />
-                </Card.Body>
-              </Card>
-            </Col>
-          );
+          return <BlogCard blogPost={blogPost} key={blogPost.id} />;
         })}
       </Row>
     </Container>
