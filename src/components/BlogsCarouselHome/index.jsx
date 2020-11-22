@@ -88,13 +88,10 @@ const BlogsCarouselHome = () => {
           </Slider>
           <Row className="allBlogsBtn">
             <Link to="/blog">
-              <h6
-                dangerouslySetInnerHTML={{
-                  __html: t("home.buttons.blogBtn", {
-                    arrow: `<span>${t("home.buttons.arrow")}</span>`,
-                  }),
-                }}
-              ></h6>
+              <h6>
+                {t("home.buttons.blogBtn")} 
+                <span>&#8594;</span>
+              </h6>
             </Link>
           </Row>
         </Col>

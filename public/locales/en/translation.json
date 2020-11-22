@@ -166,9 +166,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "All opportunities {{arrow}}",
-      "blogBtn": "All blog posts {{arrow}}",
-      "arrow": "&#8594;"
+      "opportunitiesBtn": "All opportunities",
+      "blogBtn": "All blog posts"
     }
   },
   "searchHelpPage": {
