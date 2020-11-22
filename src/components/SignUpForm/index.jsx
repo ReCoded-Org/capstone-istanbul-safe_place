@@ -141,8 +141,13 @@ export default function SignUpForm({ submit }) {
         </div>
 
         <button type="submit" className="submitBtn">
-          Sign in
+          Sign up
         </button>
+
+        <p>
+          Already have an account?&nbsp;
+          <a href="/signin">Sign in</a>
+        </p>
       </form>
     </div>
   );

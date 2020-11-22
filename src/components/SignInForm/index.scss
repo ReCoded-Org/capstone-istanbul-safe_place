@@ -25,6 +25,7 @@
     @include primaryBtn;
     background-color: $primaryColor;
     font-weight: 800;
+    margin-top: 2rem;
 
     &:hover {
       background-color: $warningColor;
@@ -39,7 +40,13 @@
     label {
       width: 100%;
       font-weight: 500;
+      color: $darkColor;
     }
+  }
+
+  p {
+    color: $darkColor;
+    margin-top: 1rem;
   }
 
   /* checkbox custom Style */
