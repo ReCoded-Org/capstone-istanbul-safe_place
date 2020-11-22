@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import { BrowserRouter as Router } from "react-router-dom";
 import BlogCard from "./index";
 
-const mockData = {
+const MOCK_DATA = {
   title: {
     rendered: "You can find safe place for yourself here",
   },
@@ -16,7 +16,7 @@ it("renders correctly and matches the snapshot", () => {
   const tree = renderer
     .create(
       <Router>
-        <BlogCard blogPost={mockData} />
+        <BlogCard blogPost={MOCK_DATA} />
       </Router>
     )
     .toJSON();
