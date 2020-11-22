@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import SearchBar from "../SearchBar";
+import BlogCard from "../BlogCard";
 import "./index.scss";
-import { Link } from "react-router-dom";
-import i18next from "i18next";
 
 const POSTS_PER_PAGE = 18;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
@@ -52,32 +51,13 @@ export default function Blogs() {
   };
 
   return (
-    <Container>
+    <Container className="blogsPage">
       <Row className="searchBar">
         <SearchBar handleSearch={handleSearch} />
       </Row>
       <Row className="justify-content-center">
         {blogPosts.map((blogPost) => {
-          return (
-            <Col key={blogPost.id} md={4}>
-              <Link to={`/blog/${blogPost.id}`}>
-                <Card className="blogPost">
-                  <Card.Img
-                    variant="top"
-                    src={blogPost.jetpack_featured_media_url}
-                  />
-                  <Card.Body>
-                    <Card.Title
-                      className="blogPostTitle"
-                      dangerouslySetInnerHTML={{
-                        __html: blogPost.title.rendered,
-                      }}
-                    />
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          );
+          return <BlogCard blogPost={blogPost} key={blogPost.id} />;
         })}
       </Row>
     </Container>

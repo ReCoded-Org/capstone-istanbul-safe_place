@@ -7,8 +7,11 @@
   height: 5rem;
   font-family: $mainFontFamily;
 
+  // Bootstrap navbar has a default margin-left for items that are on the side, when we switch to arabic these items are squished to opposite side, so using flex-end make it responsive for both languages. Had to use id to override it.
+  #responsive-navbar-nav {
+    justify-content: flex-end;
+  }
   .navbar-nav {
-    margin-left: auto;
     align-items: center;
     align-content: center;
   }
