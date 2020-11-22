@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Contact from "../../components/Contact";
@@ -6,6 +6,10 @@ import "./index.scss";
 
 const ContactUsPage = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container className="contactUsPage">
