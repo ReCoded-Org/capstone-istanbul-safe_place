@@ -166,8 +166,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "جميع الفرص {{arrow}}",
-      "blogBtn": "جميع المدونات {{arrow}} "
+      "opportunitiesBtn": "جميع الفرص",
+      "blogBtn": "جميع المدونات"
     }
   },
   "searchHelpPage": {
