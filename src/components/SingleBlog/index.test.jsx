@@ -1,8 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
-import Blogs from "./index";
-import { act } from "react-dom/test-utils";
 import { BrowserRouter as Router } from "react-router-dom";
+import { render } from "react-dom";
+import { act } from "react-dom/test-utils";
+import SingleBlog from "./index";
 
 let container;
 
@@ -16,17 +16,22 @@ afterEach(() => {
   container = null;
 });
 
-describe("Blogs", () => {
-  const MOCK_DATA = [
-    {
-      title: {
-        rendered: "You can find safe place for yourself here",
-      },
-      jetpack_featured_media_url:
-        "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
-      id: 78,
+describe("Single blog", () => {
+  const MOCK_DATA = {
+    content: {
+      rendered: "You can find safe place for yourself here",
     },
-  ];
+    "jetpack-related-posts": [
+      {
+        id: 61,
+        title: "Women and health",
+        img: {
+          src:
+            "https://safeplace102505649.files.wordpress.com/2020/11/smilinggirl.jpg?w=350&h=200&crop=1",
+        },
+      },
+    ],
+  };
 
   it("Renders without crashing", async () => {
     jest.spyOn(global, "fetch").mockImplementation(() =>
@@ -38,7 +43,7 @@ describe("Blogs", () => {
     await act(async () => {
       render(
         <Router>
-          <Blogs />
+          <SingleBlog />
         </Router>,
         container
       );
