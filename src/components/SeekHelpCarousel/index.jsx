@@ -34,7 +34,12 @@ const SeekHelpCarousel = () => {
       </Row>
       <Link to="/seekhelp">
         <h6 className="searchHelpBtn">
-          {t("home.buttons.searchHelpBtn")} <span>&#8594;</span>
+          {t("home.buttons.searchHelpBtn")}
+          {document.body.dir === "rtl" ? (
+            <span> &#8592; </span>
+          ) : (
+            <span> &#8594; </span>
+          )}
         </h6>
       </Link>
     </Container>
