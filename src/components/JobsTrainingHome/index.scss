@@ -19,6 +19,12 @@
     }
   }
 
+  .jobsTrainingHeader {
+    h2 {
+      margin-top: 3rem;
+    }
+  }
+
   a {
     @include normalLink;
   }
