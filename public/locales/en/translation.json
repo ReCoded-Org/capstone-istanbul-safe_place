@@ -323,6 +323,13 @@
     },
     "contactUsModal": {
       "message": "Thank you for leaving us message!"
+    },
+    "contactUsInfo": {
+      "header": "Leave us a message",
+      "description": "Safe Place is here for you. Please use this form to contact us, share your feedback, submit a request for assistance or work together to end gender-based violence.",
+      "location": "9094 Bay Meadows Street Conyers, GA 30012",
+      "phone": "+229-955-5388-336",
+      "email": "support@mail.com"
     }
   },
   "signIn": {
