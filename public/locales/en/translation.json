@@ -19,6 +19,13 @@
     }
   },
   "home": {
+    "genderViolenceMain": {
+      "notAloneStatement": "You are not alone",
+      "safePlaceStatement": "Safe Place is {{here}}",
+      "here": "HERE",
+      "subHeader": "Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.",
+      "button": "Find Help"
+    },
     "genderViolenceIntro": {
       "header": "What is violence against women?",
       "intro": "According to the first article of the Declaration on the Prevention of Violence Against Women, adopted by the United Nations General Assembly in 1993; It is the threat or coercion of any kind of gender-based violence or act that results in or is likely to result in physical, sexual and emotional harm to women in the public and private spheres, and arbitrarily restricting freedom.",
@@ -159,7 +166,8 @@
       }
     ],
     "buttons": {
-      "opportunitiesBtn": "All opportunities"
+      "opportunitiesBtn": "All opportunities",
+      "blogBtn": "All blog posts"
     }
   },
   "searchHelpPage": {
@@ -315,6 +323,13 @@
     },
     "contactUsModal": {
       "message": "Thank you for leaving us message!"
+    },
+    "contactUsInfo": {
+      "header": "Leave us a message",
+      "description": "Safe Place is here for you. Please use this form to contact us, share your feedback, submit a request for assistance or work together to end gender-based violence.",
+      "location": "9094 Bay Meadows Street Conyers, GA 30012",
+      "phone": "+229-955-5388-336",
+      "email": "support@mail.com"
     }
   },
   "signIn": {
@@ -337,5 +352,11 @@
       "passwordMin": "Password length must be at least 8 characters long",
       "passwordMax": "Password length must be less than or equal to 64 characters long"
     }
+  },
+  "singleBlog": {
+    "backToBlogBtn": "Back to blog",
+    "socialMediaIconsTitle": "Share on social media:",
+    "relatedPostsContainerTitle": "Related articles:",
+    "loadingMessage": "Loading..."
   }
 }

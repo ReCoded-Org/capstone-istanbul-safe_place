@@ -17,10 +17,11 @@ exports[`renders correctly 1`] = `
           Profile
         </h2>
         <div
-          className="userPortrait"
+          className="justify-content-center row"
         >
           <img
             alt="User portrait"
+            className="userPortrait"
             src="defaultProfileImage.png"
           />
         </div>
@@ -57,7 +58,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="firstName"
                   >
-                    Your first Name
+                    First name
                   </label>
                   <input
                     id="firstName"
@@ -72,7 +73,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="lastName"
                   >
-                    Last Name
+                    Last name
                   </label>
                   <input
                     id="lastName"
@@ -91,7 +92,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="nationality"
                   >
-                    Your nationality
+                    Nationality
                   </label>
                   <input
                     id="nationality"
@@ -1270,8 +1271,39 @@ exports[`renders correctly 1`] = `
             aria-expanded={null}
             className="collapse"
           >
-            <div>
-              UserPassword
+            <div
+              className="userPasswordSection col-12"
+            >
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="newPassword"
+                >
+                  New password
+                </label>
+                <input
+                  id="newPassword"
+                  name="newPassword"
+                  placeholder="Enter new password"
+                  type="password"
+                />
+              </div>
+              <div
+                className="formInput"
+              >
+                <label
+                  htmlFor="confirmNewPassword"
+                >
+                  Confirm password
+                </label>
+                <input
+                  id="confirmNewPassword"
+                  name="confirmNewPassword"
+                  placeholder="Confirm new password"
+                  type="password"
+                />
+              </div>
             </div>
           </div>
         </div>

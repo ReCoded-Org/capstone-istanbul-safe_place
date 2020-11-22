@@ -14,6 +14,10 @@
     margin-bottom: 3rem;
   }
 
+  a {
+    @include normalLink;
+  }
+
   .opportunitiesButton {
     text-align: right;
     color: $primaryColor;

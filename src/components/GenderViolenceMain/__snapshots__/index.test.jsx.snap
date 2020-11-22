@@ -10,16 +10,20 @@ exports[`renders correctly and matches the snapshot 1`] = `
     <div
       className="main-text col-md-6 col-12 order-md-first order-last"
     >
-      <h1>
-        You are not alone
-        <br />
-        Safe Place is
-        <span>
-           HERE
-        </span>
-      </h1>
+      <div>
+        <h1>
+          home.genderViolenceMain.notAloneStatement
+        </h1>
+        <h1
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "home.genderViolenceMain.safePlaceStatement",
+            }
+          }
+        />
+      </div>
       <p>
-        Safe Place provides access to immediate help and support for victims of violence. We offer a shelter, psychological help, lawyers and doctors.
+        home.genderViolenceMain.subHeader
       </p>
       <a
         href="/seekhelp"
@@ -28,7 +32,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
         <button
           type="button"
         >
-          Find Help
+          home.genderViolenceMain.button
         </button>
       </a>
     </div>

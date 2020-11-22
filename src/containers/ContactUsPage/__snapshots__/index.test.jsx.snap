@@ -10,26 +10,26 @@ exports[`renders correctly and matches the snapshot 1`] = `
   <h6>
     contactUs.contactUsPage.subHeader
   </h6>
-  <div
-    className="row row-cols-md-12"
+  <section
+    className="contactSection"
   >
-    <section
-      className="contactSection"
+    <div
+      className="contactContainer container"
     >
       <div
-        className="contactContainer container-md"
+        className="row"
       >
         <div
-          className="row"
+          className="col-md-6 col-sm-12"
         >
           <div
-            className="contactInfo col-md-6 col-12"
+            className="contactInfo col"
           >
             <h2>
-              Leave us a message
+              contactUs.contactUsInfo.header
             </h2>
             <p>
-              Torquatos nostros? quos tu tam crudelis fuisse, nihil oportere nimium nos causae confidere, sed animo etiam erga nos causae confidere, sed uti oratione perpetua malo quam ostendis sed quia dolor repellendus temporibus autem.
+              contactUs.contactUsInfo.description
             </p>
             <div
               className="contactMethods row"
@@ -43,7 +43,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
                   src="locationIcon.svg"
                 />
                 <p>
-                  9094 Bay Meadows Street Conyers, GA 30012
+                  contactUs.contactUsInfo.location
                 </p>
               </div>
               <div
@@ -55,7 +55,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
                   src="phoneIcon.svg"
                 />
                 <p>
-                  +229-955-5388-336
+                  contactUs.contactUsInfo.phone
                 </p>
               </div>
               <div
@@ -67,13 +67,17 @@ exports[`renders correctly and matches the snapshot 1`] = `
                   src="mailIcon.svg"
                 />
                 <p>
-                  support@mail.com
+                  contactUs.contactUsInfo.email
                 </p>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="col"
+        >
           <div
-            className="contactForm col-md-6 col-12"
+            className="contactForm container-fluid"
           >
             <form
               onSubmit={[Function]}
@@ -135,7 +139,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 `;

@@ -29,7 +29,7 @@ const OurTeamCards = () => {
   return (
     <Container className="ourTeamInfo">
       <h4>{t("aboutUsPage.subHeader")}</h4>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-center">
         {membersInfoArr.map((member) => {
           return (
             <div className="singleMemberInfo" key={member.name}>
