@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Row, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 const ViolenceTestModal = () => {
+  const { t } = useTranslation();
   const [isShown, setIsShown] = useState(false);
 
   const handleClose = () => setIsShown(false);
@@ -12,7 +14,7 @@ const ViolenceTestModal = () => {
   return (
     <Row className="justify-content-md-center violenceModal">
       <Button variant="primary" onClick={handleShow}>
-        Result
+        {t("violenceTestPage.result")}
       </Button>
 
       <Modal show={isShown} onHide={handleClose} className="modalCard">
@@ -21,20 +23,13 @@ const ViolenceTestModal = () => {
             <span aria-hidden="true">×</span>
           </button>
           <div className="modalBody">
-            <p>
-              If you answered YES to ANY or ALL of these questions, you may be
-              in an abusive relationship. Please call for information and
-              assistance.
-            </p>
+            <p>{t("violenceTestPage.testResult")}</p>
             <Button type="button">
               <a href="tel:+1-340-5558-235">340-5558-235</a>
             </Button>
-            <p>
-              or gain immediate access to information of nearby shelters,
-              psychologist, lawyers or doctors.
-            </p>
+            <p>{t("violenceTestPage.getHelp")}</p>
             <Link to="/seekhelp">
-              <Button type="button">Search for help</Button>
+              <Button type="button">{t("violenceTestPage.seekHelpBtn")}</Button>
             </Link>
           </div>
         </Modal.Body>

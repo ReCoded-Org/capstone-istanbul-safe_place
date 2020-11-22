@@ -19,6 +19,12 @@ const SearchBar = ({ handleSearch }) => {
             placeholder="Search"
             className="mr-sm-2 searchBarInput"
             onChange={(e) => handleInputChange(e)}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                handleSearch(e, keyword);
+                setKeyword("");
+              }
+            }}
           />
           <img
             className="searchIcon"

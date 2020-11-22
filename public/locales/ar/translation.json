@@ -178,6 +178,12 @@
     "dropdownTitles": { "location": "العنوان", "typeOfHelp": "نوع المساعدة" }
   },
   "violenceTestPage": {
+    "header": "فحص العنف الذاتي",
+    "subHeader": "هذا الفحص مصمم من  قبل  {{link}}",
+    "result": "النتيجة",
+    "testResult": "إذا أجبت بنعم على أى من الاسئلة ربما تعاني من العنف الرجاء التواصل على الرقم أدناه",
+    "getHelp": "أو احصل على معلومات التواصل مع مراكز الأمان والدكاترة والمحاميين القريبين لك",
+    "seekHelpBtn": "ابحث عن مساعدة",
     "testSpec": [
       {
         "category": "الاعتداء الجسدي",
@@ -335,5 +341,8 @@
     "socialMediaIconsTitle": "مشاركة على مواقع التواصل الاجتماعي:",
     "relatedPostsContainerTitle": "مقالات ذات صلة:",
     "loadingMessage": "جاري التحميل..."
+  },
+  "footer": {
+    "followUs": "تابعونا على حسابات السوشل ميديا"
   }
 }
