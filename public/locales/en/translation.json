@@ -178,12 +178,6 @@
     "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
   },
   "violenceTestPage": {
-    "header": "Self Test",
-    "subHeader": "This test is developed by {{link}}",
-    "result": "Result",
-    "testResult": "If you answered YES to ANY or ALL of these questions, you may be in an abusive relationship. Please call for information and assistance.",
-    "getHelp": "or gain immediate access to information of nearby shelters, psychologist, lawyers or doctors.",
-    "seekHelpBtn": "Search for help",
     "testSpec": [
       {
         "category": "Physical Abuse",
@@ -364,5 +358,8 @@
     "socialMediaIconsTitle": "Share on social media:",
     "relatedPostsContainerTitle": "Related articles:",
     "loadingMessage": "Loading..."
+  },
+  "footer": {
+    "followUs": "Follow us on social media"
   }
 }
