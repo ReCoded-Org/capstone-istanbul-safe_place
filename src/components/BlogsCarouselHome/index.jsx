@@ -12,6 +12,8 @@ import i18next from "i18next";
 
 const POSTS_PER_PAGE = 18;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
+const EN_REFERENCE_NUMBER = "10221";
+const AR_REFERENCE_NUMBER = "38299";
 
 const BlogsCarouselHome = () => {
   const { t } = useTranslation();
@@ -35,9 +37,9 @@ const BlogsCarouselHome = () => {
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
     if (ref === "en") {
-      setLanguageRef("10221");
+      setLanguageRef(EN_REFERENCE_NUMBER);
     } else if (ref === "ar") {
-      setLanguageRef("38299");
+      setLanguageRef(AR_REFERENCE_NUMBER);
     }
   });
 
