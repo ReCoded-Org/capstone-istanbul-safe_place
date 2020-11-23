@@ -25,6 +25,11 @@
     }
   }
 
+  .userSetting {
+    max-width: 1rem;
+    margin: 1.8rem;
+  }
+
   p {
     margin: 0.1rem;
   }
@@ -128,16 +133,19 @@
     z-index: 1;
   }
 
+  .navbar-collapse {
+    display: flex;
+  }
+
+  .userSetting {
+    max-width: 10rem !important;
+  }
+
   .navbar-nav {
     background-color: $secondaryColor;
     width: 14rem;
-    padding-bottom: 1rem;
     border-radius: 0.5rem;
-  }
-
-  .nav-link {
-    position: right;
-    align-self: center;
+    padding: 1rem 2.5rem;
   }
 
   .signUpBtn,
