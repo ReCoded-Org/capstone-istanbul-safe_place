@@ -15,7 +15,9 @@ export default function JobsTrainingHome() {
   const NUM_CARDS_TO_SHOW = 2;
   const shownOpportunitiesCards = cardsList.slice(0, NUM_CARDS_TO_SHOW);
   const cards = shownOpportunitiesCards.map((opportunity) => (
-    <OpportunitiesCard {...opportunity} key={opportunity.title} />
+    <Col sm={12} md={6}>
+      <OpportunitiesCard {...opportunity} key={opportunity.title} />
+    </Col>
   ));
 
   return (

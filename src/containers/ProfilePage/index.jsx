@@ -3,6 +3,7 @@ import { Container, Row, Accordion } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
+import { useTranslation } from "react-i18next";
 import UserDetailForm from "../../components/profile/UserDetailForm";
 import UserEmailForm from "../../components/profile/UserEmailForm";
 import UserPasswordForm from "../../components/profile/UserPasswordForm";
@@ -34,6 +35,7 @@ const EMAIL_UPDATED = "Email updated successfully!";
 export default function ProfilePage() {
   const [updateStatus, setUpdateStatus] = React.useState(null);
   const currentUser = React.useContext(AuthContext);
+  const { t } = useTranslation();
 
   const { register, handleSubmit, errors } = useForm({
     mode: "onTouched",
@@ -45,7 +47,7 @@ export default function ProfilePage() {
 
   const sections = [
     {
-      label: "User details",
+      label: "profile.userDetail.label",
       children: (
         <UserDetailForm
           register={register}
@@ -55,7 +57,7 @@ export default function ProfilePage() {
       ),
     },
     {
-      label: "Email address",
+      label: "profile.userEmail.label",
       children: (
         <UserEmailForm
           register={register}
@@ -65,7 +67,7 @@ export default function ProfilePage() {
       ),
     },
     {
-      label: "Change password",
+      label: "profile.userPassword.label",
       children: (
         <UserPasswordForm
           register={register}
@@ -95,11 +97,11 @@ export default function ProfilePage() {
       <form onSubmit={handleSubmit(onSave)}>
         <Accordion defaultActiveKey="0">
           <Row className="profilePortrait">
-            <h2>Profile</h2>
+            <h2>{t("profile.title")}</h2>
             <Row className="justify-content-center">
               <img
                 src={currentUser?.photoURL || defaultProfileImage}
-                alt="User portrait"
+                alt={t("profile.userImageAlt")}
                 className="userPortrait"
               />
             </Row>
@@ -109,7 +111,7 @@ export default function ProfilePage() {
               <ProfileSection
                 key={section.label}
                 eventKey={index.toString()}
-                label={section.label}
+                label={t(`${section.label}`)}
               >
                 {section.children}
               </ProfileSection>
@@ -118,7 +120,7 @@ export default function ProfilePage() {
           ))}
 
           <Row className="submitBtn">
-            <button type="submit">Save changes</button>
+            <button type="submit">{t("profile.saveChanges")}</button>
           </Row>
           <Row className="updateStatus">
             <p>{updateStatus}</p>
