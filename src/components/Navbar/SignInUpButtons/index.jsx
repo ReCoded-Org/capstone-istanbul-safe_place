@@ -5,7 +5,7 @@ export default function SignInUpButtons() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className="signButtons">
       <a href="/signin">
         <button type="button" className="signInBtn">
           {t("navbar.buttons.signIn")}

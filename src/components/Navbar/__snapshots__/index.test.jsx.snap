@@ -91,7 +91,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
             />
           </button>
         </div>
-        <div>
+        <div
+          className="signButtons"
+        >
           <a
             href="/signin"
           >
