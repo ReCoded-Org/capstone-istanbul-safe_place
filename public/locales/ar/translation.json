@@ -343,6 +343,19 @@
       "location": "٩٠٩٤ شارع باي ميادوز ، مدينة كونري ، ٣٠٠١٢"
     }
   },
+  "signIn": {
+    "header": "مرحبًا بك مجددًا",
+    "SignInWith": "سجل الدخول عبر",
+    "newHere": "زيارتك الأولى؟",
+    "createAccount": "أنشئ حسابًا",
+    "form": {
+      "yourEmail": "بريدك الإلكتروني",
+      "yourPassword": "كلمة المرور",
+      "rememberMe": "تذكرني في المرة القادمة",
+      "signIn": "سجل الدخول"
+    },
+    "or": "أو"
+  },
   "singleBlog": {
     "backToBlogBtn": "الرجوع إلى المدونة",
     "socialMediaIconsTitle": "مشاركة على مواقع التواصل الاجتماعي:",
