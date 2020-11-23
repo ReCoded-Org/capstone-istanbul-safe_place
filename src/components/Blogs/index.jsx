@@ -6,9 +6,6 @@ import "./index.scss";
 
 const POSTS_PER_PAGE = 9;
 const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
-// numbers "10221" and "38299" are the refernce numbers from word press that we get after taging each post to its language in order to make the change between the languages
-// "38299" for Arabic language.
-// "10221" for English language
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
