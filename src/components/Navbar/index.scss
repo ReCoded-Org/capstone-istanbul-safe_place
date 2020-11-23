@@ -77,6 +77,10 @@
     }
   }
 
+  .signButtons {
+    text-align: center;
+  }
+
   .signInBtn {
     @include primaryBtn;
     width: 8rem;
