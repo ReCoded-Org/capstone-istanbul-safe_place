@@ -153,7 +153,7 @@ export default function SignUpForm({ submit }) {
           <InputErrorMessage error={errors.acceptTerms} />
         </div>
 
-        <button type="submit" className="submitBtn">
+        <button type="submit" className="submitBtn" aria-label="sign up">
           {t("signUp.signUp")}
         </button>
 

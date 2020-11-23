@@ -19,10 +19,10 @@ exports[`renders correctly 1`] = `
       className="signUpForm col-md-6 col-12"
     >
       <h2>
-        Welcome to Safe Place!
+        signUp.header
       </h2>
       <h4>
-        Sign up with
+        signUp.signUpWith
       </h4>
       <ul
         className="signUpIcons"
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
               <input
                 aria-label="firstName"
                 name="firstName"
-                placeholder="First name"
+                placeholder="signUp.firstName"
                 type="text"
               />
             </div>
@@ -95,7 +95,7 @@ exports[`renders correctly 1`] = `
               <input
                 aria-label="lastName"
                 name="lastName"
-                placeholder="Last name"
+                placeholder="signUp.lastName"
                 type="text"
               />
             </div>
@@ -106,7 +106,7 @@ exports[`renders correctly 1`] = `
             <input
               aria-label="email"
               name="email"
-              placeholder="Your email"
+              placeholder="signUp.emailAddress"
               type="email"
             />
           </div>
@@ -119,7 +119,7 @@ exports[`renders correctly 1`] = `
               <input
                 aria-label="password"
                 name="password"
-                placeholder="Password"
+                placeholder="signUp.password"
                 type="password"
               />
             </div>
@@ -129,7 +129,7 @@ exports[`renders correctly 1`] = `
               <input
                 aria-label="confirmPassword"
                 name="confirmPassword"
-                placeholder="Repeat password"
+                placeholder="signUp.confirmPassword"
                 type="password"
               />
             </div>
@@ -151,40 +151,30 @@ exports[`renders correctly 1`] = `
               </div>
               <div>
                 <label
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "signUp.acceptTerms",
+                    }
+                  }
                   htmlFor="acceptTerms"
-                >
-                  I have read and agree with the
-                   
-                  <a
-                    href="/terms"
-                  >
-                    Terms of Service
-                  </a>
-                   and our
-                   
-                  <a
-                    href="/privacy"
-                  >
-                    Privacy Policy
-                  </a>
-                </label>
+                />
               </div>
             </div>
           </div>
           <button
+            aria-label="sign up"
             className="submitBtn"
             type="submit"
           >
-            Sign in
+            signUp.signUp
           </button>
-          <p>
-            Already have an account? 
-            <a
-              href="/signin"
-            >
-              Sign in
-            </a>
-          </p>
+          <p
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "signUp.haveAccount",
+              }
+            }
+          />
         </form>
       </div>
     </div>
