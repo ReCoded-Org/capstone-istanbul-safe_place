@@ -25,6 +25,7 @@ describe("Blogs", () => {
       jetpack_featured_media_url:
         "https://safeplace102505649.files.wordpress.com/2020/11/womentogether.jpg",
       id: 78,
+      tags: [10221],
     },
   ];
 
