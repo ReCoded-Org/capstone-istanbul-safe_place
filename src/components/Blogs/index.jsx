@@ -29,7 +29,6 @@ export default function Blogs() {
     const fetchBlogPosts = async () => {
       const data = await fetch(blogsApiUrl);
       const fetchedBlogPosts = await data.json();
-      console.log(fetchedBlogPosts);
       setBlogsForSearch(fetchedBlogPosts);
       setBlogPosts(fetchedBlogPosts);
     };
