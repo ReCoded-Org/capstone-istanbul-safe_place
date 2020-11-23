@@ -353,7 +353,8 @@
       "yourPassword": "كلمة المرور",
       "rememberMe": "تذكرني في المرة القادمة",
       "signIn": "سجل الدخول"
-    } 
+    },
+    "or": "أو"
   },
   "validationMessage": {
     "incorrectPassword": "كلمة المرور التي أدخلتها غير صحيحة.",

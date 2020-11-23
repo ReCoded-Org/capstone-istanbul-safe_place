@@ -88,8 +88,10 @@ export default function SignIn() {
               </a>
             </li>
           </ul>
-          <hr className="divider" />
-
+          <p className="text-center">
+            <hr className="divider" />
+            <span className="divideContent">{t("signIn.or")}</span>
+          </p>
           <SignInForm submit={handleSignIn} />
         </Col>
       </Row>

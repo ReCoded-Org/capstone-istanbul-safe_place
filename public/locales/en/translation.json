@@ -349,7 +349,8 @@
       "yourPassword": "Your password",
       "rememberMe": "Remember me next time",
       "signIn": "Sign in"
-    } 
+    },
+    "or": "Or"
   },
   "validationMessage": {
     "incorrectPassword": "The password that you've entered is incorrect",

@@ -54,20 +54,20 @@
       color: $warningColor;
     }
   }
-
+  
   hr.divider {
     @include sectionDividerLine;
+  }
 
-    &::after {
-      content: "Or";
-      display: inline-block;
-      position: relative;
-      top: -0.8rem;
-      font: normal 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
-        Arial, sans-serif;
-      padding: 0 16px;
-      background: $lightColor;
-    }
+  .divideContent {
+    content: "Or";
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -1.4rem;
+    padding: 0 1rem;
+    background: $lightColor;
   }
 
   /* Icons Style */
