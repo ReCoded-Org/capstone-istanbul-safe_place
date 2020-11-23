@@ -99,7 +99,7 @@ export default function SignIn() {
 
           <p>
             {t("signIn.newHere")}{" "}
-            <a href="/sign-up">{t("signIn.createAccount")}</a>
+            <a href="/signup">{t("signIn.createAccount")}</a>
           </p>
         </Col>
       </Row>
