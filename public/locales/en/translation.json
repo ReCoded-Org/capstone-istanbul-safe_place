@@ -173,9 +173,22 @@
   "searchHelpPage": {
     "header": "Search for help",
     "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
-    "locations": ["Istanbul", "Ankara", "Izmir"],
-    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"],
-    "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
+    "locations": [
+      "Istanbul",
+      "Ankara",
+      "Izmir"
+    ],
+    "specialists": [
+      "Doctor",
+      "Lawyer",
+      "Psychologist",
+      "Social worker",
+      "All"
+    ],
+    "dropdownTitles": {
+      "location": "Location",
+      "typeOfHelp": "Type of help"
+    }
   },
   "violenceTestPage": {
     "header": "Self Test",
@@ -349,15 +362,16 @@
       "rememberMe": "Remember me next time",
       "signIn": "Sign in"
     },
-    "validationMessage": {
-      "incorrectPassword": "The password that you've entered is incorrect",
-      "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
-      "emptyEmail": "Please provide your email",
-      "emailNotValid": "Please provide a valid email",
-      "emptyPassword": "Please provide a password",
-      "passwordMin": "Password length must be at least 8 characters long",
-      "passwordMax": "Password length must be less than or equal to 64 characters long"
-    }
+    "or": "Or"
+  },
+  "validationMessage": {
+    "incorrectPassword": "The password that you've entered is incorrect",
+    "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
+    "emptyEmail": "Please provide your email",
+    "emailNotValid": "Please provide a valid email",
+    "emptyPassword": "Please provide a password",
+    "passwordMin": "Password length must be at least 8 characters long",
+    "passwordMax": "Password length must be less than or equal to 64 characters long"
   },
   "singleBlog": {
     "backToBlogBtn": "Back to blog",
