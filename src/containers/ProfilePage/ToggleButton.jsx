@@ -3,19 +3,16 @@ import { useAccordionToggle, AccordionContext } from "react-bootstrap";
 import i18n from "i18next";
 
 function getArrowClass(isCurrentElementSelected) {
-  let arrowClass;
+  let arrow;
 
-  if (isCurrentElementSelected) {
+  if (i18n.language === "ar") {
     // if Arabic, make the margin from left
-    // or make it default, margin from right
-    arrowClass = i18n.language === "ar" ? "arrow down-rtl" : "arrow down";
-  } else if (i18n.language === "ar") {
-    arrowClass = "arrow left";
+    arrow = isCurrentElementSelected ? "arrow down-rtl" : "arrow left";
   } else {
-    arrowClass = "arrow right";
+    arrow = isCurrentElementSelected ? "arrow down" : "arrow right";
   }
 
-  return arrowClass;
+  return arrow;
 }
 
 export default function ToggleButton({ children, eventKey, callback }) {
