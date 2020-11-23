@@ -7,23 +7,24 @@ import BlogCard from "../BlogCard";
 import "./index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  BLOGS_API_URL,
+  EN_REFERENCE_NUMBER,
+  AR_REFERENCE_NUMBER,
+} from "../../blogApiConsts";
 import SliderArrow from "../SliderArrow";
 import i18next from "i18next";
-
-const POSTS_PER_PAGE = 18;
-const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
-//  "10221" and "38299" are reference numbers from wordpress that we get after tagging each post to its language in order to make the change between the languages
-const EN_REFERENCE_NUMBER = "10221";
-const AR_REFERENCE_NUMBER = "38299";
 
 const BlogsCarouselHome = () => {
   const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
-  const [languageRef, setLanguageRef] = useState("10221");
+  const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      const data = await fetch(BLOG_API_URL);
+      const blogsApiWithLangParam = `${BLOGS_API_URL}?tags=${languageRef}`;
+
+      const data = await fetch(blogsApiWithLangParam);
       const fetchedBlogPosts = await data.json();
       const filteredPosts = await fetchedBlogPosts.filter((post) => {
         return post.tags.toString() === languageRef;
