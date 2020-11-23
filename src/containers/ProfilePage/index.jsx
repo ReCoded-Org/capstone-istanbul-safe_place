@@ -13,29 +13,32 @@ import ProfileSection from "./ProfileSection";
 import { validationSchemaObject } from "../../utils/formHelpers";
 import "./index.scss";
 
-const profileFormSchema = Joi.object({
-  address: validationSchemaObject.anyOptional,
-  birthdate: validationSchemaObject.anyOptional,
-  city: validationSchemaObject.anyOptional,
-  countryCode: validationSchemaObject.anyOptional,
-  firstName: validationSchemaObject.anyOptional,
-  lastName: validationSchemaObject.anyOptional,
-  nationality: validationSchemaObject.anyOptional,
-  phoneNumber: validationSchemaObject.anyOptional,
-  sex: validationSchemaObject.anyOptional,
-  state: validationSchemaObject.anyOptional,
-  zipCode: validationSchemaObject.anyOptional,
-  email: validationSchemaObject.email,
-  newPassword: validationSchemaObject.anyOptional,
-  confirmNewPassword: validationSchemaObject.anyOptional,
-});
-
 const EMAIL_UPDATED = "Email updated successfully!";
 
 export default function ProfilePage() {
   const [updateStatus, setUpdateStatus] = React.useState(null);
   const currentUser = React.useContext(AuthContext);
   const { t } = useTranslation();
+
+  const profileFormSchema = Joi.object({
+    address: validationSchemaObject.anyOptional,
+    birthdate: validationSchemaObject.anyOptional,
+    city: validationSchemaObject.anyOptional,
+    countryCode: validationSchemaObject.anyOptional,
+    firstName: validationSchemaObject.anyOptional,
+    lastName: validationSchemaObject.anyOptional,
+    nationality: validationSchemaObject.anyOptional,
+    phoneNumber: validationSchemaObject.anyOptional,
+    sex: validationSchemaObject.anyOptional,
+    state: validationSchemaObject.anyOptional,
+    zipCode: validationSchemaObject.anyOptional,
+    email: validationSchemaObject.email.messages({
+      "string.empty": t("validationMessage.emptyEmail"),
+      "string.email": t("validationMessage.emailNotValid"),
+    }),
+    newPassword: validationSchemaObject.anyOptional,
+    confirmNewPassword: validationSchemaObject.anyOptional,
+  });
 
   const { register, handleSubmit, errors } = useForm({
     mode: "onTouched",
