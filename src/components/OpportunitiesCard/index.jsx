@@ -14,8 +14,8 @@ export default function OpportunitiesCard(opportunity) {
       <div className="contactsDetails">
         <div className="address">{t(opportunity.address)}</div>
         <div className="nameOfOpportunityOwner">{t(opportunity.name)}</div>
-        <div className="phoneNumber">{t(opportunity.phoneNumber)}</div>
       </div>
+      <div className="phoneNumber">{t(opportunity.phoneNumber)}</div>
     </Col>
   );
 }
