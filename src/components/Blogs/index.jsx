@@ -25,7 +25,6 @@ export default function Blogs() {
       });
 
       setBlogsForSearch(fetchedBlogPosts);
-      setBlogPosts(fetchedBlogPosts);
       setBlogPosts(filteredPosts);
     };
 
