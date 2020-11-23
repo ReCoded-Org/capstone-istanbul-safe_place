@@ -10,8 +10,8 @@
   flex-direction: column;
 
   .postDate {
-    font-size: 0.625rem;
-    padding-left: 80%;
+    font-size: 0.8125rem;
+    align-self: flex-end;
     width: 4.375rem;
   }
 
@@ -25,33 +25,27 @@
   .description {
     font-size: 0.875rem;
     text-align: left;
+    text-align: justify;
   }
 
   .contactsDetails {
     font-size: 0.8125rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .address {
     text-align: left;
-    padding-right: 30%;
   }
   .phoneNumber {
-    padding-left: 62%;
+    align-self: flex-end;
+    font-size: 0.8125rem;
   }
 
   .borderLine {
-    padding: 7%;
+    padding: 0.5rem;
     border-bottom: 0.125rem solid $warningColor;
     margin-bottom: 0.4rem;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .opportunities {
-    width: 75% !important;
-    margin: 1.25rem 5rem;
   }
 }
