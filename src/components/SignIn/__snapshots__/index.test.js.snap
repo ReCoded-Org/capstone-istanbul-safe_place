@@ -67,9 +67,18 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
       </ul>
-      <hr
-        className="divider"
-      />
+      <p
+        className="text-center"
+      >
+        <hr
+          className="divider"
+        />
+        <span
+          className="divideContent"
+        >
+          signIn.or
+        </span>
+      </p>
       <div
         className="signInForm"
       >
