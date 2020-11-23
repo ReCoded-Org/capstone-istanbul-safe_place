@@ -1,13 +1,18 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import COUNTRIES from "./countries.json";
+import i18n from "i18next";
+import COUNTRIES_EN from "./countries-en.json";
+import COUNTRIES_AR from "./countries-ar.json";
 import Input from "../../form/SafePlaceInput";
 import "./index.scss";
 
 export default function UserDetail({ register }) {
   const { t } = useTranslation();
-
+  const COUNTRIES = i18n.language === 'ar'
+    ? COUNTRIES_AR
+    : COUNTRIES_EN;
+    
   return (
     <Col xs={12} className="userDetailSection">
       <div className="formInputGroup">
