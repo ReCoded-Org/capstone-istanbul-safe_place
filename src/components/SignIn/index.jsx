@@ -72,7 +72,7 @@ export default function SignIn() {
           <h2>{t("signIn.header")}</h2>
           <div>
             <span className="hyphen" />
-            <h4>{t("signIn.SignInWith")}</h4>
+            <h4>{t("signIn.signInWith")}</h4>
           </div>
           <ul className="signInIcons">
             <li className="signInIcon">
