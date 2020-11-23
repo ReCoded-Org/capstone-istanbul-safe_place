@@ -25,9 +25,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
     <div
       className="nameOfOpportunityOwner"
     />
-    <div
-      className="phoneNumber"
-    />
   </div>
+  <div
+    className="phoneNumber"
+  />
 </div>
 `;
