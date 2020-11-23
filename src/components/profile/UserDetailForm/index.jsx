@@ -9,10 +9,8 @@ import "./index.scss";
 
 export default function UserDetail({ register }) {
   const { t } = useTranslation();
-  const COUNTRIES = i18n.language === 'ar'
-    ? COUNTRIES_AR
-    : COUNTRIES_EN;
-    
+  const COUNTRIES = i18n.language === "ar" ? COUNTRIES_AR : COUNTRIES_EN;
+
   return (
     <Col xs={12} className="userDetailSection">
       <div className="formInputGroup">
@@ -110,7 +108,9 @@ export default function UserDetail({ register }) {
           <label htmlFor="country">
             {t("profile.userDetail.country.label")}
             <select name="countryCode" id="country" ref={register()}>
-              <option value="">{t("profile.userDetail.country.chooseCountry")}</option>
+              <option value="">
+                {t("profile.userDetail.country.chooseCountry")}
+              </option>
               {COUNTRIES.map((country) => (
                 <option key={country.id} value={country.alpha2}>
                   {country.name}
