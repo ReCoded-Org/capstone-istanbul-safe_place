@@ -37,38 +37,34 @@ exports[`renders correctly and matches the snapshot 1`] = `
         onKeyDown={[Function]}
       >
         <a
-          className="nav-link"
-          data-rb-event-key="/about"
+          aria-current={null}
+          className="navLink"
           href="/about"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           navbar.about
         </a>
         <a
-          className="nav-link"
-          data-rb-event-key="/blog"
+          aria-current={null}
+          className="navLink"
           href="/blog"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           navbar.blog
         </a>
         <a
-          className="nav-link"
-          data-rb-event-key="/opportunities"
+          aria-current={null}
+          className="navLink"
           href="/opportunities"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           navbar.opportunities
         </a>
         <a
-          className="nav-link"
-          data-rb-event-key="/contact"
+          aria-current={null}
+          className="navLink"
           href="/contact"
           onClick={[Function]}
-          onKeyDown={[Function]}
         >
           navbar.contact
         </a>
@@ -95,7 +91,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="signButtons"
         >
           <a
+            aria-current={null}
             href="/signin"
+            onClick={[Function]}
           >
             <button
               className="signInBtn"
@@ -105,7 +103,9 @@ exports[`renders correctly and matches the snapshot 1`] = `
             </button>
           </a>
           <a
+            aria-current={null}
             href="/signup"
+            onClick={[Function]}
           >
             <button
               className="signUpBtn"
