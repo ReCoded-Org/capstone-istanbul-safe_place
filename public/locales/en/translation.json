@@ -372,7 +372,27 @@
     "emailNotValid": "Please provide a valid email",
     "emptyPassword": "Please provide a password",
     "passwordMin": "Password length must be at least 8 characters long",
-    "passwordMax": "Password length must be less than or equal to 64 characters long"
+    "passwordMax": "Password length must be less than or equal to 64 characters long",
+    "confirmPassword": "Those passwords didn't match",
+    "acceptTerms": "You must accept our terms of service and privacy policy",
+    "emptyFirsName": "Please provide your first name",
+    "emptyLastName": "Please provide your last name"
+  },
+  "signUp": {
+    "header": "Welcome to Safe Place!",
+    "signUpWith": "Sign up with",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailAddress": "Your email",
+    "password": "Password",
+    "confirmPassword": "Repeat password",
+    "signUp":"Sign up",
+    "acceptTerms": "I have read and agree with the {{terms}} and our {{privacy}}",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "haveAccount": "Already have an account? {{signIn}}",
+    "signIn": "Sign in",
+    "or": "Or"
   },
   "singleBlog": {
     "backToBlogBtn": "Back to blog",
@@ -382,5 +402,23 @@
   },
   "footer": {
     "followUs": "Follow us on social media"
+  },
+  "profile": {
+    "title": "Profile",
+    "userImageAlt": "User portrait",
+    "saveChanges": "Save changes",
+    "userDetail": {
+      "label": "User details"
+    },
+    "userEmail": {
+      "label": "Email address"
+    },
+    "userPassword": {
+      "label": "Change password",
+      "newPassword": "New password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmNewPassword": "Confirm password",
+      "confirmNewPasswordPlaceholder": "Confirm new password"
+    }
   }
 }
