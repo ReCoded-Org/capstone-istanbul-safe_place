@@ -31,14 +31,14 @@
   @include media-breakpoint-down(sm) {
     height: 220rem;
     .mapStyle {
-      height: 60%;
+      height: 50%;
     }
   }
 
   @include media-breakpoint-down(md) {
     height: 100rem;
     .mapStyle {
-      height: 65%;
+      height: 60%;
     }
   }
 }
