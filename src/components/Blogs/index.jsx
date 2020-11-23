@@ -14,7 +14,7 @@ const AR_REFERENCE_NUMBER = "38299";
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogsForSearch, setBlogsForSearch] = useState([]);
-  const [languageRef, setLanguageRef] = useState("10221");
+  const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
