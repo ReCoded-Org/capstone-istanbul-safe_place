@@ -8,26 +8,37 @@ import { getErrorClass } from "../../utils/formHelpers";
 import { EMAIL_ALREADY_TAKEN_ERROR } from "../../utils/authHelpers";
 import "./index.scss";
 
-
 export default function SignUpForm({ submit }) {
   const { t } = useTranslation();
 
   const schema = Joi.object({
-    firstName: Joi.string().required().messages({
-      "string.empty": t("validationMessage.emptyFirsName"),
-    }),
-    lastName: Joi.string().required().messages({
-      "string.empty": t("validationMessage.emptyLastName"),
-    }),
-    email: Joi.string().required().email({ tlds: {} }).messages({
-      "string.empty": t("validationMessage.emptyEmail"),
-      "string.email": t("validationMessage.emailNotValid"),
-    }),
-    password: Joi.string().required().min(8).max(64).strict().messages({
-      "string.empty": t("validationMessage.emptyPassword"),
-      "string.min": t("validationMessage.passwordMin"),
-      "string.max": t("validationMessage.passwordMax"),
-    }),
+    firstName: Joi.string()
+      .required()
+      .messages({
+        "string.empty": t("validationMessage.emptyFirsName"),
+      }),
+    lastName: Joi.string()
+      .required()
+      .messages({
+        "string.empty": t("validationMessage.emptyLastName"),
+      }),
+    email: Joi.string()
+      .required()
+      .email({ tlds: {} })
+      .messages({
+        "string.empty": t("validationMessage.emptyEmail"),
+        "string.email": t("validationMessage.emailNotValid"),
+      }),
+    password: Joi.string()
+      .required()
+      .min(8)
+      .max(64)
+      .strict()
+      .messages({
+        "string.empty": t("validationMessage.emptyPassword"),
+        "string.min": t("validationMessage.passwordMin"),
+        "string.max": t("validationMessage.passwordMax"),
+      }),
     confirmPassword: Joi.string()
       .valid(Joi.ref("password"))
       .required()
@@ -35,9 +46,11 @@ export default function SignUpForm({ submit }) {
       .messages({
         "any.only": t("validationMessage.confirmPassword"),
       }),
-    acceptTerms: Joi.valid("accepted").required().messages({
-      "any.only": t("validationMessage.acceptTerms"),
-    }),
+    acceptTerms: Joi.valid("accepted")
+      .required()
+      .messages({
+        "any.only": t("validationMessage.acceptTerms"),
+      }),
   });
 
   const { register, handleSubmit, errors, reset, setError } = useForm({

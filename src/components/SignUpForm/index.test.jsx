@@ -4,7 +4,6 @@ import "@testing-library/jest-dom/extend-expect";
 
 import SignUpForm from "./index";
 
-
 // TODO: refactor the code and extract repetitive code to helper functions
 describe("SignUpForm", () => {
   const mockSubmit = jest.fn(
@@ -86,9 +85,7 @@ describe("SignUpForm", () => {
     );
     expect(screen.getByRole("textbox", { name: /email/i }).value).toBe("test");
     expect(screen.getByLabelText(/^password/i).value).toBe("password");
-    expect(screen.getByLabelText(/confirmPassword/i).value).toBe(
-      "password"
-    );
+    expect(screen.getByLabelText(/confirmPassword/i).value).toBe("password");
     expect(screen.getByRole("checkbox", { name: /acceptTerms/i }).checked).toBe(
       true
     );
@@ -284,9 +281,7 @@ describe("SignUpForm", () => {
       "test@mail.com"
     );
     expect(screen.getByLabelText(/^password/i).value).toBe("password");
-    expect(screen.getByLabelText(/confirmPassword/i).value).toBe(
-      "passcode"
-    );
+    expect(screen.getByLabelText(/confirmPassword/i).value).toBe("passcode");
     expect(screen.getByRole("checkbox", { name: /acceptTerms/i }).checked).toBe(
       true
     );
@@ -344,9 +339,7 @@ describe("SignUpForm", () => {
       "test@mail.com"
     );
     expect(screen.getByLabelText(/^password/i).value).toBe("password");
-    expect(screen.getByLabelText(/confirmPassword/i).value).toBe(
-      "password"
-    );
+    expect(screen.getByLabelText(/confirmPassword/i).value).toBe("password");
     expect(screen.getByRole("checkbox", { name: /acceptTerms/i }).checked).toBe(
       false
     );
