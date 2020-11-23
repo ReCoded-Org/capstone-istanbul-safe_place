@@ -388,5 +388,23 @@
   },
   "footer": {
     "followUs": "Follow us on social media"
+  },
+  "profile": {
+    "title": "Profile",
+    "userImageAlt": "User portrait",
+    "saveChanges": "Save changes",
+    "userDetail": {
+      "label": "User details"
+    },
+    "userEmail": {
+      "label": "Email address"
+    },
+    "userPassword": {
+      "label": "Change password",
+      "newPassword": "New password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmNewPassword": "Confirm password",
+      "confirmNewPasswordPlaceholder": "Confirm new password"
+    }
   }
 }
