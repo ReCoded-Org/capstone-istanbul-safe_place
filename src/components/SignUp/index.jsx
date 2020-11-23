@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import SignUpForm from "../SignUpForm";
 import womenSupportEachOther from "../../images/womenSupportEachOther.png";
 import googleIcon from "../../images/icons/googleIcon.svg";
@@ -12,6 +13,7 @@ import "./index.scss";
 
 export default function SignUp() {
   const history = useHistory();
+  const { t } = useTranslation();
 
   const signUpFailed = (error) => {
     alert(error);
@@ -60,8 +62,11 @@ export default function SignUp() {
           <img src={womenSupportEachOther} alt="Two women support each other" />
         </Col>
         <Col className="signUpForm" md={6} xs={12}>
-          <h2>Welcome to Safe Place!</h2>
-          <h4>Sign up with</h4>
+          <h2>{t("signUp.header")}</h2>
+          <div>
+            <span className="hyphen" />
+            <h4>{t("signUp.signUpWith")}</h4>
+          </div>
           <ul className="signUpIcons">
             <li className="signUpIcon">
               <a href="#/" onClick={() => handleSignUpWithProvider("twitter")}>
@@ -79,7 +84,10 @@ export default function SignUp() {
               </a>
             </li>
           </ul>
-          <hr className="divider" />
+          <p className="text-center">
+            <hr className="divider" />
+            <span className="dividerContent">{t("signUp.or")}</span>
+          </p>
 
           <SignUpForm submit={handleSignUp} />
         </Col>
