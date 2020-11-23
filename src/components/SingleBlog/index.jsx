@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Spinner } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as FacebookIcon } from "../../images/icons/facebookIcon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/icons/twitterIcon.svg";
 import { ReactComponent as LinkedInIcon } from "../../images/icons/linkedInIcon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/icons/instagramIcon.svg";
-import { useTranslation } from "react-i18next";
 
 const RELATED_POSTS_TO_SHOW = 4;
+
+const spinnerStyle = {
+  height: "100vh",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  color: "#fe8f7c",
+};
 
 export default function SingleBlog(props) {
   const { t } = useTranslation();
@@ -27,7 +36,13 @@ export default function SingleBlog(props) {
   }, [params]);
 
   if (!blogPost) {
-    return <h2>{t("singleBlog.loadingMessage")}</h2>;
+    return (
+      <Container fluid style={spinnerStyle}>
+        <Spinner animation="border" role="status" size="md">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </Container>
+    );
   }
   const relatedPosts = blogPost["jetpack-related-posts"]
     .map((relatedPost) => {
