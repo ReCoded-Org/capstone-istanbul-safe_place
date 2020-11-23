@@ -7,25 +7,42 @@ import BlogCard from "../BlogCard";
 import "./index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  BLOGS_API_URL,
+  EN_REFERENCE_NUMBER,
+  AR_REFERENCE_NUMBER,
+} from "../../blogApiConsts";
 import SliderArrow from "../SliderArrow";
-
-const POSTS_PER_PAGE = 9;
-const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
+import i18next from "i18next";
 
 const BlogsCarouselHome = () => {
   const { t } = useTranslation();
-
   const [blogPosts, setBlogPosts] = useState([]);
-
-  const fetchBlogPosts = async () => {
-    const data = await fetch(BLOG_API_URL);
-    const fetchedBlogPosts = await data.json();
-    setBlogPosts(fetchedBlogPosts);
-  };
+  const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
 
   useEffect(() => {
+    const fetchBlogPosts = async () => {
+      const blogsApiWithLangParam = `${BLOGS_API_URL}?tags=${languageRef}`;
+
+      const data = await fetch(blogsApiWithLangParam);
+      const fetchedBlogPosts = await data.json();
+      const filteredPosts = await fetchedBlogPosts.filter((post) => {
+        return post.tags.toString() === languageRef;
+      });
+      setBlogPosts(filteredPosts);
+    };
+
     fetchBlogPosts();
-  }, []);
+  }, [languageRef]);
+
+  i18next.on("languageChanged", (lng) => {
+    let ref = i18next.translator.language;
+    if (ref === "en") {
+      setLanguageRef(EN_REFERENCE_NUMBER);
+    } else if (ref === "ar") {
+      setLanguageRef(AR_REFERENCE_NUMBER);
+    }
+  });
 
   const settings = {
     slidesToShow: 3,

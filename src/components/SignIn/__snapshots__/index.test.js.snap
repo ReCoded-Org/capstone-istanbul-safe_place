@@ -21,9 +21,14 @@ exports[`renders correctly 1`] = `
       <h2>
         signIn.header
       </h2>
-      <h4>
-        signIn.SignInWith
-      </h4>
+      <div>
+        <span
+          className="hyphen"
+        />
+        <h4>
+          signIn.signInWith
+        </h4>
+      </div>
       <ul
         className="signInIcons"
       >
@@ -67,9 +72,18 @@ exports[`renders correctly 1`] = `
           </a>
         </li>
       </ul>
-      <hr
-        className="divider"
-      />
+      <p
+        className="text-center"
+      >
+        <hr
+          className="divider"
+        />
+        <span
+          className="dividerContent"
+        >
+          signIn.or
+        </span>
+      </p>
       <div
         className="signInForm"
       >
@@ -125,17 +139,17 @@ exports[`renders correctly 1`] = `
           >
             signIn.form.signIn
           </button>
-          <p>
-            signIn.newHere
-             
-            <a
-              href="/signup"
-            >
-              signIn.createAccount
-            </a>
-          </p>
         </form>
       </div>
+      <p>
+        signIn.newHere
+         
+        <a
+          href="/sign-up"
+        >
+          signIn.createAccount
+        </a>
+      </p>
     </div>
   </div>
 </div>

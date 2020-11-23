@@ -20,8 +20,8 @@ export default function SignInForm({ submit }) {
       .required()
       .email({ tlds: { allow: ["com", "net", "edu"] } })
       .messages({
-        "string.empty": t("signIn.validationMessage.emptyEmail"),
-        "string.email": t("signIn.validationMessage.emailNotValid"),
+        "string.empty": t("validationMessage.emptyEmail"),
+        "string.email": t("validationMessage.emailNotValid"),
       }),
     password: Joi.string()
       .required()
@@ -29,9 +29,9 @@ export default function SignInForm({ submit }) {
       .max(64)
       .strict()
       .messages({
-        "string.empty": t("signIn.validationMessage.emptyPassword"),
-        "string.min": t("signIn.validationMessage.passwordMin"),
-        "string.max": t("signIn.validationMessage.passwordMax"),
+        "string.empty": t("validationMessage.emptyPassword"),
+        "string.min": t("validationMessage.passwordMin"),
+        "string.max": t("validationMessage.passwordMax"),
       }),
   });
 
@@ -108,11 +108,6 @@ export default function SignInForm({ submit }) {
         <button type="submit" className="submitBtn">
           {t("signIn.form.signIn")}
         </button>
-
-        <p>
-          {t("signIn.newHere")}{" "}
-          <a href="/signup">{t("signIn.createAccount")}</a>
-        </p>
       </form>
     </div>
   );
