@@ -96,7 +96,7 @@ export default function SignIn() {
             <span className="dividerContent">{t("signIn.or")}</span>
           </p>
           <SignInForm submit={handleSignIn} />
-          
+
           <p>
             {t("signIn.newHere")}{" "}
             <a href="/sign-up">{t("signIn.createAccount")}</a>
