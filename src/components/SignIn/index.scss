@@ -31,19 +31,20 @@
   }
 
   h4 {
+    display: inline-block;
+    align-content: space-between;
     font-size: 1.25rem;
     color: $primaryColor;
-    margin-bottom: 2rem;
+    margin: 0 0.8rem 2rem;
+  }
 
-    &::before {
-      display: inline-block;
-      border-top: 0.4rem solid #fe8f7c;
-      border-radius: 10px;
-      width: 56px;
-      height: 0px;
-      content: "";
-      margin: auto 0.5rem auto 0;
-    }
+  .hyphen {
+    display: inline-block;
+    border-top: 0.4rem solid #fe8f7c;
+    border-radius: $borderRadius;
+    width: 3.5rem;
+    height: 0;
+    margin: auto 0;
   }
 
   a {
@@ -57,17 +58,17 @@
 
   hr.divider {
     @include sectionDividerLine;
+  }
 
-    &::after {
-      content: "Or";
-      display: inline-block;
-      position: relative;
-      top: -0.8rem;
-      font: normal 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
-        Arial, sans-serif;
-      padding: 0 16px;
-      background: $lightColor;
-    }
+  .dividerContent {
+    content: "Or";
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -1.4rem;
+    padding: 0 1rem;
+    background: $lightColor;
   }
 
   /* Icons Style */
