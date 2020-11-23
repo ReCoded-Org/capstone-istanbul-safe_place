@@ -7,12 +7,8 @@ function getArrowClass(isCurrentElementSelected) {
 
   if (isCurrentElementSelected) {
     // if Arabic, make the margin from left
-    if (i18n.language === "ar") {
-      arrowClass = "arrow down-rtl";
-    } else {
-      // or make it default, margin from right
-      arrowClass = "arrow down";
-    }
+    // or make it default, margin from right
+    arrowClass = i18n.language === "ar" ? "arrow down-rtl" : "arrow down";
   } else if (i18n.language === "ar") {
     arrowClass = "arrow left";
   } else {
