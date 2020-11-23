@@ -14,13 +14,13 @@ exports[`renders correctly 1`] = `
         className="profilePortrait row"
       >
         <h2>
-          Profile
+          profile.title
         </h2>
         <div
           className="justify-content-center row"
         >
           <img
-            alt="User portrait"
+            alt="profile.userImageAlt"
             className="userPortrait"
             src="defaultProfileImage.png"
           />
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow down"
           />
-          User details
+          profile.userDetail.label
         </button>
         <div
           className="sectionContent"
@@ -58,12 +58,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="firstName"
                   >
-                    First name
+                    profile.userDetail.firstName.label
                   </label>
                   <input
                     id="firstName"
                     name="firstName"
-                    placeholder="Your first name"
+                    placeholder="profile.userDetail.firstName.placeholder"
                     type="text"
                   />
                 </div>
@@ -73,12 +73,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="lastName"
                   >
-                    Last name
+                    profile.userDetail.lastName.label
                   </label>
                   <input
                     id="lastName"
                     name="lastName"
-                    placeholder="Your last name"
+                    placeholder="profile.userDetail.lastName.placeholder"
                     type="text"
                   />
                 </div>
@@ -92,12 +92,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="nationality"
                   >
-                    Nationality
+                    profile.userDetail.nationality.label
                   </label>
                   <input
                     id="nationality"
                     name="nationality"
-                    placeholder="Your nationality"
+                    placeholder="profile.userDetail.nationality.placeholder"
                     type="text"
                   />
                 </div>
@@ -107,12 +107,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="phoneNumber"
                   >
-                    Phone number
+                    profile.userDetail.phoneNumber.label
                   </label>
                   <input
                     id="phoneNumber"
                     name="phoneNumber"
-                    placeholder="+90 552 477 25 15"
+                    placeholder="profile.userDetail.phoneNumber.placeholder"
                     type="tel"
                   />
                 </div>
@@ -126,7 +126,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="sex"
                   >
-                    Sex
+                    profile.userDetail.sex.label
                     <select
                       id="sex"
                       name="sex"
@@ -134,12 +134,12 @@ exports[`renders correctly 1`] = `
                       <option
                         value="female"
                       >
-                        Female
+                        profile.userDetail.sex.male
                       </option>
                       <option
                         value="male"
                       >
-                        Male
+                        profile.userDetail.sex.female
                       </option>
                     </select>
                   </label>
@@ -150,7 +150,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="birthdate"
                   >
-                    Birthdate
+                    profile.userDetail.birthdate.label
                   </label>
                   <input
                     id="birthdate"
@@ -165,12 +165,12 @@ exports[`renders correctly 1`] = `
                 <label
                   htmlFor="address"
                 >
-                  Address
+                  profile.userDetail.address.label
                 </label>
                 <input
                   id="address"
                   name="address"
-                  placeholder="1234 UTK  str.  Dumplinar Mah."
+                  placeholder="profile.userDetail.address.placeholder"
                   type="text"
                 />
               </div>
@@ -183,12 +183,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="city"
                   >
-                    City
+                    profile.userDetail.city.label
                   </label>
                   <input
                     id="city"
                     name="city"
-                    placeholder="Istanbul"
+                    placeholder="profile.userDetail.city.placeholder"
                     type="text"
                   />
                 </div>
@@ -198,12 +198,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="state"
                   >
-                    State
+                    profile.userDetail.state.label
                   </label>
                   <input
                     id="state"
                     name="state"
-                    placeholder="Fatih"
+                    placeholder="profile.userDetail.state.placeholder"
                     type="text"
                   />
                 </div>
@@ -217,12 +217,12 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="zipCode"
                   >
-                    ZIP Code
+                    profile.userDetail.zipCode.label
                   </label>
                   <input
                     id="zipCode"
                     name="zipCode"
-                    placeholder="12345"
+                    placeholder="profile.userDetail.zipCode.placeholder"
                     type="text"
                   />
                 </div>
@@ -232,7 +232,7 @@ exports[`renders correctly 1`] = `
                   <label
                     htmlFor="country"
                   >
-                    Country
+                    profile.userDetail.country.label
                     <select
                       id="country"
                       name="countryCode"
@@ -240,7 +240,7 @@ exports[`renders correctly 1`] = `
                       <option
                         value=""
                       >
-                        Please choose your country
+                        profile.userDetail.country.chooseCountry
                       </option>
                       <option
                         value="af"
@@ -1229,7 +1229,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow right"
           />
-          Email address
+          profile.userEmail.label
         </button>
         <div
           className="sectionContent"
@@ -1268,7 +1268,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow right"
           />
-          Change password
+          profile.userPassword.label
         </button>
         <div
           className="sectionContent"
@@ -1286,12 +1286,12 @@ exports[`renders correctly 1`] = `
                 <label
                   htmlFor="newPassword"
                 >
-                  New password
+                  profile.userPassword.newPassword
                 </label>
                 <input
                   id="newPassword"
                   name="newPassword"
-                  placeholder="Enter new password"
+                  placeholder="profile.userPassword.newPasswordPlaceholder"
                   type="password"
                 />
               </div>
@@ -1301,12 +1301,12 @@ exports[`renders correctly 1`] = `
                 <label
                   htmlFor="confirmNewPassword"
                 >
-                  Confirm password
+                  profile.userPassword.confirmNewPassword
                 </label>
                 <input
                   id="confirmNewPassword"
                   name="confirmNewPassword"
-                  placeholder="Confirm new password"
+                  placeholder="profile.userPassword.confirmNewPasswordPlaceholder"
                   type="password"
                 />
               </div>
@@ -1320,7 +1320,7 @@ exports[`renders correctly 1`] = `
         <button
           type="submit"
         >
-          Save changes
+          profile.saveChanges
         </button>
       </div>
       <div

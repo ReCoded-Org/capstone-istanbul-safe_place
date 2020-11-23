@@ -174,9 +174,22 @@
   "searchHelpPage": {
     "header": "Search for help",
     "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
-    "locations": ["Istanbul", "Ankara", "Izmir"],
-    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"],
-    "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
+    "locations": [
+      "Istanbul",
+      "Ankara",
+      "Izmir"
+    ],
+    "specialists": [
+      "Doctor",
+      "Lawyer",
+      "Psychologist",
+      "Social worker",
+      "All"
+    ],
+    "dropdownTitles": {
+      "location": "Location",
+      "typeOfHelp": "Type of help"
+    }
   },
   "violenceTestPage": {
     "header": "Self Test",
@@ -341,7 +354,7 @@
   },
   "signIn": {
     "header": "Welcome Back!",
-    "SignInWith": "Sign in with",
+    "signInWith": "Sign in with",
     "newHere": "New here?",
     "createAccount": "Create an account",
     "form": {
@@ -350,15 +363,36 @@
       "rememberMe": "Remember me next time",
       "signIn": "Sign in"
     },
-    "validationMessage": {
-      "incorrectPassword": "The password that you've entered is incorrect",
-      "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
-      "emptyEmail": "Please provide your email",
-      "emailNotValid": "Please provide a valid email",
-      "emptyPassword": "Please provide a password",
-      "passwordMin": "Password length must be at least 8 characters long",
-      "passwordMax": "Password length must be less than or equal to 64 characters long"
-    }
+    "or": "Or"
+  },
+  "validationMessage": {
+    "incorrectPassword": "The password that you've entered is incorrect",
+    "emailNotFound": "The email address that you've entered doesn't match any account. Sign up for an account.",
+    "emptyEmail": "Please provide your email",
+    "emailNotValid": "Please provide a valid email",
+    "emptyPassword": "Please provide a password",
+    "passwordMin": "Password length must be at least 8 characters long",
+    "passwordMax": "Password length must be less than or equal to 64 characters long",
+    "confirmPassword": "Those passwords didn't match",
+    "acceptTerms": "You must accept our terms of service and privacy policy",
+    "emptyFirsName": "Please provide your first name",
+    "emptyLastName": "Please provide your last name"
+  },
+  "signUp": {
+    "header": "Welcome to Safe Place!",
+    "signUpWith": "Sign up with",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailAddress": "Your email",
+    "password": "Password",
+    "confirmPassword": "Repeat password",
+    "signUp":"Sign up",
+    "acceptTerms": "I have read and agree with the {{terms}} and our {{privacy}}",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "haveAccount": "Already have an account? {{signIn}}",
+    "signIn": "Sign in",
+    "or": "Or"
   },
   "singleBlog": {
     "backToBlogBtn": "Back to blog",
@@ -368,5 +402,67 @@
   },
   "footer": {
     "followUs": "Follow us on social media"
+  },
+  "profile": {
+    "title": "Profile",
+    "userImageAlt": "User portrait",
+    "saveChanges": "Save changes",
+    "userDetail": {
+      "label": "User details",
+      "firstName": {
+        "label": "First name",
+        "placeholder": "Your first name"
+      },
+      "lastName": {
+        "label": "Last name",
+        "placeholder": "Your last name"
+      },
+      "nationality": {
+        "label": "Nationality",
+        "placeholder": "Your nationality"
+      },
+      "phoneNumber": {
+        "label": "Phone number",
+        "placeholder": "‎+90 552 477 25 15"
+      },
+      "sex": {
+        "label": "Sex",
+        "female": "Female",
+        "male": "Male"
+      },
+      "birthdate": {
+        "label": "Birthdate"
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "1234 UTK  str.  Dumplinar Mah."
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Istanbul"
+      },
+      "state": {
+        "label": "State",
+        "placeholder": "Fatih"
+      },
+      "zipCode": {
+        "label": "ZIP Code",
+        "placeholder": "12345"
+      },
+      "country": {
+        "label": "Country",
+        "chooseCountry": "Please choose your country"
+      }
+    },
+    "userEmail": {
+      "label": "Email address"
+    },
+    "userPassword": {
+      "label": "Change password",
+      "newPassword": "New password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmNewPassword": "Confirm password",
+      "confirmNewPasswordPlaceholder": "Confirm new password"
+    }
   }
 }

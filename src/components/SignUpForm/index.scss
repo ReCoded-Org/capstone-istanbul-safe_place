@@ -34,6 +34,10 @@
   .termsConditions {
     display: flex;
     flex-direction: row;
+
+    label {
+      margin: 0 0.5rem;
+    }
   }
 
   button.submitBtn {
@@ -73,7 +77,6 @@
     appearance: none;
     outline: 0;
     cursor: pointer;
-    margin-right: 0.5rem;
     transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
 
     &::before {
