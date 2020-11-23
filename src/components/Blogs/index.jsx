@@ -10,7 +10,7 @@ import {
 } from "../../blogApiConsts";
 import i18next from "i18next";
 
-export default function Blogs() {
+const Blogs = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogsForSearch, setBlogsForSearch] = useState([]);
   const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
@@ -60,4 +60,6 @@ export default function Blogs() {
       </Row>
     </Container>
   );
-}
+};
+
+export default Blogs;
