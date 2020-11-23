@@ -3,16 +3,14 @@ import { Container, Row } from "react-bootstrap";
 import SearchBar from "../SearchBar";
 import BlogCard from "../BlogCard";
 import "./index.scss";
+import "../../blogApiConsts";
 import i18next from "i18next";
-
-//  "10221" and "38299" are reference numbers from wordpress that we get after tagging each post to its language in order to make the change between the languages
-const EN_REFERENCE_NUMBER = "10221";
-const AR_REFERENCE_NUMBER = "38299";
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogsForSearch, setBlogsForSearch] = useState([]);
   const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
+  const blogsApiWithLangParam = `${BLOGS_API_URL}?tags=${languageRef}`;
 
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
@@ -24,10 +22,8 @@ export default function Blogs() {
   });
 
   useEffect(() => {
-    const blogsApiUrl = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?tags=${languageRef}`;
-
     const fetchBlogPosts = async () => {
-      const data = await fetch(blogsApiUrl);
+      const data = await fetch(blogsApiWithLangParam);
       const fetchedBlogPosts = await data.json();
       setBlogsForSearch(fetchedBlogPosts);
       setBlogPosts(fetchedBlogPosts);
