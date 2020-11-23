@@ -174,9 +174,22 @@
   "searchHelpPage": {
     "header": "Search for help",
     "subHeader": "Search and immediate access to information of nearby shelters, psychologist, lawyers or doctors",
-    "locations": ["Istanbul", "Ankara", "Izmir"],
-    "specialists": ["Doctor", "Lawyer", "Psychologist", "Social worker", "All"],
-    "dropdownTitles": { "location": "Location", "typeOfHelp": "Type of help" }
+    "locations": [
+      "Istanbul",
+      "Ankara",
+      "Izmir"
+    ],
+    "specialists": [
+      "Doctor",
+      "Lawyer",
+      "Psychologist",
+      "Social worker",
+      "All"
+    ],
+    "dropdownTitles": {
+      "location": "Location",
+      "typeOfHelp": "Type of help"
+    }
   },
   "violenceTestPage": {
     "header": "Self Test",
@@ -341,7 +354,7 @@
   },
   "signIn": {
     "header": "Welcome Back!",
-    "SignInWith": "Sign in with",
+    "signInWith": "Sign in with",
     "newHere": "New here?",
     "createAccount": "Create an account",
     "form": {
@@ -349,7 +362,8 @@
       "yourPassword": "Your password",
       "rememberMe": "Remember me next time",
       "signIn": "Sign in"
-    }
+    },
+    "or": "Or"
   },
   "validationMessage": {
     "incorrectPassword": "The password that you've entered is incorrect",
