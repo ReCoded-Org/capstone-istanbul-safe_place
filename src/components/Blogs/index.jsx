@@ -5,8 +5,6 @@ import BlogCard from "../BlogCard";
 import "./index.scss";
 import i18next from "i18next";
 
-const POSTS_PER_PAGE = 18;
-const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
 //  "10221" and "38299" are reference numbers from wordpress that we get after tagging each post to its language in order to make the change between the languages
 const EN_REFERENCE_NUMBER = "10221";
 const AR_REFERENCE_NUMBER = "38299";
@@ -16,21 +14,6 @@ export default function Blogs() {
   const [blogsForSearch, setBlogsForSearch] = useState([]);
   const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
 
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
-      const data = await fetch(BLOG_API_URL);
-      const fetchedBlogPosts = await data.json();
-      const filteredPosts = await fetchedBlogPosts.filter((post) => {
-        return post.tags.join() === languageRef;
-      });
-
-      setBlogsForSearch(fetchedBlogPosts);
-      setBlogPosts(filteredPosts);
-    };
-
-    fetchBlogPosts();
-  }, [languageRef]);
-
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
     if (ref === "en") {
@@ -39,6 +22,20 @@ export default function Blogs() {
       setLanguageRef(AR_REFERENCE_NUMBER);
     }
   });
+
+  useEffect(() => {
+    const blogsApiUrl = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?tags=${languageRef}`;
+
+    const fetchBlogPosts = async () => {
+      const data = await fetch(blogsApiUrl);
+      const fetchedBlogPosts = await data.json();
+      console.log(fetchedBlogPosts);
+      setBlogsForSearch(fetchedBlogPosts);
+      setBlogPosts(fetchedBlogPosts);
+    };
+
+    fetchBlogPosts();
+  }, [languageRef]);
 
   // Search function
   const handleSearch = (e, keyword) => {
