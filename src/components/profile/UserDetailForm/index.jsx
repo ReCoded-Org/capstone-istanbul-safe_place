@@ -1,44 +1,47 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import COUNTRIES from "./countries.json";
 import Input from "../../form/SafePlaceInput";
 import "./index.scss";
 
 export default function UserDetail({ register }) {
+  const { t } = useTranslation();
+
   return (
     <Col xs={12} className="userDetailSection">
       <div className="formInputGroup">
         <Input
           type="text"
-          placeholder="Your first name"
+          placeholder={t("profile.userDetail.firstName.placeholder")}
           name="firstName"
           ref={register()}
-          label="First name"
+          label={t("profile.userDetail.firstName.label")}
         />
 
         <Input
           type="text"
-          placeholder="Your last name"
+          placeholder={t("profile.userDetail.lastName.placeholder")}
           name="lastName"
           ref={register()}
-          label="Last name"
+          label={t("profile.userDetail.lastName.label")}
         />
       </div>
 
       <div className="formInputGroup">
         <Input
           type="text"
-          placeholder="Your nationality"
+          placeholder={t("profile.userDetail.nationality.placeholder")}
           name="nationality"
-          label="Nationality"
+          label={t("profile.userDetail.nationality.label")}
           ref={register()}
         />
 
         <Input
           type="tel"
-          placeholder="+90 552 477 25 15"
+          placeholder={t("profile.userDetail.phoneNumber.placeholder")}
           name="phoneNumber"
-          label="Phone number"
+          label={t("profile.userDetail.phoneNumber.label")}
           ref={register()}
         />
       </div>
@@ -46,10 +49,10 @@ export default function UserDetail({ register }) {
       <div className="formInputGroup">
         <div className="formInput">
           <label htmlFor="sex">
-            Sex
+            {t("profile.userDetail.sex.label")}
             <select name="sex" id="sex" ref={register()}>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
+              <option value="female">{t("profile.userDetail.sex.male")}</option>
+              <option value="male">{t("profile.userDetail.sex.female")}</option>
             </select>
           </label>
         </div>
@@ -58,33 +61,33 @@ export default function UserDetail({ register }) {
           type="date"
           name="birthdate"
           id="birthdate"
-          label="Birthdate"
+          label={t("profile.userDetail.birthdate.label")}
           ref={register()}
         />
       </div>
 
       <Input
         type="text"
-        placeholder="1234 UTK  str.  Dumplinar Mah."
+        placeholder={t("profile.userDetail.address.placeholder")}
         name="address"
-        label="Address"
+        label={t("profile.userDetail.address.label")}
         ref={register()}
       />
 
       <div className="formInputGroup">
         <Input
           type="text"
-          placeholder="Istanbul"
+          placeholder={t("profile.userDetail.city.placeholder")}
           name="city"
-          label="City"
+          label={t("profile.userDetail.city.label")}
           ref={register()}
         />
 
         <Input
           type="text"
-          placeholder="Fatih"
+          placeholder={t("profile.userDetail.state.placeholder")}
           name="state"
-          label="State"
+          label={t("profile.userDetail.state.label")}
           ref={register()}
         />
       </div>
@@ -92,17 +95,17 @@ export default function UserDetail({ register }) {
       <div className="formInputGroup">
         <Input
           type="text"
-          placeholder="12345"
+          placeholder={t("profile.userDetail.zipCode.placeholder")}
           name="zipCode"
-          label="ZIP Code"
+          label={t("profile.userDetail.zipCode.label")}
           ref={register()}
         />
 
         <div className="formInput">
           <label htmlFor="country">
-            Country
+            {t("profile.userDetail.country.label")}
             <select name="countryCode" id="country" ref={register()}>
-              <option value="">Please choose your country</option>
+              <option value="">{t("profile.userDetail.country.chooseCountry")}</option>
               {COUNTRIES.map((country) => (
                 <option key={country.id} value={country.alpha2}>
                   {country.name}
