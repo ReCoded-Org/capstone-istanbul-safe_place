@@ -343,6 +343,35 @@
       "location": "٩٠٩٤ شارع باي ميادوز ، مدينة كونري ، ٣٠٠١٢"
     }
   },
+  "validationMessage": {
+    "incorrectPassword": "كلمة المرور التي أدخلتها غير صحيحة.",
+    "emailNotFound": "البريد الذي أدخلته غير مرتبط بأي حساب. اشترك لإنشاء حساب جديد.",
+    "emptyEmail": "أدخل بريد الإلكتروني رجاءً.",
+    "emailNotValid": "أدخل بريدًا صالحًا رجاءً.",
+    "emptyPassword": "أدخل كلمة مرور.",
+    "passwordMin": "كلمة المرور يجب أن تتألف من 8 محارف على الأقل.",
+    "passwordMax": "طول كلمة المرور يجب أن يكون أقل من 64 محرف.",
+    "confirmPassword": "كلمتا المرور غير متطابقتين",
+    "acceptTerms": "يجب أن تقبل شروط الخدمة وسياسية الخصوصية الخاصة بنا.",
+    "emptyFirsName": "أدخل اسمك رجاءً.",
+    "emptyLastName": "أدخل كنيتك أو لقبك رجاءً."
+  },
+  "signUp": {
+    "header": "أهلًا بك في Safe Place!",
+    "signUpWith": "اشترك عبر",
+    "firstName": "الاسم",
+    "lastName": "اللقب",
+    "emailAddress": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "signUp":"اشترك",
+    "acceptTerms": "لقد قرأت {{terms}} و{{privacy}} وأقبلها كلها.",
+    "terms": "شروط الخدمة",
+    "privacy": "سياسة الخصوصية",
+    "haveAccount": "لديك حساب؟ {{signIn}}",
+    "signIn": "سجل الدخول",
+    "or": "أو"
+  },
   "singleBlog": {
     "backToBlogBtn": "الرجوع إلى المدونة",
     "socialMediaIconsTitle": "مشاركة على مواقع التواصل الاجتماعي:",

@@ -14,13 +14,13 @@ exports[`renders correctly 1`] = `
         className="profilePortrait row"
       >
         <h2>
-          Profile
+          profile.title
         </h2>
         <div
           className="justify-content-center row"
         >
           <img
-            alt="User portrait"
+            alt="profile.userImageAlt"
             className="userPortrait"
             src="defaultProfileImage.png"
           />
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow down"
           />
-          User details
+          profile.userDetail.label
         </button>
         <div
           className="sectionContent"
@@ -1229,7 +1229,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow right"
           />
-          Email address
+          profile.userEmail.label
         </button>
         <div
           className="sectionContent"
@@ -1268,7 +1268,7 @@ exports[`renders correctly 1`] = `
           <i
             className="arrow right"
           />
-          Change password
+          profile.userPassword.label
         </button>
         <div
           className="sectionContent"
@@ -1286,12 +1286,12 @@ exports[`renders correctly 1`] = `
                 <label
                   htmlFor="newPassword"
                 >
-                  New password
+                  profile.userPassword.newPassword
                 </label>
                 <input
                   id="newPassword"
                   name="newPassword"
-                  placeholder="Enter new password"
+                  placeholder="profile.userPassword.newPasswordPlaceholder"
                   type="password"
                 />
               </div>
@@ -1301,12 +1301,12 @@ exports[`renders correctly 1`] = `
                 <label
                   htmlFor="confirmNewPassword"
                 >
-                  Confirm password
+                  profile.userPassword.confirmNewPassword
                 </label>
                 <input
                   id="confirmNewPassword"
                   name="confirmNewPassword"
-                  placeholder="Confirm new password"
+                  placeholder="profile.userPassword.confirmNewPasswordPlaceholder"
                   type="password"
                 />
               </div>
@@ -1320,7 +1320,7 @@ exports[`renders correctly 1`] = `
         <button
           type="submit"
         >
-          Save changes
+          profile.saveChanges
         </button>
       </div>
       <div
