@@ -69,7 +69,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -102,7 +102,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -135,7 +135,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -168,7 +168,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -201,7 +201,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -234,7 +234,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -267,7 +267,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -300,7 +300,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -333,7 +333,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -366,7 +366,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -399,7 +399,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -432,7 +432,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -465,7 +465,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -498,7 +498,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -531,7 +531,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -564,7 +564,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -597,7 +597,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -630,7 +630,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -663,7 +663,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -696,7 +696,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="greenBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
@@ -729,7 +729,7 @@ exports[`renders correctly and matches the snapshot 1`] = `
           className="peachBorder col-md-6 col-sm-12"
         >
           <div
-            className="opportunities col"
+            className="opportunities justify-content-center col"
           >
             <div
               className="postDate"
