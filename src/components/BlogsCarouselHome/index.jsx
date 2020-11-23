@@ -28,7 +28,6 @@ const BlogsCarouselHome = () => {
       const filteredPosts = await fetchedBlogPosts.filter((post) => {
         return post.tags.toString() === languageRef;
       });
-      setBlogPosts(fetchedBlogPosts);
       setBlogPosts(filteredPosts);
     };
 
