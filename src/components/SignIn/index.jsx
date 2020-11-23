@@ -70,7 +70,10 @@ export default function SignIn() {
         </Col>
         <Col className="signInForm" md={6} xs={12}>
           <h2>{t("signIn.header")}</h2>
-          <h4>{t("signIn.SignInWith")}</h4>
+          <div>
+            <span className="hyphen" />
+            <h4>{t("signIn.SignInWith")}</h4>
+          </div>
           <ul className="signInIcons">
             <li className="signInIcon">
               <a href="#/" onClick={() => handleSignUpWithProvider("twitter")}>
@@ -88,10 +91,12 @@ export default function SignIn() {
               </a>
             </li>
           </ul>
-          <hr className="divider" />
-
+          <p className="text-center">
+            <hr className="divider" />
+            <span className="dividerContent">{t("signIn.or")}</span>
+          </p>
           <SignInForm submit={handleSignIn} />
-
+          
           <p>
             {t("signIn.newHere")}{" "}
             <a href="/sign-up">{t("signIn.createAccount")}</a>
