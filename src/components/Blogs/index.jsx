@@ -3,7 +3,11 @@ import { Container, Row } from "react-bootstrap";
 import SearchBar from "../SearchBar";
 import BlogCard from "../BlogCard";
 import "./index.scss";
-import "../../blogApiConsts";
+import {
+  BLOGS_API_URL,
+  EN_REFERENCE_NUMBER,
+  AR_REFERENCE_NUMBER,
+} from "../../blogApiConsts";
 import i18next from "i18next";
 
 export default function Blogs() {
