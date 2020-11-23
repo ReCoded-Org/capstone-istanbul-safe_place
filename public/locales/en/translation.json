@@ -360,6 +360,21 @@
       "passwordMax": "Password length must be less than or equal to 64 characters long"
     }
   },
+  "signUp": {
+    "header": "Welcome to Safe Place!",
+    "signUpWith": "Sign up with",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailAddress": "Your email",
+    "password": "Password",
+    "confirmPassword": "Repeat password",
+    "signUp":"Sign up",
+    "acceptTerms": "I have read and agree with the {{terms}} and our {{privacy}}",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "haveAccount": "Already have an account? {{signIn}}",
+    "signIn": "Sign in" 
+  },
   "singleBlog": {
     "backToBlogBtn": "Back to blog",
     "socialMediaIconsTitle": "Share on social media:",

@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
+import { useTranslation } from "react-i18next";
 import InputErrorMessage from "../InputErrorMessage";
 import { getErrorClass } from "../../utils/formHelpers";
 import { EMAIL_ALREADY_TAKEN_ERROR } from "../../utils/authHelpers";
@@ -37,6 +38,7 @@ export default function SignUpForm({ submit }) {
   const { register, handleSubmit, errors, reset, setError } = useForm({
     resolver: joiResolver(schema),
   });
+  const { t } = useTranslation();
 
   const onSubmit = async (data) => {
     const status = await submit(data);
@@ -64,7 +66,7 @@ export default function SignUpForm({ submit }) {
             <input
               className={getErrorClass(errors.firstName)}
               type="text"
-              placeholder="First name"
+              placeholder={t("signUp.firstName")}
               name="firstName"
               aria-label="firstName"
               ref={register()}
@@ -76,7 +78,7 @@ export default function SignUpForm({ submit }) {
             <input
               className={getErrorClass(errors.lastName)}
               type="text"
-              placeholder="Last name"
+              placeholder={t("signUp.lastName")}
               name="lastName"
               aria-label="lastName"
               ref={register()}
@@ -89,7 +91,7 @@ export default function SignUpForm({ submit }) {
           <input
             className={getErrorClass(errors.email)}
             type="email"
-            placeholder="Your email"
+            placeholder={t("signUp.emailAddress")}
             name="email"
             aria-label="email"
             ref={register()}
@@ -102,7 +104,7 @@ export default function SignUpForm({ submit }) {
             <input
               className={getErrorClass(errors.password)}
               type="password"
-              placeholder="Password"
+              placeholder={t("signUp.password")}
               name="password"
               aria-label="password"
               ref={register()}
@@ -114,7 +116,7 @@ export default function SignUpForm({ submit }) {
             <input
               className={getErrorClass(errors.confirmPassword)}
               type="password"
-              placeholder="Repeat password"
+              placeholder={t("signUp.confirmPassword")}
               name="confirmPassword"
               aria-label="confirmPassword"
               ref={register()}
@@ -137,24 +139,31 @@ export default function SignUpForm({ submit }) {
               />
             </div>
             <div>
-              <label htmlFor="acceptTerms">
-                I have read and agree with the{" "}
-                <a href="/terms">Terms of Service</a> and our{" "}
-                <a href="/privacy">Privacy Policy</a>
-              </label>
+              <label
+                htmlFor="acceptTerms"
+                dangerouslySetInnerHTML={{
+                  __html: t("signUp.acceptTerms", {
+                    terms: `<a href="/terms">${t("signUp.terms")}</a>`,
+                    privacy: `<a href="/privacy">Privacy Policy</a>`,
+                  }),
+                }}
+              />
             </div>
           </div>
           <InputErrorMessage error={errors.acceptTerms} />
         </div>
 
         <button type="submit" className="submitBtn">
-          Sign in
+          {t("signUp.signUp")}
         </button>
 
-        <p>
-          Already have an account?&nbsp;
-          <a href="/signin">Sign in</a>
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: t("signUp.haveAccount", {
+              signIn: `<a href="/signin">${t("signUp.signIn")}</a>`,
+            }),
+          }}
+        />
       </form>
     </div>
   );
