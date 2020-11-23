@@ -2,6 +2,7 @@
 @import "../../style/buttons";
 @import "../../style/headings";
 @import "../../style/bootstrapImports";
+@import "../../style/shapes";
 
 .signUpSection {
   /* All section style */
@@ -27,19 +28,20 @@
   }
 
   h4 {
+    display: inline-block;
+    align-content: space-between;
     font-size: 1.25rem;
     color: $primaryColor;
-    margin-bottom: 2rem;
+    margin: 0 0.8rem 2rem;
+  }
 
-    &::before {
-      display: inline-block;
-      border-top: 0.4rem solid #fe8f7c;
-      border-radius: $borderRadius;
-      width: 3.5rem;
-      height: 0;
-      content: "";
-      margin: auto 0.5rem auto 0;
-    }
+  .hyphen {
+    display: inline-block;
+    border-top: 0.4rem solid #fe8f7c;
+    border-radius: $borderRadius;
+    width: 3.5rem;
+    height: 0;
+    margin: auto 0;
   }
 
   a {
@@ -52,22 +54,18 @@
   }
 
   hr.divider {
-    overflow: visible;
-    padding: 0;
-    margin-bottom: 0.625rem;
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    color: #6e6d7a;
-    text-align: center;
+    @include sectionDividerLine;
+  }
 
-    &::after {
-      content: "Or";
-      display: inline-block;
-      position: relative;
-      top: -0.8rem;
-      padding: 0 1rem;
-      background: $lightColor;
-    }
+  .dividerContent {
+    content: "Or";
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -1.4rem;
+    padding: 0 1rem;
+    background: $lightColor;
   }
 
   /* Icons Style */
