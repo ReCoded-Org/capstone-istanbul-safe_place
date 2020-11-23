@@ -81,7 +81,10 @@ export default function SignUp() {
               </a>
             </li>
           </ul>
-          <hr className="divider" />
+          <p className="text-center">
+            <hr className="divider" />
+            <span className="divideContent">{t("signUp.or")}</span>
+          </p>
 
           <SignUpForm submit={handleSignUp} />
         </Col>
