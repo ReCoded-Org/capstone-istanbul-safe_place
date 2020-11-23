@@ -59,6 +59,16 @@
     }
   }
 
+  p {
+    color: $darkColor;
+    margin-top: 1rem;
+  }
+
+  .rememberMe {
+    display: flex;
+    flex-direction: row;
+  }
+
   /* checkbox custom Style */
   input[type="checkbox"] {
     width: 1.3rem;

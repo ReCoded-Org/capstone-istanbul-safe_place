@@ -2,7 +2,7 @@
 
 exports[`renders correctly and matches the snapshot 1`] = `
 <div
-  className="opportunities col"
+  className="opportunities justify-content-center col"
 >
   <div
     className="postDate"
