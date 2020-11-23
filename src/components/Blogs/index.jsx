@@ -14,7 +14,6 @@ export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogsForSearch, setBlogsForSearch] = useState([]);
   const [languageRef, setLanguageRef] = useState(EN_REFERENCE_NUMBER);
-  const blogsApiWithLangParam = `${BLOGS_API_URL}?tags=${languageRef}`;
 
   i18next.on("languageChanged", (lng) => {
     let ref = i18next.translator.language;
@@ -27,6 +26,8 @@ export default function Blogs() {
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
+      const blogsApiWithLangParam = `${BLOGS_API_URL}?tags=${languageRef}`;
+
       const data = await fetch(blogsApiWithLangParam);
       const fetchedBlogPosts = await data.json();
       setBlogsForSearch(fetchedBlogPosts);
