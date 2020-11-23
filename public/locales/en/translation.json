@@ -167,7 +167,8 @@
     ],
     "buttons": {
       "opportunitiesBtn": "All opportunities",
-      "blogBtn": "All blog posts"
+      "blogBtn": "All blog posts",
+      "searchHelpBtn": "Search help"
     }
   },
   "searchHelpPage": {
@@ -384,5 +385,8 @@
     "socialMediaIconsTitle": "Share on social media:",
     "relatedPostsContainerTitle": "Related articles:",
     "loadingMessage": "Loading..."
+  },
+  "footer": {
+    "followUs": "Follow us on social media"
   }
 }

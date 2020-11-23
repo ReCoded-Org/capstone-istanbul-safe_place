@@ -91,11 +91,6 @@ export default function SignIn() {
           <hr className="divider" />
 
           <SignInForm submit={handleSignIn} />
-
-          <p>
-            {t("signIn.newHere")}{" "}
-            <a href="/sign-up">{t("signIn.createAccount")}</a>
-          </p>
         </Col>
       </Row>
     </Container>

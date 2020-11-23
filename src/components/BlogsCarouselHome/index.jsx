@@ -1,67 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import smilingWomanImg from "./images/smilingWomanImg.jpg";
-import womanAndManHoldingHandsImg from "./images/womanAndManHoldingHandsImg.jpg";
-import womanTalkingToTherapistImg from "./images/womanTalkingToTherapistImg.jpg";
-import multinationalWomenImg from "./images/multinationalWomenImg.jpg";
+import BlogCard from "../BlogCard";
 import "./index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderArrow from "../SliderArrow";
 
-const SLIDE_DATA = [
-  {
-    id: 1,
-    label: "Healthy Me, Healthy We: Preventing Dating Violence",
-    img: `${smilingWomanImg}`,
-  },
-  {
-    id: 2,
-    label: "Don’t Confuse Abuse With Love",
-    img: `${womanAndManHoldingHandsImg}`,
-  },
-  {
-    id: 3,
-    label: "Talking to Your Kids About Sexual Assault",
-    img: `${womanTalkingToTherapistImg}`,
-  },
-  {
-    id: 4,
-    label: "International Womens Day",
-    img: `${multinationalWomenImg}`,
-  },
-];
+const POSTS_PER_PAGE = 9;
+const BLOG_API_URL = `https://public-api.wordpress.com/wp/v2/sites/safeplace102505649.wordpress.com/posts?per_page=${POSTS_PER_PAGE}`;
 
 const BlogsCarouselHome = () => {
   const { t } = useTranslation();
+
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  const fetchBlogPosts = async () => {
+    const data = await fetch(BLOG_API_URL);
+    const fetchedBlogPosts = await data.json();
+    setBlogPosts(fetchedBlogPosts);
+  };
+
+  useEffect(() => {
+    fetchBlogPosts();
+  }, []);
+
   const settings = {
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     infinite: true,
     autoplaySpeed: 3000,
     arrows: true,
     nextArrow: <SliderArrow leftOrRight={"right"} />,
     prevArrow: <SliderArrow leftOrRight={"left"} />,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
       {
         breakpoint: 576,
         settings: {
@@ -75,23 +49,33 @@ const BlogsCarouselHome = () => {
   return (
     <Container className="homeCarousel">
       <Row>
-        <Col>
+        <Col md={12}>
           <h2 className="title">{t("blogPage.title")}</h2>
           <h6>{t("blogPage.subtitle")}</h6>
-          <Slider className="slider" {...settings}>
-            {SLIDE_DATA.map((slide) => (
-              <div className="blog" key={slide.id}>
-                <img src={slide.img} alt={slide.label} />
-                <h5>{slide.label}</h5>
-              </div>
-            ))}
-          </Slider>
-          <Link to="/blog">
-            <h6 className="allBlogsBtn">
-              {t("home.buttons.blogBtn")} <span>&#8594;</span>
-            </h6>
-          </Link>
         </Col>
+      </Row>
+      <Slider {...settings}>
+        {blogPosts.map((blogPost) => {
+          return (
+            <BlogCard
+              blogPost={blogPost}
+              key={blogPost.id}
+              className="blogCard"
+            />
+          );
+        })}
+      </Slider>
+      <Row className="allBlogsBtn">
+        <Link to="/blog">
+          <h6>
+            {t("home.buttons.blogBtn")}
+            {document.body.dir === "rtl" ? (
+              <span> &#8592; </span>
+            ) : (
+              <span> &#8594; </span>
+            )}
+          </h6>
+        </Link>
       </Row>
     </Container>
   );
