@@ -84,14 +84,14 @@ const SearchForHelpPage = () => {
         </DropdownButton>
       </Row>
       <Row>
-        <Col>
+        <Col lg={6} md={6} sm={12}>
           <div className="seekHelpCards">
             {seekHelpCards.map((details) => (
               <SeekHelpSingleCard {...details} />
             ))}
           </div>
         </Col>
-        <Col>
+        <Col lg={6} md={6} sm={12}>
           <SeekHelpMap {...filteredCity} />
         </Col>
       </Row>
