@@ -16,9 +16,10 @@
     align-content: center;
   }
 
-  .nav-link {
+  .navLink {
     color: $lightColor !important;
     font-weight: bold;
+    margin: 0 0.5rem;
 
     &:hover {
       color: $primaryColor !important;

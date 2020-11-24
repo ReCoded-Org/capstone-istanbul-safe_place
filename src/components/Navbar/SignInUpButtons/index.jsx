@@ -1,21 +1,22 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 export default function SignInUpButtons() {
   const { t } = useTranslation();
 
   return (
     <div className="signButtons">
-      <a href="/signin">
+      <NavLink to="/signin">
         <button type="button" className="signInBtn">
           {t("navbar.buttons.signIn")}
         </button>
-      </a>
-      <a href="/signup">
+      </NavLink>
+      <NavLink to="/signup">
         <button type="button" className="signUpBtn">
           {t("navbar.buttons.signUp")}
         </button>
-      </a>
+      </NavLink>
     </div>
   );
 }
