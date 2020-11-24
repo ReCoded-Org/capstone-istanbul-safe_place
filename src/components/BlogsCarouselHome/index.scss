@@ -2,26 +2,18 @@
 @import "../../style/bootstrapImports";
 @import "../../style/buttons";
 @import "../../style/bootstrapImports";
+@import "../../style/headings";
 
 .homeCarousel {
   text-align: center;
   font-family: $mainFontFamily;
 
   .title {
-    color: $primaryColor;
-    font-weight: bold;
-    margin-top: 3rem;
-    font-family: $mainFontFamily;
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 0.5rem;
+    @include mainHeader;
   }
 
   h6 {
-    color: $darkColor;
-    text-align: center;
-    font-family: $mainFontFamily;
-    margin-bottom: 3rem;
+    @include secondaryHeader;
   }
 
   .slick-slider {

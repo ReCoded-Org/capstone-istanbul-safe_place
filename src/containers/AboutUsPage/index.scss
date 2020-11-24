@@ -1,13 +1,9 @@
 @import "../../style/variables";
+@import "../../style/headings";
 
 .aboutUsPage {
   h2 {
-    color: $primaryColor;
-    font-family: $mainFontFamily;
-    margin-top: 4rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
+    @include mainHeader;
   }
 
   p {

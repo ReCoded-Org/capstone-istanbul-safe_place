@@ -4,7 +4,7 @@
 
 .contactInfo {
   h2 {
-    @include mainHeading;
+    @include contactHeader;
     margin-bottom: 1rem;
   }
 
