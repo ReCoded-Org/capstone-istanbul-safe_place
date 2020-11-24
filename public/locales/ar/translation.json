@@ -174,7 +174,11 @@
   "searchHelpPage": {
     "header": "البحث عن مساعدة",
     "subHeader": "احصل على معلومات التواصل مع مراكز الأمان والدكاترة والمحاميين القريبين لك",
-    "locations": ["اسطنبول", "انقرة", "ازمير"],
+    "locations": [
+      "اسطنبول",
+      "انقرة",
+      "ازمير"
+    ],
     "specialists": [
       "دكاترة",
       "محاميين",
@@ -182,7 +186,10 @@
       "مصلحيين اجتماعيين",
       "الجميع"
     ],
-    "dropdownTitles": { "location": "العنوان", "typeOfHelp": "نوع المساعدة" }
+    "dropdownTitles": {
+      "location": "العنوان",
+      "typeOfHelp": "نوع المساعدة"
+    }
   },
   "violenceTestPage": {
     "header": "فحص العنف الذاتي",
@@ -345,7 +352,7 @@
   },
   "signIn": {
     "header": "مرحبًا بك مجددًا",
-    "SignInWith": "سجل الدخول عبر",
+    "signInWith": "سجل الدخول عبر",
     "newHere": "زيارتك الأولى؟",
     "createAccount": "أنشئ حسابًا",
     "form": {
@@ -353,8 +360,9 @@
       "yourPassword": "كلمة المرور",
       "rememberMe": "تذكرني في المرة القادمة",
       "signIn": "سجل الدخول"
-    },
-  "validationMessage": {
+    }
+  },
+    "validationMessage": {
     "incorrectPassword": "كلمة المرور التي أدخلتها غير صحيحة.",
     "emailNotFound": "البريد الذي أدخلته غير مرتبط بأي حساب. اشترك لإنشاء حساب جديد.",
     "emptyEmail": "أدخل بريد الإلكتروني رجاءً.",
@@ -375,7 +383,7 @@
     "emailAddress": "البريد الإلكتروني",
     "password": "كلمة المرور",
     "confirmPassword": "تأكيد كلمة المرور",
-    "signUp":"اشترك",
+    "signUp": "اشترك",
     "acceptTerms": "لقد قرأت {{terms}} و{{privacy}} وأقبلها كلها.",
     "terms": "شروط الخدمة",
     "privacy": "سياسة الخصوصية",
