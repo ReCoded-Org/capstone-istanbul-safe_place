@@ -9,10 +9,7 @@ export function getErrorClass(error) {
 }
 
 export const validationSchemaObject = {
-  email: Joi.string().required().email({ tlds: {} }).messages({
-    "string.empty": `Please provide your email`,
-    "string.email": `Please provide a valid email`,
-  }),
+  email: Joi.string().required().email({ tlds: {} }),
   stringRequired: Joi.string().required(),
   anyOptional: Joi.any().optional(),
 };
