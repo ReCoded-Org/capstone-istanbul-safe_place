@@ -4,6 +4,7 @@ exports[`Single blog Renders without crashing 1`] = `
 <div>
   <div
     class="container"
+    style=""
   >
     <div
       class="blogContent row"
