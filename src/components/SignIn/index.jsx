@@ -8,6 +8,7 @@ import googleIcon from "../../images/icons/googleIcon.svg";
 import twitterIcon from "../../images/icons/twitterIcon.svg";
 import facebookIcon from "../../images/icons/facebookIcon.svg";
 import { setFirebaseProvider } from "../../utils/authHelpers";
+import { NavLink } from "react-router-dom";
 import firebase from "../../firebaseConfig";
 
 import "./index.scss";
@@ -99,7 +100,7 @@ export default function SignIn() {
 
           <p>
             {t("signIn.newHere")}{" "}
-            <a href="/sign-up">{t("signIn.createAccount")}</a>
+            <NavLink to="/signup">{t("signIn.createAccount")}</NavLink>
           </p>
         </Col>
       </Row>
