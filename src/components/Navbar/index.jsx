@@ -10,6 +10,7 @@ import "./index.scss";
 import logo from "../../images/Logo.svg";
 import { useTranslation } from "react-i18next";
 import languageIcon from "../../images/icons/language.svg";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../auth/Authentication";
 import SignInUpButtons from "./SignInUpButtons";
 import UserSetting from "./UserSetting";
@@ -39,12 +40,18 @@ const MainNavbar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="/about">{t("navbar.about")}</Nav.Link>
-            <Nav.Link href="/blog">{t("navbar.blog")}</Nav.Link>
-            <Nav.Link href="/opportunities">
+            <NavLink className="navLink" to="/about">
+              {t("navbar.about")}
+            </NavLink>
+            <NavLink className="navLink" to="/blog">
+              {t("navbar.blog")}
+            </NavLink>
+            <NavLink className="navLink" to="/opportunities">
               {t("navbar.opportunities")}
-            </Nav.Link>
-            <Nav.Link href="/contact">{t("navbar.contact")}</Nav.Link>
+            </NavLink>
+            <NavLink className="navLink" to="/contact">
+              {t("navbar.contact")}
+            </NavLink>
             <DropdownButton
               alignRight
               variant="none"
